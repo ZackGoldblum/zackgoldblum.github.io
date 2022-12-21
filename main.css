@@ -28,3 +28,12 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
+.pub_header{
+    color: #75C6FF; 
+    margin:0;
+}
+
+.pub_paragraph{
+    margin: 0;
+}
