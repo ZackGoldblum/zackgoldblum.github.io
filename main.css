@@ -1,8 +1,21 @@
 html {
-    font-size: 22px
+    font-size: 22px;
+    font-family: Hack, monospace;
 }
 
 body {
-    background-color: #333;
+    background-color: rgb(17, 17, 17);
     color: whitesmoke;
+    font-family: Hack, monospace;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.social_media_icons a {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
