@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    max-width: max-content;
+    /*max-width: max-content;*/
+    max-width: 960px;
     margin: auto;
     background-color: rgb(17, 17, 17);
     color: whitesmoke;
@@ -17,10 +18,13 @@ body {
     text-decoration: none;
 }
 
-button.link {
-    font-size: 22px;
-    color: whitesmoke;
-    font-family: Hack, monospace; 
-    background:none; 
-    border:none; 
+.tab_gray {
+    color: gray;
+    text-decoration: none;
+}
+
+.tab_blue {
+    color: #75C6FF;
+    font-weight: bold;
+    text-decoration: none;
 }
