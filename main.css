@@ -4,6 +4,8 @@ html {
 }
 
 body {
+    max-width: max-content;
+    margin: auto;
     background-color: rgb(17, 17, 17);
     color: whitesmoke;
     font-family: Hack, monospace;
