@@ -11,12 +11,7 @@ body {
     font-family: Hack, monospace;
 }
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-.social_media_icons a {
+.social_media_icons {
     color: whitesmoke;
     font-size: 1.5rem;
     text-decoration: none;
