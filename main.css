@@ -18,6 +18,12 @@ body {
     text-decoration: none;
 }
 
+.tab_white {
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .tab_gray {
     color: gray;
     text-decoration: none;
@@ -29,11 +35,11 @@ body {
     text-decoration: none;
 }
 
-.pub_header{
+.pub_header {
     color: #75C6FF; 
     margin:0;
 }
 
-.pub_paragraph{
+.pub_paragraph {
     margin: 0;
 }
