@@ -10,6 +10,7 @@ body {
     background-color: rgb(17, 17, 17);
     color: whitesmoke;
     font-family: Hack, monospace;
+    padding-bottom: 50px;
 }
 
 .social_media_icons {
