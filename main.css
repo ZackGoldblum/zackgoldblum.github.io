@@ -58,3 +58,15 @@ body {
     font-size: 20px;
     padding-left: 20px;
   }
+
+.check_it_out:link {
+    /* color: rgb(128, 64, 255); */
+    color: rgb(192, 168, 255);
+    background-color: transparent;
+}
+/*
+.check_it_out:visited {
+    color: rgb(128, 64, 255);
+    background-color: transparent;
+}
+*/
