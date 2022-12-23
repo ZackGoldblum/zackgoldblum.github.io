@@ -1,3 +1,4 @@
+/* Shared styling */
 html {
     font-size: 22px;
     font-family: Hack, monospace;
@@ -12,12 +13,27 @@ body {
     padding-bottom: 50px;
 }
 
+.header {
+    color: #75C6FF; 
+    margin:0;
+}
+
+.paragraph {
+    margin: 0;
+}
+
+.check_it_out:link {
+    color: rgb(192, 168, 255);
+    background-color: transparent;
+}
+
 .social_media_icons {
     color: whitesmoke;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
+/* Navigation bar styling */
 .tab_white {
     color: whitesmoke;
     font-weight: bold;
@@ -35,15 +51,7 @@ body {
     text-decoration: none;
 }
 
-.pub_header {
-    color: #75C6FF; 
-    margin:0;
-}
-
-.pub_paragraph {
-    margin: 0;
-}
-
+/* Project page styling */
 .proj_container {
     display: flex;
     align-items: top;
@@ -59,12 +67,6 @@ body {
     padding-left: 20px;
   }
 
-.check_it_out:link {
-    /* color: rgb(128, 64, 255); */
-    color: rgb(192, 168, 255);
-    background-color: transparent;
-}
-
 .project_status {
     color: #75C6FF; 
     text-align: center;
@@ -74,6 +76,7 @@ body {
     position: relative;
     display: inline-block;
 }
+
 .project_status > span:before, .project_status > span:after{
     content: '';
     color: whitesmoke;
@@ -83,15 +86,11 @@ body {
     width: 100px;
     margin: 0 20px;
 }
+
 .project_status > span:before{
     right: 100%;
+
 }
 .project_status > span:after{
     left: 100%;
 }
-/*
-.check_it_out:visited {
-    color: rgb(128, 64, 255);
-    background-color: transparent;
-}
-*/
