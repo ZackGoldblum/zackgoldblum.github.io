@@ -64,6 +64,11 @@ body {
     color: rgb(192, 168, 255);
     background-color: transparent;
 }
+
+.project_status {
+    color: #75C6FF; 
+    text-align: center;
+}
 /*
 .check_it_out:visited {
     color: rgb(128, 64, 255);
