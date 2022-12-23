@@ -23,6 +23,7 @@ body {
 }
 
 .check_it_out:link {
+    font-size: 20px;
     color: rgb(192, 168, 255);
     background-color: transparent;
 }
@@ -62,8 +63,13 @@ body {
     flex-basis: 40%;
 }
 
-.proj_text {
+.proj_desc {
     font-size: 20px;
+    margin: 0;
+}
+
+.proj_text {
+    font-size: 18px;
     padding-left: 20px;
   }
 
