@@ -35,6 +35,11 @@ body {
     text-decoration: none;
 }
 
+.back_to_top {
+    color: gray;
+    text-decoration: none;
+}
+
 /* Navigation bar styling */
 .tab_white {
     color: #75C6FF;
@@ -87,12 +92,12 @@ body {
     text-decoration: none;
 }
 
-.project_status > span{
+.project_status > span {
     position: relative;
     display: inline-block;
 }
 
-.project_status > span:before, .project_status > span:after{
+.project_status > span:before, .project_status > span:after {
     content: '';
     color: whitesmoke;
     position: absolute;
@@ -102,10 +107,10 @@ body {
     margin: 0 20px;
 }
 
-.project_status > span:before{
+.project_status > span:before {
     right: 100%;
-
 }
-.project_status > span:after{
+
+.project_status > span:after {
     left: 100%;
 }
