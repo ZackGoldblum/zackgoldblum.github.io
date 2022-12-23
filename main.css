@@ -69,6 +69,26 @@ body {
     color: #75C6FF; 
     text-align: center;
 }
+
+.project_status > span{
+    position: relative;
+    display: inline-block;
+}
+.project_status > span:before, .project_status > span:after{
+    content: '';
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100px;
+    margin: 0 20px;
+}
+.project_status > span:before{
+    right: 100%;
+}
+.project_status > span:after{
+    left: 100%;
+}
 /*
 .check_it_out:visited {
     color: rgb(128, 64, 255);
