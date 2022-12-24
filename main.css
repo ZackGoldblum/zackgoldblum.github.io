@@ -166,10 +166,10 @@ body {
 /* Timeline */
 .timeline {
     margin: 0 auto;
-    max-width: 750px;
+    max-width: 960px;
     padding: 25px;
     display: grid;
-    grid-template-columns: 1fr 3px 1fr;
+    grid-template-columns: 0.4fr 3px 0fr 1fr;
     color: var(--white_color);
 }
 
@@ -220,6 +220,15 @@ body {
     color: var(--blue_color);
     font-size: 1.15em;
     font-weight: bold;
+}
+
+.timeline_image {
+    margin-left: 20px;
+}
+
+.image_thumbnail {
+    width: 100px;
+    height: 100px;
 }
 
 .timeline_paragraph {
