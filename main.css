@@ -1,4 +1,11 @@
 /* Shared styling */
+:root {
+    --blue_text_color: #75C6FF;
+    --purple_link_color: rgb(192, 168, 255);
+    --white_text_color: whitesmoke;
+    --gray_text_color: gray;
+}
+
 html {
     font-size: 22px;
     font-family: Hack, monospace;
@@ -8,13 +15,13 @@ body {
     max-width: 960px;
     margin: auto;
     background-color: rgb(17, 17, 17);
-    color: whitesmoke;
+    color: var(--white_text_color);
     font-family: Hack, monospace;
     padding-bottom: 50px;
 }
 
 .header {
-    color: #75C6FF; 
+    color: var(--blue_text_color); 
     margin:0;
 }
 
@@ -25,35 +32,35 @@ body {
 
 .check_it_out:link {
     font-size: 20px;
-    color: rgb(192, 168, 255);
+    color: var(--purple_link_color);
     background-color: transparent;
 }
 
 .social_media_icons {
-    color: whitesmoke;
+    color: var(--white_text_color);
     font-size: 1.5rem;
     text-decoration: none;
 }
 
 .back_to_top {
-    color: gray;
+    color: var(--gray_text_color);
     text-decoration: none;
 }
 
 /* Navigation bar styling */
 .tab_white {
-    color: #75C6FF;
+    color: var(--blue_text_color);
     font-weight: bold;
     text-decoration: none;
 }
 
 .tab_gray {
-    color: gray;
+    color: var(--gray_text_color);
     text-decoration: none;
 }
 
 .tab_blue {
-    color: #75C6FF;
+    color: var(--blue_text_color);
     font-weight: bold;
     text-decoration: none;
 }
@@ -80,7 +87,7 @@ body {
   }
 
 .project_status {
-    color: #75C6FF; 
+    color: var(--blue_text_color); 
     text-align: center;
     margin-bottom: 4px;
 }
@@ -88,7 +95,7 @@ body {
 .project_jump {
     margin: 0; 
     font-size: 14px;
-    color: gray;
+    color: var(--gray_text_color);
     text-decoration: none;
 }
 
@@ -99,7 +106,7 @@ body {
 
 .project_status > span:before, .project_status > span:after {
     content: '';
-    color: whitesmoke;
+    color: var(--white_text_color);
     position: absolute;
     top: 50%;
     border-bottom: 2px solid;
@@ -123,14 +130,14 @@ body {
 }
 
 .grid-item {
-    border: 2px solid whitesmoke;
+    border: 2px solid var(--white_text_color);
     padding: 20px;
     font-size: 30px;
     text-align: center;
 }
 
 .book_title {
-    color: #75C6FF; 
+    color: var(--blue_text_color); 
     font-size: 20px; 
     font-weight: bold; 
     margin: 0;
@@ -147,11 +154,11 @@ body {
 }
 
 .star_style_blue {
+    color: var(--blue_text_color);
     font-size: 1rem;
-    color: #75C6FF;
 }
 
 .star_style_white {
+    color: var(--white_text_color);
     font-size: 1rem;
-    color: whitesmoke;
 }
