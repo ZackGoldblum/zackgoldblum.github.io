@@ -114,3 +114,44 @@ body {
 .project_status > span:after {
     left: 100%;
 }
+
+/* Bookshelf page styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.book_title {
+    color: #75C6FF; 
+    font-size: 20px; 
+    font-weight: bold; 
+    margin: 0;
+}
+
+.book_author{
+    font-size: 16px;    
+    margin: 0;    
+}
+
+.book_img {
+    width: 200px; 
+    height: auto;
+}
+
+.star_style_blue {
+    font-size: 1rem;
+    color: #75C6FF;
+}
+
+.star_style_white {
+    font-size: 1rem;
+    color: whitesmoke;
+}
