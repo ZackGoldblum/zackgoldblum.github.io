@@ -177,13 +177,6 @@ body {
     margin: 0 20px 20px 20px;
 }
 
-.timeline_component_bg {
-    padding: 1em;
-    background: rgba(255, 255, 255, 0.2);
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
-    /* border-radius: 10px; */
-}
-
 /* LEAVE TILL LAST */
 .timeline_component_bottom {
     margin-bottom: 0;
@@ -219,7 +212,7 @@ body {
 .timeline_title {
     margin: 0;
     color: var(--blue_color);
-    font-size: 1.15em;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -233,5 +226,6 @@ body {
 }
 
 .timeline_paragraph {
-    margin: 1;
+    margin: 0;
+    font-size: 20px;
 }
