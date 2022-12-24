@@ -166,7 +166,7 @@ body {
     font-size: 1rem;
 }
 
-/* Timeline */
+/* About page timeline */
 .timeline {
     margin: 0 auto;
     max-width: 960px;
@@ -178,11 +178,6 @@ body {
 
 .timeline_component {
     margin: 0 20px 20px 20px;
-}
-
-/* LEAVE TILL LAST */
-.timeline_component_bottom {
-    margin-bottom: 0;
 }
 
 .timeline_middle {
@@ -201,7 +196,6 @@ body {
     border-radius: 50%;
 }
 
-/* LEAVE TILL LAST */
 .timeline_point_bottom {
     top: initial;
     bottom: 0;
@@ -220,6 +214,7 @@ body {
 }
 
 .timeline_image {
+    margin-bottom: 40px;
     margin-left: 20px;
 }
 
