@@ -50,17 +50,20 @@ body {
 /* Navigation bar styling */
 .tab_white {
     color: var(--blue_color);
+    font-size: 26px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .tab_gray {
     color: var(--gray_color);
+    font-size: 26px;
     text-decoration: none;
 }
 
 .tab_blue {
     color: var(--blue_color);
+    font-size: 26px;
     font-weight: bold;
     text-decoration: none;
 }
