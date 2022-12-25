@@ -174,8 +174,7 @@ body {
 }
 
 .about_image {
-    flex-basis: 40%;
-    /* border: 2px solid var(--white_color); */
+    flex-basis: 20%;
 }
 
 .about_text {
@@ -187,10 +186,9 @@ body {
 /* About page timeline */
 .timeline {
     margin: 0 auto;
-    max-width: 960px;
     padding: 25px;
     display: grid;
-    grid-template-columns: 0.4fr 3px 0fr 1fr;
+    grid-template-columns: 0.4fr 3px 0fr 1.5fr;
     color: var(--white_color);
 }
 
@@ -243,5 +241,5 @@ body {
 
 .timeline_paragraph {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
