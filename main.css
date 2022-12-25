@@ -229,6 +229,12 @@ body {
     font-weight: bold;
 }
 
+.timeline_subtitle {
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+}
+
 .timeline_image {
     margin-bottom: 40px;
     margin-left: 20px;
@@ -242,4 +248,5 @@ body {
 .timeline_paragraph {
     margin: 0;
     font-size: 18px;
+    color: var(--gray_color);
 }
