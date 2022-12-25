@@ -87,7 +87,7 @@ body {
 .proj_text {
     font-size: 18px;
     padding-left: 20px;
-  }
+}
 
 .project_status {
     color: var(--blue_color); 
@@ -164,6 +164,24 @@ body {
 .star_style_white {
     color: var(--white_color);
     font-size: 1rem;
+}
+
+/* About page styling */
+.about_container {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.about_image {
+    flex-basis: 40%;
+    /* border: 2px solid var(--white_color); */
+}
+
+.about_text {
+    font-size: 20px;
+    padding-left: 20px;
+    align-self: center;
 }
 
 /* About page timeline */
