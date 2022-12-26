@@ -4,17 +4,19 @@
     --purple_color: #c0a8ff;
     --white_color: whitesmoke;
     --gray_color: gray;
+    --dark_gray_color: #111111;
 }
 
 html {
     font-size: 22px;
     font-family: Hack, monospace;
+    background-color: var(--dark_gray_color);
 }
 
 body {
     max-width: 960px;
     margin: auto;
-    background-color: rgb(17, 17, 17);
+    background-color: var(--dark_gray_color);
     color: var(--white_color);
     font-family: Hack, monospace;
     padding-bottom: 50px;
