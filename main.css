@@ -252,3 +252,26 @@ body {
     line-height: 1em;
     color: var(--gray_color);
 }
+
+.affiliation_titles {
+    margin-bottom: 4px; 
+    color: #75C6FF; 
+    font-weight: bold;
+}
+
+#left {
+    float: left; 
+    width: 30%;
+    margin-right: 40px;
+}
+
+#middle {
+    float: left; 
+    width: 30%;
+    margin-right: 40px;
+}
+
+#right {
+    float: left; 
+    width: 30%;
+}
