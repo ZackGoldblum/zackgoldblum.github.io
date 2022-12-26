@@ -136,7 +136,6 @@ body {
 .grid-item {
     border: 2px solid var(--white_color);
     padding: 20px;
-    font-size: 30px;
     text-align: center;
 }
 
@@ -153,18 +152,18 @@ body {
 }
 
 .book_img {
-    width: 200px; 
+    width: 150px; 
     height: auto;
 }
 
 .star_style_blue {
     color: var(--blue_color);
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .star_style_white {
     color: var(--white_color);
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /* About page styling */
@@ -268,10 +267,11 @@ body {
 #middle {
     float: left; 
     width: 30%;
-    margin-right: 40px;
+    margin-left: 8px;
+    margin-right: 10px;
 }
 
 #right {
-    float: left; 
+    float: right; 
     width: 30%;
 }
