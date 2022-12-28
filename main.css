@@ -38,6 +38,12 @@ body {
     background-color: transparent;
 }
 
+.check_it_out:visited {
+    font-size: 20px;
+    color: var(--purple_color);
+    background-color: transparent;
+  }
+
 .social_media_icons {
     color: var(--white_color);
     font-size: 1.5rem;
