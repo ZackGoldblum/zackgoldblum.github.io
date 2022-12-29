@@ -296,7 +296,7 @@ body {
 }
 
 /* Index page styling */
-/* Slideshow modified from Ashfaq Ahmed at Codeconvey */
+/* Modified from https://github.com/Aladinbensassi/CSS3-Slider*/
 #slider {
     width: 800px;
     height: 600px;
@@ -363,7 +363,6 @@ body {
     border: solid var(--dark_gray_color) 2px;
     float: left;
     margin-right: 5px;
-    cursor: pointer;
 }
 
 .switch ul {
