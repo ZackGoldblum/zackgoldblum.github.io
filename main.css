@@ -145,6 +145,7 @@ body {
     border: 2px solid var(--white_color);
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 .book_title {
@@ -162,8 +163,16 @@ body {
 .book_img {
     width: 150px; 
     height: auto;
+    padding-bottom: 30px;
     /* width: 111px; */
     /* height: 167px; */
+}
+
+.star_style_container {
+    position: absolute; 
+    bottom: 20px; 
+    left: 0; 
+    right: 0;
 }
 
 .star_style_blue {
