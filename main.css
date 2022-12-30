@@ -141,14 +141,34 @@ body {
     padding: 10px;
 }
 
-.grid-item {
+.grid-item_S {
     border: 2px solid var(--white_color);
     padding-top: 20px;
     padding-left: 18px;
     padding-right: 18px;
     text-align: center;
     position: relative;
-    height: 420px;
+    height: 400px;
+}
+
+.grid-item_M {
+    border: 2px solid var(--white_color);
+    padding-top: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+    position: relative;
+    height: 400px;
+}
+
+.grid-item_L {
+    border: 2px solid var(--white_color);
+    padding-top: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: center;
+    position: relative;
+    height: 440px;
 }
 
 .book_title {
@@ -163,12 +183,18 @@ body {
     margin: 0;    
 }
 
+.book_img_container {
+    position: absolute;    
+    bottom: 20px; 
+    left: 0; 
+    right: 0;
+}
+
 .book_img {
+    position: relative;
     width: 150px; 
     height: auto;
     padding-bottom: 30px;
-    /* width: 111px; */
-    /* height: 167px; */
 }
 
 .star_style_container {
@@ -299,7 +325,7 @@ body {
 }
 
 /* Index page styling */
-/* Modified from https://github.com/Aladinbensassi/CSS3-Slider*/
+/* Slideshow modified from https://github.com/Aladinbensassi/CSS3-Slider*/
 #slider {
     width: 800px;
     height: 600px;
