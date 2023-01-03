@@ -141,7 +141,7 @@ body {
     padding: 10px;
 }
 
-.grid-item_S {
+.grid_item_S {
     border: 2px solid var(--white_color);
     padding-top: 20px;
     padding-left: 18px;
@@ -151,7 +151,7 @@ body {
     height: 400px;
 }
 
-.grid-item_M {
+.grid_item_M {
     border: 2px solid var(--white_color);
     padding-top: 20px;
     padding-left: 18px;
@@ -161,7 +161,7 @@ body {
     height: 400px;
 }
 
-.grid-item_L {
+.grid_item_L {
     border: 2px solid var(--white_color);
     padding-top: 20px;
     padding-left: 18px;
