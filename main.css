@@ -282,6 +282,7 @@ body {
 
 .timeline_subtitle {
     margin: 0;
+    padding-bottom: 4px;
     font-size: 20px;
     font-style: italic;
 }
@@ -297,10 +298,10 @@ body {
 }
 
 .timeline_bullet {
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: 18px;
-    line-height: 1em;
+    line-height: 1.1em;
     color: var(--gray_color);
 }
 
