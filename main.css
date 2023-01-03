@@ -296,8 +296,9 @@ body {
     height: 100px;
 }
 
-.timeline_paragraph {
-    margin: 0;
+.timeline_bullet {
+    margin-top: 6px;
+    margin-bottom: 6px;
     font-size: 18px;
     line-height: 1em;
     color: var(--gray_color);
