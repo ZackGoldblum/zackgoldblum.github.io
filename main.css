@@ -20,6 +20,7 @@ body {
     color: var(--white_color);
     font-family: Hack, monospace;
     padding-bottom: 50px;
+    background-size: 100%;
 }
 
 .header {
