@@ -305,28 +305,38 @@ body {
     color: var(--gray_color);
 }
 
+.affiliations_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.flex_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left {
+    margin-right: 12px;
+    width: 300px;
+}
+
+#middle {
+    margin-right: 12px;
+    width: 300px;
+}
+
+#right {
+    width: 240px;
+}
+
 .affiliation_titles {
     margin-bottom: 4px; 
     color: #75C6FF; 
     font-weight: bold;
-}
-
-#left {
-    float: left; 
-    width: 30%;
-    margin-right: 40px;
-}
-
-#middle {
-    float: left; 
-    width: 30%;
-    margin-left: 8px;
-    margin-right: 10px;
-}
-
-#right {
-    float: right; 
-    width: 30%;
 }
 
 /* Index page styling */
