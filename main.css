@@ -139,7 +139,6 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    padding: 10px;
 }
 
 .grid_item_S {
