@@ -355,15 +355,15 @@ body {
 }
 
 .slides {
-    width: 400%;
+    width: 500%; /* 100%*num_slides */
     height: 100%;
     position: relative;
-    -webkit-animation: slide 30s infinite;
-    animation: slide 30s infinite;
+    -webkit-animation: slide 20s infinite;
+    animation: slide 20s infinite;
 }
 
 .slider {
-    width: 25%;
+    width: 20%;  /* 100%/num_slides */
     height: 100%;
     float: left;
     position: relative;
@@ -411,6 +411,7 @@ body {
 
 .switch ul {
     overflow: hidden;
+    min-width: 100px;
 } 
 
 .on {
@@ -419,60 +420,72 @@ body {
     border-radius: 50%;
     background: var(--blue_color);
     position: relative;
-    -webkit-animation: on 30s infinite;
-    animation: on 30s infinite;
+    -webkit-animation: on 20s infinite;
+    animation: on 20s infinite;
 }
   
 @keyframes slide {
-    0%, 100%{
-      margin-left: 0%;
+    0%, 100% {
+        margin-left: 0%;  /* slide 1 */
     }
-    21%{
-      margin-left: 0%;
+    14.05% {
+        margin-left: 0%;
     }
-    25%{
-      margin-left: -100%;
+    20.55% {
+        margin-left: -100%;  /* slide 2 */
     }
-    46%{
-      margin-left: -100%;
+    34.55% {
+        margin-left: -100%;
     }
-    50%{
-      margin-left: -200%;
+    41.05% {
+        margin-left: -200%;  /* slide 3 */
     }
-    71%{
-      margin-left: -200%;
+    55.05% {
+        margin-left: -200%;
     }
-    75%{
-      margin-left: -300%;
+    61.55% {
+        margin-left: -300%;  /* slide 4 */
     }
-    96%{
-      margin-left: -300%;
+    75.55% {
+        margin-left: -300%;
+    }
+    82.05% {
+        margin-left: -400%;  /* slide 5 */
+    }
+    96.05% {
+        margin-left: -400%;
     }
 }
   
 @keyframes on {
-    0%, 100%{
-      margin-left: 0%;
+    0%, 100% {
+        margin-left: 0%;  /* circle 1 */
     }
-    21%{
-      margin-left: 0%;
+    14.05% {
+        margin-left: 0%;
     }
-    25%{
-      margin-left: 19px;
+    20.55% {
+        margin-left: 19px;  /* circle 2 */
     }
-    46%{
-      margin-left: 19px;
+    34.55% {
+         margin-left: 19px;
     }
-    50%{
-      margin-left: 38px;
+    41.05% {
+        margin-left: 38px;  /* circle 3 */
     }
-    71%{
-      margin-left: 38px;
+    55.05% {
+        margin-left: 38px;
     }
-    75%{
-      margin-left: 57px;
+    61.55% {
+        margin-left: 57px;  /* circle 4 */
     }
-    96%{
-      margin-left: 57px;
+    75.55% {
+        margin-left: 57px;
+    }
+    82.05% {
+        margin-left: 76px;  /* circle 5 */
+    }
+    96.05% {
+        margin-left: 76px;
     }
 }
