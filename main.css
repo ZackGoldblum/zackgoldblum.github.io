@@ -23,6 +23,16 @@ body {
     background-size: 100%;
 }
 
+.mobile_line_breaks {
+    display: none
+}
+
+@media screen and (max-width: 600px) {
+    .mobile_line_breaks {
+        display: block
+    }
+}
+
 .header {
     color: var(--blue_color); 
     margin:0;
