@@ -23,12 +23,12 @@ body {
     background-size: 100%;
 }
 
-.mobile_line_breaks {
+.mobile_line_break {
     display: none
 }
 
 @media screen and (max-width: 600px) {
-    .mobile_line_breaks {
+    .mobile_line_break {
         display: block
     }
 }
