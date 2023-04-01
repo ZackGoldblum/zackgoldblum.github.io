@@ -164,7 +164,7 @@ body {
 .grid_item_L {
     border: 2px solid var(--white_color);
     padding-top: 20px;
-    padding-left: 18px;
+    padding-left: 14px;
     padding-right: 18px;
     text-align: center;
     position: relative;
