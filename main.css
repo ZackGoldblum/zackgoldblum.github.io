@@ -91,6 +91,7 @@ body {
 .proj_desc {
     font-size: 20px;
     margin: 0;
+    margin-bottom: -3px;
 }
 
 .proj_text {
