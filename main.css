@@ -5,6 +5,10 @@
     --white_color: whitesmoke;
     --gray_color: gray;
     --dark_gray_color: #111111;
+    --orange_color: #b39063;
+    --green_color: #4bb18f;
+    --pink_color: #ad6db4;
+    --red_color: #b14f4f;
 }
 
 html {
@@ -134,6 +138,14 @@ body {
 
 .project_status>span:after {
     left: 100%;
+}
+
+/* Research page styling */
+.tag_style {
+    font-size: 18px; 
+    color: var(--white_color);
+    border-radius: 4px;
+    padding: 0.01rem 0.25rem;
 }
 
 /* Bookshelf page styling */
