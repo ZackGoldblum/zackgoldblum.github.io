@@ -5,10 +5,16 @@
     --white_color: whitesmoke;
     --gray_color: gray;
     --dark_gray_color: #121212;
+    --medium_gray_color: #181818;
+    --light_gray_color: rgb(50, 50, 50);
     --orange_color: #b39063;
     --green_color: #4bb18f;
     --pink_color: #ad6db4;
     --red_color: #b14f4f;
+    --dark_purple_color: #282434;
+
+    --border_radius: 8px;
+    --internal_padding: 20px;
 }
 
 html {
@@ -30,6 +36,10 @@ body {
 .header {
     color: var(--blue_color);
     margin: 0;
+}
+
+.header_margin {
+    margin-top: 6px;
 }
 
 .paragraph {
@@ -60,6 +70,13 @@ body {
     text-decoration: none;
 }
 
+.item_container {
+    background-color: var(--medium_gray_color);
+    border-radius: var(--border_radius); 
+    padding: var(--internal_padding);;
+    border: 2px solid var(--dark_purple_color);
+}
+
 /* Navigation bar styling */
 .tab_white {
     color: var(--blue_color);
@@ -82,7 +99,7 @@ body {
 }
 
 /* Project page styling */
-.proj_container {
+.proj_content {
     display: flex;
     align-items: top;
     justify-content: center;
@@ -153,6 +170,7 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    
 }
 
 .grid_item_S {
@@ -236,10 +254,11 @@ body {
     display: flex;
     align-items: top;
     justify-content: center;
+    margin: 10px 12% 0px 12%;
 }
 
 .about_image {
-    flex-basis: 20%;
+    flex-basis: 0%;
 }
 
 .about_text {
@@ -252,13 +271,24 @@ body {
 .timeline {
     margin: 0 auto;
     padding: 25px;
-    display: grid;
-    grid-template-columns: 0.4fr 3px 0fr 1.5fr;
+    display: flex;
+    flex-direction: column;
     color: var(--white_color);
 }
 
-.timeline_component {
-    margin: 0 20px 20px 20px;
+.timeline_entry {
+    background-color: var(--medium_gray_color); 
+    border-radius: var(--border_radius); 
+    border: 2px solid var(--dark_purple_color);
+    padding: var(--internal_padding); 
+    margin-bottom: 20px; 
+    display: grid;
+    grid-template-columns: 0.19fr 2px 1fr;
+    grid-gap: 20px; 
+}
+
+.timeline_left {
+    padding-right: 10px;
 }
 
 .timeline_middle {
@@ -266,6 +296,9 @@ body {
     background: var(--white_color);
 }
 
+.timeline_right {
+    padding-left: 10px;
+}
 .timeline_point {
     position: absolute;
     top: 0;
@@ -309,13 +342,14 @@ body {
 }
 
 .timeline_image {
-    margin-bottom: 40px;
-    margin-left: 20px;
+    margin-bottom: 0px;
+    text-align: right;
 }
 
 .image_thumbnail {
     width: 100px;
     height: 100px;
+    margin-right: 0;
 }
 
 .timeline_bullet {
