@@ -160,6 +160,7 @@ body {
 
 /* Research page styling */
 .tag_style {
+    font-family: 'Hack';
     font-size: 18px; 
     color: var(--white_color);
     border-radius: 4px;
@@ -358,6 +359,11 @@ body {
     font-size: 18px;
     line-height: 1.1em;
     color: var(--gray_color);
+}
+
+.tag_style_numeric {
+    font-size: 14px; 
+    background-color: var(--light_gray_color);
 }
 
 #affiliations_container {
