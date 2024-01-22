@@ -1,66 +1,40 @@
-import "./main.css"
-import * as THREE from "three";
+import * as THREE from 'three';
+
+function createStarfield(num, range) {
+    const geometry = new THREE.BufferGeometry();
+    const material = new THREE.PointsMaterial({ color: 0xffffff, size: 1.5 });
+
+    const vertices = [];
+    for (let i = 0; i < num; i++) {
+        vertices.push(
+            THREE.MathUtils.randFloatSpread(range),
+            THREE.MathUtils.randFloatSpread(range),
+            THREE.MathUtils.randFloatSpread(range)
+        );
+    }
+
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    return new THREE.Points(geometry, material);
+}
 
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000000); // Set the background to black
+
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#background')
-});
+camera.position.z = 1200;
 
-renderer.setPixelRatio(window.devicePixelRatio);
+const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#background'), antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.setX(-3);
-camera.position.setZ(30);
 
-renderer.render(scene, camera);
-
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(ambientLight)
-const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(gridHelper)
-
-const size = 2000;
-const vertices = [];
-
-for (let i = 0; i < 20000; i++) {
-    const x = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-    const y = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-    const z = (Math.random() * size + Math.random() * size) / 2 - size / 2;
-
-    vertices.push(x, y, z);
-}
-
-function addStar() {
-    const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-    const material = new THREE.MeshStandardMaterial({
-        color: 0xffffff
-    });
-    const star = new THREE.Mesh(geometry, material)
-
-    const [x, y, z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
-    star.position.set(x, y, z);
-    scene.add(star)
-}
-
-Array(2000).fill().forEach(addStar)
-
-// const backgroundTexture = new THREE.TextureLoader().load("desktop_bg.jpg")
-const backgroundTexture = new THREE.TextureLoader().load()
-scene.background = backgroundTexture;
-
-function moveCamera() {
-    const t = document.body.getBoundingClientRect().top;
-    camera.position.x = t * -0.0002;
-    camera.position.y = t * -0.0002;
-    camera.position.z = t * -0.01;
-}
-
-document.body.onscroll = moveCamera;
-moveCamera();
+const stars = createStarfield(20000, 2000);
+scene.add(stars);
 
 function animate() {
     requestAnimationFrame(animate);
+    camera.position.z -= 5 * clock.getDelta();
+    if (camera.position.z <= 0) camera.position.z = 1200;
     renderer.render(scene, camera);
 }
 
-animate()
+const clock = new THREE.Clock();
+animate();
