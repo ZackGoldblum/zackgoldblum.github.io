@@ -13,9 +13,8 @@
     --red_color: #b14f4f;
     --dark_purple_color: #282434;
 
-    --border_radius: 20px;
+    --border_radius: 8px;
     --internal_padding: 20px;
-    --item_background_color: rgba(0, 0, 0, 0.85);
 }
 
 html {
@@ -32,18 +31,6 @@ body {
     font-family: Hack, monospace;
     padding-bottom: 50px;
     background-size: 100%;
-}
-
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-main {
-    position: absolute;
-    width: 960px;
-    margin: 0 auto;
 }
 
 .header {
@@ -84,7 +71,7 @@ main {
 }
 
 .item_container {
-    background-color: var(--item_background_color);
+    background-color: var(--medium_gray_color);
     border-radius: var(--border_radius); 
     padding: var(--internal_padding);;
     border: 2px solid var(--dark_purple_color);
@@ -187,7 +174,7 @@ main {
 }
 
 .grid_item_S {
-    background-color: var(--item_background_color);
+    background-color: var(--medium_gray_color);
     border-radius: var(--border_radius); 
     padding: var(--internal_padding);;
     border: 2px solid var(--dark_purple_color);
@@ -200,7 +187,7 @@ main {
 }
 
 .grid_item_M {
-    background-color: var(--item_background_color);
+    background-color: var(--medium_gray_color);
     border-radius: var(--border_radius); 
     padding: var(--internal_padding);;
     border: 2px solid var(--dark_purple_color);
@@ -213,7 +200,7 @@ main {
 }
 
 .grid_item_L {
-    background-color: var(--item_background_color);
+    background-color: var(--medium_gray_color);
     border-radius: var(--border_radius); 
     padding: var(--internal_padding);;
     border: 2px solid var(--dark_purple_color);
@@ -302,7 +289,7 @@ main {
 }
 
 .timeline_entry {
-    background-color: var(--item_background_color); 
+    background-color: var(--medium_gray_color); 
     border-radius: var(--border_radius); 
     border: 2px solid var(--dark_purple_color);
     padding: var(--internal_padding); 
