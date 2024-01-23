@@ -13,88 +13,92 @@
 </head>
 
 <body>
-    <h1 style="text-align: center;">
-        <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
-        <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a class="social_media_icons" href="https://x.com/ZackGoldblum"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a class="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a class="social_media_icons" href="http://www.youtube.com/@braintechyoutube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-        <!-- TODO: handle email scraping bots -->
-        <a class="social_media_icons" href="mailto:zackgoldblum@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-    </h1>
-    <hr>
-    <p>
-    <div style="text-align: center;">
-        <a class="tab_white" href="projects" id="projects">Projects</a> |
-        <a class="tab_white" href="research" id="research">Research</a> |
-        <a class="tab_white" href="bookshelf" id="bookshelf">Bookshelf</a> |
-        <a class="tab_white" href="about" id="about">About</a>
-    </div>
-    </p>
-    <hr>
-    <div style="display: flex; align-items: center; justify-content: center;">
+    <canvas id="background"></canvas>
+    <main>
+        <h1 style="text-align: center;">
+            <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
+            <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a class="social_media_icons" href="https://x.com/ZackGoldblum"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="social_media_icons" href="http://www.youtube.com/@braintechyoutube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <!-- TODO: handle email scraping bots -->
+            <a class="social_media_icons" href="mailto:zackgoldblum@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </h1>
+        <hr>
+        <p>
+        <div style="text-align: center;">
+            <a class="tab_white" href="projects" id="projects">Projects</a> |
+            <a class="tab_white" href="research" id="research">Research</a> |
+            <a class="tab_white" href="bookshelf" id="bookshelf">Bookshelf</a> |
+            <a class="tab_white" href="about" id="about">About</a>
+        </div>
+        </p>
+        <hr>
+        <div style="display: flex; align-items: center; justify-content: center;">
         <p class="item_container" style="text-align: center; margin-top: 40px; margin-bottom: 40px; max-width: 80%"
             id="body_text">
-            Hello! Welcome to my website. I do cool brain stuff.
-        </p>
-    </div>
-    <div id="slider">
-        <div class="slides">
-            <div class="slider">
-                <div class="image">
-                    <img src="assets/index/slides1.png" alt="Zack Goldblum fNIRS study Longwood Gardens">
+                Hello! Welcome to my website. I do cool brain stuff.
+            </p>
+        </div>
+        <div id="slider">
+            <div class="slides">
+                <div class="slider">
+                    <div class="image">
+                        <img src="assets/index/slides1.png" alt="Zack Goldblum fNIRS study Longwood Gardens">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="image">
+                        <img src="assets/index/slides2.png" alt="Zack Goldblum Kernel Flow study">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="image">
+                        <img src="assets/index/slides3.png" alt="Zack Goldblum OpenBCI headset">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="image">
+                        <img src="assets/index/slides4.png" alt="Zack Goldblum fNIRS study selfie">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="image">
+                        <img src="assets/index/slides5.png" alt="Zack Goldblum EEG headset">
+                    </div>
                 </div>
             </div>
             <div class="slider">
-                <div class="image">
-                    <img src="assets/index/slides2.png" alt="Zack Goldblum Kernel Flow study">
+                <div class="content">
+                    <div class="image">
+                        <img src="assets/index/slides5.png" alt="Zack Goldblum EEG headset">
+                    </div>
                 </div>
             </div>
-            <div class="slider">
-                <div class="image">
-                    <img src="assets/index/slides3.png" alt="Zack Goldblum OpenBCI headset">
-                </div>
-            </div>
-            <div class="slider">
-                <div class="image">
-                    <img src="assets/index/slides4.png" alt="Zack Goldblum fNIRS study selfie">
-                </div>
-            </div>
-            <div class="slider">
-                <div class="image">
-                    <img src="assets/index/slides5.png" alt="Zack Goldblum EEG headset">
-                </div>
+            <div class="switch">
+                <ul>
+                    <li>
+                        <div class="on"></div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
-        <div class="slider">
-            <div class="content">
-                <div class="image">
-                    <img src="assets/index/slides5.png" alt="Zack Goldblum EEG headset">
-                </div>
-            </div>
-        </div>
-        <div class="switch">
-            <ul>
-                <li>
-                    <div class="on"></div>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </div>
+        <script type="module" src="main.js"></script>
+    </main>
 </body>
 
 </html>
