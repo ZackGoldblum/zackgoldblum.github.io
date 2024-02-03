@@ -16,6 +16,8 @@
     --border_radius: 20px;
     --internal_padding: 20px;
     --item_background_color: rgba(0, 0, 0, 0.85);
+    --button_size: 25px;
+    --transition_time: 0.4s;
 }
 
 html {
@@ -55,7 +57,6 @@ main {
 }
 
 #starsButton {
-    width: 25px;
     height: auto;
 }
 
@@ -68,7 +69,6 @@ main {
 }
 
 #playpauseButton {
-    width: 25px;
     height: auto;
 }
 
@@ -81,14 +81,29 @@ main {
 }
 
 #backButton {
-    width: 25px;
     height: auto;
+}
+
+#starsButton,
+#playpauseButton,
+#backButton {
+    width: var(--button_size);
+    height: auto;
+    display: block;  /* removes unclickable padding around button images */
+}
+
+#starsButtonContainer,
+#playpauseButtonContainer,
+#backButtonContainer {
+    cursor: pointer;
+    transition: filter var(--transition_time) ease;
 }
 
 #starsButtonContainer:hover,
 #playpauseButtonContainer:hover,
 #backButtonContainer:hover {
-    filter: brightness(0) invert(0.85);
+    /* TODO: Fix dark flash */
+    filter: brightness(0) invert(0.85); 
 }
 
 .header {
@@ -128,6 +143,15 @@ main {
     text-decoration: none;
 }
 
+.back_to_top .item_container {
+    transition: color var(--transition_time) ease, background-color var(--transition_time) ease;
+}
+
+.back_to_top .item_container:hover {
+    color: var(--white_color);
+    font-weight: bold;
+}
+
 .item_container {
     background-color: var(--item_background_color);
     border-radius: var(--border_radius);
@@ -148,6 +172,10 @@ main {
     color: var(--gray_color);
     font-size: 26px;
     text-decoration: none;
+}
+
+.tab_gray {
+    transition: color var(--transition_time) ease, background-color var(--transition_time) ease;
 }
 
 .tab_gray:hover {
