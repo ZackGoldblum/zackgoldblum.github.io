@@ -150,6 +150,11 @@ main {
     text-decoration: none;
 }
 
+.tab_gray:hover {
+    color: var(--white_color);
+    font-weight: bold;
+}
+
 .tab_blue {
     color: var(--blue_color);
     font-size: 26px;
