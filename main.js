@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (starsButton) {
         starsButton.addEventListener('click', function () {
-            window.location.href = 'space.html';
+            window.location.href = 'space';
         });
     }
 });
