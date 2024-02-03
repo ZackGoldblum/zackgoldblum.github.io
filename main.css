@@ -265,45 +265,21 @@ main {
     grid-gap: 16px;
 }
 
-.grid_item_S {
-    background-color: var(--item_background_color);
-    border-radius: var(--border_radius);
-    padding: var(--internal_padding);
-    ;
-    border: 2px solid var(--dark_purple_color);
-    padding-top: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
-    text-align: center;
-    position: relative;
-    height: 400px;
-}
-
-.grid_item_M {
-    background-color: var(--item_background_color);
-    border-radius: var(--border_radius);
-    padding: var(--internal_padding);
-    ;
-    border: 2px solid var(--dark_purple_color);
-    padding-top: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
-    text-align: center;
-    position: relative;
-    height: 400px;
-}
-
+.grid_item_S,
 .grid_item_L {
     background-color: var(--item_background_color);
     border-radius: var(--border_radius);
     padding: var(--internal_padding);
-    ;
     border: 2px solid var(--dark_purple_color);
-    padding-top: 20px;
-    padding-left: 14px;
-    padding-right: 18px;
     text-align: center;
     position: relative;
+}
+
+.grid_item_S {
+    height: 400px;
+}
+
+.grid_item_L {
     height: 440px;
 }
 
@@ -314,12 +290,33 @@ main {
     margin: 0;
 }
 
+.title_pad_top_13 {
+    padding-top: 13px;
+}
+
+.title_pad_top_24 {
+    padding-top: 24px;
+}
+
+.title_pad_top_37 {
+    padding-top: 37px;
+}
+
 .book_author {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 330px;
     font-size: 16px;
     margin: 0;
+}
+
+.author_pad_bottom_310{
+    bottom: 310px;
+}
+
+.author_pad_bottom_350{
+    bottom: 350px;
 }
 
 .book_img_container {
