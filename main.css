@@ -46,7 +46,7 @@ main {
     margin: 0 auto;
 }
 
-#playpauseButtonContainer {
+#starsButtonContainer {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -54,9 +54,41 @@ main {
     cursor: pointer;
 }
 
+#starsButton {
+    width: 25px;
+    height: auto;
+}
+
+#playpauseButtonContainer {
+    position: fixed;
+    top: 10px;
+    right: 45px;
+    z-index: 10;
+    cursor: pointer;
+}
+
 #playpauseButton {
     width: 25px;
     height: auto;
+}
+
+#backButtonContainer {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#backButton {
+    width: 25px;
+    height: auto;
+}
+
+#starsButtonContainer:hover,
+#playpauseButtonContainer:hover,
+#backButtonContainer:hover {
+    filter: brightness(0) invert(0.85);
 }
 
 .header {

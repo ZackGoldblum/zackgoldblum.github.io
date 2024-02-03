@@ -60,4 +60,24 @@ if (pauseButton) {
     pauseButton.addEventListener('click', togglePause);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const starsButton = document.getElementById('starsButton');
+
+    if (starsButton) {
+        starsButton.addEventListener('click', function () {
+            window.location.href = 'space.html';
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backButton = document.getElementById('backButton');
+
+    if (backButton) {
+        backButton.addEventListener('click', function() {
+            window.history.back();
+        });
+    }
+});
+
 animate();
