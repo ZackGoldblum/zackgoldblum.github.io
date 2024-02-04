@@ -15,6 +15,12 @@
 <body>
     <canvas id="background"></canvas>
     <main>
+        <div id="starsButtonContainer">
+            <img src="assets/buttons/stars.png" id="starsButton">
+        </div>
+        <div id="playpauseButtonContainer">
+            <img src="assets/buttons/pause.png" id="playpauseButton">
+        </div>
         <h1 style="text-align: center;">
             <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
             <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
@@ -46,12 +52,74 @@
         <hr>
         <div style="padding-left: 20px; padding-right: 20px;">
             <h3>
-                <u>2023-2024</u>
+                <u>2024-2025</u>
             </h3>
             <div class="grid-container">
                 <div class="grid_item_S">
-                    <p class="book_title">BLAME! 3</p><br>
-                    <p class="book_author" style="bottom: 330px;">Tsutomu Nihei</p><br>
+                    <p class="book_title">The Lovecraft Compendium</p><br>
+                    <p class="book_author author_pad_bottom_310">H. P. Lovecraft</p><br>
+                    <div class="book_img_container">
+                        <img class="book_img" src="assets/books/the_lovecraft_compendium.jpg"
+                            alt="The Lovecraft Compendium book cover"><br>
+                    </div>
+                    <div class="star_style_container">
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                        <i class="fa-regular fa-star star_style_white"></i>
+                    </div>
+                </div>
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">BLAME! 6</p><br>
+                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+                    <div class="book_img_container">
+                        <img class="book_img" src="assets/books/blame_6.jpg" alt="BLAME! 6 book cover"><br>
+                    </div>
+                    <div class="star_style_container">
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-regular fa-star star_style_white"></i>
+                    </div>
+                </div>
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">BLAME! 5</p><br>
+                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+                    <div class="book_img_container">
+                        <img class="book_img" src="assets/books/blame_5.jpg" alt="BLAME! 5 book cover"><br>
+                    </div>
+                    <div class="star_style_container">
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                    </div>
+                </div>
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">BLAME! 4</p><br>
+                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+                    <div class="book_img_container">
+                        <img class="book_img" src="assets/books/blame_4.jpg" alt="BLAME! 4 book cover"><br>
+                    </div>
+                    <div class="star_style_container">
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-solid fa-star star_style_blue"></i>
+                        <i class="fa-regular fa-star star_style_white"></i>
+                    </div>
+                </div>
+            </div>
+            <h3>
+                <br><u>2023-2024</u>
+            </h3>
+            <div class="grid-container">
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">BLAME! 3</p><br>
+                    <p class="book_author">Tsutomu Nihei</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/blame_3.jpg" alt="BLAME! 3 book cover"><br>
                     </div>
@@ -64,8 +132,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title">BLAME! 2</p><br>
-                    <p class="book_author" style="bottom: 330px;">Tsutomu Nihei</p><br>
+                    <p class="book_title title_pad_top_13">BLAME! 2</p><br>
+                    <p class="book_author">Tsutomu Nihei</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/blame_2.jpg" alt="BLAME! 2 book cover"><br>
                     </div>
@@ -78,8 +146,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title">BLAME! 1</p><br>
-                    <p class="book_author" style="bottom: 330px;">Tsutomu Nihei</p><br>
+                    <p class="book_title title_pad_top_13">BLAME! 1</p><br>
+                    <p class="book_author">Tsutomu Nihei</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/blame_1.jpg" alt="BLAME! 1 book cover"><br>
                     </div>
@@ -93,7 +161,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Those Who Resist</p><br>
-                    <p class="book_author" style="bottom: 330px;">N. C. Scrimgeour</p><br>
+                    <p class="book_author">N. C. Scrimgeour</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/those_who_resist.jpg"
                             alt="Those Who Resist book cover"><br>
@@ -107,8 +175,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Those Once Forgotten</p><br>
-                    <p class="book_author" style="bottom: 330px;">N. C. Scrimgeour</p><br>
+                    <p class="book_title title_pad_top_24">Those Once Forgotten</p><br>
+                    <p class="book_author">N. C. Scrimgeour</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/those_once_forgotten.jpg"
                             alt="Those Once Forgotten book cover"><br>
@@ -122,8 +190,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Those Left Behind</p><br>
-                    <p class="book_author" style="bottom: 330px;">N. C. Scrimgeour</p><br>
+                    <p class="book_title title_pad_top_24">Those Left Behind</p><br>
+                    <p class="book_author">N. C. Scrimgeour</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/those_left_behind.jpg"
                             alt="Those Left Behind book cover"><br>
@@ -137,8 +205,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Children of Memory</p><br>
-                    <p class="book_author" style="bottom: 330px;">Adrian Tchaikovsky</p><br>
+                    <p class="book_title title_pad_top_24">Children of Memory</p><br>
+                    <p class="book_author">Adrian Tchaikovsky</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/children_of_memory.jpg"
                             alt="Children of Memory book cover"><br>
@@ -153,7 +221,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">What is ChatGPT Doing and Why Does It Work?</p><br>
-                    <p class="book_author" style="bottom: 330px;">Stephen Wolfram</p><br>
+                    <p class="book_author">Stephen Wolfram</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/what_is_chatgpt_doing_and_why_does_it_work.jpg"
                             alt="What is ChatGPT Doing and Why Does It Work? book cover"><br>
@@ -168,7 +236,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Apex</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ramez Naam</p><br>
+                    <p class="book_author">Ramez Naam</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/apex.jpg" alt="Apex book cover"><br>
                     </div>
@@ -182,7 +250,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Crux</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ramez Naam</p><br>
+                    <p class="book_author">Ramez Naam</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/crux.jpg" alt="Crux book cover"><br>
                     </div>
@@ -196,7 +264,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Nexus</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ramez Naam</p><br>
+                    <p class="book_author">Ramez Naam</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/nexus.jpg" alt="Nexus book cover"><br>
                     </div>
@@ -210,7 +278,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Exhalation</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ted Chiang</p><br>
+                    <p class="book_author">Ted Chiang</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/exhalation.jpg" alt="Exhalation book cover"><br>
                     </div>
@@ -223,8 +291,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Stories of Your Life and Others</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ted Chiang</p><br>
+                    <p class="book_title">Stories of Your Life and Others</p><br>
+                    <p class="book_author">Ted Chiang</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/stories_of_your_life_and_others.jpg"
                             alt="Stories of Your Life and Others book cover"><br>
@@ -238,8 +306,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 23px;">Animal Farm</p><br>
-                    <p class="book_author" style="bottom: 330px;">George Orwell</p><br>
+                    <p class="book_title title_pad_top_24">Animal Farm</p><br>
+                    <p class="book_author">George Orwell</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/animal_farm.jpg" alt="Animal Farm book cover"><br>
                     </div>
@@ -252,8 +320,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">The Exodus Betrayal</p><br>
-                    <p class="book_author" style="bottom: 330px;">N. C. Scrimgeour</p><br>
+                    <p class="book_title title_pad_top_13">The Exodus Betrayal</p><br>
+                    <p class="book_author">N. C. Scrimgeour</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_exodus_betrayal.jpg"
                             alt="The Exodus Betrayal book cover"><br>
@@ -268,7 +336,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">You Look Like a Thing and I Love You</p><br>
-                    <p class="book_author" style="bottom: 330px;">Janelle Shane</p><br>
+                    <p class="book_author">Janelle Shane</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/you_look_like_a_thing_and_i_love_you.jpg"
                             alt="You Look Like a Thing and I Love You book cover"><br>
@@ -281,9 +349,9 @@
                         <i class="fa-solid fa-star star_style_blue"></i>
                     </div>
                 </div>
-                <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 23px;">Livewired</p><br>
-                    <p class="book_author" style="bottom: 330px;">David Eagleman</p><br>
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">Livewired</p><br>
+                    <p class="book_author author_pad_bottom_310">David Eagleman</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/livewired.jpg" alt="Livewired book cover"><br>
                     </div>
@@ -295,9 +363,9 @@
                         <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
                     </div>
                 </div>
-                <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Project Hail Mary</p><br>
-                    <p class="book_author" style="bottom: 330px;">Andy Weir</p><br>
+                <div class="grid_item_S">
+                    <p class="book_title">Project Hail Mary</p><br>
+                    <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/project_hail_mary.jpg"
                             alt="Project Hail Mary book cover"><br>
@@ -310,9 +378,9 @@
                         <i class="fa-solid fa-star star_style_blue"></i>
                     </div>
                 </div>
-                <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 23px;">The Alchemist</p><br>
-                    <p class="book_author" style="bottom: 330px;">Paulo Coelho</p><br>
+                <div class="grid_item_S">
+                    <p class="book_title title_pad_top_13">The Alchemist</p><br>
+                    <p class="book_author author_pad_bottom_310">Paulo Coelho</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_alchemist.jpg" alt="The Alchemist book cover"><br>
                     </div>
@@ -330,8 +398,8 @@
             </h3>
             <div class="grid-container">
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Chapterhouse: Dune</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_title">Chapterhouse: Dune</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/chapterhouse_dune.jpg"
                             alt="Chapterhouse Dune book cover"><br>
@@ -346,7 +414,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">Heretics of Dune</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/heretics_of_dune.jpg"
                             alt="Heretics of Dune book cover"><br>
@@ -361,7 +429,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">God Emperor of Dune</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/god_emperor_of_dune.jpg"
                             alt="God Emperor of Dune book cover"><br>
@@ -375,8 +443,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Children of Dune</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_title">Children of Dune</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/children_of_dune.jpg"
                             alt="Children of Dune book cover"><br>
@@ -390,8 +458,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Dune Messiah</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_title title_pad_top_13">Dune Messiah</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/dune_messiah.jpg" alt="Dune Messiah book cover"><br>
                     </div>
@@ -404,8 +472,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Dune</p><br>
-                    <p class="book_author" style="bottom: 350px;">Frank Herbert</p><br>
+                    <p class="book_title title_pad_top_13">Dune</p><br>
+                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/dune.jpg" alt="Dune book cover"><br>
                     </div>
@@ -419,7 +487,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">To Hold Up the Sky</p><br>
-                    <p class="book_author" style="bottom: 350px;">Cixin Liu</p><br>
+                    <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/to_hold_up_the_sky.jpg"
                             alt="To Hold Up the Sky book cover"><br>
@@ -434,7 +502,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">The Wandering Earth</p><br>
-                    <p class="book_author" style="bottom: 350px;">Cixin Liu</p><br>
+                    <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_wandering_earth.jpg"
                             alt="The Wandering Earth book cover"><br>
@@ -448,8 +516,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">Pale Blue Dot</p><br>
-                    <p class="book_author" style="bottom: 310px;">Carl Sagan</p><br>
+                    <p class="book_title title_pad_top_13">Pale Blue Dot</p><br>
+                    <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/pale_blue_dot.jpg" alt="Pale Blue Dot book cover"><br>
                     </div>
@@ -462,8 +530,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">Cosmos</p><br>
-                    <p class="book_author" style="bottom: 310px;">Carl Sagan</p><br>
+                    <p class="book_title title_pad_top_13">Cosmos</p><br>
+                    <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/cosmos.jpg" alt="Cosmos book cover"><br>
                     </div>
@@ -477,7 +545,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Brave New World</p><br>
-                    <p class="book_author" style="bottom: 310px;">Aldous Huxley</p><br>
+                    <p class="book_author author_pad_bottom_310">Aldous Huxley</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/brave_new_world.jpg"
                             alt="Brave New World book cover"><br>
@@ -491,8 +559,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">The Martian</p><br>
-                    <p class="book_author" style="bottom: 310px;">Andy Weir</p><br>
+                    <p class="book_title title_pad_top_13">The Martian</p><br>
+                    <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_martian.jpg" alt="The Martian book cover"><br>
                     </div>
@@ -510,7 +578,7 @@
             </h3>
             <div class="grid-container">
                 <div class="grid_item_S">
-                    <p class="book_title">Minus 148</p><br>
+                    <p class="book_title title_pad_top_13">Minus 148</p><br>
                     <p class="book_author">Art Davidson</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/minus_148.jpg" alt="Minus 148 book cover"><br>
@@ -569,8 +637,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title">21 Lessons for the 21<sup>st</sup> Century</p><br>
-                    <p class="book_author" style="bottom: 310px;">Yuval Noah Harari</p><br>
+                    <p class="book_title">21 Lessons for the 21st Century</p><br>
+                    <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/21_lessons_for_the_21st_century.jpg"
                             alt="21 Lessons for the 21st Century book cover"><br>
@@ -584,8 +652,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">Homo Deus</p><br>
-                    <p class="book_author" style="bottom: 310px;">Yuval Noah Harari</p><br>
+                    <p class="book_title title_pad_top_24">Homo Deus</p><br>
+                    <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/homo_deus.jpg" alt="Home Deus book cover"><br>
                     </div>
@@ -598,8 +666,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">Ball Lightning</p><br>
-                    <p class="book_author" style="bottom: 310px;">Cixin Liu</p><br>
+                    <p class="book_title title_pad_top_24">Ball Lightning</p><br>
+                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/ball_lightning.jpg" alt="Ball Lightning book cover"><br>
                     </div>
@@ -612,8 +680,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">Death's End</p><br>
-                    <p class="book_author" style="bottom: 310px;">Cixin Liu</p><br>
+                    <p class="book_title title_pad_top_24">Death's End</p><br>
+                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/deaths_end.jpg" alt="Deaths End book cover"><br>
                     </div>
@@ -626,8 +694,8 @@
                     </div>
                 </div>
                 <div class="grid_item_S">
-                    <p class="book_title" style="padding-top: 13px;">The Dark Forest</p><br>
-                    <p class="book_author" style="bottom: 310px;">Cixin Liu</p><br>
+                    <p class="book_title">The Dark Forest</p><br>
+                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_dark_forest.jpg"
                             alt="The Dark Forest book cover"><br>
@@ -642,7 +710,7 @@
                 </div>
                 <div class="grid_item_S">
                     <p class="book_title">Three Body Problem</p><br>
-                    <p class="book_author" style="bottom: 310px;">Cixin Liu</p><br>
+                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/three_body_problem.jpg"
                             alt="Three Body Problem book cover"><br>
@@ -661,8 +729,8 @@
             </h3>
             <div class="grid-container">
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">For Whom the Bell Tolls</p><br>
-                    <p class="book_author" style="bottom: 330px;">Ernest Hemingway</p><br>
+                    <p class="book_title title_pad_top_13">For Whom the Bell Tolls</p><br>
+                    <p class="book_author">Ernest Hemingway</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/for_whom_the_bell_tolls.jpg"
                             alt="For Whom the Bell Tolls book cover"><br>
@@ -676,8 +744,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 23px;">Mostly Harmless</p><br>
-                    <p class="book_author" style="bottom: 330px;">Douglas Adams</p><br>
+                    <p class="book_title title_pad_top_13">Mostly Harmless</p><br>
+                    <p class="book_author">Douglas Adams</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/mostly_harmless.jpg"
                             alt="Mostly Harmless book cover"><br>
@@ -692,7 +760,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">So Long, and Thanks for all the Fish</p><br>
-                    <p class="book_author" style="bottom: 330px;">Douglas Adams</p><br>
+                    <p class="book_author">Douglas Adams</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/so_long_and_thanks_for_all_the_fish.jpg"
                             alt="So Long and Thanks for all the Fish book cover"><br>
@@ -707,7 +775,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">Life, the Universe and Everything</p><br>
-                    <p class="book_author" style="bottom: 330px;">Douglas Adams</p><br>
+                    <p class="book_author">Douglas Adams</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/life_the_universe_and_everything.jpg"
                             alt="Life the Universe and Everything book cover"><br>
@@ -721,8 +789,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title">The Restaurant at the End of the Universe</p><br>
-                    <p class="book_author" style="bottom: 330px;">Douglas Adams</p><br>
+                    <p class="book_title title_pad_top_13">The Restaurant at the End of the Universe</p><br>
+                    <p class="book_author">Douglas Adams</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_restaurant_at_the_end_of_the_universe.jpg"
                             alt="The Restaurant at the End of the Universe book cover"><br>
@@ -737,7 +805,7 @@
                 </div>
                 <div class="grid_item_L">
                     <p class="book_title">The Hitchhiker's Guide to the Galaxy</p><br>
-                    <p class="book_author" style="bottom: 330px;">Douglas Adams</p><br>
+                    <p class="book_author">Douglas Adams</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/the_hitchhikers_guide_to_the_galaxy.jpg"
                             alt="The Hitchhikers Guide to the Galaxy book cover"><br>
@@ -751,8 +819,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Einstein's Dreams</p><br>
-                    <p class="book_author" style="bottom: 330px;">Alan Lightman</p><br>
+                    <p class="book_title title_pad_top_24">Einstein's Dreams</p><br>
+                    <p class="book_author">Alan Lightman</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/einsteins_dreams.jpg"
                             alt="Einsteins Dreams book cover"><br>
@@ -766,8 +834,8 @@
                     </div>
                 </div>
                 <div class="grid_item_L">
-                    <p class="book_title" style="padding-top: 13px;">Astrophysics for People in a Hurry</p><br>
-                    <p class="book_author" style="bottom: 330px;">Neil deGrasse Tyson</p><br>
+                    <p class="book_title title_pad_top_13">Astrophysics for People in a Hurry</p><br>
+                    <p class="book_author">Neil deGrasse Tyson</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/astrophysics_for_people_in_a_hurry.jpg"
                             alt="Astrophysics for People in a Hurry book cover"><br>
@@ -780,9 +848,9 @@
                         <i class="fa-regular fa-star star_style_white"></i>
                     </div>
                 </div>
-                <div class="grid_item_M">
+                <div class="grid_item_S">
                     <p class="book_title">Surely You're Joking, Mr. Feynman!</p><br>
-                    <p class="book_author" style="bottom: 290px;">Richard Feynman</p><br>
+                    <p class="book_author author_pad_bottom_310">Richard Feynman</p><br>
                     <div class="book_img_container">
                         <img class="book_img" src="assets/books/surely_youre_joking_mr_feynman.jpg"
                             alt="Surely You're Joking Mr Feynman book cover"><br>
