@@ -193,7 +193,7 @@ main {
 /* Project page styling */
 .proj_content {
     display: flex;
-    align-items: top;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -210,6 +210,8 @@ main {
     color: var(--gray_color);
     font-size: 18px;
     padding-left: 20px;
+    align-self: top;
+    margin-top: 4px;
 }
 
 .project_status {
