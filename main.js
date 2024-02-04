@@ -45,9 +45,9 @@ function togglePause() {
     isPaused = !isPaused;
 
     if (isPaused) {
-        pauseButton.src = "assets/buttons/play.png";
+        pauseButton.src = "/buttons/play.png";
     } else {
-        pauseButton.src = "assets/buttons/pause.png";
+        pauseButton.src = "/buttons/pause.png";
         clock.start();
         animate();
     }
