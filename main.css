@@ -526,8 +526,8 @@ main {
     /* 100%*num_slides */
     height: 100%;
     position: relative;
-    -webkit-animation: slide 20s infinite;
-    animation: slide 20s infinite;
+    -webkit-animation: slide 30s infinite;
+    animation: slide 30s infinite;
 }
 
 .slider {
@@ -587,54 +587,53 @@ main {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--blue_color);
     position: relative;
-    -webkit-animation: on 20s infinite;
-    animation: on 20s infinite;
+    -webkit-animation: on 30s infinite;
+    animation: on 30s infinite;
 }
 
 @keyframes slide {
 
+    /* slide 1 */
     0%,
     100% {
         margin-left: 0%;
-        /* slide 1 */
     }
 
     14.05% {
         margin-left: 0%;
     }
 
+    /* slide 2 */
     20.55% {
         margin-left: -100%;
-        /* slide 2 */
     }
 
     34.55% {
         margin-left: -100%;
     }
 
+    /* slide 3 */
     41.05% {
         margin-left: -200%;
-        /* slide 3 */
     }
 
     55.05% {
         margin-left: -200%;
     }
 
+    /* slide 4 */
     61.55% {
         margin-left: -300%;
-        /* slide 4 */
     }
 
     75.55% {
         margin-left: -300%;
     }
 
+    /* slide 5 */
     82.05% {
         margin-left: -400%;
-        /* slide 5 */
     }
 
     96.05% {
@@ -642,51 +641,50 @@ main {
     }
 }
 
-@keyframes on {
+@keyframes indicator1 {
+    0%, 20% { background-color: var(--blue_color); }
+    20.01%, 100% { background-color: var(--white_color); }
+}
 
-    0%,
-    100% {
-        margin-left: 0%;
-        /* circle 1 */
-    }
+@keyframes indicator2 {
+    0%, 20% { background-color: var(--white_color); }
+    20.01%, 40% { background-color: var(--blue_color); }
+    40.01%, 100% { background-color: var(--white_color); }
+}
 
-    14.05% {
-        margin-left: 0%;
-    }
+@keyframes indicator3 {
+    0%, 40% { background-color: var(--white_color); }
+    40.01%, 60% { background-color: var(--blue_color); }
+    60.01%, 100% { background-color: var(--white_color); }
+}
 
-    20.55% {
-        margin-left: 19px;
-        /* circle 2 */
-    }
+@keyframes indicator4 {
+    0%, 60% { background-color: var(--white_color); }
+    60.01%, 80% { background-color: var(--blue_color); }
+    80.01%, 100% { background-color: var(--white_color); }
+}
 
-    34.55% {
-        margin-left: 19px;
-    }
+@keyframes indicator5 {
+    0%, 80% { background-color: var(--white_color); }
+    80.01%, 100% { background-color: var(--blue_color); }
+}
 
-    41.05% {
-        margin-left: 38px;
-        /* circle 3 */
-    }
+.switch>ul>li:nth-child(1) {
+    animation: indicator1 30s infinite;
+}
 
-    55.05% {
-        margin-left: 38px;
-    }
+.switch>ul>li:nth-child(2) {
+    animation: indicator2 30s infinite;
+}
 
-    61.55% {
-        margin-left: 57px;
-        /* circle 4 */
-    }
+.switch>ul>li:nth-child(3) {
+    animation: indicator3 30s infinite;
+}
 
-    75.55% {
-        margin-left: 57px;
-    }
+.switch>ul>li:nth-child(4) {
+    animation: indicator4 30s infinite;
+}
 
-    82.05% {
-        margin-left: 76px;
-        /* circle 5 */
-    }
-
-    96.05% {
-        margin-left: 76px;
-    }
+.switch>ul>li:nth-child(5) {
+    animation: indicator5 30s infinite;
 }
