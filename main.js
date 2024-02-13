@@ -80,4 +80,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Update when window resized 
+function onWindowResize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(width, height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+}
+
+window.addEventListener('resize', onWindowResize);
+
 animate();
