@@ -45,9 +45,9 @@ function togglePause() {
     isPaused = !isPaused;
 
     if (isPaused) {
-        pauseButton.src = "/buttons/play.png";
+        pauseButton.src = "/buttons/play.webp";
     } else {
-        pauseButton.src = "/buttons/pause.png";
+        pauseButton.src = "/buttons/pause.webp";
         clock.start();
         animate();
     }
@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const backButton = document.getElementById('backButton');
 
     if (backButton) {
-        backButton.addEventListener('click', function() {
+        backButton.addEventListener('click', function () {
             window.history.back();
         });
     }
