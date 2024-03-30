@@ -138,6 +138,18 @@ main {
     background-color: transparent;
 }
 
+.learn_more {
+    font-size: 20px;
+    text-decoration: underline;
+    color: var(--purple_color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.check_it_out:hover, .learn_more:hover {
+    font-weight: bold; 
+}
+
 .social_media_icons {
     color: var(--white_color);
     font-size: 1.5rem;
@@ -162,7 +174,6 @@ main {
     background-color: var(--item_background_color);
     border-radius: var(--border_radius);
     padding: var(--internal_padding);
-    ;
     border: 2px solid var(--dark_purple_color);
 }
 
@@ -201,6 +212,16 @@ main {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+}
+
+.project_item {
+    overflow: hidden;
+}
+
+.additional_info {
+    display: none; 
+    color: var(--gray_color);
+    font-size: 18px;
 }
 
 .proj_image {
