@@ -160,6 +160,8 @@ main {
 .back_to_top {
     color: var(--gray_color);
     text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .back_to_top .item_container {
