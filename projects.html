@@ -14,13 +14,15 @@
 
 <body>
     <canvas id="background"></canvas>
-    <main>
+    <div id="buttonsContainer">
         <div id="starsButtonContainer">
             <img src="/buttons/stars.webp" id="starsButton" alt="Stars button">
         </div>
         <div id="playpauseButtonContainer">
             <img src="/buttons/pause.webp" id="playpauseButton" alt="Play/pause button">
         </div>
+    </div>
+    <main>
         <h1 style="text-align: center;">
             <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
             <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
@@ -301,27 +303,26 @@
                 <p class="item_container" style="max-width: 20%"> Back to top ▲</p>
             </a>
         </div>
-        
-        <script type="module" src="main.js"></script>
-        <script>
-            document.querySelectorAll('.learn_more').forEach(item => {
-                item.addEventListener('click', function (e) {
-                    e.preventDefault();  // Prevent default action of the link
-                    const additionalInfo = this.closest('.item_container').querySelector('.additional_info');
-
-                    // Toggle visibility of additional info
-                    additionalInfo.style.display = additionalInfo.style.display === 'none' ? 'block' : 'none';
-
-                    // Toggle text between "Learn More" and "Show Less"
-                    if (this.textContent === "Learn More") {
-                        this.textContent = "Show Less";
-                    } else {
-                        this.textContent = "Learn More";
-                    }
-                });
-            });
-        </script>
     </main>
+    <script type="module" src="main.js"></script>
+    <script>
+        document.querySelectorAll('.learn_more').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();  // Prevent default action of the link
+                const additionalInfo = this.closest('.item_container').querySelector('.additional_info');
+
+                // Toggle visibility of additional info
+                additionalInfo.style.display = additionalInfo.style.display === 'none' ? 'block' : 'none';
+
+                // Toggle text between "Learn More" and "Show Less"
+                if (this.textContent === "Learn More") {
+                    this.textContent = "Show Less";
+                } else {
+                    this.textContent = "Learn More";
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
