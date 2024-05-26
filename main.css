@@ -52,6 +52,8 @@ main {
     position: absolute;
     width: 960px;
     margin: 0 auto;
+    transform: scale(0.8);
+    transform-origin: center top;
 }
 
 #starsButtonContainer {
@@ -160,6 +162,8 @@ main {
 .back_to_top {
     color: var(--gray_color);
     text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .back_to_top .item_container {
@@ -385,7 +389,7 @@ main {
     display: flex;
     align-items: top;
     justify-content: center;
-    margin: 10px 12% 0px 12%;
+    margin: 10px 10% 0px 10%;
 }
 
 .about_image {
