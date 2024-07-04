@@ -12,6 +12,7 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^2.0.0",
     "three": "^0.160.0"
   }
 }
