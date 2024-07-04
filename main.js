@@ -1,4 +1,5 @@
 let mainContent, header, canvas, spaceContent;
+let regularPageButtons, spacePageButtons;
 
 // Global function to navigate to a page
 function navigateToPage(page) {
@@ -18,6 +19,10 @@ function showRegularPage(page) {
     header.style.display = 'block';
     mainContent.style.display = 'block';
     document.body.classList.remove('space-page');
+
+    // Show regular page buttons, hide space page buttons
+    if (regularPageButtons) regularPageButtons.style.display = 'block';
+    if (spacePageButtons) spacePageButtons.style.display = 'none';
   }
 
   fetchAndInsertContent(page);
@@ -60,6 +65,10 @@ function showSpacePage() {
     mainContent.style.display = 'none';
     spaceContent.style.display = 'block';
     document.body.classList.add('space-page');
+
+    // Show space page buttons, hide regular page buttons
+    if (regularPageButtons) regularPageButtons.style.display = 'none';
+    if (spacePageButtons) spacePageButtons.style.display = 'block';
   }
 }
 
@@ -88,6 +97,13 @@ function loadSpacePage() {
       mainContent.style.display = 'none';
       spaceContent.style.display = 'block';
       document.body.classList.add('space-page');
+
+      // Initialize space page buttons
+      spacePageButtons = spaceContent.querySelector('#backButtonContainer');
+      if (spacePageButtons) spacePageButtons.style.display = 'block';
+
+      // Hide regular page buttons
+      if (regularPageButtons) regularPageButtons.style.display = 'none';
 
       initializeScripts();
       setupEventListeners();
@@ -150,6 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
   mainContent = document.getElementById('main-content');
   header = document.querySelector('header');
   canvas = document.getElementById('background');
+
+  // Initialize regular page buttons
+  regularPageButtons = document.getElementById('buttonsContainer');
 
   setupEventListeners();
 
