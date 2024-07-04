@@ -1,69 +1,111 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOMContentLoaded event fired');
-  const links = document.querySelectorAll('nav a');
-  const mainContent = document.getElementById('main-content');
-  const header = document.querySelector('header');
+let mainContent, header, canvas, spaceContent;
 
-  links.forEach(link => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const page = link.getAttribute('href').substring(1);
-      console.log(`Navigating to ${page}`);
-      navigateToPage(page);
-    });
-  });
+// Global function to navigate to a page
+function navigateToPage(page) {
+  if (page === 'space') {
+    showSpacePage();
+  } else {
+    showRegularPage(page);
+  }
+  history.pushState(null, '', `/${page}`);
+  updateActiveTab(page);
+}
 
-  function navigateToPage(page) {
-      fetchPage(page);
-      history.pushState(null, '', `/${page}`);
-      updateActiveTab(page);
+function showRegularPage(page) {
+  if (document.body.classList.contains('space-page')) {
+    // Transition from space page to regular page
+    spaceContent.style.display = 'none';
+    header.style.display = 'block';
+    mainContent.style.display = 'block';
+    document.body.classList.remove('space-page');
   }
 
-  function fetchPage(page) {
-    const filePath = (page === '' || page === 'home') ? '/home.html' : `/${page}.html`;
-    console.log(`Fetching page: ${filePath}`);
+  fetchAndInsertContent(page);
+}
 
-    fetch(filePath)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Network response was not ok: ${response.statusText}`);
-        }
-        return response.text();
-      })
-      .then(html => {
-        mainContent.innerHTML = html;
-        header.style.display = 'block';
-        initializeScripts();
-      })
-      .catch(error => {
-        console.error('Error loading page:', error);
-        mainContent.innerHTML = '<p>Error loading page.</p>';
-      });
-  }
+function fetchAndInsertContent(page) {
+  const filePath = (page === '' || page === 'home') ? '/home.html' : `/${page}.html`;
 
-      });
-  }
-
-  function updateActiveTab(page) {
-    links.forEach(link => {
-      if (link.getAttribute('href').substring(1) === page) {
-        link.className = 'tab_blue';
-      } else {
-        link.className = 'tab_gray';
+  fetch(filePath)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
       }
+      return response.text();
+    })
+    .then(html => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      const newContent = tempDiv.querySelector('#main-content');
+
+      if (newContent) {
+        mainContent.innerHTML = newContent.innerHTML;
+      } else {
+        mainContent.innerHTML = html;
+      }
+
+      initializeScripts();
+    })
+    .catch(error => {
+      console.error('Error loading page:', error);
+      mainContent.innerHTML = '<p>Error loading page.</p>';
     });
+}
+
+function showSpacePage() {
+  if (!spaceContent) {
+    loadSpacePage();
+  } else {
+    header.style.display = 'none';
+    mainContent.style.display = 'none';
+    spaceContent.style.display = 'block';
+    document.body.classList.add('space-page');
   }
+}
 
-  window.addEventListener('popstate', () => {
-    const path = location.pathname.substring(1) || 'home';
-    console.log(`Popstate event: loading ${path}`);
-    navigateToPage(path);
+function loadSpacePage() {
+  fetch('/space.html')
+    .then(response => response.text())
+    .then(html => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+
+      spaceContent = document.createElement('div');
+      spaceContent.id = 'space-content';
+
+      // Append new content
+      while (tempDiv.firstChild) {
+        if (tempDiv.firstChild.id !== 'background') {
+          spaceContent.appendChild(tempDiv.firstChild);
+        } else {
+          tempDiv.removeChild(tempDiv.firstChild);
+        }
+      }
+
+      document.body.appendChild(spaceContent);
+
+      header.style.display = 'none';
+      mainContent.style.display = 'none';
+      spaceContent.style.display = 'block';
+      document.body.classList.add('space-page');
+
+      initializeScripts();
+      setupEventListeners();
+    })
+    .catch(error => {
+      console.error('Error loading space page:', error);
+    });
+}
+
+function updateActiveTab(page) {
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.getAttribute('href').substring(1) === page) {
+      link.className = 'tab_blue';
+    } else {
+      link.className = 'tab_gray';
+    }
   });
-
-  const initialPage = location.pathname.substring(1) || 'home';
-  console.log(`Initial page load: ${initialPage}`);
-  navigateToPage(initialPage);
-});
+}
 
 function initializeBackToTop() {
   const backToTopButton = document.querySelector('.back_to_top');
@@ -78,6 +120,44 @@ function initializeBackToTop() {
   }
 }
 
+function initializeSpaceBackButton() {
+  const backButton = document.getElementById('backButton');
+  if (backButton) {
+    backButton.addEventListener('click', () => {
+      navigateToPage('home');
+    });
+  }
+}
+
 function initializeScripts() {
   initializeBackToTop();
-} 
+  initializeSpaceBackButton();
+}
+
+function setupEventListeners() {
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const page = link.getAttribute('href').substring(1);
+      navigateToPage(page);
+    });
+  });
+
+  initializeSpaceBackButton();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  mainContent = document.getElementById('main-content');
+  header = document.querySelector('header');
+  canvas = document.getElementById('background');
+
+  setupEventListeners();
+
+  window.addEventListener('popstate', () => {
+    const path = location.pathname.substring(1) || 'home';
+    navigateToPage(path);
+  });
+
+  const initialPage = location.pathname.substring(1) || 'home';
+  navigateToPage(initialPage);
+});
