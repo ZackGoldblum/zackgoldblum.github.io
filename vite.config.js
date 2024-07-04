@@ -8,21 +8,27 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        home: resolve(__dirname, 'home.html'),
-        projects: resolve(__dirname, 'projects.html'),
-        research: resolve(__dirname, 'research.html'),
-        bookshelf: resolve(__dirname, 'bookshelf.html'),
-        about: resolve(__dirname, 'about.html'),
-        space: resolve(__dirname, 'space.html')
       }
     }
   },
   server: {
     port: 3000,
     open: true,
-    hmr: true,
-    historyApiFallback: {
-      index: '/index.html' // Explicitly specify the index file
-    }
-  }
+    hmr: true
+  },
+  plugins: [
+    {
+      name: 'spa-fallback',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url.includes('.')) {
+            next();
+          } else {
+            req.url = '/index.html';
+            next();
+          }
+        });
+      },
+    },
+  ],
 });
