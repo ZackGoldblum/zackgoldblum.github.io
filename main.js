@@ -1,3 +1,5 @@
+import './main.css'
+
 let mainContent, header, canvas, spaceContent;
 let regularPageButtons, spacePageButtons;
 
