@@ -72,8 +72,8 @@ function fetchAndInsertContent(page) {
 
 function show404Error() {
   mainContent.innerHTML = `
-    <div style="text-align: center; padding: 80px;">
-      <p>Sorry, you seem to be a bit lost in space...<br><br><br>Use the navigation links above to get yourself back.</p>
+    <div class=item_container style="text-align: center; margin: 180px;">
+      <p>You seem to be a bit lost in space...<br><br><br>Use the navigation links above to get yourself back.</p>
     </div>
   `;
 }
