@@ -8,7 +8,7 @@ function navigateToPage(page) {
   } else {
     showRegularPage(page);
   }
-  history.pushState(null, '', `/${page}`);
+  history.pushState(null, '', page === 'home' ? '/' : `/${page}`);
   updateActiveTab(page);
 }
 
@@ -115,7 +115,9 @@ function loadSpacePage() {
 
 function updateActiveTab(page) {
   document.querySelectorAll('nav a').forEach(link => {
-    if (link.getAttribute('href').substring(1) === page) {
+    if (link.getAttribute('href') === '/' && (page === '' || page === 'home')) {
+      link.className = 'tab_blue';
+    } else if (link.getAttribute('href').substring(1) === page) {
       link.className = 'tab_blue';
     } else {
       link.className = 'tab_gray';
@@ -151,13 +153,24 @@ function initializeScripts() {
 }
 
 function setupEventListeners() {
+  // Handle navigation links
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      const page = link.getAttribute('href').substring(1);
+      const href = link.getAttribute('href');
+      const page = href === '/' ? 'home' : href.substring(1);
       navigateToPage(page);
     });
   });
+
+  // Handle home link
+  const homeLink = document.getElementById('home-link');
+  if (homeLink) {
+    homeLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      navigateToPage('home');
+    });
+  }
 
   initializeSpaceBackButton();
 }
@@ -173,8 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupEventListeners();
 
   window.addEventListener('popstate', () => {
-    const path = location.pathname.substring(1) || 'home';
-    navigateToPage(path);
+    const path = location.pathname.substring(1);
+    navigateToPage(path || 'home');
   });
 
   const initialPage = location.pathname.substring(1) || 'home';
