@@ -46,7 +46,7 @@ export default defineConfig({
     {
       name: 'copy-html-files',
       writeBundle() {
-        const htmlFiles = ['home.html', 'projects.html', 'research.html', 'bookshelf.html', 'about.html', 'space.html'];
+        const htmlFiles = ['404.html', 'home.html', 'projects.html', 'research.html', 'bookshelf.html', 'about.html', 'space.html'];
         htmlFiles.forEach(file => {
           fs.copyFileSync(resolve(__dirname, file), resolve(__dirname, 'dist', file));
         });
