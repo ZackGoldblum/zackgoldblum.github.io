@@ -8,8 +8,16 @@ function navigateToPage(page) {
   } else {
     showRegularPage(page);
   }
-  history.pushState(null, '', page === 'home' ? '/' : `/${page}`);
+  // Only update URL if it's a valid page
+  if (isValidPage(page)) {
+    history.pushState(null, '', page === '' ? '/' : `/${page}`);
+  }
   updateActiveTab(page);
+}
+
+function isValidPage(page) {
+  const validPages = ['', 'projects', 'research', 'bookshelf', 'about', 'space'];
+  return validPages.includes(page);
 }
 
 function showRegularPage(page) {
@@ -29,7 +37,12 @@ function showRegularPage(page) {
 }
 
 function fetchAndInsertContent(page) {
-  const filePath = (page === '' || page === 'home') ? '/home.html' : `/${page}.html`;
+  if (!isValidPage(page)) {
+    show404Error();
+    return;
+  }
+
+  const filePath = page === '' ? '/home.html' : `/${page}.html`;
 
   fetch(filePath)
     .then(response => {
@@ -53,8 +66,16 @@ function fetchAndInsertContent(page) {
     })
     .catch(error => {
       console.error('Error loading page:', error);
-      mainContent.innerHTML = '<p>Error loading page.</p>';
+      show404Error();
     });
+}
+
+function show404Error() {
+  mainContent.innerHTML = `
+    <div style="text-align: center; padding: 80px;">
+      <p>Sorry, you seem to be a bit lost in space...<br><br><br>Use the navigation links above to get yourself back.</p>
+    </div>
+  `;
 }
 
 function showSpacePage() {
@@ -115,7 +136,7 @@ function loadSpacePage() {
 
 function updateActiveTab(page) {
   document.querySelectorAll('nav a').forEach(link => {
-    if (link.getAttribute('href') === '/' && (page === '' || page === 'home')) {
+    if (link.getAttribute('href') === '/' && page === '') {
       link.className = 'tab_blue';
     } else if (link.getAttribute('href').substring(1) === page) {
       link.className = 'tab_blue';
@@ -142,7 +163,7 @@ function initializeSpaceBackButton() {
   const backButton = document.getElementById('backButton');
   if (backButton) {
     backButton.addEventListener('click', () => {
-      navigateToPage('home');
+      navigateToPage('');
     });
   }
 }
@@ -158,7 +179,7 @@ function setupEventListeners() {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const href = link.getAttribute('href');
-      const page = href === '/' ? 'home' : href.substring(1);
+      const page = href === '/' ? '' : href.substring(1);
       navigateToPage(page);
     });
   });
@@ -168,7 +189,7 @@ function setupEventListeners() {
   if (homeLink) {
     homeLink.addEventListener('click', (event) => {
       event.preventDefault();
-      navigateToPage('home');
+      navigateToPage('');
     });
   }
 
@@ -187,9 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('popstate', () => {
     const path = location.pathname.substring(1);
-    navigateToPage(path || 'home');
+    navigateToPage(path);
   });
 
-  const initialPage = location.pathname.substring(1) || 'home';
+  const initialPage = location.pathname.substring(1);
   navigateToPage(initialPage);
 });
