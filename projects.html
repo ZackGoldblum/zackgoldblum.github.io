@@ -1,328 +1,254 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Zack Goldblum">
-    <meta name="description" content="Hello! Welcome to my website. I do cool brain stuff.">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
-    <script src="https://kit.fontawesome.com/65143d1f5c.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/website_icon.webp" type="image/x-icon">
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <title id="main_title">Zack Goldblum</title>
-</head>
-
-<body>
-    <canvas id="background"></canvas>
-    <div id="buttonsContainer">
-        <div id="starsButtonContainer">
-            <img src="/buttons/stars.webp" id="starsButton" alt="Stars button">
+<div style="padding-left: 20px; padding-right: 20px;">
+    <div>
+        <h3>
+            <u>Current</u>
+        </h3>
+        <div class="item_container project_item">
+            <h4 class="header">
+                Personal Website
+            </h4>
+            <p class="proj_desc">
+                My own website to showcase some of the things I do to the world.
+            </p>
+            <span style="font-size: 18px;"><em>Sept 2022 - Present</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto"
+                        src="/projects/website.webp" alt="Personal website project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        V2: Now with Three.js! And the complexity that comes with it.<br><br>
+                        V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette
+                        inspired by <a style="color: var(--dark-gray_color); font-style: italic;" 
+                            href="https://github.com/daltonmenezes/aura-theme/tree/main">Aura Theme</a>.
+                        <br><br>
+                        <!-- <a class="learn_more">Learn More</a> | -->
+                        <a class="check_it_out"
+                            href="https://github.com/ZackGoldblum/zackgoldblum.github.io">Check it out!</a>
+                    </p>
+                </div>
+            </div>
+            <div class="additional_info" style="display: none;">
+                <p>More details about the Personal Website project...</p>
+            </div>
         </div>
-        <div id="playpauseButtonContainer">
-            <img src="/buttons/pause.webp" id="playpauseButton" alt="Play/pause button">
+        <h3>
+            <br><u>2023-2024</u>
+        </h3>
+        <div class="item_container project_item">
+            <h4 class="header">
+                Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging | Ayaz Lab
+            </h4>
+            <p class="proj_desc">
+                Master's thesis research project under Dr. Hasan Ayaz.
+            </p>
+            <span style="font-size: 18px;"><em>Dec 2021 - June 2023</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/kernel_flow.webp"
+                        alt="Kernel Flow project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        For my master's thesis, I investigated a miniaturized time-domain functional
+                        near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing
+                        the neural correlates of cognitive function. This was the <u>first</u> comprehensive
+                        cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the
+                        <u>first</u> cognitive study with Kernel Flow. Through this project, I developed and
+                        verified an experimental setup for investigating the neural correlates of cognitive
+                        tasks and designed open-source tools to facilitate optical neuroimaging research.
+                        <br><br>
+                        <!-- <a class="learn_more">Learn More</a> | -->
+                        <a class="check_it_out" href="https://doi.org/10.17918/00001784">Check it out!</a>
+                        <br>
+                        <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/AyazLab/KernelFlow_Experiment">GitHub (Experiment)</a> |
+                        <a class="check_it_out" href="https://github.com/AyazLab/KernelFlow_Analysis">GitHub (Analysis)</a>
+                    </p>
+                </div>
+            </div>
+            <div class="additional_info" style="display: none;">
+                <p>More details about the Kernel Flow project...</p>
+            </div>
         </div>
-    </div>
-    <main>
-        <h1 style="text-align: center;">
-            <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
-            <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a class="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a class="social_media_icons" href="https://x.com/ZackGoldblum"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <!-- TODO: handle email scraping bots -->
-            <a class="social_media_icons" href="mailto:zackgoldblum@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </h1>
-        <hr>
-        <p>
-        <div style="text-align: center;">
-            <a class="tab_blue" href="projects" id="projects">Projects</a> |
-            <a class="tab_gray" href="research" id="research">Research</a> |
-            <a class="tab_gray" href="bookshelf" id="bookshelf">Bookshelf</a> |
-            <a class="tab_gray" href="about" id="about">About</a>
-        </div>
-        </p>
-        <hr>
-        <div style="padding-left: 20px; padding-right: 20px;">
-            <div>
-                <h3>
-                    <u>Current</u>
-                </h3>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        Personal Website
-                    </h4>
-                    <p class="proj_desc">
-                        My own website to showcase some of the things I do to the world.
-                    </p>
-                    <span style="font-size: 18px;"><em>Sept 2022 - Present</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto"
-                                src="/projects/website.webp" alt="Personal website project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                V2: Now with Three.js! And the complexity that comes with it.<br><br>
-                                V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette
-                                inspired by <a style="color: var(--dark-gray_color); font-style: italic;" 
-                                    href="https://github.com/daltonmenezes/aura-theme/tree/main">Aura Theme</a>.
-                                <br><br>
-                                <!-- <a class="learn_more">Learn More</a> | -->
-                                <a class="check_it_out"
-                                    href="https://github.com/ZackGoldblum/zackgoldblum.github.io">Check it out!</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="additional_info" style="display: none;">
-                        <p>More details about the Personal Website project...</p>
-                    </div>
+        <br>
+        <div class="item_container project_item">
+            <h4 class="header">
+                Novel Medical Devices for Neurocritical Care Monitoring | Moberg Analytics
+            </h4>
+            <p class="proj_desc">
+                Capturing contextual data and environmental factors in the neuro-ICU.
+            </p>
+            <span style="font-size: 18px;"><em>March 2022 - June 2023</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/moberg_medical_devices.webp"
+                        alt="Moberg medical devices project">
                 </div>
-                <h3>
-                    <br><u>2023-2024</u>
-                </h3>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging | Ayaz Lab
-                    </h4>
-                    <p class="proj_desc">
-                        Master's thesis research project under Dr. Hasan Ayaz.
+                <div class="proj_text">
+                    <p>
+                        In collaboration with UT Southwestern Medical Center, I designed and developed devices to 
+                        capture intracranial pressure (ICP) context as well as light, temperature, and noise levels 
+                        in neuro-ICU rooms. After the Stopcock Position Sensor for ICP context was clinically 
+                        validated at UT Southwestern Medical Center, I initiated a joint effort with a Drexel <em>Senior 
+                        Design</em> team to overhaul the devices and verify the sensors for environmental data capture.
+                        <br><br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136">Check it out!</a>
                     </p>
-                    <span style="font-size: 18px;"><em>Dec 2021 - June 2023</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/kernel_flow.webp"
-                                alt="Kernel Flow project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                For my master's thesis, I investigated a miniaturized time-domain functional
-                                near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing
-                                the neural correlates of cognitive function. This was the <u>first</u> comprehensive
-                                cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the
-                                <u>first</u> cognitive study with Kernel Flow. Through this project, I developed and
-                                verified an experimental setup for investigating the neural correlates of cognitive
-                                tasks and designed open-source tools to facilitate optical neuroimaging research.
-                                <br><br>
-                                <!-- <a class="learn_more">Learn More</a> | -->
-                                <a class="check_it_out" href="https://doi.org/10.17918/00001784">Check it out!</a>
-                                <br>
-                                <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/AyazLab/KernelFlow_Experiment">GitHub (Experiment)</a> |
-                                <a class="check_it_out" href="https://github.com/AyazLab/KernelFlow_Analysis">GitHub (Analysis)</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="additional_info" style="display: none;">
-                        <p>More details about the Kernel Flow project...</p>
-                    </div>
-                </div>
-                <br>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        Novel Medical Devices for Neurocritical Care Monitoring | Moberg Analytics
-                    </h4>
-                    <p class="proj_desc">
-                        Capturing contextual data and environmental factors in the neuro-ICU.
-                    </p>
-                    <span style="font-size: 18px;"><em>March 2022 - June 2023</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/moberg_medical_devices.webp"
-                                alt="Moberg medical devices project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                In collaboration with UT Southwestern Medical Center, I designed and developed devices to 
-                                capture intracranial pressure (ICP) context as well as light, temperature, and noise levels 
-                                in neuro-ICU rooms. After the Stopcock Position Sensor for ICP context was clinically 
-                                validated at UT Southwestern Medical Center, I initiated a joint effort with a Drexel <em>Senior 
-                                Design</em> team to overhaul the devices and verify the sensors for environmental data capture.
-                                <br><br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136">Check it out!</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <h3 style="margin-top: 10px;">
-                    <br><u>2022-2023</u>
-                </h3>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        Neurocritical Care Patient Outcome Predictor | Drexel University
-                    </h4>
-                    <p class="proj_desc">
-                        A GUI-based tool for clinicians to predict the outcome of a neurocritical care patient.
-                    </p>
-                    <span style="font-size: 18px;"><em>Sept 2022 - Dec 2022</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/neuro_outcome_predictor.webp"
-                                alt="Neurocritical care predictor project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                Final project for the <em>Advanced Biocomputational Languages</em> graduate class taught by Dr.
-                                Ahmet Sacan. We created a GUI for clinicians that predicts the outcome of a neurocritical care
-                                patient. The parameters input for the current patient are compared to a database of
-                                retrospectively collected patient and medical data using a k-nearest neighbors algorithm. The
-                                utilized database is the Medical Information Mart for Intensive Care (MIMIC)-IV.
-                                <br><br><a class="check_it_out"
-                                    href="https://github.com/ZackGoldblum/Neurocritial-Care-Patient-Outcome-Predictor">Check it
-                                    out!</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        TrachTalk | Drexel University
-                    </h4>
-                    <p class="proj_desc">
-                        An independently operable pediatric tracheostomy cuff controller.
-                    </p>
-                    <span style="font-size: 18px;"><em>Sept 2021 - March 2022</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/trachtalk.webp"
-                                alt="TrachTalk project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                <em>Junior Design</em> project for a device that inflates or deflates a tracheostomy cuff at the
-                                press of a button. The inflation pressure is set by a clinician using the dial and is maintained
-                                while the patient is breathing. The patient presses the button when he or she wishes to speak
-                                and the cuff deflates. This work was presented at several Drexel Biomed events at which I
-                                participated on a Q&A panel for prospective students.
-                                <br><br><a class="check_it_out" href="/projects/trachtalk_project.pdf"
-                                    target="_blank">Check it out!</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        BrainTech Podcast | YouTube and Spotify
-                    </h4>
-                    <p class="proj_desc">
-                        I hosted and produced the BrainTech Podcast.
-                    </p>
-                    <span style="font-size: 18px;"><em>Aug 2021 - March 2022</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/braintech_podcast.webp"
-                                alt="BrainTech Podcast project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                Through conversations with researchers, engineers, business leaders, and thinkers in brain
-                                technology, I hope to inspire students who will shape the future of this field. This podcast
-                                was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu
-                                Onaral. Four episodes were created as initial run. I would like to return to this project at
-                                some point and do more with the BrainTech channel.
-                                <br><br><a class="check_it_out" href="https://www.youtube.com/@braintechyoutube">Check it
-                                    out!</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <h3>
-                    <br><u>2021-2022</u>
-                </h3>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        Real-Time EEG-Based BCI Motor Imagery Classifier | Drexel University
-                    </h4>
-                    <p class="proj_desc">
-                        This software acquires 8-channel EEG data from the OpenBCI Ultracortex Mark IV headset, creates left vs.
-                        right-hand motor imagery datasets, and classifies user intention in near real-time.
-                    </p>
-                    <span style="font-size: 18px;"><em>March 2021 - June 2021</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/BCI_project.webp"
-                                alt="BCI motor imagery classification project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We
-                                evaluated
-                                the classification accuracies of several convolutional neural network models from Army Research
-                                Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention
-                                from my OpenBCI headset. The software handles EEG data acquisition from the headset,
-                                pre-processing,
-                                and visualization, as well as dataset creation and real-time classification using our model.
-                                <br><br><a class="check_it_out"
-                                    href="https://github.com/ZackGoldblum/BMES725-BCI-Motor-Imagery">Check it out!</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                <h3>
-                    <br><u>2020-2021</u>
-                </h3>
-                <div class="item_container project_item">
-                    <h4 class="header">
-                        NeoPET | Johns Hopkins University MedHacks 2020
-                    </h4>
-                    <p class="proj_desc">
-                        The <b>Novel</b> application for <b>Parkinson's</b> and <b>Essential Tremor</b> (<b>NeoPET</b>)
-                        provides an innovative way of tracking Parkinson's and Essential Tremor symptoms and treatment
-                        responses through a smartphone.
-                    </p>
-                    <span style="font-size: 18px;"><em>Sept 2020 - Sept 2020</em></span>
-                    <div class="proj_content">
-                        <div class="proj_image">
-                            <br><img style="width: 320px; height: auto" src="/projects/neoPET_project.webp"
-                                alt="NeoPET Johns Hopkins MedHacks 2020 project">
-                        </div>
-                        <div class="proj_text">
-                            <p>
-                                Collaborated with students from UMN to create a mobile app for Parkinson's and Essential Tremor
-                                patients that uses machine learning to analyze and quantify symptom severity. We leveraged
-                                accelerometer, gyroscope, and keystroke data streams from a smartphone to train the model and
-                                create visualizations for clinicians to remotely monitor disease progression over time.
-                                Built on Android and Google Firebase.
-                                <br><br><a class="check_it_out" href="https://devpost.com/software/neopet-2pgzxt">Check it
-                                    out!</a>
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div style="text-align: center;">
-            <a class="back_to_top" style="display: flex; align-items: center; justify-content: center;" href="#">
-                <p class="item_container" style="max-width: 20%"> Back to top ▲</p>
-            </a>
+        <h3 style="margin-top: 10px;">
+            <br><u>2022-2023</u>
+        </h3>
+        <div class="item_container project_item">
+            <h4 class="header">
+                Neurocritical Care Patient Outcome Predictor | Drexel University
+            </h4>
+            <p class="proj_desc">
+                A GUI-based tool for clinicians to predict the outcome of a neurocritical care patient.
+            </p>
+            <span style="font-size: 18px;"><em>Sept 2022 - Dec 2022</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/neuro_outcome_predictor.webp"
+                        alt="Neurocritical care predictor project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        Final project for the <em>Advanced Biocomputational Languages</em> graduate class taught by Dr.
+                        Ahmet Sacan. We created a GUI for clinicians that predicts the outcome of a neurocritical care
+                        patient. The parameters input for the current patient are compared to a database of
+                        retrospectively collected patient and medical data using a k-nearest neighbors algorithm. The
+                        utilized database is the Medical Information Mart for Intensive Care (MIMIC)-IV.
+                        <br><br><a class="check_it_out"
+                            href="https://github.com/ZackGoldblum/Neurocritial-Care-Patient-Outcome-Predictor">Check it
+                            out!</a>
+                    </p>
+                </div>
+            </div>
         </div>
-    </main>
-    <script type="module" src="main.js"></script>
-    <script>
-        document.querySelectorAll('.learn_more').forEach(item => {
-            item.addEventListener('click', function (e) {
-                e.preventDefault();  // Prevent default action of the link
-                const additionalInfo = this.closest('.item_container').querySelector('.additional_info');
-
-                // Toggle visibility of additional info
-                additionalInfo.style.display = additionalInfo.style.display === 'none' ? 'block' : 'none';
-
-                // Toggle text between "Learn More" and "Show Less"
-                if (this.textContent === "Learn More") {
-                    this.textContent = "Show Less";
-                } else {
-                    this.textContent = "Learn More";
-                }
-            });
-        });
-    </script>
-</body>
-
-</html>
+        <br>
+        <div class="item_container project_item">
+            <h4 class="header">
+                TrachTalk | Drexel University
+            </h4>
+            <p class="proj_desc">
+                An independently operable pediatric tracheostomy cuff controller.
+            </p>
+            <span style="font-size: 18px;"><em>Sept 2021 - March 2022</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/trachtalk.webp"
+                        alt="TrachTalk project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        <em>Junior Design</em> project for a device that inflates or deflates a tracheostomy cuff at the
+                        press of a button. The inflation pressure is set by a clinician using the dial and is maintained
+                        while the patient is breathing. The patient presses the button when he or she wishes to speak
+                        and the cuff deflates. This work was presented at several Drexel Biomed events at which I
+                        participated on a Q&A panel for prospective students.
+                        <br><br><a class="check_it_out" href="/projects/trachtalk_project.pdf"
+                            target="_blank">Check it out!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="item_container project_item">
+            <h4 class="header">
+                BrainTech Podcast | YouTube and Spotify
+            </h4>
+            <p class="proj_desc">
+                I hosted and produced the BrainTech Podcast.
+            </p>
+            <span style="font-size: 18px;"><em>Aug 2021 - March 2022</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/braintech_podcast.webp"
+                        alt="BrainTech Podcast project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        Through conversations with researchers, engineers, business leaders, and thinkers in brain
+                        technology, I hope to inspire students who will shape the future of this field. This podcast
+                        was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu
+                        Onaral. Four episodes were created as initial run. I would like to return to this project at
+                        some point and do more with the BrainTech channel.
+                        <br><br><a class="check_it_out" href="https://www.youtube.com/@braintechyoutube">Check it
+                            out!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h3>
+            <br><u>2021-2022</u>
+        </h3>
+        <div class="item_container project_item">
+            <h4 class="header">
+                Real-Time EEG-Based BCI Motor Imagery Classifier | Drexel University
+            </h4>
+            <p class="proj_desc">
+                This software acquires 8-channel EEG data from the OpenBCI Ultracortex Mark IV headset, creates left vs.
+                right-hand motor imagery datasets, and classifies user intention in near real-time.
+            </p>
+            <span style="font-size: 18px;"><em>March 2021 - June 2021</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/BCI_project.webp"
+                        alt="BCI motor imagery classification project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We
+                        evaluated
+                        the classification accuracies of several convolutional neural network models from Army Research
+                        Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention
+                        from my OpenBCI headset. The software handles EEG data acquisition from the headset,
+                        pre-processing,
+                        and visualization, as well as dataset creation and real-time classification using our model.
+                        <br><br><a class="check_it_out"
+                            href="https://github.com/ZackGoldblum/BMES725-BCI-Motor-Imagery">Check it out!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+        <h3>
+            <br><u>2020-2021</u>
+        </h3>
+        <div class="item_container project_item">
+            <h4 class="header">
+                NeoPET | Johns Hopkins University MedHacks 2020
+            </h4>
+            <p class="proj_desc">
+                The <b>Novel</b> application for <b>Parkinson's</b> and <b>Essential Tremor</b> (<b>NeoPET</b>)
+                provides an innovative way of tracking Parkinson's and Essential Tremor symptoms and treatment
+                responses through a smartphone.
+            </p>
+            <span style="font-size: 18px;"><em>Sept 2020 - Sept 2020</em></span>
+            <div class="proj_content">
+                <div class="proj_image">
+                    <br><img style="width: 320px; height: auto" src="/projects/neoPET_project.webp"
+                        alt="NeoPET Johns Hopkins MedHacks 2020 project">
+                </div>
+                <div class="proj_text">
+                    <p>
+                        Collaborated with students from UMN to create a mobile app for Parkinson's and Essential Tremor
+                        patients that uses machine learning to analyze and quantify symptom severity. We leveraged
+                        accelerometer, gyroscope, and keystroke data streams from a smartphone to train the model and
+                        create visualizations for clinicians to remotely monitor disease progression over time.
+                        Built on Android and Google Firebase.
+                        <br><br><a class="check_it_out" href="https://devpost.com/software/neopet-2pgzxt">Check it
+                            out!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;">
+    <a class="back_to_top" style="display: flex; align-items: center; justify-content: center;" href="#">
+        <p class="item_container" style="max-width: 20%"> Back to top ▲</p>
+    </a>
+</div>

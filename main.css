@@ -24,13 +24,13 @@
 html {
     font-size: 22px;
     font-family: Hack, monospace;
-    background-color: var(--dark_gray_color);
+    background-color: black;
 }
 
 body {
     max-width: 960px;
     margin: auto;
-    background-color: var(--dark_gray_color);
+    background-color: black;
     color: var(--white_color);
     font-family: Hack, monospace;
     padding-bottom: 50px;
