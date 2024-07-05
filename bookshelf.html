@@ -1,876 +1,820 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Zack Goldblum">
-    <meta name="description" content="Hello! Welcome to my website. I do cool brain stuff.">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
-    <script src="https://kit.fontawesome.com/65143d1f5c.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="/website_icon.webp" type="image/x-icon">
-    <link rel="stylesheet" href="main.css" type="text/css">
-    <title id="main_title">Zack Goldblum</title>
-</head>
-
-<body>
-    <canvas id="background"></canvas>
-    <div id="buttonsContainer">
-        <div id="starsButtonContainer">
-            <img src="/buttons/stars.webp" id="starsButton" alt="Stars button">
+<div style="padding-left: 20px; padding-right: 20px;">
+    <h3>
+        <u>2024-2025</u>
+    </h3>
+    <div class="grid-container">
+        <div class="grid_item_S">
+            <p class="book_title">The Lovecraft Compendium</p><br>
+            <p class="book_author author_pad_bottom_310">H. P. Lovecraft</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_lovecraft_compendium.webp"
+                    alt="The Lovecraft Compendium book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
         </div>
-        <div id="playpauseButtonContainer">
-            <img src="/buttons/pause.webp" id="playpauseButton" alt="Play/pause button">
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 6</p><br>
+            <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_6.webp" alt="BLAME! 6 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 5</p><br>
+            <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_5.webp" alt="BLAME! 5 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 4</p><br>
+            <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_4.webp" alt="BLAME! 4 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
         </div>
     </div>
-    <main>
-        <h1 style="text-align: center;">
-            <a style="color: var(--blue_color); text-decoration: none;" href="./">Zack Goldblum</a>
-            <a class="social_media_icons" href="http://www.github.com/ZackGoldblum">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a class="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a class="social_media_icons" href="https://x.com/ZackGoldblum"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <!-- TODO: handle email scraping bots -->
-            <a class="social_media_icons" href="mailto:zackgoldblum@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </h1>
-        <hr>
-        <p>
-        <div style="text-align: center;">
-            <a class="tab_gray" href="projects" id="projects">Projects</a> |
-            <a class="tab_gray" href="research" id="research">Research</a> |
-            <a class="tab_blue" href="bookshelf" id="bookshelf">Bookshelf</a> |
-            <a class="tab_gray" href="about" id="about">About</a>
-        </div>
-        </p>
-        <hr>
-        <div style="padding-left: 20px; padding-right: 20px;">
-            <h3>
-                <u>2024-2025</u>
-            </h3>
-            <div class="grid-container">
-                <div class="grid_item_S">
-                    <p class="book_title">The Lovecraft Compendium</p><br>
-                    <p class="book_author author_pad_bottom_310">H. P. Lovecraft</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_lovecraft_compendium.webp"
-                            alt="The Lovecraft Compendium book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 6</p><br>
-                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_6.webp" alt="BLAME! 6 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 5</p><br>
-                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_5.webp" alt="BLAME! 5 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 4</p><br>
-                    <p class="book_author author_pad_bottom_310">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_4.webp" alt="BLAME! 4 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
+    <h3>
+        <br><u>2023-2024</u>
+    </h3>
+    <div class="grid-container">
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 3</p><br>
+            <p class="book_author">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_3.webp" alt="BLAME! 3 book cover"><br>
             </div>
-            <h3>
-                <br><u>2023-2024</u>
-            </h3>
-            <div class="grid-container">
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 3</p><br>
-                    <p class="book_author">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_3.webp" alt="BLAME! 3 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 2</p><br>
-                    <p class="book_author">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_2.webp" alt="BLAME! 2 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">BLAME! 1</p><br>
-                    <p class="book_author">Tsutomu Nihei</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/blame_1.webp" alt="BLAME! 1 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Those Who Resist</p><br>
-                    <p class="book_author">N. C. Scrimgeour</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/those_who_resist.webp"
-                            alt="Those Who Resist book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_24">Those Once Forgotten</p><br>
-                    <p class="book_author">N. C. Scrimgeour</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/those_once_forgotten.webp"
-                            alt="Those Once Forgotten book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_24">Those Left Behind</p><br>
-                    <p class="book_author">N. C. Scrimgeour</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/those_left_behind.webp"
-                            alt="Those Left Behind book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_24">Children of Memory</p><br>
-                    <p class="book_author">Adrian Tchaikovsky</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/children_of_memory.webp"
-                            alt="Children of Memory book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">What is ChatGPT Doing and Why Does It Work?</p><br>
-                    <p class="book_author">Stephen Wolfram</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/what_is_chatgpt_doing_and_why_does_it_work.webp"
-                            alt="What is ChatGPT Doing and Why Does It Work? book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Apex</p><br>
-                    <p class="book_author">Ramez Naam</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/apex.webp" alt="Apex book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Crux</p><br>
-                    <p class="book_author">Ramez Naam</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/crux.webp" alt="Crux book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Nexus</p><br>
-                    <p class="book_author">Ramez Naam</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/nexus.webp" alt="Nexus book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Exhalation</p><br>
-                    <p class="book_author">Ted Chiang</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/exhalation.webp" alt="Exhalation book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">Stories of Your Life and Others</p><br>
-                    <p class="book_author">Ted Chiang</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/stories_of_your_life_and_others.webp"
-                            alt="Stories of Your Life and Others book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_24">Animal Farm</p><br>
-                    <p class="book_author">George Orwell</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/animal_farm.webp" alt="Animal Farm book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">The Exodus Betrayal</p><br>
-                    <p class="book_author">N. C. Scrimgeour</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_exodus_betrayal.webp"
-                            alt="The Exodus Betrayal book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">You Look Like a Thing and I Love You</p><br>
-                    <p class="book_author">Janelle Shane</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/you_look_like_a_thing_and_i_love_you.webp"
-                            alt="You Look Like a Thing and I Love You book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">Livewired</p><br>
-                    <p class="book_author author_pad_bottom_310">David Eagleman</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/livewired.webp" alt="Livewired book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Project Hail Mary</p><br>
-                    <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/project_hail_mary.webp"
-                            alt="Project Hail Mary book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">The Alchemist</p><br>
-                    <p class="book_author author_pad_bottom_310">Paulo Coelho</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_alchemist.webp" alt="The Alchemist book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-            </div>
-            <h3>
-                <br><u>2022-2023</u>
-            </h3>
-            <div class="grid-container">
-                <div class="grid_item_L">
-                    <p class="book_title">Chapterhouse: Dune</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/chapterhouse_dune.webp"
-                            alt="Chapterhouse Dune book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">Heretics of Dune</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/heretics_of_dune.webp"
-                            alt="Heretics of Dune book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">God Emperor of Dune</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/god_emperor_of_dune.webp"
-                            alt="God Emperor of Dune book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">Children of Dune</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/children_of_dune.webp"
-                            alt="Children of Dune book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">Dune Messiah</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/dune_messiah.webp" alt="Dune Messiah book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">Dune</p><br>
-                    <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/dune.webp" alt="Dune book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">To Hold Up the Sky</p><br>
-                    <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/to_hold_up_the_sky.webp"
-                            alt="To Hold Up the Sky book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">The Wandering Earth</p><br>
-                    <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_wandering_earth.webp"
-                            alt="The Wandering Earth book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">Pale Blue Dot</p><br>
-                    <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/pale_blue_dot.webp" alt="Pale Blue Dot book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">Cosmos</p><br>
-                    <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/cosmos.webp" alt="Cosmos book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Brave New World</p><br>
-                    <p class="book_author author_pad_bottom_310">Aldous Huxley</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/brave_new_world.webp"
-                            alt="Brave New World book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">The Martian</p><br>
-                    <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_martian.webp" alt="The Martian book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-            </div>
-            <h3>
-                <br><u>2021-2022</u>
-            </h3>
-            <div class="grid-container">
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_13">Minus 148</p><br>
-                    <p class="book_author">Art Davidson</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/minus_148.webp" alt="Minus 148 book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Of Mice and Men</p><br>
-                    <p class="book_author">John Steinbeck</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/of_mice_and_men.webp"
-                            alt="Of Mice and Men book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Children of Ruin</p><br>
-                    <p class="book_author">Adrian Tchaikovsky</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/children_of_ruin.webp"
-                            alt="Children of Ruin book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Children of Time</p><br>
-                    <p class="book_author">Adrian Tchaikovsky</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/children_of_time.webp"
-                            alt="Children of time book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">21 Lessons for the 21st Century</p><br>
-                    <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/21_lessons_for_the_21st_century.webp"
-                            alt="21 Lessons for the 21st Century book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_24">Homo Deus</p><br>
-                    <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/homo_deus.webp" alt="Home Deus book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_24">Ball Lightning</p><br>
-                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/ball_lightning.webp" alt="Ball Lightning book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title title_pad_top_24">Death's End</p><br>
-                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/deaths_end.webp" alt="Deaths End book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">The Dark Forest</p><br>
-                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_dark_forest.webp"
-                            alt="The Dark Forest book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Three Body Problem</p><br>
-                    <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/three_body_problem.webp"
-                            alt="Three Body Problem book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-            </div>
-            <h3>
-                <br><u>2020-2021</u>
-            </h3>
-            <div class="grid-container">
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">For Whom the Bell Tolls</p><br>
-                    <p class="book_author">Ernest Hemingway</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/for_whom_the_bell_tolls.webp"
-                            alt="For Whom the Bell Tolls book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">Mostly Harmless</p><br>
-                    <p class="book_author">Douglas Adams</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/mostly_harmless.webp"
-                            alt="Mostly Harmless book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">So Long, and Thanks for all the Fish</p><br>
-                    <p class="book_author">Douglas Adams</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/so_long_and_thanks_for_all_the_fish.webp"
-                            alt="So Long and Thanks for all the Fish book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">Life, the Universe and Everything</p><br>
-                    <p class="book_author">Douglas Adams</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/life_the_universe_and_everything.webp"
-                            alt="Life the Universe and Everything book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">The Restaurant at the End of the Universe</p><br>
-                    <p class="book_author">Douglas Adams</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_restaurant_at_the_end_of_the_universe.webp"
-                            alt="The Restaurant at the End of the Universe book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title">The Hitchhiker's Guide to the Galaxy</p><br>
-                    <p class="book_author">Douglas Adams</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/the_hitchhikers_guide_to_the_galaxy.webp"
-                            alt="The Hitchhikers Guide to the Galaxy book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_24">Einstein's Dreams</p><br>
-                    <p class="book_author">Alan Lightman</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/einsteins_dreams.webp"
-                            alt="Einsteins Dreams book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_L">
-                    <p class="book_title title_pad_top_13">Astrophysics for People in a Hurry</p><br>
-                    <p class="book_author">Neil deGrasse Tyson</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/astrophysics_for_people_in_a_hurry.webp"
-                            alt="Astrophysics for People in a Hurry book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
-                <div class="grid_item_S">
-                    <p class="book_title">Surely You're Joking, Mr. Feynman!</p><br>
-                    <p class="book_author author_pad_bottom_310">Richard Feynman</p><br>
-                    <div class="book_img_container">
-                        <img class="book_img" src="/books/surely_youre_joking_mr_feynman.webp"
-                            alt="Surely You're Joking Mr Feynman book cover"><br>
-                    </div>
-                    <div class="star_style_container">
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-solid fa-star star_style_blue"></i>
-                        <i class="fa-regular fa-star star_style_white"></i>
-                    </div>
-                </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
             </div>
         </div>
-        <div style="text-align: center;">
-            <a class="back_to_top" style="display: flex; align-items: center; justify-content: center;" href="#">
-                <p class="item_container" style="max-width: 20%"> Back to top ▲</p>
-            </a>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 2</p><br>
+            <p class="book_author">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_2.webp" alt="BLAME! 2 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
         </div>
-    </main>
-    <script type="module" src="main.js"></script>
-</body>
-
-</html>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">BLAME! 1</p><br>
+            <p class="book_author">Tsutomu Nihei</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/blame_1.webp" alt="BLAME! 1 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Those Who Resist</p><br>
+            <p class="book_author">N. C. Scrimgeour</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/those_who_resist.webp"
+                    alt="Those Who Resist book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_24">Those Once Forgotten</p><br>
+            <p class="book_author">N. C. Scrimgeour</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/those_once_forgotten.webp"
+                    alt="Those Once Forgotten book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_24">Those Left Behind</p><br>
+            <p class="book_author">N. C. Scrimgeour</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/those_left_behind.webp"
+                    alt="Those Left Behind book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_24">Children of Memory</p><br>
+            <p class="book_author">Adrian Tchaikovsky</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/children_of_memory.webp"
+                    alt="Children of Memory book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">What is ChatGPT Doing and Why Does It Work?</p><br>
+            <p class="book_author">Stephen Wolfram</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/what_is_chatgpt_doing_and_why_does_it_work.webp"
+                    alt="What is ChatGPT Doing and Why Does It Work? book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Apex</p><br>
+            <p class="book_author">Ramez Naam</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/apex.webp" alt="Apex book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Crux</p><br>
+            <p class="book_author">Ramez Naam</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/crux.webp" alt="Crux book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Nexus</p><br>
+            <p class="book_author">Ramez Naam</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/nexus.webp" alt="Nexus book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Exhalation</p><br>
+            <p class="book_author">Ted Chiang</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/exhalation.webp" alt="Exhalation book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">Stories of Your Life and Others</p><br>
+            <p class="book_author">Ted Chiang</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/stories_of_your_life_and_others.webp"
+                    alt="Stories of Your Life and Others book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_24">Animal Farm</p><br>
+            <p class="book_author">George Orwell</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/animal_farm.webp" alt="Animal Farm book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">The Exodus Betrayal</p><br>
+            <p class="book_author">N. C. Scrimgeour</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_exodus_betrayal.webp"
+                    alt="The Exodus Betrayal book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">You Look Like a Thing and I Love You</p><br>
+            <p class="book_author">Janelle Shane</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/you_look_like_a_thing_and_i_love_you.webp"
+                    alt="You Look Like a Thing and I Love You book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">Livewired</p><br>
+            <p class="book_author author_pad_bottom_310">David Eagleman</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/livewired.webp" alt="Livewired book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Project Hail Mary</p><br>
+            <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/project_hail_mary.webp"
+                    alt="Project Hail Mary book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">The Alchemist</p><br>
+            <p class="book_author author_pad_bottom_310">Paulo Coelho</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_alchemist.webp" alt="The Alchemist book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+    </div>
+    <h3>
+        <br><u>2022-2023</u>
+    </h3>
+    <div class="grid-container">
+        <div class="grid_item_L">
+            <p class="book_title">Chapterhouse: Dune</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/chapterhouse_dune.webp"
+                    alt="Chapterhouse Dune book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">Heretics of Dune</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/heretics_of_dune.webp"
+                    alt="Heretics of Dune book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">God Emperor of Dune</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/god_emperor_of_dune.webp"
+                    alt="God Emperor of Dune book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">Children of Dune</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/children_of_dune.webp"
+                    alt="Children of Dune book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">Dune Messiah</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/dune_messiah.webp" alt="Dune Messiah book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">Dune</p><br>
+            <p class="book_author author_pad_bottom_350">Frank Herbert</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/dune.webp" alt="Dune book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">To Hold Up the Sky</p><br>
+            <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/to_hold_up_the_sky.webp"
+                    alt="To Hold Up the Sky book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">The Wandering Earth</p><br>
+            <p class="book_author author_pad_bottom_350">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_wandering_earth.webp"
+                    alt="The Wandering Earth book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">Pale Blue Dot</p><br>
+            <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/pale_blue_dot.webp" alt="Pale Blue Dot book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">Cosmos</p><br>
+            <p class="book_author author_pad_bottom_310">Carl Sagan</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/cosmos.webp" alt="Cosmos book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Brave New World</p><br>
+            <p class="book_author author_pad_bottom_310">Aldous Huxley</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/brave_new_world.webp"
+                    alt="Brave New World book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">The Martian</p><br>
+            <p class="book_author author_pad_bottom_310">Andy Weir</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_martian.webp" alt="The Martian book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+    </div>
+    <h3>
+        <br><u>2021-2022</u>
+    </h3>
+    <div class="grid-container">
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_13">Minus 148</p><br>
+            <p class="book_author">Art Davidson</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/minus_148.webp" alt="Minus 148 book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Of Mice and Men</p><br>
+            <p class="book_author">John Steinbeck</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/of_mice_and_men.webp"
+                    alt="Of Mice and Men book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Children of Ruin</p><br>
+            <p class="book_author">Adrian Tchaikovsky</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/children_of_ruin.webp"
+                    alt="Children of Ruin book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Children of Time</p><br>
+            <p class="book_author">Adrian Tchaikovsky</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/children_of_time.webp"
+                    alt="Children of time book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">21 Lessons for the 21st Century</p><br>
+            <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/21_lessons_for_the_21st_century.webp"
+                    alt="21 Lessons for the 21st Century book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_24">Homo Deus</p><br>
+            <p class="book_author author_pad_bottom_310">Yuval Noah Harari</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/homo_deus.webp" alt="Home Deus book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_24">Ball Lightning</p><br>
+            <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/ball_lightning.webp" alt="Ball Lightning book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title title_pad_top_24">Death's End</p><br>
+            <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/deaths_end.webp" alt="Deaths End book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">The Dark Forest</p><br>
+            <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_dark_forest.webp"
+                    alt="The Dark Forest book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Three Body Problem</p><br>
+            <p class="book_author author_pad_bottom_310">Cixin Liu</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/three_body_problem.webp"
+                    alt="Three Body Problem book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+    </div>
+    <h3>
+        <br><u>2020-2021</u>
+    </h3>
+    <div class="grid-container">
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">For Whom the Bell Tolls</p><br>
+            <p class="book_author">Ernest Hemingway</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/for_whom_the_bell_tolls.webp"
+                    alt="For Whom the Bell Tolls book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">Mostly Harmless</p><br>
+            <p class="book_author">Douglas Adams</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/mostly_harmless.webp"
+                    alt="Mostly Harmless book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">So Long, and Thanks for all the Fish</p><br>
+            <p class="book_author">Douglas Adams</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/so_long_and_thanks_for_all_the_fish.webp"
+                    alt="So Long and Thanks for all the Fish book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">Life, the Universe and Everything</p><br>
+            <p class="book_author">Douglas Adams</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/life_the_universe_and_everything.webp"
+                    alt="Life the Universe and Everything book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">The Restaurant at the End of the Universe</p><br>
+            <p class="book_author">Douglas Adams</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_restaurant_at_the_end_of_the_universe.webp"
+                    alt="The Restaurant at the End of the Universe book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title">The Hitchhiker's Guide to the Galaxy</p><br>
+            <p class="book_author">Douglas Adams</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/the_hitchhikers_guide_to_the_galaxy.webp"
+                    alt="The Hitchhikers Guide to the Galaxy book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_24">Einstein's Dreams</p><br>
+            <p class="book_author">Alan Lightman</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/einsteins_dreams.webp"
+                    alt="Einsteins Dreams book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_L">
+            <p class="book_title title_pad_top_13">Astrophysics for People in a Hurry</p><br>
+            <p class="book_author">Neil deGrasse Tyson</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/astrophysics_for_people_in_a_hurry.webp"
+                    alt="Astrophysics for People in a Hurry book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star-half-stroke star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+        <div class="grid_item_S">
+            <p class="book_title">Surely You're Joking, Mr. Feynman!</p><br>
+            <p class="book_author author_pad_bottom_310">Richard Feynman</p><br>
+            <div class="book_img_container">
+                <img class="book_img" src="/books/surely_youre_joking_mr_feynman.webp"
+                    alt="Surely You're Joking Mr Feynman book cover"><br>
+            </div>
+            <div class="star_style_container">
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-solid fa-star star_style_blue"></i>
+                <i class="fa-regular fa-star star_style_white"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;">
+    <a class="back_to_top" style="display: flex; align-items: center; justify-content: center;" href="#">
+        <p class="item_container" style="max-width: 20%"> Back to top ▲</p>
+    </a>
+</div>
