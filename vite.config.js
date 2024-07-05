@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import fs from 'fs';
 
 export default defineConfig({
+  base: '/',
   root: '.',
   publicDir: 'public',
   build: {
@@ -46,7 +47,7 @@ export default defineConfig({
     {
       name: 'copy-html-files',
       writeBundle() {
-        const htmlFiles = ['404.html', 'home.html', 'projects.html', 'research.html', 'bookshelf.html', 'about.html', 'space.html'];
+        const htmlFiles = ['index.html', '404.html', 'home.html', 'projects.html', 'research.html', 'bookshelf.html', 'about.html', 'space.html'];
         htmlFiles.forEach(file => {
           fs.copyFileSync(resolve(__dirname, file), resolve(__dirname, 'dist', file));
         });
