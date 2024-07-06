@@ -198,6 +198,13 @@ function setupEventListeners() {
   initializeSpaceBackButton();
 }
 
+function handleRouteChange() {
+  const path = window.location.pathname.substring(1);
+  navigateToPage(path);
+}
+
+window.addEventListener('popstate', handleRouteChange);
+
 document.addEventListener('DOMContentLoaded', () => {
   mainContent = document.getElementById('main-content');
   header = document.querySelector('header');
@@ -208,11 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setupEventListeners();
 
-  window.addEventListener('popstate', () => {
-    const path = location.pathname.substring(1);
-    navigateToPage(path);
-  });
-
-  const initialPage = location.pathname.substring(1);
-  navigateToPage(initialPage);
+  // Handle initial route
+  handleRouteChange();
 });
