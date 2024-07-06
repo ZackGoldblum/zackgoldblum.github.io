@@ -5,6 +5,7 @@ import fs from 'fs';
 export default defineConfig({
   root: '.',
   publicDir: 'public',
+  base: '/',
   build: {
     rollupOptions: {
       input: {
@@ -23,16 +24,6 @@ export default defineConfig({
     {
       name: 'spa-fallback',
       configureServer(server) {
-        server.middlewares.use((req, res, next) => {
-          if (req.url.includes('.')) {
-            next();
-          } else {
-            req.url = '/index.html';
-            next();
-          }
-        });
-      },
-      configurePreviewServer(server) {
         server.middlewares.use((req, res, next) => {
           if (req.url.includes('.')) {
             next();
