@@ -32,6 +32,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Copy additional HTML files
+        run: |
+          cp *.html dist/
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
