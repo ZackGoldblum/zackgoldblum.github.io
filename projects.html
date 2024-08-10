@@ -80,8 +80,84 @@
                             </p>
                         </div>
                     </div>
+                </div>
+                <h3>
+                    <br><u>2024-2025</u>
+                </h3>
+                <div class="item_container project_item">
+                    <h4 class="header">
+                        Custom Hardline Liquid Cooled PC
+                    </h4>
+                    <p class="proj_desc">
+                        My first foray into building liquid cooled computers.
+                    </p>
+                    <span style="font-size: 18px;"><em>August 2024</em></span>
+                    <div class="proj_content">
+                        <div class="proj_image">
+                            <br><img style="width: 320px; height: auto" src="/projects/liquid_cooled_pc.webp"
+                                alt="Liquid Cooled PC project">
+                        </div>
+                        <div class="proj_text">
+                            <p>
+                                I've been building computers for over a decade (since I was 14 years old). In fact, it
+                                was this skill that landed me my first job as an assistant technician for a local IT
+                                company. As a kid, I loved to disassemble old tech products to see what was inside
+                                <span>&#8212;</span> although I had no idea how any of it worked. But going the other
+                                direction to build something functional was a whole new paradigm. I did figure it out
+                                though, because that first computer I built is still next to me, and still running!
+                                Since then, I've built computers for friends, several machine learning servers, and now
+                                my second (and first ever liquid cooled) PC. This build was significantly more
+                                challenging, but worth it for the experience gain and seeing the meticulous planning
+                                finally come together. There are a couple things to improve: my 90-degree bends could
+                                use some practice and one of the GPU tubing runs will need to be re-routed next time I
+                                do maintenance. Overall though, I'm proud of this build and glad I took it on.
+                            </p>
+                            <a class="learn_more">Build list</a>
+                        </div>
+                    </div>
                     <div class="additional_info" style="display: none;">
-                        <p>More details about the Personal Website project...</p>
+                        <div style="line-height: 1.8;">
+                            <span class="proj_desc" style="color: var(--white_color)">Computer Components</span> <br>
+                            - <em>1x</em> Gigabyte GeForce RTX 4090 Gaming OC <br>
+                            - <em>1x</em> AMD Ryzen 7 7800X3D <br>
+                            - <em>1x</em> NZXT N7 B650E - White <br>
+                            - <em>1x</em> Corsair Vengeance DDR5 RAM 64GB (2x32GB) 6000MHz CL30 - White <br>
+                            - <em>1x</em> Samsung 990 Pro 2TB <br>
+                            - <em>1x</em> Seasonic Vertex GX-1000 | 1000W | 80+ Gold <br>
+                            - <em>1x</em> Corsair 4000D Airflow - White <br>
+                            - <em>6x</em> EK-Loop Fan FPT 120 D-RGB - White (27mm Thickness) <br>
+                            - <em>1x</em> Corsair iCUE Commander Core XT <br>
+                            - <em>1x</em> EK-Loop PCI-E 4.0 Riser Cable <br>
+                            - <em>1x</em> D-RGB 6-Way Splitter Cable <br>
+                            - <em>1x</em> ARGB Adapter Cable <br>
+                        </div>
+                        <div style="line-height: 1.8; margin-top: 20px;">
+                            <span class="proj_desc" style="color: var(--white_color)">Liquid Cooling Loop
+                                Components</span> <br>
+                            - <em>1x</em> EK-Quantum Vector² Master RTX 4090 D-RGB - Nickel + Plexi <br>
+                            - <em>1x</em> EK-Quantum Kinetic FLT 80 DDC PWM D-RGB - Plexi <br>
+                            - <em>1x</em> EK-Quantum Velocity² D-RGB - AM5 Nickel + Plexi <br>
+                            - <em>1x</em> EK-Quantum Surface P360M - White (44mm Thickness) <br>
+                            - <em>1x</em> EK-Quantum Surface P240M - White (44mm Thickness) <br>
+                            - <em>10x</em> EK-Quantum Torque HDC 12 - Satin Titanium <br>
+                            - <em>6x</em> EK-Quantum Torque Rotary 90° - Satin Titanium <br>
+                            - <em>4x</em> EK-Quantum Torque Micro Plug - Satin Titanium <br>
+                            - <em>1x</em> EK-Quantum Torque Double Rotary Offset 21 Fitting - Satin Titanium <br>
+                            - <em>1x</em> EK-Quantum Torque Extender Static MF 28 - Satin Titanium <br>
+                            - <em>1x</em> EK-Quantum Torque Extender Static MF 7 - Satin Titanium <br>
+                            - <em>1x</em> EK-Quantum Torque Drain Valve - Satin Titanium <br>
+                            - <em>1x</em> EK-Loop Angled Bracket - 120/120mm <br>
+                            - <em>6x</em> EK-Loop Hard Tube 12mm 0.8m - Acrylic <br>
+                            - <em>1x</em> EK-CryoFuel Mystic Fog (Premix 1000mL) <br>
+                        </div>
+                        <div style="line-height: 1.8; margin-top: 20px;">
+                            <span class="proj_desc" style="color: var(--white_color)">Equipment</span> <br>
+                            - <em>1x</em> EK-Loop Heat Gun 1500W <br>
+                            - <em>1x</em> EK-Loop Leak Tester Flex <br>
+                            - <em>1x</em> Corsair Hydro X Series XT Hardline Bending Toolkit
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
                 <h3>
@@ -314,11 +390,11 @@
                 // Toggle visibility of additional info
                 additionalInfo.style.display = additionalInfo.style.display === 'none' ? 'block' : 'none';
 
-                // Toggle text between "Learn More" and "Show Less"
-                if (this.textContent === "Learn More") {
-                    this.textContent = "Show Less";
+                // Toggle text
+                if (this.textContent === "Build list") {
+                    this.textContent = "Show less";
                 } else {
-                    this.textContent = "Learn More";
+                    this.textContent = "Build list";
                 }
             });
         });
