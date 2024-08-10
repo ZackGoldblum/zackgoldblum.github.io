@@ -149,8 +149,9 @@ main {
     cursor: pointer;
 }
 
-.check_it_out:hover, .learn_more:hover {
-    font-weight: bold; 
+.check_it_out:hover,
+.learn_more:hover {
+    font-weight: bold;
 }
 
 .social_media_icons {
@@ -224,9 +225,10 @@ main {
 }
 
 .additional_info {
-    display: none; 
+    display: none;
     color: var(--gray_color);
     font-size: 18px;
+    width: 100%;
 }
 
 .proj_image {
@@ -241,9 +243,9 @@ main {
 .proj_text {
     color: var(--gray_color);
     font-size: 18px;
-    padding-left: 20px;
     align-self: top;
     margin-top: 4px;
+    flex-basis: 60%;
 }
 
 .project_status {
