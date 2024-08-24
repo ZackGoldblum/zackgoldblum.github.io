@@ -132,7 +132,11 @@ h1 {
   transition: color var(--transition_time) ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--white_color);
+  font-weight: bold;
+}
+
 .nav-link.active {
   color: var(--blue_color);
   font-weight: bold;
@@ -221,7 +225,7 @@ h3 {
 
 /* Navigation bar styling */
 .tab_white {
-  color: var(--blue_color);
+  color: var(--white_color);
   font-size: 26px;
   font-weight: bold;
   text-decoration: none;
