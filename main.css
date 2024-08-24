@@ -185,7 +185,7 @@ main {
 
 /* Navigation bar styling */
 .tab_white {
-    color: var(--blue_color);
+    color: var(--white_color);
     font-size: 26px;
     font-weight: bold;
     text-decoration: none;
