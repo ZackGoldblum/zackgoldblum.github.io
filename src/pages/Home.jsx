@@ -5,7 +5,7 @@ function Home() {
         <div>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <p className="item_container" style={{ textAlign: 'center', marginTop: '40px', marginBottom: '40px', maxWidth: '80%' }} id="body_text">
-                    Hello! Welcome to my website. I do cool brain stuff.
+                    Hello! Welcome to my website. I do cool brain research.
                 </p>
             </div>
             <div id="slider">
