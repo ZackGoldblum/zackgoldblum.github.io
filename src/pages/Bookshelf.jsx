@@ -47,6 +47,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2024-2025": [
+            { title: "Permutation City", author: "Greg Egan", imageSrc: "/books/permutation_city.webp", rating: 4, size: "M", titlePadTop: 10 },
+            { title: "Do Androids Dream of Electric Sheep?", author: "Philip K. Dick", imageSrc: "/books/do_androids_dream_of_electric_sheep.webp", rating: 3.5, size: "M" },
+            { title: "Mona Lisa Overdrive", author: "William Gibson", imageSrc: "/books/mona_lisa_overdrive.webp", rating: 4, size: "M", titlePadTop: 10 },
+            { title: "Count Zero", author: "William Gibson", imageSrc: "/books/count_zero.webp", rating: 5, size: "M", titlePadTop: 22 },
             { title: "Neuromancer", author: "William Gibson", imageSrc: "/books/neuromancer.webp", rating: 4.5, size: "S", titlePadTop: 10 },
             { title: "Burning Chrome", author: "William Gibson", imageSrc: "/books/burning_chrome.webp", rating: 4, size: "S", titlePadTop: 10 },
             { title: "Thinking in Systems", author: "Donella H. Meadows", imageSrc: "/books/thinking_in_systems.webp", rating: 4, size: "S" },
