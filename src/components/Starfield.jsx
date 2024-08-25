@@ -46,16 +46,22 @@ const Starfield = ({ isPaused }) => {
 
         const starSpeeds = new Float32Array(10000).map(() => THREE.MathUtils.randFloat(3, 8));
 
+        let lastTime = performance.now();
+        const maxDelta = 1 / 30;  // Cap the delta at 30 fps
+
         const animate = () => {
+            const currentTime = performance.now();
+            let delta = (currentTime - lastTime) / 1000;  // Convert to seconds
+            delta = Math.min(delta, maxDelta);
+            lastTime = currentTime;
+
             if (!isPaused) {
-                const delta = clockRef.current.getDelta();
                 const positions = stars.geometry.attributes.position.array;
 
                 for (let i = 0; i < positions.length; i += 3) {
                     // Use individual star speed
-                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.5;
+                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
 
-                    // If star is too close, reset its position
                     if (positions[i + 2] > 500) {
                         positions[i] = THREE.MathUtils.randFloatSpread(1000);
                         positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
