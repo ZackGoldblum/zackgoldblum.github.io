@@ -269,13 +269,14 @@ h3 {
 }
 
 .additional_info {
-  display: none;
   color: var(--gray_color);
+  width: 100%;
   font-size: 18px;
 }
 
 .proj_image {
   flex-basis: 40%;
+  margin-top: 4px;
 }
 
 .proj_desc {
@@ -285,10 +286,8 @@ h3 {
 
 .proj_text {
   color: var(--gray_color);
-  font-size: 18px;
   padding-left: 20px;
   align-self: top;
-  margin-top: 4px;
 }
 
 .project_status {

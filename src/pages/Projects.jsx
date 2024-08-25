@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 
-const ProjectItem = ({ title, description, date, imageSrc, content }) => (
-    <div className="item_container project_item" style={{ marginBottom: '20px' }}>
-        <h4 className="header header_margin project_title">{title}</h4>
-        <p className="proj_desc" >{description}</p>
-        <span style={{ fontSize: '18px', fontStyle: 'italic', display: 'block', marginBottom: '20px' }}>{date}</span>
-        <div className="proj_content">
-            <div className="proj_image">
-                <img style={{ width: '320px', height: 'auto' }} src={imageSrc} alt={`${title} project`} />
+const ProjectItem = ({ title, description, date, imageSrc, content, additionalInfo }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const toggleAdditionalInfo = () => {
+        setIsExpanded(!isExpanded);
+    };
+
+    return (
+        <div className="item_container project_item" style={{ marginBottom: '20px' }}>
+            <h4 className="header header_margin project_title">{title}</h4>
+            <p className="proj_desc">{description}</p>
+            <span style={{ fontSize: '18px', fontStyle: 'italic', display: 'block', marginBottom: '20px' }}>{date}</span>
+            <div className="proj_content">
+                <div className="proj_image">
+                    <img style={{ width: '320px', height: 'auto' }} src={imageSrc} alt={`${title} project`} />
+                </div>
+                <div className="proj_text">
+                    <p className="paragraph" style={{ fontSize: '18px' }} dangerouslySetInnerHTML={{ __html: content }} />
+                    {additionalInfo && (
+                        <p
+                            className="learn_more"
+                            onClick={toggleAdditionalInfo}
+                            style={{ marginBottom: '0px' }}
+                        >
+                            {isExpanded ? "Show less" : "Build list"}
+                        </p>
+                    )}
+                </div>
             </div>
-            <div className="proj_text">
-                <p className="paragraph" dangerouslySetInnerHTML={{ __html: content }} />
-            </div>
+            {isExpanded && additionalInfo && (
+                <div className="additional_info">
+                    <div dangerouslySetInnerHTML={{ __html: additionalInfo }} />
+                </div>
+            )}
         </div>
-    </div>
-);
+    );
+};
 
 function Projects() {
     useSmoothScroll();
-    
+
     const projectsData = {
         "Current": [
             {
@@ -27,7 +49,9 @@ function Projects() {
                 description: "My own website to showcase some of the things I do to the world.",
                 date: "Sept 2022 - Present",
                 imageSrc: "/projects/website.webp",
-                content: `V2: Now with Three.js! And the complexity that comes with it.<br><br>
+                content: `
+                  V3: Re-implementation into a React single page application.<br><br>
+                  V2: New design with a Three.js-animated starfield background.<br><br>
                   V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette
                   inspired by <a style="color: var(--dark-gray_color); font-style: italic;" 
                   href="https://github.com/daltonmenezes/aura-theme/tree/main">Aura Theme</a>.
@@ -36,9 +60,88 @@ function Projects() {
                   href="https://github.com/ZackGoldblum/zackgoldblum.github.io">Check it out!</a>`
             }
         ],
+        "2024-2025": [
+            {
+                title: "Custom Hardline Liquid Cooled PC",
+                description: "My first foray into building liquid cooled computers.",
+                date: "Aug 2024",
+                imageSrc: "/projects/liquid_cooled_pc.webp",
+                content: `I've been building computers for over a decade (since I was 14 years old). In fact, it
+                  was this skill that landed me my first job as an assistant technician at a local IT
+                  company. As a kid, I loved to disassemble old tech products to see what was inside
+                  — although I had no idea how any of it worked. But going the other
+                  direction to build something functional was a whole new paradigm. I did figure it out
+                  though, because that first computer I built is still next to me, and still running!
+                  Since then, I've built computers for friends, several machine learning servers, and now
+                  my second (and first ever liquid cooled) PC. This build was significantly more
+                  challenging, but worth it for the experience gain and seeing the meticulous planning
+                  finally come together. There are a couple things to improve: my 90° bends could
+                  use some practice and one of the GPU tubing runs will need to be re-routed next time I
+                  do maintenance. Overall, I'm proud of this build and glad I took it on.`,
+                additionalInfo: `
+                  <div style="line-height: 1.2;">
+                      <span class="proj_desc" style="color: var(--white_color)">Computer Components</span> <br>
+                      - <em>1x</em> Gigabyte GeForce RTX 4090 Gaming OC <br>
+                      - <em>1x</em> AMD Ryzen 7 7800X3D <br>
+                      - <em>1x</em> NZXT N7 B650E - White <br>
+                      - <em>1x</em> Corsair Vengeance DDR5 RAM 64GB (2x32GB) 6000MHz CL30 - White <br>
+                      - <em>1x</em> Samsung 990 Pro 2TB <br>
+                      - <em>1x</em> Seasonic Vertex GX-1000 | 1000W | 80+ Gold <br>
+                      - <em>1x</em> Corsair 4000D Airflow - White <br>
+                      - <em>6x</em> EK-Loop Fan FPT 120 D-RGB - White (27mm Thickness) <br>
+                      - <em>1x</em> Corsair iCUE Commander Core XT <br>
+                      - <em>1x</em> EK-Loop PCI-E 4.0 Riser Cable <br>
+                      - <em>1x</em> D-RGB 6-Way Splitter Cable <br>
+                      - <em>1x</em> ARGB Adapter Cable <br>
+                  </div>
+                  <div style="line-height: 1.2; margin-top: 20px;">
+                      <span class="proj_desc" style="color: var(--white_color)">Liquid Cooling Loop Components</span> <br>
+                      - <em>1x</em> EK-Quantum Vector² Master RTX 4090 D-RGB - Nickel + Plexi <br>
+                      - <em>1x</em> EK-Quantum Kinetic FLT 80 DDC PWM D-RGB - Plexi <br>
+                      - <em>1x</em> EK-Quantum Velocity² D-RGB - AM5 Nickel + Plexi <br>
+                      - <em>1x</em> EK-Quantum Surface P360M - White (44mm Thickness) <br>
+                      - <em>1x</em> EK-Quantum Surface P240M - White (44mm Thickness) <br>
+                      - <em>10x</em> EK-Quantum Torque HDC 12mm - Satin Titanium <br>
+                      - <em>6x</em> EK-Quantum Torque Rotary 90° - Satin Titanium <br>
+                      - <em>4x</em> EK-Quantum Torque Micro Plug - Satin Titanium <br>
+                      - <em>1x</em> EK-Quantum Torque Double Rotary Offset 21mm Fitting - Satin Titanium <br>
+                      - <em>1x</em> EK-Quantum Torque Extender Static MF 28mm - Satin Titanium <br>
+                      - <em>1x</em> EK-Quantum Torque Extender Static MF 7mm - Satin Titanium <br>
+                      - <em>1x</em> EK-Quantum Torque Drain Valve - Satin Titanium <br>
+                      - <em>1x</em> EK-Loop Angled Bracket - 120/120mm <br>
+                      - <em>6x</em> EK-Loop Hard Tube 12mm 0.8m - Acrylic <br>
+                      - <em>1x</em> EK-CryoFuel Mystic Fog (Premix 1000mL) <br>
+                  </div>
+                  <div style="line-height: 1.2; margin-top: 20px;">
+                      <span class="proj_desc" style="color: var(--white_color)">Equipment</span> <br>
+                      - <em>1x</em> EK-Loop Heat Gun 1500W <br>
+                      - <em>1x</em> EK-Loop Leak Tester Flex <br>
+                      - <em>1x</em> Corsair Hydro X Series XT Hardline Bending Toolkit
+                  </div>`
+            },
+            {
+                title: "Sociail Chat | Sociail",
+                description: "Bringing together the best of human and AI collaboration.",
+                date: "June 2023 - March 2024",
+                imageSrc: "/projects/sociail_chat.webp",
+                content: `My time at Sociail marked my first true entrepreneurial experience. I joined the
+                  founding team immediately after graduation and developed the initial prototype
+                  of Sociail Chat, our collaborative AI product. As the startup grew, I found myself
+                  leading a multinational software development team and guiding the product through
+                  successive iterations until a limited release. Approaching launch, my focus
+                  shifted from technical development to product design and delivering an excellent user
+                  experience. I also had co-founder responsibilities around building the company itself
+                  — interviewing and onboarding team members, establishing our culture,
+                  and creating the 'operating system' of Sociail. There is so much more to share, and
+                  eventually I'll write something long-form that conveys how truly foundational this
+                  experience was.
+                  <br><br>
+                  <a class="check_it_out" href="https://www.sociail.com/">Check it out!</a>`
+            }
+        ],
         "2023-2024": [
             {
-                title: "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging | Ayaz Lab",
+                title: "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging | Neuroergonomics and Neuroengineering Lab",
                 description: "Master's thesis research project under Dr. Hasan Ayaz.",
                 date: "Dec 2021 - June 2023",
                 imageSrc: "/projects/kernel_flow.webp",
