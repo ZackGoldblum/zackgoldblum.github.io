@@ -61,13 +61,22 @@ function About() {
 
     const timelineEntries = [
         {
-            date: "Sept 2023-<br>Present",
+            date: "Aug 2024-<br>Present",
+            imageUrl: "/about/penn_thumbnail.webp",
+            imageAlt: "Penn thumbnail",
+            title: "Bioengineering PhD Student",
+            subheader: "University of Pennsylvania",
+            subtitle: "School of Engineering and Applied Science",
+            bullets: ["Litt Lab under Brian Litt, MD.<br><br>"]
+        },
+        {
+            date: "Sept 2023-<br>Aug 2024",
             imageUrl: "/about/litt_lab_thumbnail.webp",
             imageAlt: "Litt Lab thumbnail",
             title: "Research Specialist",
             subheader: "Litt Lab, University of Pennsylvania",
             subtitle: "Center for Neuroengineering and Therapeutics",
-            bullets: ["Translational neuroengineering research for epilepsy patient care under Brian Litt, MD.<br><br>"]
+            bullets: ["Translational neuroengineering research for epilepsy patient care.<br><br>"]
         },
         {
             date: "June 2023-<br>March 2024",
@@ -75,7 +84,10 @@ function About() {
             imageAlt: "Sociail thumbnail",
             title: "Co-Founder, Technology Lead",
             subheader: "Sociail",
-            bullets: ["Part of the executive leadership team focused on bringing together the best of human and AI collaboration.<br>"]
+            bullets: [
+                "— Led a multinational software development team through the release of our collaborative AI product, Sociail Chat<br>",
+                "— Conducted co-founder responsibilities around building the company itself, including interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail"
+            ]
         },
         {
             date: "Dec 2021-<br>Sept 2023",
@@ -85,11 +97,11 @@ function About() {
             subheader: "Neuroergonomics and Neuroengineering Lab, Drexel University",
             subtitle: "Cognitive Neuroengineering and Quantitative Experimental Research (CONQUER) Collaborative",
             bullets: [
-                "<b>Thesis:</b> 'Evaluation of Cognitive Function using Time - Domain Optical Neuroimaging'<br>",
+                "<b>Thesis:</b> 'Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging' under Dr. Hasan Ayaz<br>",
                 "— Designed and implemented a comprehensive cognitive study time-synchronized with TD-fNIRS data acquisition<br>",
                 "— Developed neuroimaging data processing, visualization, and analysis tools for TD-fNIRS<br>",
                 "— Enrolled and recorded behavioral, physiological, and neuroimaging data from 15 participants<br>",
-                "— Evaluated the neural correlates of cognitive function across a battery of eight cognitive tasks<br><br>"
+                "— Evaluated the neural correlates of cognitive function across a battery of eight cognitive tasks"
             ]
         },
         {
@@ -101,8 +113,8 @@ function About() {
                     title: "Lead Engineer",
                     subheader: "Moberg Analytics <span style=\"font-size: 18px; font-style: italic;\">(March 2022 - June 2023)</span>",
                     bullets: [
-                        "— Managed a collaboration to create contextual neuro-ICU sensors and a data aggregation system<br>",
-                        "— Led the development of a medical device for validating intracranial pressure recordings from conception through clinical trials<br>",
+                        "— Led the development of a medical device for validating intracranial pressure recordings from conception through clinical trials at UT Southwestern Medical Center<br>",
+                        "— Managed a project to create contextual neuro-ICU sensors and a data aggregation system in collaboration with Drexel University<br>",
                         "— Created an evaluation framework and assessed medical devices for performance in Prolonged Casualty Care"
                     ]
                 },
@@ -111,7 +123,7 @@ function About() {
                     subheader: "Moberg Analytics <span style=\"font-size: 18px; font-style: italic;\">(June 2020 - March 2022)</span>",
                     bullets: [
                         "— Developed a cloud-based platform for neurophysiological data harmonization, visualization, and analytics<br>",
-                        "— Established a common data format for a 1+ TB neurocritical care patient data repository<br>",
+                        "— Established a common data format for a large-scale neurocritical care patient data repository<br>",
                         "— Published an open-source Python package to aid researchers and developers working with HDF5 files"
                     ]
                 }
@@ -126,7 +138,7 @@ function About() {
             bullets: [
                 "— Performed product verification and validation activities for a novel stent-delivery system<br>",
                 "— Completed CAD designs and requirement testing<br>",
-                "— Improved UX aspects of the device and optimized the manufacturing assembly process<br><br>"
+                "— Improved UX aspects of the device and optimized the manufacturing assembly process"
             ]
         },
         {
@@ -139,9 +151,8 @@ function About() {
             bullets: [
                 "— BS in Biomedical Engineering <code class=\"tag_style tag_style_numeric\">GPA 3.85</code><br>",
                 "— MS in Biomedical Engineering <code class=\"tag_style tag_style_numeric\">GPA 4.00</code><br>",
-                "— Neuroengineering concentration + neuroscience minor<br>",
+                "— Neuroengineering concentration + Neuroscience minor<br>",
                 "— Graduated with Honors from the Pennoni Honors College<br>",
-                "— BIOMED student advisory board + student ambassador<br>"
             ]
         }
     ];
@@ -172,11 +183,16 @@ function About() {
                     <div id="affiliations_container">
                         <div className="flex_container">
                             <div id="left" className="box">
+                                <a href="https://seas.upenn.edu/">
+                                    <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
+                                </a>
+                            </div>
+                            <div id="middle" className="box">
                                 <a href="https://cnt.upenn.edu/">
                                     <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
                                 </a>
                             </div>
-                            <div id="middle" className="box">
+                            <div id="right" className="box">
                                 <a href="https://littlab.seas.upenn.edu/">
                                     <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
                                 </a>
@@ -243,6 +259,13 @@ function About() {
                 <br />
                 <Section title="Volunteering">
                     <div>
+                        <h4 className="header about_header">Alumni Board</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Drexel BIOMED Alumni Network <span style={{ fontSize: '18px' }}>(July 2024 - Present)</span>
+                        </p>
+                    </div>
+                    <br />
+                    <div>
                         <h4 className="header about_header">Event Manager, Philadelphia</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024)</span>
@@ -250,16 +273,67 @@ function About() {
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">BIOMED Student Advisory Board</h4>
+                        <h4 className="header about_header">Student Advisory Board</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel University School of Biomedical Engineering, Science and Health Systems <span style={{ fontSize: '18px' }}>(Aug 2022 - June 2023)</span>
                         </p>
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">BIOMED Student Ambassador</h4>
+                        <h4 className="header about_header">Student Ambassador</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel University School of Biomedical Engineering, Science and Health Systems <span style={{ fontSize: '18px' }}>(April 2022 - June 2023)</span>
+                        </p>
+                    </div>
+                </Section>
+                <br />
+                <Section title="Impactful Courses">
+                    <div>
+                        <h4 className="header about_header">Brain-Computer Interfaces</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Brian Litt, University of Pennsylvania, 2024
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Brain-Computer Interface Lab</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Jaimie Dougherty, Drexel University, 2023
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Neuroengineering I and II</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Catherine von Reyn, Drexel University, 2022
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Medical Technology Innovation</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Banu Onaral, Drexel University, 2022
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Brain Technology Convergence</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Banu Onaral, Drexel University, 2022
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Neural Networks</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Hualou Liang, Drexel University, 2021
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Biomedical Signal Processing</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Kurtulus Izzetoglu, Drexel University, 2021
                         </p>
                     </div>
                 </Section>
