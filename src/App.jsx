@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Research from './pages/Research';
@@ -10,6 +10,8 @@ import Space from './pages/Space';
 import NotFound from './pages/NotFound';
 import Starfield from './components/Starfield';
 import './index.css';
+
+const Router = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
 
 function App() {
     const [isPaused, setIsPaused] = useState(false);
