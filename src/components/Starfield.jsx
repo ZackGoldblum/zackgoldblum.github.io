@@ -25,77 +25,95 @@ const Starfield = () => {
             return new THREE.Points(geometry, material);
         };
 
-        const scene = new THREE.Scene();
-        sceneRef.current = scene;
-        scene.background = new THREE.Color(0x000000);
+        let scene, camera, renderer, stars;
 
-        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 2000);
-        cameraRef.current = camera;
-        camera.position.z = 500;
+        const init = () => {
+            scene = new THREE.Scene();
+            sceneRef.current = scene;
+            scene.background = new THREE.Color(0x000000);
 
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        rendererRef.current = renderer;
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000, 0);
-        mountRef.current.appendChild(renderer.domElement);
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 2000);
+            cameraRef.current = camera;
+            camera.position.z = 500;
 
-        const stars = createStarfield(10000, 1000);
-        starsRef.current = stars;
-        scene.add(stars);
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            rendererRef.current = renderer;
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0);
+            mountRef.current.appendChild(renderer.domElement);
 
-        const starSpeeds = new Float32Array(10000).map(() => THREE.MathUtils.randFloat(3, 8));
+            stars = createStarfield(10000, 1000);
+            starsRef.current = stars;
+            scene.add(stars);
 
-        let lastTime = performance.now();
-        const maxDelta = 1 / 30;  // Cap the delta at 30 fps
+            const starSpeeds = new Float32Array(10000).map(() => THREE.MathUtils.randFloat(3, 8));
 
-        const animate = () => {
-            const currentTime = performance.now();
-            let delta = (currentTime - lastTime) / 1000;  // Convert to seconds
-            delta = Math.min(delta, maxDelta);
-            lastTime = currentTime;
+            let lastTime = performance.now();
+            const maxDelta = 1 / 30;  // Cap the delta at 30 fps
 
-            const positions = stars.geometry.attributes.position.array;
+            const animate = () => {
+                const currentTime = performance.now();
+                let delta = (currentTime - lastTime) / 1000;  // Convert to seconds
+                delta = Math.min(delta, maxDelta);
+                lastTime = currentTime;
 
-            for (let i = 0; i < positions.length; i += 3) {
-                // Use individual star speed
-                positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
+                const positions = stars.geometry.attributes.position.array;
 
-                if (positions[i + 2] > 500) {
-                    positions[i] = THREE.MathUtils.randFloatSpread(1000);
-                    positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
-                    positions[i + 2] = -500;
+                for (let i = 0; i < positions.length; i += 3) {
+                    // Use individual star speed
+                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
+
+                    if (positions[i + 2] > 500) {
+                        positions[i] = THREE.MathUtils.randFloatSpread(1000);
+                        positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
+                        positions[i + 2] = -500;
+                    }
                 }
-            }
 
-            stars.geometry.attributes.position.needsUpdate = true;
+                stars.geometry.attributes.position.needsUpdate = true;
 
-            renderer.render(scene, camera);
-            animationFrameRef.current = requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+                animationFrameRef.current = requestAnimationFrame(animate);
+            };
+
+            animate();
+
+            const handleResize = () => {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+
+                renderer.setSize(width, height);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            };
+
+            window.addEventListener('resize', handleResize);
+
+            // Capture the current value of mountRef.current
+            const currentMount = mountRef.current;
+
+            return () => {
+                window.removeEventListener('resize', handleResize);
+                cancelAnimationFrame(animationFrameRef.current);
+                if (currentMount && renderer) {
+                    currentMount.removeChild(renderer.domElement);
+                }
+                // Dispose of Three.js objects
+                if (scene) {
+                    scene.dispose();
+                }
+                if (renderer) {
+                    renderer.dispose();
+                }
+            };
         };
 
-        animate();
-
-        const handleResize = () => {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-
-            renderer.setSize(width, height);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        };
-
-        window.addEventListener('resize', handleResize);
+        init();
 
         return () => {
-            window.removeEventListener('resize', handleResize);
-            cancelAnimationFrame(animationFrameRef.current);
-            const currentMount = mountRef.current;
-            const currentRenderer = rendererRef.current;
-            if (currentMount && currentRenderer) {
-                currentMount.removeChild(currentRenderer.domElement);
-            }
+            // No-op
         };
     }, []);
 
