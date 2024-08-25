@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Research from './pages/Research';
@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound';
 import Starfield from './components/Starfield';
 import './index.css';
 
-const Router = import.meta.env.PROD ? HashRouter : BrowserRouter;
+const Router = BrowserRouter;
 
 function App() {
     function AppContent() {
