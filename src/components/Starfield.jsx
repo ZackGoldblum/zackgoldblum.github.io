@@ -30,7 +30,7 @@ const Starfield = ({ isPaused }) => {
         sceneRef.current = scene;
         scene.background = new THREE.Color(0x000000);
 
-        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
+        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 2000);
         cameraRef.current = camera;
         camera.position.z = 500;
 
@@ -40,9 +40,11 @@ const Starfield = ({ isPaused }) => {
         renderer.setClearColor(0x000000, 0);
         mountRef.current.appendChild(renderer.domElement);
 
-        const stars = createStarfield(20000, 2000);
+        const stars = createStarfield(10000, 1000);
         starsRef.current = stars;
         scene.add(stars);
+
+        const starSpeeds = new Float32Array(10000).map(() => THREE.MathUtils.randFloat(3, 8));
 
         const animate = () => {
             if (!isPaused) {
@@ -50,11 +52,14 @@ const Starfield = ({ isPaused }) => {
                 const positions = stars.geometry.attributes.position.array;
 
                 for (let i = 0; i < positions.length; i += 3) {
-                    positions[i + 2] += 5 * delta;  // speed
+                    // Use individual star speed
+                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.5;
 
                     // If star is too close, reset its position
-                    if (positions[i + 2] > 1000) {
-                        positions[i + 2] -= 2000;
+                    if (positions[i + 2] > 500) {
+                        positions[i] = THREE.MathUtils.randFloatSpread(1000);
+                        positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
+                        positions[i + 2] = -500;
                     }
                 }
 
