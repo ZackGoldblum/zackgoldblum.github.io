@@ -8,7 +8,6 @@ const Starfield = () => {
     const rendererRef = useRef(null);
     const starsRef = useRef(null);
     const animationFrameRef = useRef(null);
-    const clockRef = useRef(new THREE.Clock());
 
     useEffect(() => {
         const createStarfield = (num, range) => {
@@ -93,8 +92,9 @@ const Starfield = () => {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationFrameRef.current);
             const currentMount = mountRef.current;
-            if (currentMount && renderer) {
-                currentMount.removeChild(renderer.domElement);
+            const currentRenderer = rendererRef.current;
+            if (currentMount && currentRenderer) {
+                currentMount.removeChild(currentRenderer.domElement);
             }
         };
     }, []);

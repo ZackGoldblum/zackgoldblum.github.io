@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 
 const TimelineEntry = ({ date, imageUrl, imageAlt, title, subheader, subtitle, bullets, positions }) => (
@@ -348,3 +349,19 @@ function About() {
 }
 
 export default About;
+
+TimelineEntry.propTypes = {
+    date: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subheader: PropTypes.string,
+    subtitle: PropTypes.string,
+    bullets: PropTypes.arrayOf(PropTypes.string),
+    positions: PropTypes.arrayOf(PropTypes.string)
+};
+
+Section.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
+};

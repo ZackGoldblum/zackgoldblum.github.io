@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 
-const ProjectItem = ({ title, description, date, imageSrc, content, additionalInfo }) => {
+const ProjectEntry = ({ title, description, date, imageSrc, content, additionalInfo }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const toggleAdditionalInfo = () => {
@@ -251,7 +252,7 @@ function Projects() {
                 <React.Fragment key={year}>
                     <h3><br /><u>{year}</u></h3>
                     {projects.map((project, index) => (
-                        <ProjectItem key={index} {...project} />
+                        <ProjectEntry key={index} {...project} />
                     ))}
                 </React.Fragment>
             ))}
@@ -264,3 +265,12 @@ function Projects() {
     );
 }
 export default Projects;
+
+ProjectEntry.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    additionalInfo: PropTypes.string
+};

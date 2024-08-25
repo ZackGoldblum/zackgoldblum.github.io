@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 function NotFound() {
     return (
         <div className="item_container" style= {{ textAlign: 'center', margin: '180px', padding: '0px' }}>

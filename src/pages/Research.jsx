@@ -1,7 +1,7 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 
-const ResearchItem = ({ year, items }) => (
+const ResearchSection = ({ year, items }) => (
     <>
         <h3><br /><u>{year}</u></h3>
         {items.map((item, index) => (
@@ -16,7 +16,7 @@ const ResearchItem = ({ year, items }) => (
 
 function Research() {
     useSmoothScroll();
-    
+
     const researchData = {
         "2024-2025": [
             {
@@ -103,7 +103,7 @@ function Research() {
     return (
         <div>
             {Object.entries(researchData).map(([year, items]) => (
-                <ResearchItem key={year} year={year} items={items} />
+                <ResearchSection key={year} year={year} items={items} />
             ))}
             <div style={{ textAlign: 'center' }}>
                 <a className="back_to_top" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} href="#">
@@ -115,3 +115,13 @@ function Research() {
 }
 
 export default Research;
+
+ResearchSection.propTypes = {
+    year: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({
+        tag: PropTypes.string.isRequired,
+        tagColor: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired
+    })).isRequired
+};

@@ -1,10 +1,10 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 
-const BookItem = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPosition, size = 'S' }) => {
+const Book = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPosition, size = 'S' }) => {
     const titleStyle = titlePadTop ? { paddingTop: `${titlePadTop}px` } : {};
     const authorStyle = authorBottomPosition ?
         { marginBottom: `${authorBottomPosition}px` } :
@@ -30,12 +30,12 @@ const BookItem = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPo
     );
 };
 
-const BookshelfSection = ({ year, books, isLast }) => (
+const YearSection = ({ year, books, isLast }) => (
     <>
         <h3><br /><u>{year}</u></h3>
         <div className="grid-container">
             {books.map((book, index) => (
-                <BookItem key={index} {...book} />
+                <Book key={index} {...book} />
             ))}
         </div>
         {!isLast && <br />}
@@ -123,7 +123,7 @@ function Bookshelf() {
     return (
         <div>
             {Object.entries(bookshelfData).map(([year, books], index, array) => (
-                <BookshelfSection
+                <YearSection
                     key={year}
                     year={year}
                     books={books}
@@ -140,3 +140,24 @@ function Bookshelf() {
 }
 
 export default Bookshelf;
+
+Book.propTypes = {
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    imageSrc: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    titlePadTop: PropTypes.string,
+    authorBottomPosition: PropTypes.string,
+    size: PropTypes.string
+};
+
+YearSection.propTypes = {
+    year: PropTypes.string.isRequired,
+    books: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        imageSrc: PropTypes.string.isRequired,
+        rating: PropTypes.number.isRequired
+    })).isRequired,
+    isLast: PropTypes.bool
+};
