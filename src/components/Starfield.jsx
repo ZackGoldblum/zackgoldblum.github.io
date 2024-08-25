@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-const Starfield = ({ isPaused }) => {
+const Starfield = () => {
     const mountRef = useRef(null);
     const sceneRef = useRef(null);
     const cameraRef = useRef(null);
@@ -55,22 +55,20 @@ const Starfield = ({ isPaused }) => {
             delta = Math.min(delta, maxDelta);
             lastTime = currentTime;
 
-            if (!isPaused) {
-                const positions = stars.geometry.attributes.position.array;
+            const positions = stars.geometry.attributes.position.array;
 
-                for (let i = 0; i < positions.length; i += 3) {
-                    // Use individual star speed
-                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
+            for (let i = 0; i < positions.length; i += 3) {
+                // Use individual star speed
+                positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
 
-                    if (positions[i + 2] > 500) {
-                        positions[i] = THREE.MathUtils.randFloatSpread(1000);
-                        positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
-                        positions[i + 2] = -500;
-                    }
+                if (positions[i + 2] > 500) {
+                    positions[i] = THREE.MathUtils.randFloatSpread(1000);
+                    positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
+                    positions[i + 2] = -500;
                 }
-
-                stars.geometry.attributes.position.needsUpdate = true;
             }
+
+            stars.geometry.attributes.position.needsUpdate = true;
 
             renderer.render(scene, camera);
             animationFrameRef.current = requestAnimationFrame(animate);
@@ -94,17 +92,12 @@ const Starfield = ({ isPaused }) => {
         return () => {
             window.removeEventListener('resize', handleResize);
             cancelAnimationFrame(animationFrameRef.current);
-            mountRef.current?.removeChild(renderer.domElement);
+            const currentMount = mountRef.current;
+            if (currentMount && renderer) {
+                currentMount.removeChild(renderer.domElement);
+            }
         };
     }, []);
-
-    useEffect(() => {
-        if (isPaused) {
-            clockRef.current.stop();
-        } else {
-            clockRef.current.start();
-        }
-    }, [isPaused]);
 
     return <div ref={mountRef} style={{
         position: 'fixed',

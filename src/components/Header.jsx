@@ -1,10 +1,10 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Header({ isPaused, togglePause }) {
+// function Header({ isPaused, togglePause }) {
+function Header() {
     const location = useLocation();
 
     return (
@@ -56,5 +56,10 @@ function Header({ isPaused, togglePause }) {
         </header>
     );
 }
+
+// Header.propTypes = {
+//   isPaused: PropTypes.bool,
+//   togglePause: PropTypes.func
+// };
 
 export default Header;
