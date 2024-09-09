@@ -189,22 +189,35 @@ function About() {
                 <br />
                 <Section title="Current Affiliations">
                     <div id="affiliations_container">
-                        <div className="flex_container">
-                            <div id="left" className="box">
-                                <a href="https://seas.upenn.edu/">
-                                    <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
-                                </a>
-                            </div>
-                            <div id="middle" className="box">
-                                <a href="https://cnt.upenn.edu/">
-                                    <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
-                                </a>
-                            </div>
-                            <div id="right" className="box">
-                                <a href="https://littlab.seas.upenn.edu/">
-                                    <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
-                                </a>
-                            </div>
+                        <div id="left" className="box">
+                            <a href="https://seas.upenn.edu/">
+                                <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
+                            </a>
+                        </div>
+                        <div id="middle" className="box">
+                            <a href="https://cnt.upenn.edu/">
+                                <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
+                            </a>
+                        </div>
+                        <div id="right" className="box">
+                            <a href="https://littlab.seas.upenn.edu/">
+                                <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
+                            </a>
+                        </div>
+                        <div id="left" className="box">
+                            <a href="https://nucleate.xyz/">
+                                <img src="/about/nucleate.webp" alt="Nucleate image" width="533" height="80" />
+                            </a>
+                        </div>
+                        <div id="middle" className="box">
+                            <a href="https://drexel.edu/biomed/resources/alumni/">
+                                <img src="/about/dban.webp" alt="Drexel Biomed Alumni Network image" width="250" height="80" />
+                            </a>
+                        </div>
+                        <div id="right" className="box">
+                            <a href="https://pintofscience.com/">
+                                <img src="/about/pint_of_science.webp" alt="Pint of Science image" width="250" height="80" />
+                            </a>
                         </div>
                     </div>
                 </Section>

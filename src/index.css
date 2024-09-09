@@ -575,9 +575,10 @@ h3 {
 }
 
 #affiliations_container {
-  display: flex;
-  align-items: center;
+  display: flex; 
+  flex-wrap: wrap; 
   justify-content: center;
+  gap: 20px; 
   width: 100%;
   max-width: 920px;
   margin: 0 auto;
