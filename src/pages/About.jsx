@@ -201,32 +201,6 @@ function About() {
                     </div>
                 </Section>
                 <br />
-                <Section title="Certifications">
-                    <div>
-                        <h4 className="header about_header">Biomedical Research</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Good Clinical Practice</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Human Subjects Research - Social Behavioral</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437">Check it out!</a>
-                    </div>
-                </Section>
-                <br />
                 <Section title="Tutoring and Mentorship">
                     <div>
                         <h4 className="header about_header">Physics Tutor - Electricity & Magnetism</h4>
@@ -335,6 +309,32 @@ function About() {
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Dr. Kurtulus Izzetoglu, Drexel University, 2021
                         </p>
+                    </div>
+                </Section>
+                <br />
+                <Section title="Certifications">
+                    <div>
+                        <h4 className="header about_header">Biomedical Research</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920">Check it out!</a>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Good Clinical Practice</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870">Check it out!</a>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Human Subjects Research - Social Behavioral</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437">Check it out!</a>
                     </div>
                 </Section>
             </div>
