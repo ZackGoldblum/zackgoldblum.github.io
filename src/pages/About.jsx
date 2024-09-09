@@ -68,7 +68,7 @@ function About() {
             title: "Bioengineering PhD Student",
             subheader: "University of Pennsylvania",
             subtitle: "School of Engineering and Applied Science",
-            bullets: ["Litt Lab under Brian Litt, MD.<br><br>"]
+            bullets: ["Litt Lab under Brian Litt, MD.", "Ashton Fellow."]
         },
         {
             date: "Sept 2023-<br>Aug 2024",
@@ -242,7 +242,7 @@ function About() {
                     <div>
                         <h4 className="header about_header">Event Manager, Philadelphia</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024)</span>
+                            Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024 - Present)</span>
                         </p>
                     </div>
                     <br />
