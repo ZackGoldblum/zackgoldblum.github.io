@@ -62,6 +62,14 @@ function About() {
 
     const timelineEntries = [
         {
+            date: "Sept 2024-<br>Present",
+            imageUrl: "/about/nucleate_thumbnail.webp",
+            imageAlt: "Nucleate thumbnail",
+            title: "Leadership Team, Philadelphia",
+            subheader: "Nucleate",
+            bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
+        },
+        {
             date: "Aug 2024-<br>Present",
             imageUrl: "/about/penn_thumbnail.webp",
             imageAlt: "Penn thumbnail",
