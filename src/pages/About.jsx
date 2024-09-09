@@ -168,8 +168,7 @@ function About() {
                     alt="Zack Goldblum profile picture"
                 />
                 <div className="about_text item_container">
-                    I am an engineer and scientist doing research at the intersection of artificial intelligence and
-                    neurotechnology.
+                    I am an engineer and scientist doing research at the intersection of neurotechnology and artificial intelligence.
                 </div>
             </div>
             <br />
