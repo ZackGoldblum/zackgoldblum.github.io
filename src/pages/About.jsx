@@ -62,13 +62,21 @@ function About() {
 
     const timelineEntries = [
         {
+            date: "Sept 2024-<br>Present",
+            imageUrl: "/about/nucleate_thumbnail.webp",
+            imageAlt: "Nucleate thumbnail",
+            title: "Leadership Team, Philadelphia",
+            subheader: "Nucleate",
+            bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
+        },
+        {
             date: "Aug 2024-<br>Present",
             imageUrl: "/about/penn_thumbnail.webp",
             imageAlt: "Penn thumbnail",
             title: "Bioengineering PhD Student",
             subheader: "University of Pennsylvania",
             subtitle: "School of Engineering and Applied Science",
-            bullets: ["Litt Lab under Brian Litt, MD.<br><br>"]
+            bullets: ["Litt Lab under Brian Litt, MD.", "Ashton Fellow."]
         },
         {
             date: "Sept 2023-<br>Aug 2024",
@@ -168,8 +176,7 @@ function About() {
                     alt="Zack Goldblum profile picture"
                 />
                 <div className="about_text item_container">
-                    I am an engineer and scientist doing research at the intersection of artificial intelligence and
-                    neurotechnology.
+                    I am an engineer and scientist doing research at the intersection of neurotechnology and artificial intelligence.
                 </div>
             </div>
             <br />
@@ -182,49 +189,36 @@ function About() {
                 <br />
                 <Section title="Current Affiliations">
                     <div id="affiliations_container">
-                        <div className="flex_container">
-                            <div id="left" className="box">
-                                <a href="https://seas.upenn.edu/">
-                                    <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
-                                </a>
-                            </div>
-                            <div id="middle" className="box">
-                                <a href="https://cnt.upenn.edu/">
-                                    <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
-                                </a>
-                            </div>
-                            <div id="right" className="box">
-                                <a href="https://littlab.seas.upenn.edu/">
-                                    <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
-                                </a>
-                            </div>
+                        <div id="left" className="box">
+                            <a href="https://seas.upenn.edu/">
+                                <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
+                            </a>
                         </div>
-                    </div>
-                </Section>
-                <br />
-                <Section title="Certifications">
-                    <div>
-                        <h4 className="header about_header">Biomedical Research</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Good Clinical Practice</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Human Subjects Research - Social Behavioral</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437">Check it out!</a>
+                        <div id="middle" className="box">
+                            <a href="https://cnt.upenn.edu/">
+                                <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
+                            </a>
+                        </div>
+                        <div id="right" className="box">
+                            <a href="https://littlab.seas.upenn.edu/">
+                                <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
+                            </a>
+                        </div>
+                        <div id="left" className="box">
+                            <a href="https://nucleate.xyz/">
+                                <img src="/about/nucleate.webp" alt="Nucleate image" width="533" height="80" />
+                            </a>
+                        </div>
+                        <div id="middle" className="box">
+                            <a href="https://drexel.edu/biomed/resources/alumni/">
+                                <img src="/about/dban.webp" alt="Drexel Biomed Alumni Network image" width="250" height="80" />
+                            </a>
+                        </div>
+                        <div id="right" className="box">
+                            <a href="https://pintofscience.com/">
+                                <img src="/about/pint_of_science.webp" alt="Pint of Science image" width="250" height="80" />
+                            </a>
+                        </div>
                     </div>
                 </Section>
                 <br />
@@ -269,7 +263,7 @@ function About() {
                     <div>
                         <h4 className="header about_header">Event Manager, Philadelphia</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024)</span>
+                            Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024 - Present)</span>
                         </p>
                     </div>
                     <br />
@@ -336,6 +330,32 @@ function About() {
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Dr. Kurtulus Izzetoglu, Drexel University, 2021
                         </p>
+                    </div>
+                </Section>
+                <br />
+                <Section title="Certifications">
+                    <div>
+                        <h4 className="header about_header">Biomedical Research</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920">Check it out!</a>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Good Clinical Practice</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870">Check it out!</a>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Human Subjects Research - Social Behavioral</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
+                        </p>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437">Check it out!</a>
                     </div>
                 </Section>
             </div>
