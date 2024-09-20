@@ -22,8 +22,8 @@ function Research() {
             {
                 tag: "Pre-print",
                 tagColor: "light_purple",
-                title: "Pennsieve — A Collaborative Platform for Translational Neuroscience and Beyond",
-                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Sinha N, Wagenaar J. <em>arXiv</em>. Park City, UT. September 16, 2024. DOI: 10.48550/arXiv.2409.10509.<br><a class="check_it_out" href="https://arxiv.org/abs/2409.10509">Check it out!</a>'
+                title: "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Sinha N, Wagenaar J. <em>arXiv</em>. September 16, 2024. DOI: 10.48550/arXiv.2409.10509.<br><a class="check_it_out" href="https://arxiv.org/abs/2409.10509" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             },
             {
                 tag: "Poster",
