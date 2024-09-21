@@ -55,10 +55,10 @@ function Projects() {
                   V2: New design with a Three.js-animated starfield background.<br><br>
                   V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette
                   inspired by <a style="color: var(--dark-gray_color); font-style: italic;" 
-                  href="https://github.com/daltonmenezes/aura-theme/tree/main">Aura Theme</a>.
+                  href="https://github.com/daltonmenezes/aura-theme/tree/main" target="_blank" rel="noopener noreferrer">Aura Theme</a>.
                   <br><br>
                   <a class="check_it_out"
-                  href="https://github.com/ZackGoldblum/zackgoldblum.github.io">Check it out!</a>`
+                  href="https://github.com/ZackGoldblum/zackgoldblum.github.io" target="_blank" rel="noopener noreferrer">Check it out!</a>`
             }
         ],
         "2024-2025": [
@@ -137,7 +137,7 @@ function Projects() {
                   eventually I'll write something long-form that conveys how truly foundational this
                   experience was.
                   <br><br>
-                  <a class="check_it_out" href="https://www.sociail.com/">Check it out!</a>`
+                  <a class="check_it_out" href="https://www.sociail.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>`
             }
         ],
         "2023-2024": [
@@ -154,10 +154,10 @@ function Projects() {
                   verified an experimental setup for investigating the neural correlates of cognitive
                   tasks and designed open-source tools to facilitate optical neuroimaging research.
                   <br><br>
-                  <a class="check_it_out" href="https://doi.org/10.17918/00001784">Check it out!</a>
+                  <a class="check_it_out" href="https://doi.org/10.17918/00001784" target="_blank" rel="noopener noreferrer">Check it out!</a>
                   <br>
-                  <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/AyazLab/KernelFlow_Experiment">GitHub (Experiment)</a> |
-                  <a class="check_it_out" href="https://github.com/AyazLab/KernelFlow_Analysis">GitHub (Analysis)</a>`
+                  <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/AyazLab/KernelFlow_Experiment" target="_blank" rel="noopener noreferrer">GitHub (Experiment)</a> |
+                  <a class="check_it_out" href="https://github.com/AyazLab/KernelFlow_Analysis" target="_blank" rel="noopener noreferrer">GitHub (Analysis)</a>`
             },
             {
                 title: "Novel Medical Devices for Neurocritical Care Monitoring | Moberg Analytics",
@@ -169,7 +169,7 @@ function Projects() {
                   in neuro-ICU rooms. After the Stopcock Position Sensor for ICP context was clinically 
                   validated at UT Southwestern Medical Center, I initiated a joint effort with a Drexel <em>Senior 
                   Design</em> team to overhaul the devices and verify the sensors for environmental data capture.
-                  <br><br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136">Check it out!</a>`
+                  <br><br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136" target="_blank" rel="noopener noreferrer">Check it out!</a>`
             }
         ],
         "2022-2023": [
@@ -184,7 +184,7 @@ function Projects() {
                   retrospectively collected patient and medical data using a k-nearest neighbors algorithm. The
                   utilized database is the Medical Information Mart for Intensive Care (MIMIC)-IV.
                   <br><br><a class="check_it_out"
-                  href="https://github.com/ZackGoldblum/Neurocritial-Care-Patient-Outcome-Predictor">Check it
+                  href="https://github.com/ZackGoldblum/Neurocritial-Care-Patient-Outcome-Predictor" target="_blank" rel="noopener noreferrer">Check it
                   out!</a>`
             },
             {
@@ -197,8 +197,7 @@ function Projects() {
                   while the patient is breathing. The patient presses the button when he or she wishes to speak
                   and the cuff deflates. This work was presented at several Drexel Biomed events at which I
                   participated on a Q&A panel for prospective students.
-                  <br><br><a class="check_it_out" href="/projects/trachtalk_project.pdf"
-                  target="_blank">Check it out!</a>`
+                  <br><br><a class="check_it_out" href="/projects/trachtalk_project.pdf">Check it out!</a>`
             },
             {
                 title: "BrainTech Podcast | YouTube and Spotify",
@@ -210,7 +209,7 @@ function Projects() {
                   was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu
                   Onaral. Four episodes were created as initial run. I would like to return to this project at
                   some point and do more with the BrainTech channel.
-                  <br><br><a class="check_it_out" href="https://www.youtube.com/@braintechyoutube">Check it
+                  <br><br><a class="check_it_out" href="https://www.youtube.com/@braintechyoutube" target="_blank" rel="noopener noreferrer">Check it
                   out!</a>`
             }
         ],
@@ -226,7 +225,7 @@ function Projects() {
                   from my OpenBCI headset. The software handles EEG data acquisition from the headset,
                   pre-processing, and visualization, as well as dataset creation and real-time classification using our model.
                   <br><br><a class="check_it_out"
-                  href="https://github.com/ZackGoldblum/BMES725-BCI-Motor-Imagery">Check it out!</a>`
+                  href="https://github.com/ZackGoldblum/BMES725-BCI-Motor-Imagery" target="_blank" rel="noopener noreferrer">Check it out!</a>`
             }
         ],
         "2020-2021": [
@@ -240,7 +239,7 @@ function Projects() {
                   accelerometer, gyroscope, and keystroke data streams from a smartphone to train the model and
                   create visualizations for clinicians to remotely monitor disease progression over time.
                   Built on Android and Google Firebase.
-                  <br><br><a class="check_it_out" href="https://devpost.com/software/neopet-2pgzxt">Check it
+                  <br><br><a class="check_it_out" href="https://devpost.com/software/neopet-2pgzxt" target="_blank" rel="noopener noreferrer">Check it
                   out!</a>`
             }
         ]

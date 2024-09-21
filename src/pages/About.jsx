@@ -15,6 +15,7 @@ const TimelineEntry = ({ date, imagePath, imageUrl, imageAlt, title, subheader, 
             </div>
             <br />
             <div className="timeline_image">
+                <a href={imageUrl} target="_blank" rel="noopener noreferrer">
                     <img className="image_thumbnail" src={imagePath} alt={imageAlt} />
                 </a>
             </div>
@@ -197,32 +198,32 @@ function About() {
                 <Section title="Current Affiliations">
                     <div id="affiliations_container">
                         <div id="left" className="box">
-                            <a href="https://seas.upenn.edu/">
+                            <a href="https://seas.upenn.edu/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
                             </a>
                         </div>
                         <div id="middle" className="box">
-                            <a href="https://cnt.upenn.edu/">
+                            <a href="https://cnt.upenn.edu/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
                             </a>
                         </div>
                         <div id="right" className="box">
-                            <a href="https://littlab.seas.upenn.edu/">
+                            <a href="https://littlab.seas.upenn.edu/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
                             </a>
                         </div>
                         <div id="left" className="box">
-                            <a href="https://nucleate.xyz/">
+                            <a href="https://nucleate.xyz/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/nucleate.webp" alt="Nucleate image" width="533" height="80" />
                             </a>
                         </div>
                         <div id="middle" className="box">
-                            <a href="https://drexel.edu/biomed/resources/alumni/">
+                            <a href="https://drexel.edu/biomed/resources/alumni/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/dban.webp" alt="Drexel Biomed Alumni Network image" width="250" height="80" />
                             </a>
                         </div>
                         <div id="right" className="box">
-                            <a href="https://pintofscience.com/">
+                            <a href="https://pintofscience.com/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/pint_of_science.webp" alt="Pint of Science image" width="250" height="80" />
                             </a>
                         </div>
@@ -346,7 +347,7 @@ function About() {
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
                         </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920">Check it out!</a>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920" target="_blank" rel="noopener noreferrer">Check it out!</a>
                     </div>
                     <br />
                     <div>
@@ -354,7 +355,7 @@ function About() {
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
                         </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870">Check it out!</a>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870" target="_blank" rel="noopener noreferrer">Check it out!</a>
                     </div>
                     <br />
                     <div>
@@ -362,7 +363,7 @@ function About() {
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
                         </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437">Check it out!</a>
+                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437" target="_blank" rel="noopener noreferrer">Check it out!</a>
                     </div>
                 </Section>
             </div>
