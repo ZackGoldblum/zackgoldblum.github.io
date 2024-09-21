@@ -380,6 +380,7 @@ export default About;
 
 TimelineEntry.propTypes = {
     date: PropTypes.string.isRequired,
+    imagePath: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     imageAlt: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
