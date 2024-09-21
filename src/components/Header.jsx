@@ -28,13 +28,13 @@ function Header() {
             <h1>
                 <Link to="/" style={{ color: 'var(--blue_color)', textDecoration: 'none' }}>Zack Goldblum</Link>
                 <span style={{ marginLeft: '20px' }}>
-                    <a className="social_media_icons" href="http://www.github.com/ZackGoldblum" aria-label="GitHub">
+                    <a className="social_media_icons" href="http://www.github.com/ZackGoldblum" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
-                    <a className="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum" aria-label="LinkedIn">
+                    <a className="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a className="social_media_icons" href="https://x.com/ZackGoldblum" aria-label="X (Twitter)">
+                    <a className="social_media_icons" href="https://x.com/ZackGoldblum" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faXTwitter} />
                     </a>
                     <a className="social_media_icons" href="mailto:zackgoldblum@gmail.com" aria-label="Email">

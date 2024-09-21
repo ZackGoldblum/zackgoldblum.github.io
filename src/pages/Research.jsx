@@ -20,10 +20,10 @@ function Research() {
     const researchData = {
         "2024-2025": [
             {
-                tag: "Publication",
-                tagColor: "green",
-                title: "Pennsieve — A Collaborative Platform for Translational Neuroscience and Beyond",
-                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Sinha N, Wagenaar J. <em>arXiv</em>. Park City, UT. September 16, 2024. DOI: 10.48550/arXiv.2409.10509.<br><a class="check_it_out" href="https://arxiv.org/abs/2409.10509">Check it out!</a>'
+                tag: "Pre-print",
+                tagColor: "light_purple",
+                title: "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Sinha N, Wagenaar J. <em>arXiv</em>. September 16, 2024. DOI: 10.48550/arXiv.2409.10509.<br><a class="check_it_out" href="https://arxiv.org/abs/2409.10509" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             },
             {
                 tag: "Poster",
@@ -37,13 +37,13 @@ function Research() {
                 tag: "Publication",
                 tagColor: "green",
                 title: "A Novel External Ventricular Drain Sensor to Improve Acquired Brain Injury Monitoring",
-                content: '<b>Goldblum Z</b>, Gruen V, Olson DM, Kanter G, Moberg D. <em>Military Medicine</em>, Volume 188, Issue Supplement_6, November/December 2023, Pages 334-339. DOI: 10.1093/milmed/usad136.<br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136">Check it out!</a>'
+                content: '<b>Goldblum Z</b>, Gruen V, Olson DM, Kanter G, Moberg D. <em>Military Medicine</em>, Volume 188, Issue Supplement_6, November/December 2023, Pages 334-339. DOI: 10.1093/milmed/usad136.<br><a class="check_it_out" href="https://doi.org/10.1093/milmed/usad136" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             },
             {
                 tag: "Thesis",
                 tagColor: "red",
                 title: "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging",
-                content: '<b>Goldblum Z</b>. <em>Master\'s Thesis, Drexel University</em>. June, 2023. DOI: 10.17918/00001784.<br><a class="check_it_out" href="https://doi.org/10.17918/00001784">Check it out!</a>'
+                content: '<b>Goldblum Z</b>. <em>Master\'s Thesis, Drexel University</em>. June, 2023. DOI: 10.17918/00001784.<br><a class="check_it_out" href="https://doi.org/10.17918/00001784" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             },
             {
                 tag: "Poster",
@@ -61,13 +61,13 @@ function Research() {
                 tag: "Poster",
                 tagColor: "orange",
                 title: "Enhancing Neurocritical Care Through Multimodal Monitoring with Novel Contextual Sensors",
-                content: 'Zwiebel I, Gruen V, Jose J, Wheeler K, <b>Goldblum Z</b>, Gomba MA, Moyer EJ, Moberg D. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 31, 2023.<br><a class="check_it_out" href="/research/senior_design_NEBEC_2023.pdf" target="_blank">Check it out!</a>'
+                content: 'Zwiebel I, Gruen V, Jose J, Wheeler K, <b>Goldblum Z</b>, Gomba MA, Moyer EJ, Moberg D. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 31, 2023.<br><a class="check_it_out" href="/research/senior_design_NEBEC_2023.pdf">Check it out!</a>'
             },
             {
                 tag: "Poster",
                 tagColor: "orange",
                 title: "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging",
-                content: '<b>Goldblum Z</b>, Alshehri S, Curtin A, Ayaz H. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 30, 2023.<br><a class="check_it_out" href="/research/goldblum_NEBEC_2023.pdf" target="_blank">Check it out!</a>'
+                content: '<b>Goldblum Z</b>, Alshehri S, Curtin A, Ayaz H. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 30, 2023.<br><a class="check_it_out" href="/research/goldblum_NEBEC_2023.pdf">Check it out!</a>'
             }
         ],
         "2022-2023": [
@@ -75,7 +75,7 @@ function Research() {
                 tag: "Poster",
                 tagColor: "orange",
                 title: "Using Contextual Data to Enhance Machine Learning in Traumatic Brain Injury: Progress from the MIND Workgroup",
-                content: '<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Military Health System Research Symposium</em>. Kissimmee, FL. September 12, 2022.<br><a class="check_it_out" href="/research/goldblum_MHSRS_2022.pdf" target="_blank">Check it out!</a>'
+                content: '<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Military Health System Research Symposium</em>. Kissimmee, FL. September 12, 2022.<br><a class="check_it_out" href="/research/goldblum_MHSRS_2022.pdf">Check it out!</a>'
             }
         ],
         "2021-2022": [
@@ -83,7 +83,7 @@ function Research() {
                 tag: "Poster",
                 tagColor: "orange",
                 title: "Using Contextual Data to Enhance Machine Learning in Traumatic Brain Injury",
-                content: '<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Neurocritical Care Society 19th Annual Meeting</em>. Chicago, IL. October 27, 2021.<br><i>Voted as a Poster of Distinction</i><br><a class="check_it_out" href="/research/goldblum_NCS_2021.pdf" target="_blank">Check it out!</a>'
+                content: '<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Neurocritical Care Society 19th Annual Meeting</em>. Chicago, IL. October 27, 2021.<br><i>Voted as a Poster of Distinction</i><br><a class="check_it_out" href="/research/goldblum_NCS_2021.pdf">Check it out!</a>'
             },
             {
                 tag: "Poster",
