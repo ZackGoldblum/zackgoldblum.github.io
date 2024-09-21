@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useSmoothScroll from '../hooks/useSmoothScroll';
 
-const TimelineEntry = ({ date, imageUrl, imageAlt, title, subheader, subtitle, bullets, positions }) => (
+const TimelineEntry = ({ date, imagePath, imageUrl, imageAlt, title, subheader, subtitle, bullets, positions }) => (
     <div className="timeline_entry item_container">
         <div className="timeline_left">
             <div className="timeline_date timeline_date_right">
@@ -15,8 +15,7 @@ const TimelineEntry = ({ date, imageUrl, imageAlt, title, subheader, subtitle, b
             </div>
             <br />
             <div className="timeline_image">
-                <a href={imageUrl}>
-                    <img className="image_thumbnail" src={imageUrl} alt={imageAlt} />
+                    <img className="image_thumbnail" src={imagePath} alt={imageAlt} />
                 </a>
             </div>
         </div>
@@ -63,7 +62,8 @@ function About() {
     const timelineEntries = [
         {
             date: "Sept 2024-<br>Present",
-            imageUrl: "/about/nucleate_thumbnail.webp",
+            imagePath: "/about/nucleate_thumbnail.webp",
+            imageUrl: "https://www.nucleate.xyz/",
             imageAlt: "Nucleate thumbnail",
             title: "Leadership Team, Philadelphia",
             subheader: "Nucleate",
@@ -71,7 +71,8 @@ function About() {
         },
         {
             date: "Aug 2024-<br>Present",
-            imageUrl: "/about/penn_thumbnail.webp",
+            imagePath: "/about/penn_thumbnail.webp",
+            imageUrl: "https://be.seas.upenn.edu/",
             imageAlt: "Penn thumbnail",
             title: "Bioengineering PhD Student",
             subheader: "University of Pennsylvania",
@@ -80,7 +81,8 @@ function About() {
         },
         {
             date: "Sept 2023-<br>Aug 2024",
-            imageUrl: "/about/litt_lab_thumbnail.webp",
+            imagePath: "/about/litt_lab_thumbnail.webp",
+            imageUrl: "https://littlab.seas.upenn.edu/",
             imageAlt: "Litt Lab thumbnail",
             title: "Research Specialist",
             subheader: "Litt Lab, University of Pennsylvania",
@@ -89,7 +91,8 @@ function About() {
         },
         {
             date: "June 2023-<br>March 2024",
-            imageUrl: "/about/sociail_thumbnail.webp",
+            imagePath: "/about/sociail_thumbnail.webp",
+            imageUrl: "https://www.sociail.com/",
             imageAlt: "Sociail thumbnail",
             title: "Co-Founder, Technology Lead",
             subheader: "Sociail",
@@ -100,7 +103,8 @@ function About() {
         },
         {
             date: "Dec 2021-<br>Sept 2023",
-            imageUrl: "/about/ayaz_lab_thumbnail.webp",
+            imagePath: "/about/ayaz_lab_thumbnail.webp",
+            imageUrl: "https://ayazlab.com/",
             imageAlt: "Ayaz Lab thumbnail",
             title: "Research Assistant",
             subheader: "Neuroergonomics and Neuroengineering Lab, Drexel University",
@@ -115,7 +119,8 @@ function About() {
         },
         {
             date: "June 2020-<br>June 2023",
-            imageUrl: "/about/moberg_analytics_thumbnail.webp",
+            imagePath: "/about/moberg_analytics_thumbnail.webp",
+            imageUrl: "https://moberganalytics.com/",
             imageAlt: "Moberg Analytics thumbnail",
             positions: [
                 {
@@ -140,7 +145,8 @@ function About() {
         },
         {
             date: "Sept 2019-<br>March 2020",
-            imageUrl: "/about/intact_vascular_thumbnail.webp",
+            imagePath: "/about/intact_vascular_thumbnail.webp",
+            imageUrl: "https://www.linkedin.com/company/intactvascular/",
             imageAlt: "Intact Vascular thumbnail",
             title: "Product Research & Development Engineer",
             subheader: "Intact Vascular",
@@ -152,7 +158,8 @@ function About() {
         },
         {
             date: "Sept 2018-<br>June 2023",
-            imageUrl: "/about/drexel_thumbnail.webp",
+            imagePath: "/about/drexel_thumbnail.webp",
+            imageUrl: "https://drexel.edu/biomed/",
             imageAlt: "Drexel University thumbnail",
             title: "Biomedical Engineering Graduate",
             subheader: "Drexel University",
