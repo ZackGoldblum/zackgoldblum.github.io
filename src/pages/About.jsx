@@ -81,6 +81,27 @@ function About() {
             bullets: ["Litt Lab under Brian Litt, MD.", "Ashton Fellow."]
         },
         {
+            date: "June 2023-<br>Present",
+            imagePath: "/about/sociail_thumbnail.webp",
+            imageUrl: "https://www.sociail.com/",
+            imageAlt: "Sociail thumbnail",
+            positions: [
+                {
+                    title: "Advisor",
+                    subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(Sept 2024 - Present)</span>",
+                    bullets: []
+                },
+                {
+                    title: "Co-Founder, Technology Lead",
+                    subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(June 2023 - March 2024)</span>",
+                    bullets: [
+                        "— Led a multinational software development team building our collaborative AI platform, Sociail Chat<br>",
+                        "— Conducted co-founder responsibilities around building the company itself, including interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail"
+                    ]
+                }
+            ]
+        },
+        {
             date: "Sept 2023-<br>Aug 2024",
             imagePath: "/about/litt_lab_thumbnail.webp",
             imageUrl: "https://littlab.seas.upenn.edu/",
@@ -89,18 +110,6 @@ function About() {
             subheader: "Litt Lab, University of Pennsylvania",
             subtitle: "Center for Neuroengineering and Therapeutics",
             bullets: ["Translational neuroengineering research for epilepsy patient care.<br><br>"]
-        },
-        {
-            date: "June 2023-<br>March 2024",
-            imagePath: "/about/sociail_thumbnail.webp",
-            imageUrl: "https://www.sociail.com/",
-            imageAlt: "Sociail thumbnail",
-            title: "Co-Founder, Technology Lead",
-            subheader: "Sociail",
-            bullets: [
-                "— Led a multinational software development team through the release of our collaborative AI product, Sociail Chat<br>",
-                "— Conducted co-founder responsibilities around building the company itself, including interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail"
-            ]
         },
         {
             date: "Dec 2021-<br>Sept 2023",
@@ -205,6 +214,11 @@ function About() {
                         <div id="middle" className="box">
                             <a href="https://cnt.upenn.edu/" target="_blank" rel="noopener noreferrer">
                                 <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
+                            </a>
+                        </div>
+                        <div id="right" className="box">
+                            <a href="https://sociail.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="/about/sociail.webp" alt="Sociail image" width="144" height="80" />
                             </a>
                         </div>
                         <div id="right" className="box">
