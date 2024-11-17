@@ -276,6 +276,13 @@ function About() {
                 <br />
                 <Section title="Volunteering">
                     <div>
+                        <h4 className="header about_header">Peer Reviewer</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Epilepsia Open <span style={{ fontSize: '18px' }}>(Nov 2024)</span>
+                        </p>
+                    </div>
+                    <br />
+                    <div>
                         <h4 className="header about_header">Alumni Board</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel BIOMED Alumni Network <span style={{ fontSize: '18px' }}>(July 2024 - Present)</span>
