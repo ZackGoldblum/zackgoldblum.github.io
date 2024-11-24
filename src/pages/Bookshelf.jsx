@@ -47,6 +47,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2024-2025": [
+            { title: "Shutter Island", author: "Dennis Lehane", imageSrc: "/books/shutter_island.webp", rating: 5, size: "M", titlePadTop: 22 },
+            { title: "Axiomatic", author: "Greg Egan", imageSrc: "/books/axiomatic.webp", rating: 4, size: "M", titlePadTop: 22 },
+            { title: "Welcome to the Universe in 3D: A Visual Tour", author: "Neil deGrasse Tyson", imageSrc: "/books/welcome_to_the_universe_in_3d.webp", rating: 3.5, size: "M" },
+            { title: "Diaspora", author: "Greg Egan", imageSrc: "/books/diaspora.webp", rating: 4.5, size: "M", titlePadTop: 22 },
             { title: "Permutation City", author: "Greg Egan", imageSrc: "/books/permutation_city.webp", rating: 4, size: "M", titlePadTop: 10 },
             { title: "Do Androids Dream of Electric Sheep?", author: "Philip K. Dick", imageSrc: "/books/do_androids_dream_of_electric_sheep.webp", rating: 3.5, size: "M" },
             { title: "Mona Lisa Overdrive", author: "William Gibson", imageSrc: "/books/mona_lisa_overdrive.webp", rating: 4, size: "M", titlePadTop: 10 },
