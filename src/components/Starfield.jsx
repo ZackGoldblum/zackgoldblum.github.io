@@ -6,33 +6,63 @@ const Starfield = () => {
     const sceneRef = useRef(null);
     const cameraRef = useRef(null);
     const rendererRef = useRef(null);
-    const starsRef = useRef(null);
+    const starsRef = useRef([]);
     const animationFrameRef = useRef(null);
 
     useEffect(() => {
-        const createStarfield = (num, range) => {
+        const createStarfield = (num, range, layerIndex) => {
             const geometry = new THREE.BufferGeometry();
             const vertices = new Float32Array(num * 3);
+            const colors = new Float32Array(num * 3);
+            const sizes = new Float32Array(num);
 
-            for (let i = 0; i < num * 3; i += 3) {
-                vertices[i] = THREE.MathUtils.randFloatSpread(range);
-                vertices[i + 1] = THREE.MathUtils.randFloatSpread(range);
-                vertices[i + 2] = THREE.MathUtils.randFloatSpread(range);
+            // Star colors based on temperature (from red to blue-white)
+            const starColors = [
+                new THREE.Color(0xffcccc), // Reddish
+                new THREE.Color(0xffffff), // White
+                new THREE.Color(0xccccff), // Bluish
+            ];
+
+            for (let i = 0; i < num; i++) {
+                const i3 = i * 3;
+                vertices[i3] = THREE.MathUtils.randFloatSpread(range);
+                vertices[i3 + 1] = THREE.MathUtils.randFloatSpread(range);
+                vertices[i3 + 2] = THREE.MathUtils.randFloatSpread(range);
+
+                // Random color from our palette
+                const color = starColors[Math.floor(Math.random() * starColors.length)];
+                colors[i3] = color.r;
+                colors[i3 + 1] = color.g;
+                colors[i3 + 2] = color.b;
+
+                // Varied sizes based on layer and random factor
+                sizes[i] = (Math.random() * 2 + 0.5) * (1 + layerIndex * 0.5);
             }
 
             geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
-            const material = new THREE.PointsMaterial({ color: 0xffffff, size: 1.5 });
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+            const material = new THREE.PointsMaterial({
+                size: 1.5,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                sizeAttenuation: true
+            });
+
             return new THREE.Points(geometry, material);
         };
 
-        let scene, camera, renderer, stars;
+        let scene, camera, renderer;
+        const starLayers = [];
 
         const init = () => {
             scene = new THREE.Scene();
             sceneRef.current = scene;
             scene.background = new THREE.Color(0x000000);
 
-            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 2000);
+            camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 2000);
             cameraRef.current = camera;
             camera.position.z = 500;
 
@@ -42,14 +72,23 @@ const Starfield = () => {
             renderer.setClearColor(0x000000, 0);
             mountRef.current.appendChild(renderer.domElement);
 
-            stars = createStarfield(10000, 1000);
-            starsRef.current = stars;
-            scene.add(stars);
+            // Create multiple star layers
+            const layerConfigs = [
+                { stars: 5000, range: 1000, speed: 12 },
+                { stars: 4000, range: 800, speed: 8 },
+                { stars: 3000, range: 600, speed: 5 }
+            ];
 
-            const starSpeeds = new Float32Array(10000).map(() => THREE.MathUtils.randFloat(3, 8));
+            layerConfigs.forEach((config, index) => {
+                const stars = createStarfield(config.stars, config.range, index);
+                stars.userData.speed = config.speed;
+                scene.add(stars);
+                starLayers.push(stars);
+            });
+            starsRef.current = starLayers;
 
             let lastTime = performance.now();
-            const maxDelta = 1 / 30;  // Cap the delta at 30 fps
+            const maxDelta = 1 / 60;
 
             const animate = () => {
                 const currentTime = performance.now();
@@ -57,20 +96,29 @@ const Starfield = () => {
                 delta = Math.min(delta, maxDelta);
                 lastTime = currentTime;
 
-                const positions = stars.geometry.attributes.position.array;
+                starLayers.forEach(stars => {
+                    const positions = stars.geometry.attributes.position.array;
+                    const sizes = stars.geometry.attributes.size.array;
 
-                for (let i = 0; i < positions.length; i += 3) {
-                    // Use individual star speed
-                    positions[i + 2] += starSpeeds[i / 3] * delta * 1.25;
+                    for (let i = 0; i < positions.length; i += 3) {
+                        // Move stars
+                        positions[i + 2] += stars.userData.speed * delta;
 
-                    if (positions[i + 2] > 500) {
-                        positions[i] = THREE.MathUtils.randFloatSpread(1000);
-                        positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
-                        positions[i + 2] = -500;
+                        // Reset position when star goes too far
+                        if (positions[i + 2] > 500) {
+                            positions[i] = THREE.MathUtils.randFloatSpread(1000);
+                            positions[i + 1] = THREE.MathUtils.randFloatSpread(1000);
+                            positions[i + 2] = -500;
+                        }
+
+                        // Twinkle effect
+                        const starIndex = i / 3;
+                        sizes[starIndex] *= 0.9 + Math.random() * 0.2;
                     }
-                }
 
-                stars.geometry.attributes.position.needsUpdate = true;
+                    stars.geometry.attributes.position.needsUpdate = true;
+                    stars.geometry.attributes.size.needsUpdate = true;
+                });
 
                 renderer.render(scene, camera);
                 animationFrameRef.current = requestAnimationFrame(animate);
