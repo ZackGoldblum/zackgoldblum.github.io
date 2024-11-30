@@ -47,7 +47,7 @@ const Starfield = () => {
                 size: 1.5,
                 vertexColors: true,
                 transparent: true,
-                opacity: 0.8,
+                opacity: 0,
                 sizeAttenuation: true
             });
 
@@ -89,12 +89,23 @@ const Starfield = () => {
 
             let lastTime = performance.now();
             const maxDelta = 1 / 60;
+            const fadeInDuration = 2; // Fade in duration (seconds)
+            let fadeInTime = 0;
 
             const animate = () => {
                 const currentTime = performance.now();
-                let delta = (currentTime - lastTime) / 1000;  // Convert to seconds
+                let delta = (currentTime - lastTime) / 1000;
                 delta = Math.min(delta, maxDelta);
                 lastTime = currentTime;
+
+                // Handle fade in
+                if (fadeInTime < fadeInDuration) {
+                    fadeInTime += delta;
+                    const opacity = Math.min(fadeInTime / fadeInDuration, 1) * 0.8; // Max opacity 0.8
+                    starLayers.forEach(stars => {
+                        stars.material.opacity = opacity;
+                    });
+                }
 
                 starLayers.forEach(stars => {
                     const positions = stars.geometry.attributes.position.array;
