@@ -66,8 +66,8 @@ function About() {
             imagePath: "/about/nucleate_thumbnail.webp",
             imageUrl: "https://www.nucleate.xyz/",
             imageAlt: "Nucleate thumbnail",
-            title: "Leadership Team, Philadelphia",
-            subheader: "Nucleate",
+            title: "Leadership Team",
+            subheader: "Nucleate Philadelphia",
             bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
         },
         {
@@ -244,7 +244,14 @@ function About() {
                     </div>
                 </Section>
                 <br />
-                <Section title="Tutoring and Mentorship">
+                <Section title="Teaching and Mentorship">
+                    <div>
+                        <h4 className="header about_header">Teaching Assistant - Brain-Computer Interfaces</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            University of Pennsylvania BE 5210 <span style={{ fontSize: '18px' }}>(Jan 2024 - Present)</span>
+                        </p>
+                    </div>
+                    <br />
                     <div>
                         <h4 className="header about_header">Physics Tutor - Electricity & Magnetism</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
@@ -313,8 +320,15 @@ function About() {
                 <br />
                 <Section title="Impactful Courses">
                     <div>
-                        <h4 className="header about_header">Brain-Computer Interfaces</h4>
+                        <h4 className="header about_header">Applied Medical Innovation</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Katie Reuther, University of Pennsylvania, 2024
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Brain-Computer Interfaces</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px', }}>
                             Dr. Brian Litt, University of Pennsylvania, 2024
                         </p>
                     </div>
