@@ -46,6 +46,25 @@ function Projects() {
     const projectsData = {
         "Current": [
             {
+                title: "Sociail Chat | Sociail",
+                description: "Bringing together the best of human and AI collaboration.",
+                date: "June 2023 - Present",
+                imageSrc: "/projects/sociail_chat.webp",
+                content: `My time at Sociail marks my first true entrepreneurial experience. I joined the
+                  founding team right after graduating from Drexel and developed the initial prototype
+                  of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself
+                  leading a multinational software development team and guiding the product through
+                  successive iterations until a limited release. Approaching launch, my focus
+                  shifted from technical development to product design, user experience, and go-to-market strategy.
+                  My co-founder responsibilities helped build the company itself:
+                  interviewing and onboarding team members, establishing our culture,
+                  and creating the 'operating system' of Sociail. There is so much more to share, and
+                  eventually I'll write something long-form that conveys how truly foundational this
+                  experience is.
+                  <br><br>
+                  <a class="check_it_out" href="https://www.sociail.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>`
+            },
+            {
                 title: "Personal Website",
                 description: "My own website to showcase some of the things I do to the world.",
                 date: "Sept 2022 - Present",
@@ -120,25 +139,6 @@ function Projects() {
                       - <em>1x</em> Corsair Hydro X Series XT Hardline Bending Toolkit
                   </div>`
             },
-            {
-                title: "Sociail Chat | Sociail",
-                description: "Bringing together the best of human and AI collaboration.",
-                date: "June 2023 - March 2024",
-                imageSrc: "/projects/sociail_chat.webp",
-                content: `My time at Sociail marked my first true entrepreneurial experience. I joined the
-                  founding team immediately after graduation and developed the initial prototype
-                  of Sociail Chat, our collaborative AI product. As the startup grew, I found myself
-                  leading a multinational software development team and guiding the product through
-                  successive iterations until a limited release. Approaching launch, my focus
-                  shifted from technical development to product design and delivering an excellent user
-                  experience. I also had co-founder responsibilities around building the company itself
-                  — interviewing and onboarding team members, establishing our culture,
-                  and creating the 'operating system' of Sociail. There is so much more to share, and
-                  eventually I'll write something long-form that conveys how truly foundational this
-                  experience was.
-                  <br><br>
-                  <a class="check_it_out" href="https://www.sociail.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>`
-            }
         ],
         "2023-2024": [
             {
