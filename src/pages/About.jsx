@@ -88,7 +88,7 @@ function About() {
             positions: [
                 {
                     title: "Advisor",
-                    subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(Sept 2024 - Present)</span>",
+                    subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(March 2024 - Present)</span>",
                     bullets: []
                 },
                 {
