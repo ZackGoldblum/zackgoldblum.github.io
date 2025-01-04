@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faXTwitter, faGoogleScholar } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 // function Header({ isPaused, togglePause }) {
@@ -31,10 +31,13 @@ function Header() {
                     <a className="social_media_icons" href="http://www.github.com/ZackGoldblum" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
+                    <a className="social_media_icons" href="https://scholar.google.com/citations?user=7xzw1a8AAAAJ&hl" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGoogleScholar} />
+                    </a>
                     <a className="social_media_icons" href="http://www.linkedin.com/in/zackgoldblum" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a className="social_media_icons" href="https://x.com/ZackGoldblum" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+                    <a className="social_media_icons" href="https://x.com/ZackGoldblum" aria-label="X" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faXTwitter} />
                     </a>
                     <a className="social_media_icons" href="mailto:zackgoldblum@gmail.com" aria-label="Email">
