@@ -82,6 +82,27 @@ function Projects() {
         ],
         "2024-2025": [
             {
+                title: "EpiTracker",
+                description: "Insightful epilepsy management.",
+                date: "Oct 2024 - Dec 2024",
+                imageSrc: "/projects/epitracker.webp",
+                content: `
+                  Final project for <em>Applied Medical Innovation</em>, where we learned and executed the process of creating impactful, 
+                  commercially viable medical innovations. The concept for EpiTracker emerged from nearly a dozen stakeholder 
+                  interviews spanning neurologists, neurosurgeons, foundations, and patients, with the goal of identifying 
+                  addressable gaps in epilepsy care. We discovered an opportunity to reduce the time to optimal treatment by 
+                  capturing critical information from ambulatory settings and presenting actionable trends and insights to support 
+                  clinical care decisions. The project culminated in a functional prototype of EpiTracker—which took the form of a 
+                  mobile app for patients and web portal for clinicians—and a final pitch complete with market research and a 
+                  business model.
+                  <br><br>
+                  <a class="check_it_out"
+                  href="https://epitracker.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>
+                  <br><br>
+                  <a class="check_it_out"
+                  href="https://github.com/ZackGoldblum/EpiTracker" target="_blank" rel="noopener noreferrer">GitHub Project</a>`
+            },
+            {
                 title: "Custom Hardline Liquid Cooled PC",
                 description: "My first foray into building liquid cooled computers.",
                 date: "Aug 2024",
