@@ -89,7 +89,9 @@ function About() {
                 {
                     title: "Advisor",
                     subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(March 2024 - Present)</span>",
-                    bullets: []
+                    bullets: [
+                        "— Leading go-to-market efforts"
+                    ]
                 },
                 {
                     title: "Co-Founder, Technology Lead",
@@ -246,35 +248,35 @@ function About() {
                 <br />
                 <Section title="Teaching and Mentorship">
                     <div>
-                        <h4 className="header about_header">Teaching Assistant - Brain-Computer Interfaces</h4>
+                        <h4 className="header about_header">Co-Head TA — Brain-Computer Interfaces</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             University of Pennsylvania BE 5210 <span style={{ fontSize: '18px' }}>(Jan 2024 - Present)</span>
                         </p>
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">Physics Tutor - Electricity & Magnetism</h4>
+                        <h4 className="header about_header">Physics Tutor — Electricity & Magnetism</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Private <span style={{ fontSize: '18px' }}>(March 2023 - June 2023)</span>
                         </p>
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">Peer Mentor - Brain Technology Convergence</h4>
+                        <h4 className="header about_header">Peer Mentor — Brain Technology Convergence</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel University BMES T580 <span style={{ fontSize: '18px' }}>(Sept 2022 - Dec 2022)</span>
                         </p>
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">Peer Mentor - Medical Technology Innovation</h4>
+                        <h4 className="header about_header">Peer Mentor — Medical Technology Innovation</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel University BMES 585 <span style={{ fontSize: '18px' }}>(Jan 2021 - March 2021)</span>
                         </p>
                     </div>
                     <br />
                     <div>
-                        <h4 className="header about_header">Physics Tutor - Newtonian Mechanics</h4>
+                        <h4 className="header about_header">Physics Tutor — Newtonian Mechanics</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel Center for Learning and Academic Success <span style={{ fontSize: '18px' }}>(April 2020 - March 2021)</span>
                         </p>
@@ -418,11 +420,16 @@ TimelineEntry.propTypes = {
     imagePath: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     imageAlt: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     subheader: PropTypes.string,
     subtitle: PropTypes.string,
     bullets: PropTypes.arrayOf(PropTypes.string),
-    positions: PropTypes.arrayOf(PropTypes.string)
+    positions: PropTypes.arrayOf(PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        subheader: PropTypes.string.isRequired,
+        subtitle: PropTypes.string,
+        bullets: PropTypes.arrayOf(PropTypes.string).isRequired
+    }))
 };
 
 Section.propTypes = {
