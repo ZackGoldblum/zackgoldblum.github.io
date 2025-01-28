@@ -10,6 +10,20 @@ const Book = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPositi
         { marginBottom: `${authorBottomPosition}px` } :
         {};
 
+    // Special case for XXS size
+    if (size === 'XS' || size === 'XXS' || size === 'XXXS') {
+        return (
+            <div className={`grid_item_${size}`}>
+                <p className="book_title book_title_xs" style={titleStyle}>{title}</p>
+                <p className="book_author book_author_xs" style={authorStyle}>{author}</p>
+                <div className="book_img_container_xs">
+                    <img className="book_img book_img_xs" src={imageSrc} alt={`${title} book cover`} />
+                </div>
+            </div>
+        );
+    }
+
+    // Regular layout for other sizes
     return (
         <div className={`grid_item_${size}`}>
             <p className="book_title" style={titleStyle}>{title}</p><br />
@@ -17,22 +31,25 @@ const Book = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPositi
             <div className="book_img_container">
                 <img className="book_img" src={imageSrc} alt={`${title} book cover`} /><br />
             </div>
-            <div className="star_style_container">
-                {[1, 2, 3, 4, 5].map((star) => (
-                    <FontAwesomeIcon
-                        key={star}
-                        icon={star <= rating ? faStar : star - 0.5 <= rating ? faStarHalfStroke : faStarRegular}
-                        className={`star_icon ${star <= Math.ceil(rating) ? 'star_style_blue' : 'star_style_white'}`}
-                    />
-                ))}
-            </div>
+            {rating && (
+                <div className="star_style_container">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                        <FontAwesomeIcon
+                            key={star}
+                            icon={star <= rating ? faStar : star - 0.5 <= rating ? faStarHalfStroke : faStarRegular}
+                            className={`star_icon ${star <= Math.ceil(rating) ? 'star_style_blue' : 'star_style_white'}`}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
 
-const YearSection = ({ year, books, isLast }) => (
+const YearSection = ({ year, books, isLast, subtitle }) => (
     <>
         <h3><br /><u>{year}</u></h3>
+        {subtitle && <p className="year_subtitle">{subtitle}</p>}
         <div className="grid-container">
             {books.map((book, index) => (
                 <Book key={index} {...book} />
@@ -124,19 +141,84 @@ function Bookshelf() {
             { title: "Astrophysics for People in a Hurry", author: "Neil deGrasse Tyson", imageSrc: "/books/astrophysics_for_people_in_a_hurry.webp", rating: 3.5, size: "L", titlePadTop: 10 },
             { title: "Surely You're Joking, Mr. Feynman!", author: "Richard Feynman", imageSrc: "/books/surely_youre_joking_mr_feynman.webp", rating: 4, size: "S", authorBottomPosition: -24 },
         ],
+        "Earlier Reading": {
+            subtitle: "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate sequence as best I can recall.",
+            books: [
+                { title: "11/22/63", author: "Stephen King", imageSrc: "/books/11_22_63.webp", size: "XXS", authorBottomPosition: 0, titlePadTop: 10 },
+                { title: "Ready Player One", author: "Ernest Cline", imageSrc: "/books/ready_player_one.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Future of the Mind", author: "Michio Kaku", imageSrc: "/books/the_future_of_the_mind.webp", size: "XXS" },
+                { title: "MaddAddam", author: "Margaret Atwood", imageSrc: "/books/maddaddam.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Year of the Flood", author: "Margaret Atwood", imageSrc: "/books/the_year_of_the_flood.webp", size: "XXS" },
+                { title: "Oryx and Crake", author: "Margaret Atwood", imageSrc: "/books/oryx_and_crake.webp", size: "XXS", titlePadTop: 10 },
+                { title: "Make Your Bed", author: "William H. McRaven", imageSrc: "/books/make_your_bed.webp", size: "XXS", titlePadTop: 10 },
+                { title: "David and Goliath", author: "Malcolm Gladwell", imageSrc: "/books/david_and_goliath.webp", size: "XXS" },
+                { title: "Outliers", author: "Malcolm Gladwell", imageSrc: "/books/outliers.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Tipping Point", author: "Malcolm Gladwell", imageSrc: "/books/the_tipping_point.webp", size: "XXS" },
+                { title: "Blink", author: "Malcolm Gladwell", imageSrc: "/books/blink.webp", size: "XXXS" },
+                { title: "Frankenstein", author: "Mary Shelley", imageSrc: "/books/frankenstein.webp", size: "XXXS" },
+                { title: "1984", author: "George Orwell", imageSrc: "/books/1984.webp", size: "XXXS" },
+                { title: "Farenheit 451", author: "Ray Bradbury", imageSrc: "/books/farenheit_451.webp", size: "XXXS" },
+                { title: "Bel Canto", author: "Ann Patchett", imageSrc: "/books/bel_canto.webp", size: "XXXS" },
+                { title: "The Kite Runner", author: "Khaled Hosseini", imageSrc: "/books/the_kite_runner.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "The Catcher in the Rye", author: "J. D. Salinger", imageSrc: "/books/the_catcher_in_the_rye.webp", size: "XS", authorBottomPosition: 16 },
+                { title: "The Great Gatsby", author: "F. Scott Fitzgerald", imageSrc: "/books/the_great_gatsby.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "Lord of the Flies", author: "William Golding", imageSrc: "/books/lord_of_the_flies.webp", size: "XS", authorBottomPosition: 16 },
+                { title: "The Book Thief", author: "Markus Zusak", imageSrc: "/books/the_book_thief.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "The Pearl", author: "John Steinbeck", imageSrc: "/books/the_pearl.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "The Giver", author: "Lois Lowry", imageSrc: "/books/the_giver.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "To Kill a Mockingbird", author: "Harper Lee", imageSrc: "/books/to_kill_a_mockingbird.webp", size: "XS", authorBottomPosition: 16 },
+                { title: "Inkdeath", author: "Cornelia Funke", imageSrc: "/books/inkdeath.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "Inkspell", author: "Cornelia Funke", imageSrc: "/books/inkspell.webp", size: "XS", authorBottomPosition: 16, titlePadTop: 10 },
+                { title: "Inkheart", author: "Cornelia Funke", imageSrc: "/books/inkheart.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Death Cure", author: "James Dashner", imageSrc: "/books/the_death_cure.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Scorch Trials", author: "James Dashner", imageSrc: "/books/the_scorch_trials.webp", size: "XXS" },
+                { title: "The Maze Runner", author: "James Dashner", imageSrc: "/books/the_maze_runner.webp", size: "XXS", titlePadTop: 10 },
+                { title: "Terminal", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/terminal.webp", size: "XXS", authorBottomPosition: -10, titlePadTop: 10 },
+                { title: "Spiral", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/spiral.webp", size: "XXS" },
+                { title: "Closer", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/closer.webp", size: "XXS" },
+                { title: "Freefall", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/freefall.webp", size: "XXS" },
+                { title: "Deeper", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/deeper.webp", size: "XXS" },
+                { title: "Tunnels", author: "Roderick Gordon & Brian Williams", imageSrc: "/books/tunnels.webp", size: "XXS" },
+                { title: "Pathfinder", author: "Orson Scott Card", imageSrc: "/books/pathfinder.webp", size: "XXS", authorBottomPosition: 6 },
+                { title: "Ender's Game", author: "Orson Scott Card", imageSrc: "/books/enders_game.webp", size: "XXS", authorBottomPosition: 6 },
+                { title: "Execution", author: "Alexander Gordon Smith", imageSrc: "/books/execution.webp", size: "XXS" },
+                { title: "Fugitives", author: "Alexander Gordon Smith", imageSrc: "/books/fugitives.webp", size: "XXS" },
+                { title: "Death Sentence", author: "Alexander Gordon Smith", imageSrc: "/books/death_sentence.webp", size: "XXS" },
+                { title: "Solitary", author: "Alexander Gordon Smith", imageSrc: "/books/solitary.webp", size: "XXS" },
+                { title: "Lockdown", author: "Alexander Gordon Smith", imageSrc: "/books/lockdown.webp", size: "XXS", authorBottomPosition: -6 },
+                { title: "Flesh & Bone", author: "Jonathan Maberry", imageSrc: "/books/flesh_and_bone.webp", size: "XXS" },
+                { title: "Dust & Decay", author: "Jonathan Maberry", imageSrc: "/books/dust_and_decay.webp", size: "XXS" },
+                { title: "Rot & Ruin", author: "Jonathan Maberry", imageSrc: "/books/rot_and_ruin.webp", size: "XXS" },
+                { title: "Mockingjay", author: "Suzanne Collins", imageSrc: "/books/mockingjay.webp", size: "XXS", titlePadTop: 10 },
+                { title: "Catching Fire", author: "Suzanne Collins", imageSrc: "/books/catching_fire.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Hunger Games", author: "Suzanne Collins", imageSrc: "/books/the_hunger_games.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The House of Hades", author: "Rick Riordan", imageSrc: "/books/the_house_of_hades.webp", size: "XXS" },
+                { title: "The Mark of Athena", author: "Rick Riordan", imageSrc: "/books/the_mark_of_athena.webp", size: "XXS" },
+                { title: "The Son of Neptune", author: "Rick Riordan", imageSrc: "/books/the_son_of_neptune.webp", size: "XXS" },
+                { title: "The Lost Hero", author: "Rick Riordan", imageSrc: "/books/the_lost_hero.webp", size: "XXS", titlePadTop: 10 },
+                { title: "The Last Olympian", author: "Rick Riordan", imageSrc: "/books/the_last_olympian.webp", size: "XXS" },
+                { title: "The Battle of the Labyrinth", author: "Rick Riordan", imageSrc: "/books/the_battle_of_the_labyrinth.webp", size: "XXS" },
+                { title: "The Titan's Curse", author: "Rick Riordan", imageSrc: "/books/the_titans_curse.webp", size: "XXS" },
+                { title: "The Sea of Monsters", author: "Rick Riordan", imageSrc: "/books/the_sea_of_monsters.webp", size: "XXS" },
+                { title: "The Lightning Thief", author: "Rick Riordan", imageSrc: "/books/the_lightning_thief.webp", size: "XXS" },
+                { title: "The Phantom Tollbooth", author: "Norton Juster", imageSrc: "/books/the_phantom_tollbooth.webp", size: "XXS" },
+            ]
+        }
     };
 
     return (
         <div>
-            {Object.entries(bookshelfData).map(([year, books], index, array) => (
+            {Object.entries(bookshelfData).map(([year, data], index, array) => (
                 <YearSection
                     key={year}
                     year={year}
-                    books={books}
+                    books={Array.isArray(data) ? data : data.books}
+                    subtitle={Array.isArray(data) ? null : data.subtitle}
                     isLast={index === array.length - 1}
                 />
             ))}
             <div style={{ textAlign: 'center' }}>
+                <br />
                 <a className="back_to_top" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} href="#">
                     <p className="item_container" style={{ maxWidth: '20%' }}> Back to top ▲</p>
                 </a>
@@ -151,9 +233,9 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     imageSrc: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    titlePadTop: PropTypes.string,
-    authorBottomPosition: PropTypes.string,
+    rating: PropTypes.number,
+    titlePadTop: PropTypes.number,
+    authorBottomPosition: PropTypes.number,
     size: PropTypes.string
 };
 
@@ -163,7 +245,8 @@ YearSection.propTypes = {
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
         imageSrc: PropTypes.string.isRequired,
-        rating: PropTypes.number.isRequired
+        rating: PropTypes.number
     })).isRequired,
-    isLast: PropTypes.bool
+    isLast: PropTypes.bool,
+    subtitle: PropTypes.string
 };
