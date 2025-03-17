@@ -287,7 +287,7 @@ function About() {
                     <div>
                         <h4 className="header about_header">Peer Reviewer</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            Epilepsia Open <span style={{ fontSize: '18px' }}>(Nov 2024)</span>
+                        PeerJ Computer Science <span style={{ fontSize: '18px' }}>(2025)</span>, Epilepsia Open <span style={{ fontSize: '18px' }}>(2024 - 2025)</span>
                         </p>
                     </div>
                     <br />
