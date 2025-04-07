@@ -63,19 +63,25 @@ function Bookshelf() {
     useSmoothScroll();
 
     const bookshelfData = {
+        "2025-2026": [
+            { title: "The Return of the King", author: "J. R. R. Tolkien", imageSrc: "/books/the_return_of_the_king.webp", rating: 5, size: "S"},
+            { title: "The Two Towers", author: "J. R. R. Tolkien", imageSrc: "/books/the_two_towers.webp", rating: 4.5, size: "S", titlePadTop: 12},
+            { title: "The Fellowship of the Ring", author: "J. R. R. Tolkien", imageSrc: "/books/the_fellowship_of_the_ring.webp", rating: 4, size: "S"},
+            { title: "The Hobbit", author: "J. R. R. Tolkien", imageSrc: "/books/the_hobbit.webp", rating: 4, size: "S", titlePadTop: 12},
+        ],
         "2024-2025": [
-            { title: "Quanta and Fields", author: "Sean Carroll", imageSrc: "/books/the_biggest_ideas_quanta_and_fields.webp", rating: 4, size: "M", titlePadTop: 10 },
-            { title: "Space, Time, and Motion", author: "Sean Carroll", imageSrc: "/books/the_biggest_ideas_space_time_and_motion.webp", rating: 4.5, size: "M", titlePadTop: 10 },
-            { title: "Shutter Island", author: "Dennis Lehane", imageSrc: "/books/shutter_island.webp", rating: 5, size: "M", titlePadTop: 22 },
-            { title: "Axiomatic", author: "Greg Egan", imageSrc: "/books/axiomatic.webp", rating: 4, size: "M", titlePadTop: 22 },
+            { title: "Quanta and Fields", author: "Sean Carroll", imageSrc: "/books/the_biggest_ideas_quanta_and_fields.webp", rating: 4, size: "S" },
+            { title: "Space, Time, and Motion", author: "Sean Carroll", imageSrc: "/books/the_biggest_ideas_space_time_and_motion.webp", rating: 4.5, size: "S" },
+            { title: "Shutter Island", author: "Dennis Lehane", imageSrc: "/books/shutter_island.webp", rating: 5, size: "S", titlePadTop: 12 },
+            { title: "Axiomatic", author: "Greg Egan", imageSrc: "/books/axiomatic.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Welcome to the Universe in 3D: A Visual Tour", author: "Neil deGrasse Tyson", imageSrc: "/books/welcome_to_the_universe_in_3d.webp", rating: 3.5, size: "M" },
             { title: "Diaspora", author: "Greg Egan", imageSrc: "/books/diaspora.webp", rating: 4.5, size: "M", titlePadTop: 22 },
             { title: "Permutation City", author: "Greg Egan", imageSrc: "/books/permutation_city.webp", rating: 4, size: "M", titlePadTop: 10 },
             { title: "Do Androids Dream of Electric Sheep?", author: "Philip K. Dick", imageSrc: "/books/do_androids_dream_of_electric_sheep.webp", rating: 3.5, size: "M" },
-            { title: "Mona Lisa Overdrive", author: "William Gibson", imageSrc: "/books/mona_lisa_overdrive.webp", rating: 4, size: "M", titlePadTop: 10 },
-            { title: "Count Zero", author: "William Gibson", imageSrc: "/books/count_zero.webp", rating: 5, size: "M", titlePadTop: 22 },
-            { title: "Neuromancer", author: "William Gibson", imageSrc: "/books/neuromancer.webp", rating: 4.5, size: "M", titlePadTop: 22 },
-            { title: "Burning Chrome", author: "William Gibson", imageSrc: "/books/burning_chrome.webp", rating: 4, size: "M", titlePadTop: 22 },
+            { title: "Mona Lisa Overdrive", author: "William Gibson", imageSrc: "/books/mona_lisa_overdrive.webp", rating: 4, size: "S" },
+            { title: "Count Zero", author: "William Gibson", imageSrc: "/books/count_zero.webp", rating: 5, size: "S", titlePadTop: 12 },
+            { title: "Neuromancer", author: "William Gibson", imageSrc: "/books/neuromancer.webp", rating: 4.5, size: "S", titlePadTop: 12 },
+            { title: "Burning Chrome", author: "William Gibson", imageSrc: "/books/burning_chrome.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Thinking in Systems", author: "Donella H. Meadows", imageSrc: "/books/thinking_in_systems.webp", rating: 4, size: "S" },
             { title: "Reincarnation Blues", author: "Michael Poore", imageSrc: "/books/reincarnation_blues.webp", rating: 3.5, size: "S" },
             { title: "The Lovecraft Compendium", author: "H. P. Lovecraft", imageSrc: "/books/the_lovecraft_compendium.webp", rating: 3.5, size: "S" },
