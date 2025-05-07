@@ -321,6 +321,13 @@ function About() {
                 </Section>
                 <br />
                 <Section title="Impactful Courses">
+                <div>
+                        <h4 className="header about_header">Clinical Research Informatics In The Cloud</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Joost Wagenaar, University of Pennsylvania, 2025
+                        </p>
+                    </div>
+                    <br />
                     <div>
                         <h4 className="header about_header">Applied Medical Innovation</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
