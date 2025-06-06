@@ -29,7 +29,7 @@ function Research() {
             {
                 tag: "Poster",
                 tagColor: "orange",
-                title: "Bridging Patient Experience and Clinical Data: An LLM-Powered Chat Inter face wit h Real-Time EEG Metrics",
+                title: "Bridging Patient Experience and Clinical Data: An LLM-Powered Chat Interface with Real-Time EEG Metrics",
                 content: '<b>Goldblum Z</b>, Shi H, Novakov V, Litt B. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, CA. June 2-6, 2025.<br><a class="check_it_out" href="/research/goldblum_ictals_2025.pdf">Check it out!</a>'
             },
             {
