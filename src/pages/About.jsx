@@ -66,7 +66,7 @@ function About() {
             imagePath: "/about/nucleate_thumbnail.webp",
             imageUrl: "https://www.nucleate.xyz/",
             imageAlt: "Nucleate thumbnail",
-            title: "Leadership Team",
+            title: "Co-Director, Mentorships",
             subheader: "Nucleate Philadelphia",
             bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
         },
