@@ -7,6 +7,7 @@ const ResearchSection = ({ year, items }) => (
         {items.map((item, index) => (
             <div key={index} className="item_container" style={{ marginBottom: '20px' }}>
                 <code className="tag_style" style={{ background: `var(--${item.tagColor}_color)` }}>{item.tag}</code>
+                <br></br>
                 <h4 className="header header_margin research-title" style={{ margin: 0 }}>{item.title}</h4>
                 <p className="paragraph" style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: item.content }} />
             </div>
@@ -18,6 +19,26 @@ function Research() {
     useSmoothScroll();
 
     const researchData = {
+        "2025-2026": [
+            {
+                tag: "Talk",
+                tagColor: "blue",
+                title: "Harnessing Epilepsy Databases for Translational Science",
+                content: 'Sinha N, <b>Goldblum Z</b>. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, CA. June 2-6, 2025.'
+            },
+            {
+                tag: "Poster",
+                tagColor: "orange",
+                title: "Bridging Patient Experience and Clinical Data: An LLM-Powered Chat Inter face wit h Real-Time EEG Metrics",
+                content: '<b>Goldblum Z</b>, Shi H, Novakov V, Litt B. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, CA. June 2-6, 2025.<br><a class="check_it_out" href="/research/goldblum_ictals_2025.pdf">Check it out!</a>'
+            },
+            {
+                tag: "Poster",
+                tagColor: "orange",
+                title: "Scalable Multicenter Normative IEEG Atlas: Harnessing Epilepsy Databases for Translational Science",
+                content: 'Liang K*, <b>Goldblum Z</b>*, Okalova T, Davis K, Litt B, Wagenaar J, Sinha N. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, CA. June 2-6, 2025.<br><a class="check_it_out" href="/research/liang_ictals_2025.pdf">Check it out!</a><br><i>Selected for oral presentation</i><br><i>*These authors contributed equally to this work</i>'
+            }
+        ],
         "2024-2025": [
             {
                 tag: "Poster",
