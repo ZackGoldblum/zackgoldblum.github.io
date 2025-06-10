@@ -36,7 +36,7 @@ function Research() {
                 tag: "Poster",
                 tagColor: "orange",
                 title: "Scalable Multicenter Normative IEEG Atlas: Harnessing Epilepsy Databases for Translational Science",
-                content: 'Liang K*, <b>Goldblum Z</b>*, Okalova T, Davis K, Litt B, Wagenaar J, Sinha N. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025.<br><a class="check_it_out" href="/research/liang_ictals_2025.pdf">Check it out!</a><br><i>Selected for oral presentation</i><br><i>*These authors contributed equally to this work</i>'
+                content: 'Liang K*, <b>Goldblum Z</b>*, Okalova T, Davis K, Litt B, Wagenaar J, Sinha N. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025.<br><i>Selected for oral presentation</i><br><i>*These authors contributed equally to this work</i><br><a class="check_it_out" href="/research/liang_ictals_2025.pdf">Check it out!</a>'
             }
         ],
         "2024-2025": [
