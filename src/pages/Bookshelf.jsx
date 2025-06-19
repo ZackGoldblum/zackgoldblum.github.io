@@ -64,6 +64,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2025-2026": [
+            { title: "Sleep and the Soul", author: "Greg Egan", imageSrc: "/books/sleep_and_the_soul.webp", rating: 3.5, size: "L", titlePadTop: 22},
+            { title: "The Techno-Optimist Manifesto", author: "Marc Andressen", imageSrc: "/books/the_techno-optimist_manifesto.webp", rating: 3.5, size: "L", titlePadTop: 10},
+            { title: "The Quantum Thief", author: "Hannu Rajaniemi", imageSrc: "/books/the_quantum_thief.webp", rating: 3.5, size: "L", titlePadTop: 22},
+            { title: "The Metamorphosis of Prime Intellect", author: "Roger Williams", imageSrc: "/books/the_metamorphosis_of_prime_intellect.webp", rating: 4.0, size: "L"},
             { title: "The Return of the King", author: "J. R. R. Tolkien", imageSrc: "/books/the_return_of_the_king.webp", rating: 5, size: "S"},
             { title: "The Two Towers", author: "J. R. R. Tolkien", imageSrc: "/books/the_two_towers.webp", rating: 4.5, size: "S", titlePadTop: 12},
             { title: "The Fellowship of the Ring", author: "J. R. R. Tolkien", imageSrc: "/books/the_fellowship_of_the_ring.webp", rating: 4, size: "S"},
