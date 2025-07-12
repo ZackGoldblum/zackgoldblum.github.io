@@ -23,6 +23,12 @@ function Research() {
             {
                 tag: "Talk",
                 tagColor: "blue",
+                title: "Turning Continuous Data into Actionable Epilepsy Care: Devices, Platforms, and Applications",
+                content: '<b>Goldblum Z</b>. <em>Computational Neuroscience Meeting</em>. Florence, IT. July 5-9, 2025.'
+            },
+            {
+                tag: "Talk",
+                tagColor: "blue",
                 title: "Harnessing Epilepsy Databases for Translational Science",
                 content: 'Sinha N, <b>Goldblum Z</b>. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025.'
             },
