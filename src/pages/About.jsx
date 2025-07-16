@@ -89,9 +89,7 @@ function About() {
                 {
                     title: "Advisor",
                     subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(March 2024 - Present)</span>",
-                    bullets: [
-                        "— Leading go-to-market efforts"
-                    ]
+                    bullets: []
                 },
                 {
                     title: "Co-Founder, Technology Lead",
