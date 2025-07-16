@@ -384,32 +384,6 @@ function About() {
                         </p>
                     </div>
                 </Section>
-                <br />
-                <Section title="Certifications">
-                    <div>
-                        <h4 className="header about_header">Biomedical Research</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - N/A)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w05306b68-a365-4ec3-ba07-d8522b3b0dfd-58123920" target="_blank" rel="noopener noreferrer">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Good Clinical Practice</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Sept 2023 - Sept 2026)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w4c47456a-6a05-400a-b30c-adee6ec9d829-58147870" target="_blank" rel="noopener noreferrer">Check it out!</a>
-                    </div>
-                    <br />
-                    <div>
-                        <h4 className="header about_header">Human Subjects Research - Social Behavioral</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            CITI Program <span style={{ fontSize: '18px' }}>(Feb 2022 - Feb 2025)</span>
-                        </p>
-                        <a className="check_it_out" href="https://www.citiprogram.org/verify/?w098eae68-b03c-4ce7-b76a-cafb17f52784-47523437" target="_blank" rel="noopener noreferrer">Check it out!</a>
-                    </div>
-                </Section>
             </div>
             <div style={{ textAlign: 'center' }}>
                 <a className="back_to_top" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} href="#">
