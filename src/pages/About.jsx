@@ -75,7 +75,7 @@ function About() {
             imagePath: "/about/penn_thumbnail.webp",
             imageUrl: "https://be.seas.upenn.edu/",
             imageAlt: "Penn thumbnail",
-            title: "Bioengineering PhD Student",
+            title: "Bioengineering PhD Candidate",
             subheader: "University of Pennsylvania",
             subtitle: "School of Engineering and Applied Science",
             bullets: ["Litt Lab under Brian Litt, MD.", "Ashton Fellow."]
