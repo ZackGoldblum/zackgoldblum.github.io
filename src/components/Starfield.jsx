@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import * as THREE from 'three';
 
 const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
@@ -10,9 +11,16 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
     const animationFrameRef = useRef(null);
 
     // Component state
-    const [skyboxLoaded, setSkyboxLoaded] = useState(false);
     const [starsVisible, setStarsVisible] = useState(false);
     const [starsAnimating, setStarsAnimating] = useState(false);
+
+    // Use ref for callback to keep it stable and prevent useEffect re-runs
+    const onSkyboxLoadedRef = useRef(onSkyboxLoaded);
+
+    // Update ref when callback changes, but don't trigger useEffect
+    useEffect(() => {
+        onSkyboxLoadedRef.current = onSkyboxLoaded;
+    }, [onSkyboxLoaded]);
 
     // Animation and scroll tracking references
     const scrollProgressRef = useRef(0);
@@ -215,8 +223,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
                     scene.add(skyboxMesh);
 
                     // Initialize stars and notify completion
-                    setSkyboxLoaded(true);
-                    onSkyboxLoaded();
+                    onSkyboxLoadedRef.current();
                     setStarsVisible(true);
 
                     // Start the animation loop
@@ -226,8 +233,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
                 (error) => {
                     console.error('Failed to load galaxy texture:', error);
                     // No fallback - just proceed with black background and stars
-                    setSkyboxLoaded(true);
-                    onSkyboxLoaded();
+                    onSkyboxLoadedRef.current();
                     setStarsVisible(true);
                     animate();
                 }
@@ -366,9 +372,6 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
                 skyboxMesh.material.opacity += ANIMATION_CONFIG.skyboxFadeSpeed;
             }
 
-            // Calculate scroll-based motion
-            const scrollProgress = scrollProgressRef.current;
-
             // Decay scroll velocity when not actively scrolling
             scrollVelocityRef.current *= ANIMATION_CONFIG.velocityDecay;
 
@@ -376,7 +379,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
             const velocityFactor = Math.min(scrollVelocityRef.current / ANIMATION_CONFIG.maxVelocity, 1.0);
             const scrollAmplification = 2.5 + velocityFactor * 40;
 
-            starLayersRef.current.forEach((starLayer, index) => {
+            starLayersRef.current.forEach((starLayer) => {
                 if (starLayer && starLayer.userData) {
                     const distance = starLayer.userData.distance;
 
@@ -446,7 +449,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 
         // Return cleanup function
         return cleanup;
-    }, []);
+    }, []); // Empty dependency array - only run once
 
     return (
         <div
@@ -462,6 +465,12 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
             }}
         />
     );
+};
+
+// PropTypes validation
+Starfield.propTypes = {
+    onSkyboxLoaded: PropTypes.func,
+    uiVisible: PropTypes.bool
 };
 
 export default Starfield;
