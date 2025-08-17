@@ -220,6 +220,12 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 
                     // Create and add skybox mesh
                     skyboxMesh = new THREE.Mesh(sphereGeometry, skyboxMaterial);
+
+                    // Initial skybox positioning
+                    skyboxMesh.rotation.x = Math.PI * 0.2;
+                    skyboxMesh.rotation.y = Math.PI * 0.2;
+                    skyboxMesh.rotation.z = Math.PI * 0.2;
+
                     scene.add(skyboxMesh);
 
                     // Initialize stars and notify completion
