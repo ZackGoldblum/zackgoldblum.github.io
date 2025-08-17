@@ -83,8 +83,8 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 
         // Configuration constants (increased minimum sizes to prevent twinkling)
         const STAR_LAYER_CONFIG = {
-            VERY_DISTANT: { count: 3000, distance: 800, size: 0.6, opacity: 0.4 },
-            FAR: { count: 2500, distance: 600, size: 0.7, opacity: 0.5 },
+            // VERY_DISTANT: { count: 3000, distance: 800, size: 0.6, opacity: 0.4 },
+            // FAR: { count: 2500, distance: 600, size: 0.7, opacity: 0.5 },
             DISTANT: { count: 2000, distance: 450, size: 0.8, opacity: 0.6 },
             MEDIUM_FAR: { count: 1500, distance: 350, size: 0.9, opacity: 0.7 },
             MEDIUM: { count: 1000, distance: 250, size: 1.0, opacity: 0.8 }
@@ -242,8 +242,8 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
             // Create star layers with fade-in effect
             const starLayers = [];
             const layerConfigs = [
-                STAR_LAYER_CONFIG.VERY_DISTANT,
-                STAR_LAYER_CONFIG.FAR,
+                // STAR_LAYER_CONFIG.VERY_DISTANT,
+                // STAR_LAYER_CONFIG.FAR,
                 STAR_LAYER_CONFIG.DISTANT,
                 STAR_LAYER_CONFIG.MEDIUM_FAR,
                 STAR_LAYER_CONFIG.MEDIUM
