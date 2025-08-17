@@ -3,28 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faXTwitter, faGoogleScholar } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-// function Header({ isPaused, togglePause }) {
 function Header() {
     const location = useLocation();
 
     return (
         <header style={{ margin: 0, padding: 0 }}>
-            {/* <div id="buttonsContainer">
-                <div id="starsButtonContainer">
-                    <Link to="/space">
-                        <img src="/buttons/stars.webp" id="starsButton" alt="Stars button" />
-                    </Link>
-                </div>
-                <div id="playpauseButtonContainer">
-                    <img
-                        src={isPaused ? "/buttons/play.webp" : "/buttons/pause.webp"}
-                        id="playpauseButton"
-                        alt="Play/pause button"
-                        onClick={togglePause}
-                        style={{ cursor: 'pointer' }}
-                    />
-                </div>
-            </div> */}
             <h1>
                 <Link to="/" style={{ color: 'var(--blue_color)', textDecoration: 'none' }}>Zack Goldblum</Link>
                 <span style={{ marginLeft: '20px' }}>
@@ -59,10 +42,5 @@ function Header() {
         </header>
     );
 }
-
-// Header.propTypes = {
-//   isPaused: PropTypes.bool,
-//   togglePause: PropTypes.func
-// };
 
 export default Header;

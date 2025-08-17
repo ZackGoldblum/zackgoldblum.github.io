@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import * as THREE from 'three';
 
-const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
+const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrollMotion = false }) => {
     // Three.js scene references
     const mountRef = useRef(null);
     const sceneRef = useRef(null);
@@ -318,7 +318,9 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 
             // Add event listeners
             window.addEventListener('resize', handleResize);
-            window.addEventListener('scroll', handleScroll, { passive: true });
+            if (!disableScrollMotion) {
+                window.addEventListener('scroll', handleScroll, { passive: true });
+            }
             document.addEventListener('visibilitychange', handleVisibilityChange);
 
             // Initialize scroll tracking
@@ -332,7 +334,9 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
             // Cleanup function
             return () => {
                 window.removeEventListener('resize', handleResize);
-                window.removeEventListener('scroll', handleScroll);
+                if (!disableScrollMotion) {
+                    window.removeEventListener('scroll', handleScroll);
+                }
                 document.removeEventListener('visibilitychange', handleVisibilityChange);
                 cancelAnimationFrame(animationFrameRef.current);
 
@@ -382,8 +386,13 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
             scrollVelocityRef.current *= ANIMATION_CONFIG.velocityDecay;
 
             // Convert scroll velocity to speed multiplier (restore original values)
-            const velocityFactor = Math.min(scrollVelocityRef.current / ANIMATION_CONFIG.maxVelocity, 1.0);
-            const scrollAmplification = 2.5 + velocityFactor * 40;
+            let velocityFactor = 0;
+            let scrollAmplification = 2.5;
+
+            if (!disableScrollMotion) {
+                velocityFactor = Math.min(scrollVelocityRef.current / ANIMATION_CONFIG.maxVelocity, 1.0);
+                scrollAmplification = 2.5 + velocityFactor * 40;
+            }
 
             starLayersRef.current.forEach((starLayer) => {
                 if (starLayer && starLayer.userData) {
@@ -398,7 +407,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
                     // Only animate star movement if animation is enabled
                     if (starsAnimatingRef.current && starLayer.material.opacity > 0) {
                         // Flying through space motion - stars move toward camera (restore original speed)
-                        const baseFlightSpeed = 0.5;
+                        const baseFlightSpeed = 0.7;
                         const flightSpeed = baseFlightSpeed * scrollAmplification;
 
                         // Update star positions
@@ -455,7 +464,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 
         // Return cleanup function
         return cleanup;
-    }, []); // Empty dependency array - only run once
+    }, [disableScrollMotion]); // Include disableScrollMotion dependency
 
     return (
         <div
@@ -476,7 +485,8 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false }) => {
 // PropTypes validation
 Starfield.propTypes = {
     onSkyboxLoaded: PropTypes.func,
-    uiVisible: PropTypes.bool
+    uiVisible: PropTypes.bool,
+    disableScrollMotion: PropTypes.bool
 };
 
 export default Starfield;
