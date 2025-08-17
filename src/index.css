@@ -17,7 +17,7 @@
 
   --border_radius: 20px;
   --internal_padding: 20px;
-  --item_background_color: rgba(0, 0, 0, 0.75);
+  --item_background_color: rgba(0, 0, 0, 0.5);
   --button_size: 25px;
   --transition_time: 0.4s;
 }
