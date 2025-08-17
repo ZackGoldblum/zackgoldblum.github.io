@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Research from './pages/Research';
@@ -16,11 +17,26 @@ function App() {
     function AppContent() {
         const location = useLocation();
         const isSpacePage = location.pathname === '/space';
+        const [uiVisible, setUiVisible] = useState(false);
+
+        // Handle skybox loaded - trigger UI fade in
+        const handleSkyboxLoaded = () => {
+            setTimeout(() => {
+                setUiVisible(true);
+            }, 500);
+        };
 
         return (
             <>
-                <Starfield />
-                <div style={{ position: 'relative', zIndex: 1 }}>
+                <Starfield onSkyboxLoaded={handleSkyboxLoaded} uiVisible={uiVisible} />
+                <div
+                    style={{
+                        position: 'relative',
+                        zIndex: 1,
+                        opacity: uiVisible ? 1 : 0,
+                        transition: 'opacity 0.5s ease-in-out'
+                    }}
+                >
                     {!isSpacePage && <Header />}
                     <main>
                         <Routes>
