@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import * as THREE from 'three';
 
-const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrollMotion = false }) => {
+const Starfield = ({ onSkyboxLoaded = () => { }, disableScrollMotion = false }) => {
     // Three.js scene references
     const mountRef = useRef(null);
     const sceneRef = useRef(null);
@@ -493,7 +493,6 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrol
 // PropTypes validation
 Starfield.propTypes = {
     onSkyboxLoaded: PropTypes.func,
-    uiVisible: PropTypes.bool,
     disableScrollMotion: PropTypes.bool
 };
 

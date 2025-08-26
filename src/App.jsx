@@ -28,7 +28,7 @@ function App() {
 
         return (
             <>
-                <Starfield onSkyboxLoaded={handleSkyboxLoaded} uiVisible={uiVisible} />
+                <Starfield onSkyboxLoaded={handleSkyboxLoaded} />
                 {!isStarsPage && (
                     <div
                         style={{
