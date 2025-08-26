@@ -23,19 +23,19 @@ function App() {
         const handleSkyboxLoaded = () => {
             setTimeout(() => {
                 setUiVisible(true);
-            }, 500);
+            }, 1000);
         };
 
         return (
             <>
-                <Starfield onSkyboxLoaded={handleSkyboxLoaded} uiVisible={uiVisible} />
+                <Starfield onSkyboxLoaded={handleSkyboxLoaded} />
                 {!isStarsPage && (
                     <div
                         style={{
                             position: 'relative',
                             zIndex: 1,
                             opacity: uiVisible ? 1 : 0,
-                            transition: 'opacity 0.5s ease-in-out'
+                            transition: 'opacity 2.0s ease-in-out'
                         }}
                     >
                         <Header />
