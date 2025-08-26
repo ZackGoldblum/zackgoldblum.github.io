@@ -93,11 +93,11 @@ const Starfield = ({ onSkyboxLoaded = () => { }, disableScrollMotion = false }) 
         const ANIMATION_CONFIG = {
             skyboxFadeSpeed: 0.015,
             starFadeSpeed: 0.02,
-            baseFlightSpeed: 0.5,
+            baseFlightSpeed: 0.6,
             velocityDecay: 0.95,
             maxVelocity: 2000,
             scrollAmplification: { base: 2.5, max: 40 },
-            fadeInDuration: 10.0
+            fadeInDuration: 1.0
         };
 
         // Function to create a layer of stars
