@@ -40,12 +40,12 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrol
         starsAnimatingRef.current = starsAnimating;
     }, [starsAnimating]);
 
-    // Start animation when UI becomes visible
+    // Start animation when stars become visible (independent of UI)
     useEffect(() => {
-        if (uiVisible && starsVisible && !starsAnimating) {
+        if (starsVisible && !starsAnimating) {
             setStarsAnimating(true);
         }
-    }, [uiVisible, starsVisible, starsAnimating]);
+    }, [starsVisible, starsAnimating]);
 
     useEffect(() => {
         let scene, camera, renderer, skyboxMesh;
@@ -97,7 +97,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrol
             velocityDecay: 0.95,
             maxVelocity: 2000,
             scrollAmplification: { base: 2.5, max: 40 },
-            fadeInDuration: 2.0
+            fadeInDuration: 10.0
         };
 
         // Function to create a layer of stars
@@ -228,20 +228,28 @@ const Starfield = ({ onSkyboxLoaded = () => { }, uiVisible = false, disableScrol
 
                     scene.add(skyboxMesh);
 
-                    // Initialize stars and notify completion
-                    onSkyboxLoadedRef.current();
+                    // Initialize stars and start animation immediately
                     setStarsVisible(true);
 
                     // Start the animation loop
                     animate();
+
+                    // Delay the UI trigger until stars are visible
+                    setTimeout(() => {
+                        onSkyboxLoadedRef.current();
+                    }, 2000);
                 },
                 undefined, // Progress callback not needed
                 (error) => {
                     console.error('Failed to load galaxy texture:', error);
                     // No fallback - just proceed with black background and stars
-                    onSkyboxLoadedRef.current();
                     setStarsVisible(true);
                     animate();
+
+                    // Delay the UI trigger until stars are visible
+                    setTimeout(() => {
+                        onSkyboxLoadedRef.current();
+                    }, 2000);
                 }
             );
 
