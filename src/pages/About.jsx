@@ -62,13 +62,13 @@ function About() {
 
     const timelineEntries = [
         {
-            date: "Sept 2024-<br>Present",
-            imagePath: "/about/nucleate_thumbnail.webp",
-            imageUrl: "https://www.nucleate.xyz/",
-            imageAlt: "Nucleate thumbnail",
-            title: "Co-Director, Mentorships",
-            subheader: "Nucleate Philadelphia",
-            bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
+            date: "Sept 2025-<br>Present",
+            imagePath: "/about/pennhealthtech_thumbnail.webp",
+            imageUrl: "https://healthtech.upenn.edu/",
+            imageAlt: "Penn Health-Tech thumbnail",
+            title: "Student Fellow",
+            subheader: "Penn Health-Tech, University of Pennsylvania",
+            bullets: ["Penn Health-Tech is a university-wide effort to advance Penn's world-class breakthroughs into devices and health technologies."]
         },
         {
             date: "Aug 2024-<br>Present",
@@ -100,6 +100,15 @@ function About() {
                     ]
                 }
             ]
+        },
+        {
+            date: "Sept 2024-<br>Sept 2025",
+            imagePath: "/about/nucleate_thumbnail.webp",
+            imageUrl: "https://www.nucleate.xyz/",
+            imageAlt: "Nucleate thumbnail",
+            title: "Co-Director, Mentorships",
+            subheader: "Nucleate Philadelphia",
+            bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
         },
         {
             date: "Sept 2023-<br>Aug 2024",
@@ -227,8 +236,8 @@ function About() {
                             </a>
                         </div>
                         <div id="left" className="box">
-                            <a href="https://nucleate.xyz/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/nucleate.webp" alt="Nucleate image" width="533" height="80" />
+                            <a href="https://healthtech.upenn.edu/" target="_blank" rel="noopener noreferrer">
+                                <img src="/about/pennhealthtech.webp" alt="Penn Health-Tech image" width="486" height="80" />
                             </a>
                         </div>
                         <div id="middle" className="box">
@@ -283,13 +292,6 @@ function About() {
                 <br />
                 <Section title="Volunteering">
                     <div>
-                        <h4 className="header about_header">Peer Reviewer</h4>
-                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                        PeerJ Computer Science <span style={{ fontSize: '18px' }}>(2025)</span>, Epilepsia Open <span style={{ fontSize: '18px' }}>(2024 - 2025)</span>
-                        </p>
-                    </div>
-                    <br />
-                    <div>
                         <h4 className="header about_header">Alumni Board</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Drexel BIOMED Alumni Network <span style={{ fontSize: '18px' }}>(July 2024 - Present)</span>
@@ -300,6 +302,13 @@ function About() {
                         <h4 className="header about_header">Event Manager, Philadelphia</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
                             Pint of Science US <span style={{ fontSize: '18px' }}>(May 2024 - Present)</span>
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <h4 className="header about_header">Peer Reviewer</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                        PeerJ Computer Science <span style={{ fontSize: '18px' }}>(2025)</span>, Epilepsia Open <span style={{ fontSize: '18px' }}>(2024 - 2025)</span>
                         </p>
                     </div>
                     <br />
