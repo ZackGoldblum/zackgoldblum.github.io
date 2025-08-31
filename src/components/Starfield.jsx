@@ -237,7 +237,7 @@ const Starfield = ({ onSkyboxLoaded = () => { }, disableScrollMotion = false }) 
                     // Delay the UI trigger until stars are visible
                     setTimeout(() => {
                         onSkyboxLoadedRef.current();
-                    }, 2000);
+                    }, 1000);
                 },
                 undefined, // Progress callback not needed
                 (error) => {

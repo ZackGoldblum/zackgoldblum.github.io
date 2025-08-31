@@ -693,8 +693,8 @@ h3 {
   /* 100%*num_slides */
   height: 100%;
   position: relative;
-  -webkit-animation: slide 30s infinite 6s;
-  animation: slide 30s infinite 6s;
+  -webkit-animation: slide 30s infinite 3s;
+  animation: slide 30s infinite 3s;
 }
 
 .slider {
@@ -755,8 +755,8 @@ h3 {
   height: 100%;
   border-radius: 50%;
   position: relative;
-  -webkit-animation: on 30s infinite 6s;
-  animation: on 30s infinite 6s;
+  -webkit-animation: on 30s infinite 3s;
+  animation: on 30s infinite 3s;
 }
 
 @keyframes slide {
@@ -889,22 +889,22 @@ h3 {
 }
 
 .switch>ul>li:nth-child(1) {
-  animation: indicator1 30s infinite 6s;
+  animation: indicator1 30s infinite 3s;
   background-color: var(--blue_color);
 }
 
 .switch>ul>li:nth-child(2) {
-  animation: indicator2 30s infinite 6s;
+  animation: indicator2 30s infinite 3s;
 }
 
 .switch>ul>li:nth-child(3) {
-  animation: indicator3 30s infinite 6s;
+  animation: indicator3 30s infinite 3s;
 }
 
 .switch>ul>li:nth-child(4) {
-  animation: indicator4 30s infinite 6s;
+  animation: indicator4 30s infinite 3s;
 }
 
 .switch>ul>li:nth-child(5) {
-  animation: indicator5 30s infinite 6s;
+  animation: indicator5 30s infinite 3s;
 }
