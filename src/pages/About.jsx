@@ -92,7 +92,7 @@ function About() {
                     bullets: []
                 },
                 {
-                    title: "Co-Founder, Technology Lead",
+                    title: "Co-Founder, Tech Lead",
                     subheader: "Sociail <span style=\"font-size: 18px; font-style: italic;\">(June 2023 - March 2024)</span>",
                     bullets: [
                         "— Led a multinational software development team building our collaborative AI platform, Sociail Chat<br>",
