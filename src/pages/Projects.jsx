@@ -16,7 +16,6 @@ const ProjectEntry = ({ title, description, date, imageSrc, content, additionalI
             <span style={{ fontSize: '18px', fontStyle: 'italic', display: 'block', marginBottom: '20px' }}>{date}</span>
             <div className="proj_content">
                 <div className="proj_image">
-                    <img style={{ width: '320px', height: 'auto' }} src={imageSrc} alt={`${title} project`} />
                 </div>
                 <div className="proj_text">
                     <p className="paragraph" style={{ fontSize: '18px' }} dangerouslySetInnerHTML={{ __html: content }} />
