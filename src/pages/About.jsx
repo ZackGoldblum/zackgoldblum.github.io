@@ -16,7 +16,7 @@ const TimelineEntry = ({ date, imagePath, imageUrl, imageAlt, title, subheader, 
             <br />
             <div className="timeline_image">
                 <a href={imageUrl} target="_blank" rel="noopener noreferrer">
-                    <img className="image_thumbnail" src={imagePath} alt={imageAlt} />
+                    <img className="image_thumbnail" src={imagePath} alt={imageAlt} loading="lazy" />
                 </a>
             </div>
         </div>
@@ -200,6 +200,7 @@ function About() {
                     style={{ width: '200px', height: '200px', border: '2px solid var(--white_color)' }}
                     src="/about/zack_profile_pic.webp"
                     alt="Zack Goldblum profile picture"
+                    loading="lazy"
                 />
                 <div className="about_text item_container">
                     I am an engineer and scientist doing research at the intersection of neurotechnology and artificial intelligence.
@@ -217,37 +218,37 @@ function About() {
                     <div id="affiliations_container">
                         <div id="left" className="box">
                             <a href="https://seas.upenn.edu/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" />
+                                <img src="/about/penn_engineering.webp" alt="Penn Engineering image" width="210" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="middle" className="box">
                             <a href="https://cnt.upenn.edu/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" />
+                                <img src="/about/cnt.webp" alt="Center for Neuroengineering and Therapeutics image" width="333" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="right" className="box">
                             <a href="https://sociail.com/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/sociail.webp" alt="Sociail image" width="144" height="80" />
+                                <img src="/about/sociail.webp" alt="Sociail image" width="144" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="right" className="box">
                             <a href="https://littlab.seas.upenn.edu/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" />
+                                <img src="/about/littlab.webp" alt="Litt Lab image" width="278" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="left" className="box">
                             <a href="https://healthtech.upenn.edu/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/pennhealthtech.webp" alt="Penn Health-Tech image" width="486" height="80" />
+                                <img src="/about/pennhealthtech.webp" alt="Penn Health-Tech image" width="486" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="middle" className="box">
                             <a href="https://drexel.edu/biomed/resources/alumni/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/dban.webp" alt="Drexel Biomed Alumni Network image" width="250" height="80" />
+                                <img src="/about/dban.webp" alt="Drexel Biomed Alumni Network image" width="250" height="80" loading="lazy" />
                             </a>
                         </div>
                         <div id="right" className="box">
                             <a href="https://pintofscience.com/" target="_blank" rel="noopener noreferrer">
-                                <img src="/about/pint_of_science.webp" alt="Pint of Science image" width="250" height="80" />
+                                <img src="/about/pint_of_science.webp" alt="Pint of Science image" width="250" height="80" loading="lazy" />
                             </a>
                         </div>
                     </div>

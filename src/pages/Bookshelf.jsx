@@ -17,7 +17,7 @@ const Book = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPositi
                 <p className="book_title book_title_xs" style={titleStyle}>{title}</p>
                 <p className="book_author book_author_xs" style={authorStyle}>{author}</p>
                 <div className="book_img_container_xs">
-                    <img className="book_img book_img_xs" src={imageSrc} alt={`${title} book cover`} />
+                    <img className="book_img book_img_xs" src={imageSrc} alt={`${title} book cover`} loading="lazy" />
                 </div>
             </div>
         );
@@ -29,7 +29,7 @@ const Book = ({ title, author, imageSrc, rating, titlePadTop, authorBottomPositi
             <p className="book_title" style={titleStyle}>{title}</p><br />
             <p className="book_author" style={authorStyle}>{author}</p><br />
             <div className="book_img_container">
-                <img className="book_img" src={imageSrc} alt={`${title} book cover`} /><br />
+                <img className="book_img" src={imageSrc} alt={`${title} book cover`} loading="lazy" /><br />
             </div>
             {rating && (
                 <div className="star_style_container">
