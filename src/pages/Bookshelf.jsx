@@ -64,6 +64,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2025-2026": [
+            { title: "Biomega 1", author: "Tsutomu Nihei", imageSrc: "/books/biomega_1.webp", rating: 4, size: "S", titlePadTop: 12},
+            { title: "Abaddon's Gate", author: "James S.A. Corey", imageSrc: "/books/abaddons_gate.webp", rating: 4.5, size: "S", titlePadTop: 12},
+            { title: "Caliban's War", author: "James S.A. Corey", imageSrc: "/books/calibans_war.webp", rating: 4.5, size: "S", titlePadTop: 12},
+            { title: "Leviathan Wakes", author: "James S.A. Corey", imageSrc: "/books/leviathan_wakes.webp", rating: 5, size: "S", titlePadTop: 12},
             { title: "NOiSE", author: "Tsutomu Nihei", imageSrc: "/books/noise.webp", rating: 4.5, size: "S", titlePadTop: 12},
             { title: "Black Hole Blues", author: "Janna Levin", imageSrc: "/books/black_hole_blues.webp", rating: 3.5, size: "S"},
             { title: "Abundance", author: "Ezra Klein & Derek Thompson", imageSrc: "/books/abundance.webp", rating: 4.5, size: "S", titlePadTop: 12, authorBottomPosition: -8},
@@ -94,8 +98,8 @@ function Bookshelf() {
             { title: "Reincarnation Blues", author: "Michael Poore", imageSrc: "/books/reincarnation_blues.webp", rating: 3.5, size: "S" },
             { title: "The Lovecraft Compendium", author: "H. P. Lovecraft", imageSrc: "/books/the_lovecraft_compendium.webp", rating: 3.5, size: "S" },
             { title: "BLAME! 6", author: "Tsutomu Nihei", imageSrc: "/books/blame_6.webp", rating: 4, size: "S", titlePadTop: 10 },
-            { title: "BLAME! 5", author: "Tsutomu Nihei", imageSrc: "/books/blame_5.webp", rating: 4.5, size: "S", titlePadTop: 10 },
-            { title: "BLAME! 4", author: "Tsutomu Nihei", imageSrc: "/books/blame_4.webp", rating: 4, size: "S", titlePadTop: 10 },
+            { title: "BLAME! 5", author: "Tsutomu Nihei", imageSrc: "/books/blame_5.webp", rating: 4.5, size: "S", titlePadTop: 12 },
+            { title: "BLAME! 4", author: "Tsutomu Nihei", imageSrc: "/books/blame_4.webp", rating: 4, size: "S", titlePadTop: 12 },
         ],
         "2023-2024": [
             { title: "BLAME! 3", author: "Tsutomu Nihei", imageSrc: "/books/blame_3.webp", rating: 4, size: "S", titlePadTop: 10 },
@@ -106,10 +110,10 @@ function Bookshelf() {
             { title: "Those Left Behind", author: "N. C. Scrimgeour", imageSrc: "/books/those_left_behind.webp", rating: 4, size: "M", titlePadTop: 10 },
             { title: "Children of Memory", author: "Adrian Tchaikovsky", imageSrc: "/books/children_of_memory.webp", rating: 4, size: "M", titlePadTop: 10 },
             { title: "What is ChatGPT Doing and Why Does It Work?", author: "Stephen Wolfram", imageSrc: "/books/what_is_chatgpt_doing_and_why_does_it_work.webp", rating: 4, size: "M" },
-            { title: "Apex", author: "Ramez Naam", imageSrc: "/books/apex.webp", rating: 5, size: "S", authorBottomPosition: 10 },
-            { title: "Crux", author: "Ramez Naam", imageSrc: "/books/crux.webp", rating: 5, size: "S", authorBottomPosition: 10 },
-            { title: "Nexus", author: "Ramez Naam", imageSrc: "/books/nexus.webp", rating: 5, size: "S", authorBottomPosition: 10 },
-            { title: "Exhalation", author: "Ted Chiang", imageSrc: "/books/exhalation.webp", rating: 5, size: "S", authorBottomPosition: 10 },
+            { title: "Apex", author: "Ramez Naam", imageSrc: "/books/apex.webp", rating: 5, size: "S", authorBottomPosition: 10, titlePadTop: 12 },
+            { title: "Crux", author: "Ramez Naam", imageSrc: "/books/crux.webp", rating: 5, size: "S", authorBottomPosition: 10, titlePadTop: 12 },
+            { title: "Nexus", author: "Ramez Naam", imageSrc: "/books/nexus.webp", rating: 5, size: "S", authorBottomPosition: 10, titlePadTop: 12 },
+            { title: "Exhalation", author: "Ted Chiang", imageSrc: "/books/exhalation.webp", rating: 5, size: "S", authorBottomPosition: 10, titlePadTop: 12 },
             { title: "Stories of Your Life and Others", author: "Ted Chiang", imageSrc: "/books/stories_of_your_life_and_others.webp", rating: 4.5, size: "M", titlePadTop: 10 },
             { title: "Animal Farm", author: "George Orwell", imageSrc: "/books/animal_farm.webp", rating: 4.5, size: "M", titlePadTop: 22 },
             { title: "The Exodus Betrayal", author: "N. C. Scrimgeour", imageSrc: "/books/the_exodus_betrayal.webp", rating: 3.5, size: "M", titlePadTop: 10 },
@@ -127,10 +131,10 @@ function Bookshelf() {
             { title: "Dune", author: "Frank Herbert", imageSrc: "/books/dune.webp", rating: 5, size: "M", titlePadTop: 10, authorBottomPosition: 16 },
             { title: "To Hold Up the Sky", author: "Cixin Liu", imageSrc: "/books/to_hold_up_the_sky.webp", rating: 4, size: "M", authorBottomPosition: 16 },
             { title: "The Wandering Earth", author: "Cixin Liu", imageSrc: "/books/the_wandering_earth.webp", rating: 3.5, size: "M", authorBottomPosition: 16 },
-            { title: "Pale Blue Dot", author: "Carl Sagan", imageSrc: "/books/pale_blue_dot.webp", rating: 4, size: "S" },
-            { title: "Cosmos", author: "Carl Sagan", imageSrc: "/books/cosmos.webp", rating: 4, size: "S" },
-            { title: "Brave New World", author: "Aldous Huxley", imageSrc: "/books/brave_new_world.webp", rating: 3, size: "S" },
-            { title: "The Martian", author: "Andy Weir", imageSrc: "/books/the_martian.webp", rating: 4.5, size: "S" },
+            { title: "Pale Blue Dot", author: "Carl Sagan", imageSrc: "/books/pale_blue_dot.webp", rating: 4, size: "S", titlePadTop: 12},
+            { title: "Cosmos", author: "Carl Sagan", imageSrc: "/books/cosmos.webp", rating: 4, size: "S", titlePadTop: 12},
+            { title: "Brave New World", author: "Aldous Huxley", imageSrc: "/books/brave_new_world.webp", rating: 3, size: "S", titlePadTop: 12},
+            { title: "The Martian", author: "Andy Weir", imageSrc: "/books/the_martian.webp", rating: 4.5, size: "S", titlePadTop: 12},
         ],
         "2021-2022": [
             { title: "Minus 148", author: "Art Davidson", imageSrc: "/books/minus_148.webp", rating: 4, size: "S", titlePadTop: 10 },
@@ -156,7 +160,7 @@ function Bookshelf() {
             { title: "Surely You're Joking, Mr. Feynman!", author: "Richard Feynman", imageSrc: "/books/surely_youre_joking_mr_feynman.webp", rating: 4, size: "S", authorBottomPosition: -24 },
         ],
         "Earlier Reading": {
-            subtitle: "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate sequence as best I can recall.",
+            subtitle: "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate order as best I can recall.",
             books: [
                 { title: "11/22/63", author: "Stephen King", imageSrc: "/books/11_22_63.webp", size: "XXS", authorBottomPosition: 0, titlePadTop: 10 },
                 { title: "Ready Player One", author: "Ernest Cline", imageSrc: "/books/ready_player_one.webp", size: "XXS", titlePadTop: 10 },
