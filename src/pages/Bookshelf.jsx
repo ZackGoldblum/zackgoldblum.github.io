@@ -64,6 +64,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2025-2026": [
+            { title: "Biomega 5", author: "Tsutomu Nihei", imageSrc: "/books/biomega_5.webp", rating: 4, size: "S", titlePadTop: 12 },
+            { title: "Biomega 4", author: "Tsutomu Nihei", imageSrc: "/books/biomega_4.webp", rating: 4.5, size: "S", titlePadTop: 12 },
+            { title: "Biomega 3", author: "Tsutomu Nihei", imageSrc: "/books/biomega_3.webp", rating: 4.5, size: "S", titlePadTop: 12 },
+            { title: "Biomega 2", author: "Tsutomu Nihei", imageSrc: "/books/biomega_2.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Biomega 1", author: "Tsutomu Nihei", imageSrc: "/books/biomega_1.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Abaddon's Gate", author: "James S.A. Corey", imageSrc: "/books/abaddons_gate.webp", rating: 4.5, size: "S", titlePadTop: 12 },
             { title: "Caliban's War", author: "James S.A. Corey", imageSrc: "/books/calibans_war.webp", rating: 4.5, size: "S", titlePadTop: 12 },
