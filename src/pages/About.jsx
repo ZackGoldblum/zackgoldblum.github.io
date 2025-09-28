@@ -5,6 +5,11 @@ import useSmoothScroll from '../hooks/useSmoothScroll';
 const TimelineEntry = ({ date, imagePath, imageUrl, imageAlt, title, subheader, subtitle, bullets, positions }) => (
     <div className="timeline_entry item_container">
         <div className="timeline_left">
+            <div className="timeline_image">
+                <a href={imageUrl} target="_blank" rel="noopener noreferrer">
+                    <img className="image_thumbnail" src={imagePath} alt={imageAlt} loading="lazy" />
+                </a>
+            </div>
             <div className="timeline_date timeline_date_right">
                 {date.split('<br>').map((part, index) => (
                     <React.Fragment key={index}>
@@ -12,12 +17,6 @@ const TimelineEntry = ({ date, imagePath, imageUrl, imageAlt, title, subheader, 
                         {index < date.split('<br>').length - 1 && <br />}
                     </React.Fragment>
                 ))}
-            </div>
-            <br />
-            <div className="timeline_image">
-                <a href={imageUrl} target="_blank" rel="noopener noreferrer">
-                    <img className="image_thumbnail" src={imagePath} alt={imageAlt} loading="lazy" />
-                </a>
             </div>
         </div>
         <div className="timeline_middle"></div>
@@ -62,7 +61,7 @@ function About() {
 
     const timelineEntries = [
         {
-            date: "Sept 2025-<br>Present",
+            date: "Sept 2025—<br>Present",
             imagePath: "/about/pennhealthtech_thumbnail.webp",
             imageUrl: "https://healthtech.upenn.edu/",
             imageAlt: "Penn Health-Tech thumbnail",
@@ -71,7 +70,7 @@ function About() {
             bullets: ["Penn Health-Tech is a university-wide effort to advance Penn's world-class breakthroughs into devices and health technologies."]
         },
         {
-            date: "Aug 2024-<br>Present",
+            date: "Aug 2024—<br>Present",
             imagePath: "/about/penn_thumbnail.webp",
             imageUrl: "https://be.seas.upenn.edu/",
             imageAlt: "Penn thumbnail",
@@ -81,7 +80,7 @@ function About() {
             bullets: ["Litt Lab under Brian Litt, MD.", "Ashton Fellow."]
         },
         {
-            date: "June 2023-<br>Present",
+            date: "June 2023—<br>Present",
             imagePath: "/about/sociail_thumbnail.webp",
             imageUrl: "https://www.sociail.com/",
             imageAlt: "Sociail thumbnail",
@@ -102,7 +101,7 @@ function About() {
             ]
         },
         {
-            date: "Sept 2024-<br>Sept 2025",
+            date: "Sept 2024—<br>Sept 2025",
             imagePath: "/about/nucleate_thumbnail.webp",
             imageUrl: "https://www.nucleate.xyz/",
             imageAlt: "Nucleate thumbnail",
@@ -111,7 +110,7 @@ function About() {
             bullets: ["Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."]
         },
         {
-            date: "Sept 2023-<br>Aug 2024",
+            date: "Sept 2023—<br>Aug 2024",
             imagePath: "/about/litt_lab_thumbnail.webp",
             imageUrl: "https://littlab.seas.upenn.edu/",
             imageAlt: "Litt Lab thumbnail",
@@ -121,7 +120,7 @@ function About() {
             bullets: ["Translational neuroengineering research for epilepsy patient care.<br><br>"]
         },
         {
-            date: "Dec 2021-<br>Sept 2023",
+            date: "Dec 2021—<br>Sept 2023",
             imagePath: "/about/ayaz_lab_thumbnail.webp",
             imageUrl: "https://ayazlab.com/",
             imageAlt: "Ayaz Lab thumbnail",
@@ -137,7 +136,7 @@ function About() {
             ]
         },
         {
-            date: "June 2020-<br>June 2023",
+            date: "June 2020—<br>June 2023",
             imagePath: "/about/moberg_analytics_thumbnail.webp",
             imageUrl: "https://moberganalytics.com/",
             imageAlt: "Moberg Analytics thumbnail",
@@ -163,7 +162,7 @@ function About() {
             ]
         },
         {
-            date: "Sept 2019-<br>March 2020",
+            date: "Sept 2019—<br>March 2020",
             imagePath: "/about/intact_vascular_thumbnail.webp",
             imageUrl: "https://www.linkedin.com/company/intactvascular/",
             imageAlt: "Intact Vascular thumbnail",
@@ -176,7 +175,7 @@ function About() {
             ]
         },
         {
-            date: "Sept 2018-<br>June 2023",
+            date: "Sept 2018—<br>June 2023",
             imagePath: "/about/drexel_thumbnail.webp",
             imageUrl: "https://drexel.edu/biomed/",
             imageAlt: "Drexel University thumbnail",
