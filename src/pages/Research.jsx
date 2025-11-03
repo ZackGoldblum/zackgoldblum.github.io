@@ -21,6 +21,12 @@ function Research() {
     const researchData = {
         "2025-2026": [
             {
+                tag: "Pre-print",
+                tagColor: "light_purple",
+                title: "The Seizure Embedding Map: A Spatio-Temporal Transformer for Comparing Patients by Ictal Intracranial EEG Features at Scale",
+                content: 'Pattnaik AR, Xu Z, Ojemann WKS, Aguila CA, Lucas A, Lavelle S, <b>Goldblum Z</b>, Galer PD, Gallagher R, Davis KA, Sinha N, Conrad EC, Litt B. <em>medRxiv</em>. October 17, 2025. DOI: 10.1101/2025.10.15.25338097.<br><a class="check_it_out" href="https://www.medrxiv.org/content/10.1101/2025.10.15.25338097v1" target="_blank" rel="noopener noreferrer">Check it out!</a>'
+            },
+            {
                 tag: "Talk",
                 tagColor: "blue",
                 title: "Turning Continuous Data into Actionable Epilepsy Care: Devices, Platforms, and Applications",
