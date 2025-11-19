@@ -64,6 +64,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2025-2026": [
+            { title: "Babylon's Ashes", author: "James S.A. Corey", imageSrc: "/books/babylons_ashes.webp", rating: 3.5, size: "S", titlePadTop: 12 },
+            { title: "Nemesis Games", author: "James S.A. Corey", imageSrc: "/books/nemesis_games.webp", rating: 4, size: "S", titlePadTop: 12 },
+            { title: "Cibola Burn", author: "James S.A. Corey", imageSrc: "/books/cibola_burn.webp", rating: 4, size: "S", titlePadTop: 12 },
+            { title: "Biomega 6", author: "Tsutomu Nihei", imageSrc: "/books/biomega_6.webp", rating: 4.5, size: "S", titlePadTop: 12 },
             { title: "Biomega 5", author: "Tsutomu Nihei", imageSrc: "/books/biomega_5.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Biomega 4", author: "Tsutomu Nihei", imageSrc: "/books/biomega_4.webp", rating: 4.5, size: "S", titlePadTop: 12 },
             { title: "Biomega 3", author: "Tsutomu Nihei", imageSrc: "/books/biomega_3.webp", rating: 4.5, size: "S", titlePadTop: 12 },
