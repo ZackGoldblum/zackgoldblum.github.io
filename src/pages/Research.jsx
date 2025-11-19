@@ -24,7 +24,7 @@ function Research() {
                 tag: "Publication",
                 tagColor: "green",
                 title: "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
-                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>arXiv</em>. November 19, 2025. DOI: 10.1038/s41597-025-06075-5.<br><a class="check_it_out" href="https://www.nature.com/articles/s41597-025-06075-5" target="_blank" rel="noopener noreferrer">Check it out!</a>'
+                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>Scientific Data</em>. November 19, 2025. DOI: 10.1038/s41597-025-06075-5.<br><a class="check_it_out" href="https://www.nature.com/articles/s41597-025-06075-5" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             },
             {
                 tag: "Pre-print",
