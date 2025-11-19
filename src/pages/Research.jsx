@@ -21,6 +21,12 @@ function Research() {
     const researchData = {
         "2025-2026": [
             {
+                tag: "Publication",
+                tagColor: "green",
+                title: "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+                content: '<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>arXiv</em>. November 19, 2025. DOI: 10.1038/s41597-025-06075-5.<br><a class="check_it_out" href="https://www.nature.com/articles/s41597-025-06075-5" target="_blank" rel="noopener noreferrer">Check it out!</a>'
+            },
+            {
                 tag: "Pre-print",
                 tagColor: "light_purple",
                 title: "The Seizure Embedding Map: A Spatio-Temporal Transformer for Comparing Patients by Ictal Intracranial EEG Features at Scale",
