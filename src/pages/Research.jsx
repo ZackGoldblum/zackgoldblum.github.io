@@ -21,6 +21,12 @@ function Research() {
     const researchData = {
         "2025-2026": [
             {
+                tag: "Live Demo",
+                tagColor: "orange",
+                title: "Agentic AI Makes Real-time Neural Data Conversational for Epilepsy Patients",
+                content: '<b>Goldblum Z</b>*, Shi H*, Litt B. <em>NeurIPS: Foundation Models for the Brain and Body Workshop</em>. San Diego, CA. December 6, 2025.<br><i>*These authors contributed equally to this work</i>'
+            },
+            {
                 tag: "Publication",
                 tagColor: "green",
                 title: "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
