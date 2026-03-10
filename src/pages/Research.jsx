@@ -24,7 +24,7 @@ function Research() {
                 tag: "Pre-print",
                 tagColor: "light_purple",
                 title: "An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy",
-                content: '<b>Goldblum Z</b>*, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>medRxiv</em>. January 27, 2026. DOI: 10.64898/2026.01.26.26344234.<br><i>*These authors contributed equally to this work</i><br><a class="check_it_out" href="https://www.medrxiv.org/content/10.64898/2026.01.26.26344234v1" target="_blank" rel="noopener noreferrer">Check it out!</a>'
+                content: '<b>Goldblum Z</b>*, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>medRxiv</em>. March 09, 2026. DOI: 10.64898/2026.01.26.26344234.<br><i>*These authors contributed equally to this work</i><br><a class="check_it_out" href="https://www.medrxiv.org/content/10.64898/2026.01.26.26344234v2" target="_blank" rel="noopener noreferrer">Check it out!</a>'
             }
         ],
         "2025-2026": [
