@@ -63,6 +63,12 @@ function Bookshelf() {
     useSmoothScroll();
 
     const bookshelfData = {
+        "2026-2027": [
+            { title: "Leviathan Falls", author: "James S.A. Corey", imageSrc: "/books/leviathan_falls.webp", rating: 4.5, size: "M", titlePadTop: 12 },
+            { title: "Tiamat's Wrath", author: "James S.A. Corey", imageSrc: "/books/tiamats_wrath.webp", rating: 4.5, size: "M", titlePadTop: 12 },
+            { title: "Persepolis Rising", author: "James S.A. Corey", imageSrc: "/books/persepolis_rising.webp", rating: 5.0, size: "M" },
+            { title: "The Vital Question", author: "Nick Lane", imageSrc: "/books/the_vital_question.webp", rating: 3.0, size: "M" },
+        ],
         "2025-2026": [
             { title: "The Scaling Era: An Oral History of AI", author: "Dwarkesh Patel", imageSrc: "/books/the_scaling_era.webp", rating: 4.0, size: "M" },
             { title: "Babylon's Ashes", author: "James S.A. Corey", imageSrc: "/books/babylons_ashes.webp", rating: 3.5, size: "M", titlePadTop: 22 },
