@@ -308,7 +308,7 @@ function About() {
                     <div>
                         <h4 className="header about_header">Peer Reviewer</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
-                            PeerJ Computer Science <span style={{ fontSize: '18px' }}>(2025)</span>, Epilepsia Open <span style={{ fontSize: '18px' }}>(2024 - 2025)</span>
+                            Journal of Neural Engineering <span style={{ fontSize: '18px' }}>(2026)</span>, PeerJ Computer Science <span style={{ fontSize: '18px' }}>(2025)</span>, Epilepsia Open <span style={{ fontSize: '18px' }}>(2024 - 2025)</span>
                         </p>
                     </div>
                     <br />
@@ -328,6 +328,13 @@ function About() {
                 </Section>
                 <br />
                 <Section title="Impactful Courses">
+                    <div>
+                        <h4 className="header about_header">Applying your Thesis to the Real World</h4>
+                        <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
+                            Dr. Vanessa Chan, University of Pennsylvania, 2026
+                        </p>
+                    </div>
+                    <br />
                     <div>
                         <h4 className="header about_header">NeuroAI - A Principled Understanding of the Human Brain</h4>
                         <p className="timeline_subtitle" style={{ paddingBottom: '0px' }}>
