@@ -64,6 +64,10 @@ function Bookshelf() {
 
     const bookshelfData = {
         "2026-2027": [
+            { title: "Crowbar", author: "Andrew Edwards", imageSrc: "/books/crowbar.webp", rating: 3, size: "S", titlePadTop: 12 },
+            { title: "Meditations", author: "Marcus Aurelius", imageSrc: "/books/meditations.webp", rating: 2.5, size: "S", titlePadTop: 12 },
+            { title: "The Odyssey", author: "Homer", imageSrc: "/books/the_odyssey.webp", rating: 3, size: "S", titlePadTop: 12 },
+            { title: "King of Dogs", author: "Andrew Edwards", imageSrc: "/books/king_of_dogs.webp", rating: 4, size: "S", titlePadTop: 12 },
             { title: "Leviathan Falls", author: "James S.A. Corey", imageSrc: "/books/leviathan_falls.webp", rating: 4.5, size: "M", titlePadTop: 12 },
             { title: "Tiamat's Wrath", author: "James S.A. Corey", imageSrc: "/books/tiamats_wrath.webp", rating: 4.5, size: "M", titlePadTop: 12 },
             { title: "Persepolis Rising", author: "James S.A. Corey", imageSrc: "/books/persepolis_rising.webp", rating: 5.0, size: "M" },
