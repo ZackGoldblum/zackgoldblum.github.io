@@ -1,5 +1,5 @@
 import PageIntro from '../components/PageIntro'
-import { affiliations, bio, courses, teaching, timeline, volunteering, type SimpleEntry } from '../data/about'
+import { affiliations, courses, teaching, timeline, volunteering, type SimpleEntry } from '../data/about'
 
 function SimpleList({ title, glyph, entries }: { title: string; glyph: string; entries: SimpleEntry[] }) {
   return (
@@ -21,29 +21,16 @@ function SimpleList({ title, glyph, entries }: { title: string; glyph: string; e
   )
 }
 
-export default function About() {
+export default function Timeline() {
   return (
     <div>
-      <PageIntro index="04" title="About" />
+      <PageIntro
+        index="04"
+        title="Timeline"
+        lede="Where I've been and what I'm building now — research, startups, and school along the way."
+      />
 
-      <section className="about-hero card">
-        <img
-          className="about-hero__photo"
-          src="/about/zack_profile_pic.webp"
-          alt="Zack Goldblum"
-          width="180"
-          height="180"
-        />
-        <div>
-          <p className="about-hero__bio">{bio}</p>
-          <p className="mono about-hero__meta">CURRENTLY: BIOENGINEERING PHD CANDIDATE · LITT LAB · UPENN</p>
-        </div>
-      </section>
-
-      <section className="about-section">
-        <div className="divider">
-          <span className="divider__glyph">✦ TRAJECTORY</span>
-        </div>
+      <section>
         <div className="timeline">
           {timeline.map((entry) => (
             <article key={entry.date + entry.org} className="timeline__entry">

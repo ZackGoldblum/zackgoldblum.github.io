@@ -24,8 +24,8 @@ const STAR_COLORS = [
   '198,222,255', '178,198,255', '255,236,210', '216,198,255', '170,235,255',
 ]
 
-const BASE_SPEED = 0.0001 // z units per ms — cruise
-const MAX_BOOST = 14 // scroll throttle multiplier cap
+const BASE_SPEED = 0.000028 // z units per ms — slow cruise (~35s per star)
+const MAX_BOOST = 30 // scroll throttle multiplier cap
 const Z_NEAR = 0.035
 const STREAK = 1.6 // streak length in frames of motion
 

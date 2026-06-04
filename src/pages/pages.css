@@ -6,10 +6,52 @@
 
 .hero {
   min-height: calc(88dvh - var(--nav-height));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  gap: var(--space-6);
+}
+
+@media (min-width: 880px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: center;
+    column-gap: var(--space-8);
+  }
+}
+
+.hero__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: var(--space-5);
+}
+
+.hero__portrait {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hero__portrait img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+}
+
+.hero__portrait .mono {
+  color: var(--text-dim);
+  letter-spacing: var(--tracking-wide);
+  max-width: 280px;
+}
+
+@media (max-width: 879px) {
+  .hero__portrait { order: -1; }
+  .hero__portrait img { max-width: 132px; border-radius: var(--radius-lg); }
+  .hero__portrait .mono { max-width: none; }
 }
 
 .hero__title {
@@ -268,38 +310,7 @@
 .book-grid--dense .book__title { font-size: var(--text-xs); }
 .book-grid--dense .book__author { font-size: var(--text-2xs); }
 
-/* ---------- About ---------- */
-
-.about-hero {
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-  padding: var(--space-6);
-}
-
-.about-hero__photo {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  flex-shrink: 0;
-}
-
-.about-hero__bio {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 500;
-  color: var(--text-bright);
-  line-height: var(--leading-snug);
-  max-width: 30ch;
-}
-
-.about-hero__meta {
-  margin-top: var(--space-3);
-  color: var(--text-dim);
-  letter-spacing: var(--tracking-wide);
-}
+/* ---------- Timeline page ---------- */
 
 .about-section { margin-top: var(--space-7); }
 
@@ -473,12 +484,6 @@
 }
 
 @media (max-width: 720px) {
-  .about-hero {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-5);
-  }
-
   .timeline__entry { grid-template-columns: 14px minmax(0, 1fr); gap: var(--space-3); }
   .timeline__content { padding: var(--space-4); }
 

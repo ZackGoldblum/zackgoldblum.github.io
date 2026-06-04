@@ -5,12 +5,12 @@
    ============================================================ */
 
 :root {
-  /* Surfaces — neutral charcoal glass, not blue */
-  --bg-void: #04060f;                          /* the deep field */
-  --bg-deep: #070b18;                          /* slightly lifted */
-  --bg-raised: rgba(14, 17, 27, 0.34);         /* glass card — stars show through */
-  --bg-elevated: rgba(30, 34, 49, 0.45);       /* hover / active glass */
-  --bg-hairline: rgba(175, 185, 210, 0.06);    /* whisper fill */
+  /* Surfaces — near-black, no blue cast */
+  --bg-void: #040408;                          /* the deep field */
+  --bg-deep: #08080d;                          /* slightly lifted */
+  --bg-raised: rgba(255, 255, 255, 0.022);     /* barely-there panel */
+  --bg-elevated: rgba(255, 255, 255, 0.05);    /* hover / active */
+  --bg-hairline: rgba(255, 255, 255, 0.045);   /* whisper fill */
 
   /* Text */
   --text-bright: #eef2fc;                      /* headings, starlight */
@@ -31,14 +31,11 @@
   --accent-pulsar-soft: rgba(255, 126, 182, 0.13);
 
   /* Lines & glows */
-  --line: rgba(175, 188, 215, 0.14);
-  --line-soft: rgba(175, 188, 215, 0.08);
-  --line-bright: rgba(205, 218, 240, 0.3);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-soft: rgba(255, 255, 255, 0.055);
+  --line-bright: rgba(255, 255, 255, 0.22);
   --glow-ion: 0 0 24px rgba(105, 216, 255, 0.18);
   --glow-soft: 0 0 28px rgba(225, 232, 250, 0.08);
-  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.45);
-  --glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012) 45%, rgba(255, 255, 255, 0));
 
   /* Hero gradient — starlight sweep */
   --grad-starlight: linear-gradient(120deg, #eef2fc 20%, #9fd8ff 55%, #b9a4ff 85%);

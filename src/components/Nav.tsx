@@ -6,7 +6,7 @@ const LINKS = [
   { to: '/projects', label: 'Projects', index: '01' },
   { to: '/research', label: 'Research', index: '02' },
   { to: '/bookshelf', label: 'Bookshelf', index: '03' },
-  { to: '/about', label: 'About', index: '04' },
+  { to: '/timeline', label: 'Timeline', index: '04' },
 ]
 
 export default function Nav() {
