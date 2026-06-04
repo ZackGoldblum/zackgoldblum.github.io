@@ -1,39 +1,33 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * Starfield — canvas 2D night sky.
+ * Starfield — flying through space.
  *
- * Three depth layers of stars with individual twinkle phases.
- * Slow autonomous drift + scroll parallax + lerped mouse parallax,
- * all scaled by depth so the sky feels volumetric. Occasional
- * shooting stars. Static render under prefers-reduced-motion.
+ * Stars live in a z-flight field and stream toward the camera
+ * (classic warp projection). The ship cruises at a base speed;
+ * scrolling throttles the engines, accelerating the field and
+ * stretching stars into light-streaks. Mouse drift nudges the
+ * heading. Static render under prefers-reduced-motion.
  */
 
 interface Star {
-  x: number // 0..1 of field width
-  y: number // 0..1 of field height
-  z: number // depth 0 (far) .. 1 (near)
-  r: number // radius px at dpr 1
-  a: number // base alpha
-  phase: number
-  speed: number // twinkle speed
-  color: string // "r,g,b"
-  halo: boolean
-}
-
-interface Meteor {
-  x: number
+  x: number // -1.2 .. 1.2 field units
   y: number
-  vx: number
-  vy: number
-  born: number
-  life: number
+  z: number // 1 (far) -> 0 (at the camera)
+  size: number
+  color: string
+  twinkle: number
 }
 
 const STAR_COLORS = [
   '255,255,255', '255,255,255', '255,255,255', '255,255,255',
   '198,222,255', '178,198,255', '255,236,210', '216,198,255', '170,235,255',
 ]
+
+const BASE_SPEED = 0.0001 // z units per ms — cruise
+const MAX_BOOST = 14 // scroll throttle multiplier cap
+const Z_NEAR = 0.035
+const STREAK = 1.6 // streak length in frames of motion
 
 export default function Starfield() {
   const ref = useRef<HTMLCanvasElement>(null)
@@ -47,130 +41,131 @@ export default function Starfield() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     let w = 0
     let h = 0
-    let dpr = 1
-    let stars: Star[] = []
-    let meteors: Meteor[] = []
-    let nextMeteor = performance.now() + 4000 + Math.random() * 5000
     let raf = 0
     let running = false
+    let last = 0
+    let stars: Star[] = []
 
-    // Parallax state
+    // Engine state
+    let scrollVel = 0
+    let lastScrollY = window.scrollY
+
+    // Heading drift
     let mouseX = 0
     let mouseY = 0
-    let px = 0
-    let py = 0
+    let mx = 0
+    let my = 0
+
+    const spawn = (s: Star, initial: boolean) => {
+      s.x = (Math.random() - 0.5) * 2.4
+      s.y = (Math.random() - 0.5) * 2.4
+      s.z = initial ? Z_NEAR + Math.random() * (1 - Z_NEAR) : 1
+      s.size = 0.5 + Math.random() * 0.9
+      s.color = STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)]
+      s.twinkle = Math.random() * Math.PI * 2
+    }
 
     const buildStars = () => {
-      const count = Math.min(520, Math.round((w * h) / 2600))
+      const count = Math.min(650, Math.round((w * h) / 1900))
       stars = Array.from({ length: count }, () => {
-        const z = 0.15 + Math.pow(Math.random(), 1.7) * 0.85
-        const r = 0.35 + z * (0.5 + Math.random() * 0.9)
-        return {
-          x: Math.random(),
-          y: Math.random(),
-          z,
-          r,
-          a: 0.35 + z * 0.45 + Math.random() * 0.2,
-          phase: Math.random() * Math.PI * 2,
-          speed: 0.0004 + Math.random() * 0.0011,
-          color: STAR_COLORS[Math.floor(Math.random() * STAR_COLORS.length)],
-          halo: z > 0.8 && Math.random() < 0.18,
-        }
+        const s = {} as Star
+        spawn(s, true)
+        return s
       })
     }
 
     const resize = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, 2)
+      const dpr = Math.min(window.devicePixelRatio || 1, 2)
       w = window.innerWidth
       h = window.innerHeight
       canvas.width = Math.round(w * dpr)
       canvas.height = Math.round(h * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
       buildStars()
-      if (reduced) drawFrame(0, true)
+      if (reduced) drawStatic()
     }
 
-    const wrap = (v: number, max: number) => ((v % max) + max) % max
-
-    const drawFrame = (t: number, still = false) => {
+    const drawStatic = () => {
       ctx.clearRect(0, 0, w, h)
-      const scroll = window.scrollY
-
-      // Ease mouse parallax toward target
-      px += (mouseX - px) * 0.035
-      py += (mouseY - py) * 0.035
-
-      const driftY = still ? 0 : t * 0.0035 // slow upward drift of the whole field
-
+      const cx = w / 2
+      const cy = h / 2
       for (const s of stars) {
-        const depth = s.z
-        const x = wrap(s.x * w + px * depth * 22, w + 8) - 4
-        const y = wrap(s.y * h - scroll * depth * 0.30 + py * depth * 14 + driftY * depth, h + 8) - 4
-
-        const tw = still ? 1 : 0.74 + 0.26 * Math.sin(s.phase + t * s.speed)
-        const alpha = s.a * tw
-
-        if (s.halo) {
-          const g = ctx.createRadialGradient(x, y, 0, x, y, s.r * 7)
-          g.addColorStop(0, `rgba(${s.color},${alpha * 0.5})`)
-          g.addColorStop(1, `rgba(${s.color},0)`)
-          ctx.fillStyle = g
-          ctx.beginPath()
-          ctx.arc(x, y, s.r * 7, 0, Math.PI * 2)
-          ctx.fill()
-        }
-
+        const px = cx + (s.x / s.z) * cx
+        const py = cy + (s.y / s.z) * cy
+        if (px < -8 || px > w + 8 || py < -8 || py > h + 8) continue
+        const size = Math.min(s.size * (0.45 / s.z), 2.6)
+        const alpha = 0.25 + 0.65 * (1 - s.z)
         ctx.fillStyle = `rgba(${s.color},${alpha})`
         ctx.beginPath()
-        ctx.arc(x, y, s.r, 0, Math.PI * 2)
+        ctx.arc(px, py, size, 0, Math.PI * 2)
         ctx.fill()
-      }
-
-      if (still) return
-
-      // Shooting stars
-      if (t > nextMeteor && !document.hidden) {
-        nextMeteor = t + 6000 + Math.random() * 9000
-        const fromLeft = Math.random() < 0.5
-        meteors.push({
-          x: w * (fromLeft ? Math.random() * 0.4 : 0.6 + Math.random() * 0.4),
-          y: h * Math.random() * 0.45,
-          vx: (fromLeft ? 1 : -1) * (0.45 + Math.random() * 0.35),
-          vy: 0.28 + Math.random() * 0.22,
-          born: t,
-          life: 1100 + Math.random() * 500,
-        })
-      }
-
-      meteors = meteors.filter((m) => t - m.born < m.life)
-      for (const m of meteors) {
-        const age = (t - m.born) / m.life
-        const fade = age < 0.2 ? age / 0.2 : 1 - (age - 0.2) / 0.8
-        const mx = m.x + m.vx * (t - m.born)
-        const my = m.y + m.vy * (t - m.born)
-        const tail = 130
-        const g = ctx.createLinearGradient(mx, my, mx - m.vx * tail, my - m.vy * tail)
-        g.addColorStop(0, `rgba(220,240,255,${0.85 * fade})`)
-        g.addColorStop(1, 'rgba(140,180,255,0)')
-        ctx.strokeStyle = g
-        ctx.lineWidth = 1.4
-        ctx.lineCap = 'round'
-        ctx.beginPath()
-        ctx.moveTo(mx, my)
-        ctx.lineTo(mx - m.vx * tail, my - m.vy * tail)
-        ctx.stroke()
       }
     }
 
-    const loop = (t: number) => {
-      drawFrame(t)
-      raf = requestAnimationFrame(loop)
+    const frame = (t: number) => {
+      const dt = Math.min(t - last || 16.7, 50)
+      last = t
+      ctx.clearRect(0, 0, w, h)
+
+      // Throttle: scroll velocity decays, boosting flight speed while it lasts
+      scrollVel *= Math.pow(0.93, dt / 16.7)
+      const boost = Math.min(scrollVel * 0.045, MAX_BOOST)
+      const speed = BASE_SPEED * (1 + boost) * dt
+
+      // Heading drift eases toward the cursor
+      mx += (mouseX - mx) * 0.03
+      my += (mouseY - my) * 0.03
+      const cx = w / 2 + mx * 26
+      const cy = h / 2 + my * 18
+
+      for (const s of stars) {
+        s.z -= speed
+        if (s.z <= Z_NEAR) spawn(s, false)
+
+        const px = cx + (s.x / s.z) * (w / 2)
+        const py = cy + (s.y / s.z) * (h / 2)
+        if (px < -60 || px > w + 60 || py < -60 || py > h + 60) {
+          spawn(s, false)
+          continue
+        }
+
+        const size = Math.min(s.size * (0.45 / s.z), 2.8)
+        const appear = Math.min(1, (1 - s.z) * 7) // fade in after spawn
+        const depth = 0.22 + 0.78 * (1 - s.z)
+        const tw = 0.86 + 0.14 * Math.sin(s.twinkle + t * 0.0012)
+        const alpha = appear * depth * tw
+
+        // Streak: project the star a moment ago and stroke between
+        const zPrev = Math.min(s.z + speed * STREAK, 1)
+        const qx = cx + (s.x / zPrev) * (w / 2)
+        const qy = cy + (s.y / zPrev) * (h / 2)
+
+        const dx = px - qx
+        const dy = py - qy
+        if (dx * dx + dy * dy > 1.2) {
+          ctx.strokeStyle = `rgba(${s.color},${alpha})`
+          ctx.lineWidth = size
+          ctx.lineCap = 'round'
+          ctx.beginPath()
+          ctx.moveTo(qx, qy)
+          ctx.lineTo(px, py)
+          ctx.stroke()
+        } else {
+          ctx.fillStyle = `rgba(${s.color},${alpha})`
+          ctx.beginPath()
+          ctx.arc(px, py, size, 0, Math.PI * 2)
+          ctx.fill()
+        }
+      }
+
+      raf = requestAnimationFrame(frame)
     }
 
     const start = () => {
       if (!running && !reduced) {
         running = true
-        raf = requestAnimationFrame(loop)
+        last = 0
+        raf = requestAnimationFrame(frame)
       }
     }
 
@@ -179,27 +174,39 @@ export default function Starfield() {
       cancelAnimationFrame(raf)
     }
 
+    const onScroll = () => {
+      const y = window.scrollY
+      scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY), 600)
+      lastScrollY = y
+    }
+
     const onMouse = (e: MouseEvent) => {
       mouseX = (e.clientX / w - 0.5) * 2
       mouseY = (e.clientY / h - 0.5) * 2
     }
 
     const onVisibility = () => {
-      if (document.hidden) stop()
-      else start()
+      if (document.hidden) {
+        stop()
+        scrollVel = 0
+      } else {
+        start()
+      }
     }
 
     resize()
-    start()
-    if (reduced) drawFrame(0, true)
+    if (reduced) drawStatic()
+    else start()
 
     window.addEventListener('resize', resize)
+    window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('mousemove', onMouse, { passive: true })
     document.addEventListener('visibilitychange', onVisibility)
 
     return () => {
       stop()
       window.removeEventListener('resize', resize)
+      window.removeEventListener('scroll', onScroll)
       window.removeEventListener('mousemove', onMouse)
       document.removeEventListener('visibilitychange', onVisibility)
     }

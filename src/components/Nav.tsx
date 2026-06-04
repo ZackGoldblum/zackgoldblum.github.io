@@ -27,43 +27,47 @@ export default function Nav() {
   }, [open])
 
   return (
-    <header className="nav">
-      <div className="nav__inner">
-        <Link to="/" className="nav__brand" aria-label="Home">
-          <span className="nav__sigil mono">ZG</span>
-          <span className="nav__name">Zack Goldblum</span>
-        </Link>
+    <>
+      <header className="nav">
+        <div className="nav__inner">
+          <Link to="/" className="nav__brand" aria-label="Home">
+            <span className="nav__sigil mono">ZG</span>
+            <span className="nav__name">Zack Goldblum</span>
+          </Link>
 
-        <nav className="nav__links" aria-label="Primary">
-          {LINKS.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}
-            >
-              {l.label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className="nav__links" aria-label="Primary">
+            {LINKS.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}
+              >
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <button
-          className={`nav__burger${open ? ' nav__burger--open' : ''}`}
-          onClick={() => setOpen(!open)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          <span />
-          <span />
-        </button>
-      </div>
+          <button
+            className={`nav__burger${open ? ' nav__burger--open' : ''}`}
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
 
+      {/* Overlay lives outside the header: backdrop-filter on .nav would
+          otherwise re-anchor position:fixed to the navbar. */}
       <div className={`nav__overlay${open ? ' nav__overlay--open' : ''}`} aria-hidden={!open}>
         <nav className="nav__overlay-links" aria-label="Mobile">
           {LINKS.map((l, i) => (
             <NavLink
               key={l.to}
               to={l.to}
-              style={{ transitionDelay: open ? `${80 + i * 55}ms` : '0ms' }}
+              style={{ transitionDelay: open ? `${60 + i * 45}ms` : '0ms' }}
               className={({ isActive }) =>
                 `nav__overlay-link${isActive ? ' nav__overlay-link--active' : ''}`
               }
@@ -75,6 +79,6 @@ export default function Nav() {
         </nav>
         <SocialLinks className="nav__overlay-socials" />
       </div>
-    </header>
+    </>
   )
 }

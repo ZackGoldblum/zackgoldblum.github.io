@@ -28,7 +28,7 @@ export const projects: Record<string, Project[]> = {
       date: 'Sept 2022 — Present',
       image: '/projects/website.webp',
       body: [
-        'V4: Complete redesign — dark, space-age, and mobile-first, with a custom canvas starfield, scroll and mouse parallax, and the occasional shooting star.',
+        'V4: Complete redesign — dark, space-age, and mobile-first, with a custom canvas starfield that flies through space and hits warp speed when you scroll.',
         'V3: Re-implementation into a React single page application.',
         'V2: New design with a Three.js-animated starfield background.',
         "V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette inspired by <a href=\"https://github.com/daltonmenezes/aura-theme/tree/main\" target=\"_blank\" rel=\"noopener noreferrer\">Aura Theme</a>.",
