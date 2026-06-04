@@ -8,8 +8,8 @@
   /* Surfaces — neutral charcoal glass, not blue */
   --bg-void: #04060f;                          /* the deep field */
   --bg-deep: #070b18;                          /* slightly lifted */
-  --bg-raised: rgba(16, 19, 29, 0.55);         /* glass card */
-  --bg-elevated: rgba(30, 34, 49, 0.6);        /* hover / active glass */
+  --bg-raised: rgba(14, 17, 27, 0.34);         /* glass card — stars show through */
+  --bg-elevated: rgba(30, 34, 49, 0.45);       /* hover / active glass */
   --bg-hairline: rgba(175, 185, 210, 0.06);    /* whisper fill */
 
   /* Text */
