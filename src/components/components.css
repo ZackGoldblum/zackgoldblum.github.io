@@ -30,28 +30,7 @@
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
   text-decoration: none;
-}
-
-.nav__sigil {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--accent-ion);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  background: var(--bg-hairline);
-  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
-}
-
-.nav__brand:hover .nav__sigil {
-  border-color: var(--accent-ion);
-  box-shadow: var(--glow-ion);
 }
 
 .nav__name {
@@ -316,19 +295,19 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  color: var(--accent-ion);
+  color: var(--accent-flare);
   white-space: nowrap;
 }
 
 /* ---------- Card (glass surface) ---------- */
 
 .card {
-  background: var(--bg-raised);
+  background: var(--glass-sheen), var(--bg-raised);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-lg);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-card);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35);
+  backdrop-filter: blur(20px) saturate(1.35);
+  box-shadow: var(--shadow-card), var(--glass-edge);
   transition: border-color var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out),
     box-shadow var(--dur-med) var(--ease-out);
 }
@@ -336,7 +315,7 @@
 .card--hover:hover {
   border-color: var(--line-bright);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card), var(--glow-ion);
+  box-shadow: var(--shadow-card), var(--glass-edge), var(--glow-soft);
 }
 
 /* ---------- Buttons ---------- */

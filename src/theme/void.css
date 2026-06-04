@@ -5,12 +5,12 @@
    ============================================================ */
 
 :root {
-  /* Surfaces */
+  /* Surfaces — neutral charcoal glass, not blue */
   --bg-void: #04060f;                          /* the deep field */
   --bg-deep: #070b18;                          /* slightly lifted */
-  --bg-raised: rgba(15, 22, 44, 0.52);         /* glass card */
-  --bg-elevated: rgba(24, 33, 62, 0.62);       /* hover / active glass */
-  --bg-hairline: rgba(125, 145, 200, 0.07);    /* whisper fill */
+  --bg-raised: rgba(16, 19, 29, 0.55);         /* glass card */
+  --bg-elevated: rgba(30, 34, 49, 0.6);        /* hover / active glass */
+  --bg-hairline: rgba(175, 185, 210, 0.06);    /* whisper fill */
 
   /* Text */
   --text-bright: #eef2fc;                      /* headings, starlight */
@@ -31,11 +31,14 @@
   --accent-pulsar-soft: rgba(255, 126, 182, 0.13);
 
   /* Lines & glows */
-  --line: rgba(140, 160, 210, 0.16);
-  --line-soft: rgba(140, 160, 210, 0.09);
-  --line-bright: rgba(160, 190, 240, 0.34);
+  --line: rgba(175, 188, 215, 0.14);
+  --line-soft: rgba(175, 188, 215, 0.08);
+  --line-bright: rgba(205, 218, 240, 0.3);
   --glow-ion: 0 0 24px rgba(105, 216, 255, 0.18);
+  --glow-soft: 0 0 28px rgba(225, 232, 250, 0.08);
   --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --glass-edge: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012) 45%, rgba(255, 255, 255, 0));
 
   /* Hero gradient — starlight sweep */
   --grad-starlight: linear-gradient(120deg, #eef2fc 20%, #9fd8ff 55%, #b9a4ff 85%);

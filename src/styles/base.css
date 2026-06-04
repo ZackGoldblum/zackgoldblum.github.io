@@ -102,7 +102,7 @@ body {
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: var(--tracking-wider);
-  color: var(--accent-ion);
+  color: var(--text-dim);
   white-space: nowrap;
 }
 

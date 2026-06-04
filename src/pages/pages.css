@@ -99,7 +99,7 @@
 }
 
 .project__date {
-  color: var(--accent-ion);
+  color: var(--text-dim);
   letter-spacing: var(--tracking-wider);
   margin-bottom: var(--space-2);
 }
@@ -340,8 +340,8 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--accent-ion);
-  box-shadow: 0 0 10px var(--accent-ion);
+  background: var(--text-bright);
+  box-shadow: 0 0 10px rgba(225, 232, 250, 0.55);
 }
 
 .timeline__content { padding: var(--space-5); }
@@ -366,7 +366,7 @@
 .timeline__logo:hover img { border-color: var(--accent-ion); }
 
 .timeline__date {
-  color: var(--accent-ion);
+  color: var(--text-dim);
   letter-spacing: var(--tracking-wider);
 }
 
@@ -402,7 +402,7 @@
   color: var(--text-body);
 }
 
-.timeline__position li::marker { color: var(--accent-ion); }
+.timeline__position li::marker { color: var(--text-dim); }
 
 /* Affiliations */
 .affiliations {

@@ -31,7 +31,6 @@ export default function Nav() {
       <header className="nav">
         <div className="nav__inner">
           <Link to="/" className="nav__brand" aria-label="Home">
-            <span className="nav__sigil mono">ZG</span>
             <span className="nav__name">Zack Goldblum</span>
           </Link>
 
