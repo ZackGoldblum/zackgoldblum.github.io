@@ -1,0 +1,44 @@
+/* ============================================================
+   void.css — the palette. Deep space over a faint nebula.
+   Components reference only these semantic tokens;
+   no hard-coded colors anywhere else.
+   ============================================================ */
+
+:root {
+  /* Surfaces */
+  --bg-void: #04060f;                          /* the deep field */
+  --bg-deep: #070b18;                          /* slightly lifted */
+  --bg-raised: rgba(15, 22, 44, 0.52);         /* glass card */
+  --bg-elevated: rgba(24, 33, 62, 0.62);       /* hover / active glass */
+  --bg-hairline: rgba(125, 145, 200, 0.07);    /* whisper fill */
+
+  /* Text */
+  --text-bright: #eef2fc;                      /* headings, starlight */
+  --text-body: #aeb8d0;                        /* body copy */
+  --text-dim: #6d7894;                         /* meta, captions */
+
+  /* Accents */
+  --accent-ion: #69d8ff;                       /* primary — ion blue */
+  --accent-nebula: #a78bfa;                    /* violet */
+  --accent-aurora: #56e8a9;                    /* green — publications */
+  --accent-flare: #ffb86b;                     /* amber — posters, awards */
+  --accent-pulsar: #ff7eb6;                    /* pink — thesis */
+
+  --accent-ion-soft: rgba(105, 216, 255, 0.12);
+  --accent-nebula-soft: rgba(167, 139, 250, 0.13);
+  --accent-aurora-soft: rgba(86, 232, 169, 0.12);
+  --accent-flare-soft: rgba(255, 184, 107, 0.13);
+  --accent-pulsar-soft: rgba(255, 126, 182, 0.13);
+
+  /* Lines & glows */
+  --line: rgba(140, 160, 210, 0.16);
+  --line-soft: rgba(140, 160, 210, 0.09);
+  --line-bright: rgba(160, 190, 240, 0.34);
+  --glow-ion: 0 0 24px rgba(105, 216, 255, 0.18);
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+  /* Hero gradient — starlight sweep */
+  --grad-starlight: linear-gradient(120deg, #eef2fc 20%, #9fd8ff 55%, #b9a4ff 85%);
+
+  color-scheme: dark;
+}

@@ -1,0 +1,61 @@
+/* ============================================================
+   typography.css — type utilities.
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+  letter-spacing: 0.004em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-bright);
+  line-height: var(--leading-tight);
+  font-weight: 600;
+}
+
+/* Mono micro-label: "01 / PROJECTS", dates, coordinates */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.eyebrow--ion { color: var(--accent-ion); }
+
+/* Mono data text — dates, venues, DOIs */
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 450;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Starlight gradient text for hero moments */
+.starlight {
+  background: var(--grad-starlight);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Inline links inside body copy */
+.prose a {
+  color: var(--accent-ion);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.prose a:hover { border-bottom-color: var(--accent-ion); }
+
+.prose em { color: var(--text-body); }
+.prose b, .prose strong { color: var(--text-bright); font-weight: 600; }
+.prose u { text-decoration-color: var(--accent-nebula); text-underline-offset: 3px; }
