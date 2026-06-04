@@ -46,25 +46,6 @@ function Projects() {
     const projectsData = {
         "Current": [
             {
-                title: "Sociail Chat | Sociail",
-                description: "Bringing together the best of human and AI collaboration.",
-                date: "June 2023 - Present",
-                imageSrc: "/projects/sociail_chat.webp",
-                content: `My time at Sociail marks my first true entrepreneurial experience. I joined the
-                  founding team right after graduating from Drexel and developed the initial prototype
-                  of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself
-                  leading a multinational software development team and guiding the product through
-                  successive iterations until a limited release. Approaching launch, my focus
-                  shifted from technical development to product design, user experience, and go-to-market strategy.
-                  My co-founder responsibilities helped build the company itself:
-                  interviewing and onboarding team members, establishing our culture,
-                  and creating the 'operating system' of Sociail. There is so much more to share, and
-                  eventually I'll write something long-form that conveys how truly foundational this
-                  experience is.
-                  <br><br>
-                  <a class="check_it_out" href="https://www.sociail.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>`
-            },
-            {
                 title: "Personal Website",
                 description: "My own website to showcase some of the things I do to the world.",
                 date: "Sept 2022 - Present",
@@ -80,7 +61,131 @@ function Projects() {
                   href="https://github.com/ZackGoldblum/zackgoldblum.github.io" target="_blank" rel="noopener noreferrer">Check it out!</a>`
             }
         ],
+        "2025-2026": [
+            {
+                title: "Neuronova | Penn Center for Neuromodulation Technology",
+                description: "Brain data visualization and normative modeling platform for intracranial EEG research.",
+                date: "Dec 2024 - Present",
+                imageSrc: "/projects/neuronova.webp",
+                content: `Built at the Penn Center for Neuromodulation Technology, Neuronova is a platform for
+                  visualizing and analyzing intracranial EEG data across a multi-center research cohort.
+                  The platform lets researchers place individual patient electrodes on a 3D brain surface
+                  rendered in Three.js, then compare electrode-level measurements—spectral power across delta,
+                  theta, alpha, beta, and gamma bands—against population-level reference distributions.
+                  Deviations from the normative model are quantified as z-scores, giving researchers a principled
+                  way to identify abnormal channels or regions across patients.
+                  <br><br>
+                  The data pipeline ingests HDF5-format iEEG recordings from Pennsieve, computes 30+ time-series
+                  features per channel using a CaTCH-22-inspired feature set, and stores both raw features and
+                  computed statistics in PostgreSQL. The frontend is React with Recharts for distribution plots
+                  and Three.js for the 3D viewer; the backend is Flask + SQLAlchemy. Production infrastructure
+                  runs on AWS (Elastic Beanstalk, RDS, S3/CloudFront) provisioned with Terraform and deployed
+                  via GitHub Actions CI/CD.
+                  <br><br>
+                  <a class="check_it_out" href="https://github.com/penn-cnt/neuronova" target="_blank" rel="noopener noreferrer">GitHub</a>`
+            },
+            {
+                title: "BE-5210 Competition Website | University of Pennsylvania",
+                description: "Full-stack leaderboard platform for a machine learning competition on intracranial EEG data.",
+                date: "Jan 2026 - March 2026",
+                imageSrc: "/projects/be5210.webp",
+                content: `I built this full-stack competition website for BE-5210, a Penn biomedical engineering
+                  course centered on predicting theta-gamma coupling in intracranial EEG data. Student teams
+                  upload MATLAB files containing their model predictions, which are automatically scored via
+                  Pearson correlation against held-out test data. The defining feature is a staged leaderboard:
+                  scores are released on a configurable schedule rather than immediately, preventing teams from
+                  gaming submissions by reacting to competitor results in real time. Atomic PostgreSQL
+                  transactions and APScheduler ensure the leaderboard advances exactly once per interval even
+                  under concurrent workers.
+                  <br><br>
+                  The stack is React + Flask + PostgreSQL, containerized with Docker and deployed on AWS
+                  (S3/CloudFront for the frontend, Elastic Beanstalk for the API, RDS for the database).
+                  I also added a "Whack-a-Brian" easter egg minigame—complete with its own global high score
+                  table—as a reward for curious students.
+                  <br><br>
+                  <a class="check_it_out" href="https://be5210.com" target="_blank" rel="noopener noreferrer">Check it out!</a>
+                  <br>
+                  <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/penn-cnt/BE-5210" target="_blank" rel="noopener noreferrer">GitHub</a>`
+            },
+            {
+                title: "Sociail Chat | Sociail",
+                description: "Bringing together the best of human and AI collaboration.",
+                date: "June 2023 - Dec 2025",
+                imageSrc: "/projects/sociail_chat.webp",
+                content: `My time at Sociail marks my first true entrepreneurial experience. I joined the
+                  founding team right after graduating from Drexel and developed the initial prototype
+                  of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself
+                  leading a multinational software development team and guiding the product through
+                  successive iterations until a limited release. Approaching launch, my focus
+                  shifted from technical development to product design, user experience, and go-to-market strategy.
+                  My co-founder responsibilities helped build the company itself:
+                  interviewing and onboarding team members, establishing our culture,
+                  and creating the 'operating system' of Sociail. There is so much more to share, and
+                  eventually I'll write something long-form that conveys how truly foundational this
+                  experience is.
+                  <br><br>
+                  The platform is built on the Matrix protocol (Synapse server) for end-to-end encrypted
+                  real-time messaging, with a React/TypeScript frontend customized on top of Element Web.
+                  The backend is Node.js + Redis for the messaging core, Python FastAPI for AI
+                  orchestration, and Apache Kafka for event streaming. A multi-agent system routes
+                  requests via a semantic router to specialized agents (conversation, task, research,
+                  code) backed by a RAG pipeline and vector store. The model farm spans self-hosted
+                  models (LLaMA 3.2, Mistral, CodeLLaMA, SDXL) running on our own GPU cluster—two Dell
+                  PowerEdge R740xd servers with NVIDIA A6000s (96GB VRAM total)—alongside external
+                  providers (OpenAI, Anthropic, AWS Bedrock). Production runs on DigitalOcean managed
+                  Kubernetes with Cloudflare for CDN and DDoS protection, Prometheus + Grafana + Loki
+                  for observability, and HCP Vault for secrets management. Bridges connect the platform
+                  to Slack, Discord, WhatsApp, Telegram, and GitHub.
+                  <br><br>
+                  <a class="check_it_out" href="https://www.sociail.com/" target="_blank" rel="noopener noreferrer">Check it out!</a>`
+            }
+        ],
         "2024-2025": [
+            {
+                title: "AskEEG | BMIN 5100",
+                description: "Conversational interface for querying and analyzing intracranial EEG data using natural language.",
+                date: "Jan 2025 - May 2025",
+                imageSrc: "/projects/askeeg.webp",
+                content: `AskEEG is a course project I built for BMIN 5100 (Biomedical Informatics) at Penn: a
+                  conversational interface for querying and analyzing intracranial EEG data. Instead of
+                  manually specifying analysis parameters, a researcher can ask something like "What is the
+                  synchrony in the alpha band from 10 to 20 seconds?" and the system uses an LLM (Claude or
+                  GPT via LangChain) to extract the time window, frequency band, and relevant channels before
+                  running the analysis. The signal processing pipeline applies common average referencing,
+                  notch filtering at 60 Hz, and bandpass filtering, then computes the Kuramoto order
+                  parameter—a phase-based synchrony metric—across all channels per frequency band.
+                  <br><br>
+                  The architecture is a Vue 3 frontend backed by a Flask REST API, with iEEG data sourced
+                  from Pennsieve or S3. Compute-intensive analyses run in AWS Fargate containers, with
+                  Terraform-managed infrastructure and CloudWatch logging. Session isolation via S3 key
+                  prefixes supports multi-user workflows without data collision.
+                  <br><br>
+                  <a class="check_it_out" href="https://github.com/BMIN-5100-Spring-2025/Goldblum-AskEEG" target="_blank" rel="noopener noreferrer">GitHub</a>`
+            },
+            {
+                title: "ASM-Calc | Penn Center for Neuromodulation Technology",
+                description: "Clinical pharmacokinetics tool for calculating and visualizing anti-seizure medication concentrations.",
+                date: "Feb 2025",
+                imageSrc: "/projects/asm_calc.webp",
+                content: `ASM-Calc is a clinical tool I built with researchers at the Penn Center for
+                  Neuromodulation Technology to help clinicians visualize anti-seizure medication (ASM)
+                  concentrations over time. Input dose events with timestamps and the app renders individual
+                  and combined drug curves in real time, drawing on a two-compartment pharmacokinetic model
+                  that accounts for absorption, distribution, and elimination. Twenty-plus ASMs are
+                  pre-configured with literature-sourced parameters (half-life, volume of distribution,
+                  bioavailability), and the combined total concentration curve is automatically computed when
+                  multiple drugs are active—useful for spotting potential interactions. The project is based
+                  on research published in <em>Epilepsia</em>.
+                  <br><br>
+                  The React + Vite frontend talks to a Flask backend deployed as Vercel serverless functions.
+                  State is persisted in localStorage so sessions survive page refreshes. The pharmacokinetic
+                  engine is a clean ~170 lines of NumPy—auditable and straightforward, as clinical tooling
+                  should be.
+                  <br><br>
+                  <a class="check_it_out" href="https://www.asmcalc.com" target="_blank" rel="noopener noreferrer">Check it out!</a>
+                  <br>
+                  <a class="check_it_out" style="padding-top: 10px; display: inline-block;" href="https://github.com/penn-cnt/ASM-Calc" target="_blank" rel="noopener noreferrer">GitHub</a>`
+            },
             {
                 title: "EpiTracker",
                 description: "Insightful epilepsy management.",
