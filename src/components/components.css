@@ -117,7 +117,7 @@
   justify-content: flex-start;
   gap: var(--space-6);
   padding: calc(var(--nav-height) + var(--space-7)) var(--gutter) var(--space-7);
-  background: rgba(3, 3, 7, 0.95);
+  background: rgba(3, 3, 7, 0.4); /* 60% transparent */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   opacity: 0;
@@ -185,17 +185,11 @@
   width: 38px;
   height: 38px;
   color: var(--text-dim);
-  border: 1px solid transparent;
-  border-radius: var(--radius-sm);
-  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  transition: color var(--dur-fast) var(--ease-out);
 }
 
 .socials__link:hover {
-  color: var(--accent-ion);
-  border-color: var(--line);
-  box-shadow: var(--glow-ion);
-  transform: translateY(-2px);
+  color: var(--text-bright);
 }
 
 /* ---------- Footer ---------- */
@@ -222,14 +216,6 @@
   color: var(--text-dim);
   letter-spacing: var(--tracking-wide);
 }
-
-.footer__top {
-  color: var(--text-dim);
-  letter-spacing: var(--tracking-wide);
-  transition: color var(--dur-fast) var(--ease-out);
-}
-
-.footer__top:hover { color: var(--accent-ion); }
 
 /* ---------- Page intro ---------- */
 
@@ -266,6 +252,18 @@
   color: var(--text-dim);
   background: var(--bg-hairline);
   white-space: nowrap;
+}
+
+/* Chip as a filter button */
+.chip--btn {
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.chip--btn:hover {
+  color: var(--text-bright);
+  border-color: var(--line-bright);
 }
 
 .chip--ion { color: var(--accent-ion); background: var(--accent-ion-soft); border-color: transparent; }

@@ -6,8 +6,8 @@ import { useEffect, useRef } from 'react'
  * Stars live in a z-flight field and stream toward the camera
  * (classic warp projection). The ship cruises at a base speed;
  * scrolling throttles the engines, accelerating the field and
- * stretching stars into light-streaks. Mouse drift nudges the
- * heading. Static render under prefers-reduced-motion.
+ * stretching stars into light-streaks. Static render under
+ * prefers-reduced-motion.
  */
 
 interface Star {
@@ -50,12 +50,6 @@ export default function Starfield() {
     let scrollVel = 0
     let lastScrollY = window.scrollY
 
-    // Heading drift
-    let mouseX = 0
-    let mouseY = 0
-    let mx = 0
-    let my = 0
-
     const spawn = (s: Star, initial: boolean) => {
       s.x = (Math.random() - 0.5) * 2.4
       s.y = (Math.random() - 0.5) * 2.4
@@ -66,7 +60,7 @@ export default function Starfield() {
     }
 
     const buildStars = () => {
-      const count = Math.min(650, Math.round((w * h) / 1900))
+      const count = Math.min(950, Math.round((w * h) / 1250))
       stars = Array.from({ length: count }, () => {
         const s = {} as Star
         spawn(s, true)
@@ -112,11 +106,8 @@ export default function Starfield() {
       const boost = Math.min(scrollVel * 0.045, MAX_BOOST)
       const speed = BASE_SPEED * (1 + boost) * dt
 
-      // Heading drift eases toward the cursor
-      mx += (mouseX - mx) * 0.03
-      my += (mouseY - my) * 0.03
-      const cx = w / 2 + mx * 26
-      const cy = h / 2 + my * 18
+      const cx = w / 2
+      const cy = h / 2
 
       for (const s of stars) {
         s.z -= speed
@@ -180,11 +171,6 @@ export default function Starfield() {
       lastScrollY = y
     }
 
-    const onMouse = (e: MouseEvent) => {
-      mouseX = (e.clientX / w - 0.5) * 2
-      mouseY = (e.clientY / h - 0.5) * 2
-    }
-
     const onVisibility = () => {
       if (document.hidden) {
         stop()
@@ -200,14 +186,12 @@ export default function Starfield() {
 
     window.addEventListener('resize', resize)
     window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('mousemove', onMouse, { passive: true })
     document.addEventListener('visibilitychange', onVisibility)
 
     return () => {
       stop()
       window.removeEventListener('resize', resize)
       window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('mousemove', onMouse)
       document.removeEventListener('visibilitychange', onVisibility)
     }
   }, [])

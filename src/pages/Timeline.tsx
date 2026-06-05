@@ -1,22 +1,31 @@
 import PageIntro from '../components/PageIntro'
-import { affiliations, courses, teaching, timeline, volunteering, type SimpleEntry } from '../data/about'
+import { courses, teaching, timeline, volunteering, type SimpleEntry } from '../data/about'
 
-function SimpleList({ title, glyph, entries }: { title: string; glyph: string; entries: SimpleEntry[] }) {
+function SectionHead({ title }: { title: string }) {
+  return (
+    <div className="era">
+      <span className="era__year">{title.toUpperCase()}</span>
+      <span className="era__line" />
+    </div>
+  )
+}
+
+/** Flat ledger rows: title over org on the left, mono date right, hairline between. */
+function Ledger({ title, entries }: { title: string; entries: SimpleEntry[] }) {
   return (
     <section className="about-section">
-      <div className="divider">
-        <span className="divider__glyph">
-          {glyph} {title.toUpperCase()}
-        </span>
-      </div>
-      <div className="simple-grid">
+      <SectionHead title={title} />
+      <ul className="ledger">
         {entries.map((e) => (
-          <div key={e.title + e.detail} className="simple-entry card">
-            <h4>{e.title}</h4>
-            <p className="mono">{e.detail}</p>
-          </div>
+          <li key={e.title + e.org}>
+            <div className="ledger__main">
+              <span className="ledger__title">{e.title}</span>
+              <span className="ledger__org">{e.org}</span>
+            </div>
+            <span className="ledger__date mono">{e.date}</span>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }
@@ -69,29 +78,9 @@ export default function Timeline() {
         </div>
       </section>
 
-      <section className="about-section">
-        <div className="divider">
-          <span className="divider__glyph">✦ CURRENT AFFILIATIONS</span>
-        </div>
-        <div className="affiliations">
-          {affiliations.map((a) => (
-            <a
-              key={a.name}
-              className="affiliations__item card card--hover"
-              href={a.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={a.name}
-            >
-              <img src={a.logo} alt={a.name} loading="lazy" />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <SimpleList title="Teaching and Mentorship" glyph="✦" entries={teaching} />
-      <SimpleList title="Volunteering" glyph="✦" entries={volunteering} />
-      <SimpleList title="Impactful Courses" glyph="✦" entries={courses} />
+      <Ledger title="Teaching and Mentorship" entries={teaching} />
+      <Ledger title="Volunteering" entries={volunteering} />
+      <Ledger title="Impactful Courses" entries={courses} />
     </div>
   )
 }

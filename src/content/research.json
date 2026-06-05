@@ -1,0 +1,234 @@
+{
+  "2026-2027": [
+    {
+      "type": "Poster",
+      "title": "An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy",
+      "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>AI in Epilepsy and Neurological Disorders</em>. San Juan, PR. March 16-19, 2026. *Equal contribution.",
+      "awards": [
+        "Best Poster Award"
+      ],
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_ai_in_epilepsy_2026.pdf"
+        }
+      ]
+    },
+    {
+      "type": "Pre-print",
+      "title": "An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy",
+      "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>medRxiv</em>. March 9, 2026. DOI: 10.64898/2026.01.26.26344234. *Equal contribution.",
+      "links": [
+        {
+          "label": "medRxiv",
+          "href": "https://www.medrxiv.org/content/10.64898/2026.01.26.26344234v2"
+        }
+      ]
+    }
+  ],
+  "2025-2026": [
+    {
+      "type": "Live Demo",
+      "title": "Agentic AI Makes Real-time Neural Data Conversational for Epilepsy Patients",
+      "citation": "<b>Goldblum Z*</b>, Shi H*, Litt B. <em>NeurIPS: Foundation Models for the Brain and Body Workshop</em>. San Diego, CA. December 6, 2025. *Equal contribution."
+    },
+    {
+      "type": "Publication",
+      "title": "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+      "citation": "<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>Scientific Data</em>. November 19, 2025. DOI: 10.1038/s41597-025-06075-5.",
+      "links": [
+        {
+          "label": "Nature",
+          "href": "https://www.nature.com/articles/s41597-025-06075-5"
+        }
+      ]
+    },
+    {
+      "type": "Pre-print",
+      "title": "The Seizure Embedding Map: A Spatio-Temporal Transformer for Comparing Patients by Ictal Intracranial EEG Features at Scale",
+      "citation": "Pattnaik AR, Xu Z, Ojemann WKS, Aguila CA, Lucas A, Lavelle S, <b>Goldblum Z</b>, Galer PD, Gallagher R, Davis KA, Sinha N, Conrad EC, Litt B. <em>medRxiv</em>. October 17, 2025. DOI: 10.1101/2025.10.15.25338097.",
+      "links": [
+        {
+          "label": "medRxiv",
+          "href": "https://www.medrxiv.org/content/10.1101/2025.10.15.25338097v1"
+        }
+      ]
+    },
+    {
+      "type": "Talk",
+      "title": "Turning Continuous Data into Actionable Epilepsy Care: Devices, Platforms, and Applications",
+      "citation": "<b>Goldblum Z</b>. <em>Computational Neuroscience Meeting</em>. Florence, IT. July 5-9, 2025."
+    },
+    {
+      "type": "Talk",
+      "title": "Harnessing Epilepsy Databases for Translational Science",
+      "citation": "Sinha N, <b>Goldblum Z</b>. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025."
+    },
+    {
+      "type": "Poster",
+      "title": "Bridging Patient Experience and Clinical Data: An LLM-Powered Chat Interface with Real-Time EEG Metrics",
+      "citation": "<b>Goldblum Z</b>, Shi H, Novakov V, Litt B. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_ictals_2025.pdf"
+        }
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "Scalable Multicenter Normative IEEG Atlas: Harnessing Epilepsy Databases for Translational Science",
+      "citation": "Liang K*, <b>Goldblum Z*</b>, Okalova T, Davis K, Litt B, Wagenaar J, Sinha N. <em>International Conference for Technology and Analysis of Seizures</em>. Montreal, QC. June 2-6, 2025. *Equal contribution.",
+      "awards": [
+        "Selected for oral presentation"
+      ],
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/liang_ictals_2025.pdf"
+        }
+      ]
+    }
+  ],
+  "2024-2025": [
+    {
+      "type": "Poster",
+      "title": "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+      "citation": "<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>INCF Assembly</em>. Austin, TX. September 23-25, 2024.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_pennsieve_INCF_2024.pdf"
+        }
+      ]
+    },
+    {
+      "type": "Pre-print",
+      "title": "Pennsieve: A Collaborative Platform for Translational Neuroscience and Beyond",
+      "citation": "<b>Goldblum Z</b>, Xu Z, Shi H, Orzechowski P, Spence J, Davis K A, Litt B, Sinha N, Wagenaar J. <em>arXiv</em>. September 16, 2024. DOI: 10.48550/arXiv.2409.10509.",
+      "links": [
+        {
+          "label": "arXiv",
+          "href": "https://arxiv.org/abs/2409.10509"
+        }
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "Implementing a Large Language Model Chat Interface for Epilepsy Patient Care",
+      "citation": "<b>Goldblum Z</b>, Litt B. <em>Artificial Intelligence in Epilepsy and Neurological Disorders</em>. Park City, UT. April 1-4, 2024.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_ai_in_epilepsy_2024.pdf"
+        }
+      ]
+    }
+  ],
+  "2023-2024": [
+    {
+      "type": "Publication",
+      "title": "A Novel External Ventricular Drain Sensor to Improve Acquired Brain Injury Monitoring",
+      "citation": "<b>Goldblum Z</b>, Gruen V, Olson DM, Kanter G, Moberg D. <em>Military Medicine</em>, Volume 188, Issue Supplement_6, November/December 2023, Pages 334-339. DOI: 10.1093/milmed/usad136.",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.1093/milmed/usad136"
+        }
+      ]
+    },
+    {
+      "type": "Thesis",
+      "title": "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging",
+      "citation": "<b>Goldblum Z</b>. <em>Master's Thesis, Drexel University</em>. June, 2023. DOI: 10.17918/00001784.",
+      "links": [
+        {
+          "label": "DOI",
+          "href": "https://doi.org/10.17918/00001784"
+        }
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "Assessing the Clinical Value and Deployability of TBI Monitoring Technology for Prolonged Casualty Care",
+      "citation": "Gomba MA, Keenan S, Moberg D, Moyer EJ, Grym G, <b>Goldblum Z</b>, Kenny K, Gruen V, Willner M. <em>Special Operations Medical Assembly</em>. Raleigh, NC. May 16, 20-23, 2023."
+    },
+    {
+      "type": "Poster",
+      "title": "Improving Neurocritical Care Monitoring with Contextual Data Sensors",
+      "citation": "Ruxmohan S, <b>Goldblum Z</b>, Marshall J, Nairon E, Measho D, Moberg D, Olson DM. <em>Graduate Medical Education: Neurology Research Day Conference</em>. Dallas, TX. May 11, 2023."
+    },
+    {
+      "type": "Poster",
+      "title": "Enhancing Neurocritical Care Through Multimodal Monitoring with Novel Contextual Sensors",
+      "citation": "Zwiebel I, Gruen V, Jose J, Wheeler K, <b>Goldblum Z</b>, Gomba MA, Moyer EJ, Moberg D. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 31, 2023.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/senior_design_NEBEC_2023.pdf"
+        }
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging",
+      "citation": "<b>Goldblum Z</b>, Alshehri S, Curtin A, Ayaz H. <em>Northeast Bioengineering Conference</em>. Philadelphia, PA. March 30, 2023.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_NEBEC_2023.pdf"
+        }
+      ]
+    }
+  ],
+  "2022-2023": [
+    {
+      "type": "Poster",
+      "title": "Using Contextual Data to Enhance Machine Learning in Traumatic Brain Injury: Progress from the MIND Workgroup",
+      "citation": "<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Military Health System Research Symposium</em>. Kissimmee, FL. September 12, 2022.",
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_MHSRS_2022.pdf"
+        }
+      ]
+    }
+  ],
+  "2021-2022": [
+    {
+      "type": "Poster",
+      "title": "Using Contextual Data to Enhance Machine Learning in Traumatic Brain Injury",
+      "citation": "<b>Goldblum Z</b>, Olson DM, Rosenthal ES, Foreman B, Moberg D. <em>Neurocritical Care Society 19th Annual Meeting</em>. Chicago, IL. October 27, 2021.",
+      "awards": [
+        "Voted as a Poster of Distinction"
+      ],
+      "links": [
+        {
+          "label": "Poster PDF",
+          "href": "/research/goldblum_NCS_2021.pdf"
+        }
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "Development and Validation of an Open-Source Optimum Cerebral Perfusion Pressure Tool to Guide Precision Care in Severe Traumatic Brain Injury",
+      "citation": "Foreman B, Li F, Rosenthal ES, Maddux C, Habboush D, <b>Goldblum Z</b>, Moberg D. <em>Neurocritical Care Society 19th Annual Meeting</em>. Chicago, IL. October 27, 2021.",
+      "awards": [
+        "Voted as a Poster of Distinction"
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "A Robust Data Archive Format for Traumatic Brain Injury Physiology and Machine Learning",
+      "citation": "Habboush D, Rosenthal ES, Foreman B, <b>Goldblum Z</b>, Smielewski P, Moberg D. <em>Neurocritical Care Society 19th Annual Meeting</em>. Chicago, IL. October 27, 2021.",
+      "awards": [
+        "Voted as a Poster of Distinction"
+      ]
+    },
+    {
+      "type": "Poster",
+      "title": "MIND Collaborative Effort to Developing Meaning from Annotated Data During Continuous Multimodal Monitoring",
+      "citation": "Olson DM, Sharma G, Moberg D, Habboush D, <b>Goldblum Z</b>, Moyer EJ, Maddux C, Foreman B, Stover J, Rosenthal ES. <em>International Neuroscience Nursing Research Symposium</em>. Chicago, IL (virtual). August 7, 2021."
+    }
+  ]
+}

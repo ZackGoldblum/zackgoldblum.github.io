@@ -1,0 +1,940 @@
+[
+  {
+    "era": "2026-2027",
+    "books": [
+      {
+        "title": "Leviathan Falls",
+        "author": "James S.A. Corey",
+        "cover": "/books/leviathan_falls.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Tiamat's Wrath",
+        "author": "James S.A. Corey",
+        "cover": "/books/tiamats_wrath.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Persepolis Rising",
+        "author": "James S.A. Corey",
+        "cover": "/books/persepolis_rising.webp",
+        "rating": 5
+      },
+      {
+        "title": "The Vital Question",
+        "author": "Nick Lane",
+        "cover": "/books/the_vital_question.webp",
+        "rating": 3
+      }
+    ]
+  },
+  {
+    "era": "2025-2026",
+    "books": [
+      {
+        "title": "The Scaling Era: An Oral History of AI",
+        "author": "Dwarkesh Patel",
+        "cover": "/books/the_scaling_era.webp",
+        "rating": 4
+      },
+      {
+        "title": "Babylon's Ashes",
+        "author": "James S.A. Corey",
+        "cover": "/books/babylons_ashes.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Nemesis Games",
+        "author": "James S.A. Corey",
+        "cover": "/books/nemesis_games.webp",
+        "rating": 4
+      },
+      {
+        "title": "Cibola Burn",
+        "author": "James S.A. Corey",
+        "cover": "/books/cibola_burn.webp",
+        "rating": 4
+      },
+      {
+        "title": "Biomega 6",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_6.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Biomega 5",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_5.webp",
+        "rating": 4
+      },
+      {
+        "title": "Biomega 4",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_4.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Biomega 3",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_3.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Biomega 2",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_2.webp",
+        "rating": 4
+      },
+      {
+        "title": "Biomega 1",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/biomega_1.webp",
+        "rating": 4
+      },
+      {
+        "title": "Abaddon's Gate",
+        "author": "James S.A. Corey",
+        "cover": "/books/abaddons_gate.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Caliban's War",
+        "author": "James S.A. Corey",
+        "cover": "/books/calibans_war.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Leviathan Wakes",
+        "author": "James S.A. Corey",
+        "cover": "/books/leviathan_wakes.webp",
+        "rating": 5
+      },
+      {
+        "title": "NOiSE",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/noise.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Black Hole Blues",
+        "author": "Janna Levin",
+        "cover": "/books/black_hole_blues.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Abundance",
+        "author": "Ezra Klein & Derek Thompson",
+        "cover": "/books/abundance.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Zero to One",
+        "author": "Peter Thiel",
+        "cover": "/books/zero_to_one.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Sleep and the Soul",
+        "author": "Greg Egan",
+        "cover": "/books/sleep_and_the_soul.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "The Techno-Optimist Manifesto",
+        "author": "Marc Andressen",
+        "cover": "/books/the_techno-optimist_manifesto.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "The Quantum Thief",
+        "author": "Hannu Rajaniemi",
+        "cover": "/books/the_quantum_thief.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "The Metamorphosis of Prime Intellect",
+        "author": "Roger Williams",
+        "cover": "/books/the_metamorphosis_of_prime_intellect.webp",
+        "rating": 4
+      },
+      {
+        "title": "The Return of the King",
+        "author": "J. R. R. Tolkien",
+        "cover": "/books/the_return_of_the_king.webp",
+        "rating": 5
+      },
+      {
+        "title": "The Two Towers",
+        "author": "J. R. R. Tolkien",
+        "cover": "/books/the_two_towers.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "The Fellowship of the Ring",
+        "author": "J. R. R. Tolkien",
+        "cover": "/books/the_fellowship_of_the_ring.webp",
+        "rating": 4
+      },
+      {
+        "title": "The Hobbit",
+        "author": "J. R. R. Tolkien",
+        "cover": "/books/the_hobbit.webp",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "era": "2024-2025",
+    "books": [
+      {
+        "title": "Quanta and Fields",
+        "author": "Sean Carroll",
+        "cover": "/books/the_biggest_ideas_quanta_and_fields.webp",
+        "rating": 4
+      },
+      {
+        "title": "Space, Time, and Motion",
+        "author": "Sean Carroll",
+        "cover": "/books/the_biggest_ideas_space_time_and_motion.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Shutter Island",
+        "author": "Dennis Lehane",
+        "cover": "/books/shutter_island.webp",
+        "rating": 5
+      },
+      {
+        "title": "Axiomatic",
+        "author": "Greg Egan",
+        "cover": "/books/axiomatic.webp",
+        "rating": 4
+      },
+      {
+        "title": "Welcome to the Universe in 3D: A Visual Tour",
+        "author": "Neil deGrasse Tyson",
+        "cover": "/books/welcome_to_the_universe_in_3d.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Diaspora",
+        "author": "Greg Egan",
+        "cover": "/books/diaspora.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Permutation City",
+        "author": "Greg Egan",
+        "cover": "/books/permutation_city.webp",
+        "rating": 4
+      },
+      {
+        "title": "Do Androids Dream of Electric Sheep?",
+        "author": "Philip K. Dick",
+        "cover": "/books/do_androids_dream_of_electric_sheep.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Mona Lisa Overdrive",
+        "author": "William Gibson",
+        "cover": "/books/mona_lisa_overdrive.webp",
+        "rating": 4
+      },
+      {
+        "title": "Count Zero",
+        "author": "William Gibson",
+        "cover": "/books/count_zero.webp",
+        "rating": 5
+      },
+      {
+        "title": "Neuromancer",
+        "author": "William Gibson",
+        "cover": "/books/neuromancer.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Burning Chrome",
+        "author": "William Gibson",
+        "cover": "/books/burning_chrome.webp",
+        "rating": 4
+      },
+      {
+        "title": "Thinking in Systems",
+        "author": "Donella H. Meadows",
+        "cover": "/books/thinking_in_systems.webp",
+        "rating": 4
+      },
+      {
+        "title": "Reincarnation Blues",
+        "author": "Michael Poore",
+        "cover": "/books/reincarnation_blues.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "The Lovecraft Compendium",
+        "author": "H. P. Lovecraft",
+        "cover": "/books/the_lovecraft_compendium.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "BLAME! 6",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_6.webp",
+        "rating": 4
+      },
+      {
+        "title": "BLAME! 5",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_5.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "BLAME! 4",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_4.webp",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "era": "2023-2024",
+    "books": [
+      {
+        "title": "BLAME! 3",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_3.webp",
+        "rating": 4
+      },
+      {
+        "title": "BLAME! 2",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_2.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "BLAME! 1",
+        "author": "Tsutomu Nihei",
+        "cover": "/books/blame_1.webp",
+        "rating": 4
+      },
+      {
+        "title": "Those Who Resist",
+        "author": "N. C. Scrimgeour",
+        "cover": "/books/those_who_resist.webp",
+        "rating": 4
+      },
+      {
+        "title": "Those Once Forgotten",
+        "author": "N. C. Scrimgeour",
+        "cover": "/books/those_once_forgotten.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Those Left Behind",
+        "author": "N. C. Scrimgeour",
+        "cover": "/books/those_left_behind.webp",
+        "rating": 4
+      },
+      {
+        "title": "Children of Memory",
+        "author": "Adrian Tchaikovsky",
+        "cover": "/books/children_of_memory.webp",
+        "rating": 4
+      },
+      {
+        "title": "What is ChatGPT Doing and Why Does It Work?",
+        "author": "Stephen Wolfram",
+        "cover": "/books/what_is_chatgpt_doing_and_why_does_it_work.webp",
+        "rating": 4
+      },
+      {
+        "title": "Apex",
+        "author": "Ramez Naam",
+        "cover": "/books/apex.webp",
+        "rating": 5
+      },
+      {
+        "title": "Crux",
+        "author": "Ramez Naam",
+        "cover": "/books/crux.webp",
+        "rating": 5
+      },
+      {
+        "title": "Nexus",
+        "author": "Ramez Naam",
+        "cover": "/books/nexus.webp",
+        "rating": 5
+      },
+      {
+        "title": "Exhalation",
+        "author": "Ted Chiang",
+        "cover": "/books/exhalation.webp",
+        "rating": 5
+      },
+      {
+        "title": "Stories of Your Life and Others",
+        "author": "Ted Chiang",
+        "cover": "/books/stories_of_your_life_and_others.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Animal Farm",
+        "author": "George Orwell",
+        "cover": "/books/animal_farm.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "The Exodus Betrayal",
+        "author": "N. C. Scrimgeour",
+        "cover": "/books/the_exodus_betrayal.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "You Look Like a Thing and I Love You",
+        "author": "Janelle Shane",
+        "cover": "/books/you_look_like_a_thing_and_i_love_you.webp",
+        "rating": 5
+      },
+      {
+        "title": "Livewired",
+        "author": "David Eagleman",
+        "cover": "/books/livewired.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Project Hail Mary",
+        "author": "Andy Weir",
+        "cover": "/books/project_hail_mary.webp",
+        "rating": 5
+      },
+      {
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "cover": "/books/the_alchemist.webp",
+        "rating": 3.5
+      }
+    ]
+  },
+  {
+    "era": "2022-2023",
+    "books": [
+      {
+        "title": "Chapterhouse: Dune",
+        "author": "Frank Herbert",
+        "cover": "/books/chapterhouse_dune.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Heretics of Dune",
+        "author": "Frank Herbert",
+        "cover": "/books/heretics_of_dune.webp",
+        "rating": 4
+      },
+      {
+        "title": "God Emperor of Dune",
+        "author": "Frank Herbert",
+        "cover": "/books/god_emperor_of_dune.webp",
+        "rating": 3
+      },
+      {
+        "title": "Children of Dune",
+        "author": "Frank Herbert",
+        "cover": "/books/children_of_dune.webp",
+        "rating": 4
+      },
+      {
+        "title": "Dune Messiah",
+        "author": "Frank Herbert",
+        "cover": "/books/dune_messiah.webp",
+        "rating": 3
+      },
+      {
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "cover": "/books/dune.webp",
+        "rating": 5
+      },
+      {
+        "title": "To Hold Up the Sky",
+        "author": "Cixin Liu",
+        "cover": "/books/to_hold_up_the_sky.webp",
+        "rating": 4
+      },
+      {
+        "title": "The Wandering Earth",
+        "author": "Cixin Liu",
+        "cover": "/books/the_wandering_earth.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Pale Blue Dot",
+        "author": "Carl Sagan",
+        "cover": "/books/pale_blue_dot.webp",
+        "rating": 4
+      },
+      {
+        "title": "Cosmos",
+        "author": "Carl Sagan",
+        "cover": "/books/cosmos.webp",
+        "rating": 4
+      },
+      {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "cover": "/books/brave_new_world.webp",
+        "rating": 3
+      },
+      {
+        "title": "The Martian",
+        "author": "Andy Weir",
+        "cover": "/books/the_martian.webp",
+        "rating": 4.5
+      }
+    ]
+  },
+  {
+    "era": "2021-2022",
+    "books": [
+      {
+        "title": "Minus 148",
+        "author": "Art Davidson",
+        "cover": "/books/minus_148.webp",
+        "rating": 4
+      },
+      {
+        "title": "Of Mice and Men",
+        "author": "John Steinbeck",
+        "cover": "/books/of_mice_and_men.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Children of Ruin",
+        "author": "Adrian Tchaikovsky",
+        "cover": "/books/children_of_ruin.webp",
+        "rating": 4.5
+      },
+      {
+        "title": "Children of Time",
+        "author": "Adrian Tchaikovsky",
+        "cover": "/books/children_of_time.webp",
+        "rating": 5
+      },
+      {
+        "title": "21 Lessons for the 21st Century",
+        "author": "Yuval Noah Harari",
+        "cover": "/books/21_lessons_for_the_21st_century.webp",
+        "rating": 4
+      },
+      {
+        "title": "Homo Deus",
+        "author": "Yuval Noah Harari",
+        "cover": "/books/homo_deus.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Ball Lightning",
+        "author": "Cixin Liu",
+        "cover": "/books/ball_lightning.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Death's End",
+        "author": "Cixin Liu",
+        "cover": "/books/deaths_end.webp",
+        "rating": 4
+      },
+      {
+        "title": "The Dark Forest",
+        "author": "Cixin Liu",
+        "cover": "/books/the_dark_forest.webp",
+        "rating": 5
+      },
+      {
+        "title": "Three Body Problem",
+        "author": "Cixin Liu",
+        "cover": "/books/three_body_problem.webp",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "era": "2020-2021",
+    "books": [
+      {
+        "title": "For Whom the Bell Tolls",
+        "author": "Ernest Hemingway",
+        "cover": "/books/for_whom_the_bell_tolls.webp",
+        "rating": 5
+      },
+      {
+        "title": "Mostly Harmless",
+        "author": "Douglas Adams",
+        "cover": "/books/mostly_harmless.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "So Long, and Thanks for all the Fish",
+        "author": "Douglas Adams",
+        "cover": "/books/so_long_and_thanks_for_all_the_fish.webp",
+        "rating": 2.5
+      },
+      {
+        "title": "Life, the Universe and Everything",
+        "author": "Douglas Adams",
+        "cover": "/books/life_the_universe_and_everything.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "The Restaurant at the End of the Universe",
+        "author": "Douglas Adams",
+        "cover": "/books/the_restaurant_at_the_end_of_the_universe.webp",
+        "rating": 4
+      },
+      {
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "author": "Douglas Adams",
+        "cover": "/books/the_hitchhikers_guide_to_the_galaxy.webp",
+        "rating": 5
+      },
+      {
+        "title": "Einstein's Dreams",
+        "author": "Alan Lightman",
+        "cover": "/books/einsteins_dreams.webp",
+        "rating": 4
+      },
+      {
+        "title": "Astrophysics for People in a Hurry",
+        "author": "Neil deGrasse Tyson",
+        "cover": "/books/astrophysics_for_people_in_a_hurry.webp",
+        "rating": 3.5
+      },
+      {
+        "title": "Surely You're Joking, Mr. Feynman!",
+        "author": "Richard Feynman",
+        "cover": "/books/surely_youre_joking_mr_feynman.webp",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "era": "Earlier Reading",
+    "subtitle": "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate order as best I can recall.",
+    "books": [
+      {
+        "title": "11/22/63",
+        "author": "Stephen King",
+        "cover": "/books/11_22_63.webp"
+      },
+      {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "cover": "/books/atomic_habits.webp"
+      },
+      {
+        "title": "Ready Player One",
+        "author": "Ernest Cline",
+        "cover": "/books/ready_player_one.webp"
+      },
+      {
+        "title": "The Future of the Mind",
+        "author": "Michio Kaku",
+        "cover": "/books/the_future_of_the_mind.webp"
+      },
+      {
+        "title": "MaddAddam",
+        "author": "Margaret Atwood",
+        "cover": "/books/maddaddam.webp"
+      },
+      {
+        "title": "The Year of the Flood",
+        "author": "Margaret Atwood",
+        "cover": "/books/the_year_of_the_flood.webp"
+      },
+      {
+        "title": "Oryx and Crake",
+        "author": "Margaret Atwood",
+        "cover": "/books/oryx_and_crake.webp"
+      },
+      {
+        "title": "When Breath Becomes Air",
+        "author": "Paul Kalanithi",
+        "cover": "/books/when_breath_becomes_air.webp"
+      },
+      {
+        "title": "The Devil in the White City",
+        "author": "Erik Larson",
+        "cover": "/books/the_devil_in_the_white_city.webp"
+      },
+      {
+        "title": "Make Your Bed",
+        "author": "William H. McRaven",
+        "cover": "/books/make_your_bed.webp"
+      },
+      {
+        "title": "David and Goliath",
+        "author": "Malcolm Gladwell",
+        "cover": "/books/david_and_goliath.webp"
+      },
+      {
+        "title": "Outliers",
+        "author": "Malcolm Gladwell",
+        "cover": "/books/outliers.webp"
+      },
+      {
+        "title": "The Tipping Point",
+        "author": "Malcolm Gladwell",
+        "cover": "/books/the_tipping_point.webp"
+      },
+      {
+        "title": "Blink",
+        "author": "Malcolm Gladwell",
+        "cover": "/books/blink.webp"
+      },
+      {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "cover": "/books/frankenstein.webp"
+      },
+      {
+        "title": "1984",
+        "author": "George Orwell",
+        "cover": "/books/1984.webp"
+      },
+      {
+        "title": "Farenheit 451",
+        "author": "Ray Bradbury",
+        "cover": "/books/farenheit_451.webp"
+      },
+      {
+        "title": "Bel Canto",
+        "author": "Ann Patchett",
+        "cover": "/books/bel_canto.webp"
+      },
+      {
+        "title": "The Body Builders",
+        "author": "Adam Piore",
+        "cover": "/books/the_body_builders.webp"
+      },
+      {
+        "title": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "cover": "/books/the_kite_runner.webp"
+      },
+      {
+        "title": "The Metamorphosis",
+        "author": "Franz Kafka",
+        "cover": "/books/the_metamorphosis.webp"
+      },
+      {
+        "title": "The Catcher in the Rye",
+        "author": "J. D. Salinger",
+        "cover": "/books/the_catcher_in_the_rye.webp"
+      },
+      {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "cover": "/books/the_great_gatsby.webp"
+      },
+      {
+        "title": "Lord of the Flies",
+        "author": "William Golding",
+        "cover": "/books/lord_of_the_flies.webp"
+      },
+      {
+        "title": "The Book Thief",
+        "author": "Markus Zusak",
+        "cover": "/books/the_book_thief.webp"
+      },
+      {
+        "title": "The Pearl",
+        "author": "John Steinbeck",
+        "cover": "/books/the_pearl.webp"
+      },
+      {
+        "title": "The Giver",
+        "author": "Lois Lowry",
+        "cover": "/books/the_giver.webp"
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "cover": "/books/to_kill_a_mockingbird.webp"
+      },
+      {
+        "title": "Inkdeath",
+        "author": "Cornelia Funke",
+        "cover": "/books/inkdeath.webp"
+      },
+      {
+        "title": "Inkspell",
+        "author": "Cornelia Funke",
+        "cover": "/books/inkspell.webp"
+      },
+      {
+        "title": "Inkheart",
+        "author": "Cornelia Funke",
+        "cover": "/books/inkheart.webp"
+      },
+      {
+        "title": "The Death Cure",
+        "author": "James Dashner",
+        "cover": "/books/the_death_cure.webp"
+      },
+      {
+        "title": "The Scorch Trials",
+        "author": "James Dashner",
+        "cover": "/books/the_scorch_trials.webp"
+      },
+      {
+        "title": "The Maze Runner",
+        "author": "James Dashner",
+        "cover": "/books/the_maze_runner.webp"
+      },
+      {
+        "title": "Terminal",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/terminal.webp"
+      },
+      {
+        "title": "Spiral",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/spiral.webp"
+      },
+      {
+        "title": "Closer",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/closer.webp"
+      },
+      {
+        "title": "Freefall",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/freefall.webp"
+      },
+      {
+        "title": "Deeper",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/deeper.webp"
+      },
+      {
+        "title": "Tunnels",
+        "author": "Roderick Gordon & Brian Williams",
+        "cover": "/books/tunnels.webp"
+      },
+      {
+        "title": "Pathfinder",
+        "author": "Orson Scott Card",
+        "cover": "/books/pathfinder.webp"
+      },
+      {
+        "title": "Ender's Game",
+        "author": "Orson Scott Card",
+        "cover": "/books/enders_game.webp"
+      },
+      {
+        "title": "Execution",
+        "author": "Alexander Gordon Smith",
+        "cover": "/books/execution.webp"
+      },
+      {
+        "title": "Fugitives",
+        "author": "Alexander Gordon Smith",
+        "cover": "/books/fugitives.webp"
+      },
+      {
+        "title": "Death Sentence",
+        "author": "Alexander Gordon Smith",
+        "cover": "/books/death_sentence.webp"
+      },
+      {
+        "title": "Solitary",
+        "author": "Alexander Gordon Smith",
+        "cover": "/books/solitary.webp"
+      },
+      {
+        "title": "Lockdown",
+        "author": "Alexander Gordon Smith",
+        "cover": "/books/lockdown.webp"
+      },
+      {
+        "title": "Flesh & Bone",
+        "author": "Jonathan Maberry",
+        "cover": "/books/flesh_and_bone.webp"
+      },
+      {
+        "title": "Dust & Decay",
+        "author": "Jonathan Maberry",
+        "cover": "/books/dust_and_decay.webp"
+      },
+      {
+        "title": "Rot & Ruin",
+        "author": "Jonathan Maberry",
+        "cover": "/books/rot_and_ruin.webp"
+      },
+      {
+        "title": "Mockingjay",
+        "author": "Suzanne Collins",
+        "cover": "/books/mockingjay.webp"
+      },
+      {
+        "title": "Catching Fire",
+        "author": "Suzanne Collins",
+        "cover": "/books/catching_fire.webp"
+      },
+      {
+        "title": "The Hunger Games",
+        "author": "Suzanne Collins",
+        "cover": "/books/the_hunger_games.webp"
+      },
+      {
+        "title": "The House of Hades",
+        "author": "Rick Riordan",
+        "cover": "/books/the_house_of_hades.webp"
+      },
+      {
+        "title": "The Mark of Athena",
+        "author": "Rick Riordan",
+        "cover": "/books/the_mark_of_athena.webp"
+      },
+      {
+        "title": "The Son of Neptune",
+        "author": "Rick Riordan",
+        "cover": "/books/the_son_of_neptune.webp"
+      },
+      {
+        "title": "The Lost Hero",
+        "author": "Rick Riordan",
+        "cover": "/books/the_lost_hero.webp"
+      },
+      {
+        "title": "The Last Olympian",
+        "author": "Rick Riordan",
+        "cover": "/books/the_last_olympian.webp"
+      },
+      {
+        "title": "The Battle of the Labyrinth",
+        "author": "Rick Riordan",
+        "cover": "/books/the_battle_of_the_labyrinth.webp"
+      },
+      {
+        "title": "The Titan's Curse",
+        "author": "Rick Riordan",
+        "cover": "/books/the_titans_curse.webp"
+      },
+      {
+        "title": "The Sea of Monsters",
+        "author": "Rick Riordan",
+        "cover": "/books/the_sea_of_monsters.webp"
+      },
+      {
+        "title": "The Lightning Thief",
+        "author": "Rick Riordan",
+        "cover": "/books/the_lightning_thief.webp"
+      },
+      {
+        "title": "The Phantom Tollbooth",
+        "author": "Norton Juster",
+        "cover": "/books/the_phantom_tollbooth.webp"
+      }
+    ]
+  }
+]

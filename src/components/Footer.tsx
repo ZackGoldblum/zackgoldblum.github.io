@@ -8,12 +8,6 @@ export default function Footer() {
           © {new Date().getFullYear()} ZACK GOLDBLUM · PHILADELPHIA, PA
         </p>
         <SocialLinks />
-        <button
-          className="footer__top mono"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          BACK TO TOP ↑
-        </button>
       </div>
     </footer>
   )

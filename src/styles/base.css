@@ -82,7 +82,9 @@ body {
   margin: var(--space-8) 0 var(--space-5);
 }
 
-.era:first-of-type { margin-top: 0; }
+/* Only the first era section hugs the intro — each era lives in its
+   own <section>, so target the section, not the .era itself. */
+section:first-of-type .era { margin-top: 0; }
 
 .era__year {
   font-family: var(--font-mono);

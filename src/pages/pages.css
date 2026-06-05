@@ -42,16 +42,9 @@
   border: 1px solid var(--line);
 }
 
-.hero__portrait .mono {
-  color: var(--text-dim);
-  letter-spacing: var(--tracking-wide);
-  max-width: 280px;
-}
-
 @media (max-width: 879px) {
   .hero__portrait { order: -1; }
   .hero__portrait img { max-width: 132px; border-radius: var(--radius-lg); }
-  .hero__portrait .mono { max-width: none; }
 }
 
 .hero__title {
@@ -201,6 +194,14 @@
 
 /* ---------- Research ---------- */
 
+/* Type filter — chip buttons under the intro */
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: calc(-1 * var(--space-3)) 0 var(--space-6);
+}
+
 .research-list {
   display: flex;
   flex-direction: column;
@@ -312,7 +313,10 @@
 
 /* ---------- Timeline page ---------- */
 
-.about-section { margin-top: var(--space-7); }
+.about-section { margin-top: var(--space-8); }
+
+/* Section spacing comes from .about-section, not the era heading */
+.about-section .era { margin-top: 0; }
 
 /* Timeline */
 .timeline {
@@ -359,7 +363,7 @@
 
 .timeline__head {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* logo pinned to the top, regardless of text height */
   gap: var(--space-4);
   margin-bottom: var(--space-4);
 }
@@ -415,45 +419,56 @@
 
 .timeline__position li::marker { color: var(--text-dim); }
 
-/* Affiliations */
-.affiliations {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--space-4);
+/* Ledger rows (teaching / volunteering / courses) */
+.ledger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.affiliations__item {
-  display: grid;
-  place-items: center;
-  padding: var(--space-4) var(--space-5);
-  min-height: 96px;
+.ledger li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line-soft);
 }
 
-.affiliations__item img {
-  max-height: 56px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+.ledger__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }
 
-/* Simple entries (teaching / volunteering / courses) */
-.simple-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-4);
-}
-
-.simple-entry { padding: var(--space-4) var(--space-5); }
-
-.simple-entry h4 {
-  font-size: var(--text-base);
+.ledger__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--text-bright);
   line-height: var(--leading-snug);
 }
 
-.simple-entry .mono {
-  margin-top: var(--space-2);
+.ledger__org {
+  font-size: var(--text-xs);
+  color: var(--text-dim);
+  line-height: var(--leading-snug);
+}
+
+.ledger__date {
+  font-size: var(--text-xs);
   color: var(--text-dim);
   letter-spacing: 0.03em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .ledger li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
 }
 
 /* ---------- 404 ---------- */
@@ -496,6 +511,4 @@
   .records__strip { grid-auto-columns: 78vw; }
   .research { padding: var(--space-4); }
   .project { padding: var(--space-4); }
-  .simple-grid { grid-template-columns: minmax(0, 1fr); }
-  .affiliations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
