@@ -1,4 +1,4 @@
-export type ChipTone = 'ion' | 'nebula' | 'aurora' | 'flare' | 'pulsar' | 'dim'
+export type ChipTone = 'ion' | 'nebula' | 'aurora' | 'comet' | 'flare' | 'pulsar' | 'dim'
 
 interface ChipProps {
   tone?: ChipTone

@@ -87,6 +87,15 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-sm);
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.nav__burger:hover {
+  background: var(--bg-hairline);
+}
+
+.nav__burger:hover span {
+  background: var(--accent-ion);
 }
 
 .nav__burger span {
@@ -96,7 +105,8 @@
   height: 1.5px;
   background: var(--text-bright);
   border-radius: 2px;
-  transition: transform var(--dur-med) var(--ease-out), top var(--dur-med) var(--ease-out);
+  transition: transform var(--dur-med) var(--ease-out), top var(--dur-med) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
 }
 
 .nav__burger span:nth-child(1) { top: 16px; }
@@ -269,6 +279,7 @@
 .chip--ion { color: var(--accent-ion); background: var(--accent-ion-soft); border-color: transparent; }
 .chip--nebula { color: var(--accent-nebula); background: var(--accent-nebula-soft); border-color: transparent; }
 .chip--aurora { color: var(--accent-aurora); background: var(--accent-aurora-soft); border-color: transparent; }
+.chip--comet { color: var(--accent-comet); background: var(--accent-comet-soft); border-color: transparent; }
 .chip--flare { color: var(--accent-flare); background: var(--accent-flare-soft); border-color: transparent; }
 .chip--pulsar { color: var(--accent-pulsar); background: var(--accent-pulsar-soft); border-color: transparent; }
 

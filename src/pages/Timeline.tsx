@@ -66,7 +66,7 @@ export default function Timeline() {
                     {pos.bullets.length > 0 && (
                       <ul>
                         {pos.bullets.map((b) => (
-                          <li key={b}>{b}</li>
+                          <li key={b} dangerouslySetInnerHTML={{ __html: b }} />
                         ))}
                       </ul>
                     )}

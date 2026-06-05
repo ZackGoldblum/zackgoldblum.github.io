@@ -13,13 +13,25 @@ export interface ResearchItem {
   links?: { label: string; href: string }[]
 }
 
+/* One hue per type: green = published, teal = almost-published,
+   then violet / blue / amber / pink for the rest. */
 export const researchTypeTone: Record<ResearchType, ChipTone> = {
   Publication: 'aurora',
-  'Pre-print': 'nebula',
-  Poster: 'flare',
+  'Pre-print': 'comet',
+  Poster: 'nebula',
   Talk: 'ion',
-  'Live Demo': 'ion',
+  'Live Demo': 'flare',
   Thesis: 'pulsar',
+}
+
+/** Plural labels for the filter buttons. */
+export const researchTypePlural: Record<ResearchType, string> = {
+  Publication: 'Publications',
+  'Pre-print': 'Pre-prints',
+  Poster: 'Posters',
+  Talk: 'Talks',
+  'Live Demo': 'Live Demos',
+  Thesis: 'Theses',
 }
 
 export const research = data as Record<string, ResearchItem[]>

@@ -8,7 +8,7 @@
   /* Surfaces — near-black, no blue cast */
   --bg-void: #040408;                          /* the deep field */
   --bg-deep: #08080d;                          /* slightly lifted */
-  --bg-raised: rgba(255, 255, 255, 0.022);     /* barely-there panel */
+  --bg-raised: rgba(255, 255, 255, 0.024);     /* barely-there panel */
   --bg-elevated: rgba(255, 255, 255, 0.05);    /* hover / active */
   --bg-hairline: rgba(255, 255, 255, 0.045);   /* whisper fill */
 
@@ -18,15 +18,17 @@
   --text-dim: #6d7894;                         /* meta, captions */
 
   /* Accents */
-  --accent-ion: #69d8ff;                       /* primary — ion blue */
-  --accent-nebula: #a78bfa;                    /* violet */
+  --accent-ion: #69d8ff;                       /* primary — ion blue (talks) */
+  --accent-nebula: #a78bfa;                    /* violet — posters */
   --accent-aurora: #56e8a9;                    /* green — publications */
-  --accent-flare: #ffb86b;                     /* amber — posters, awards */
+  --accent-comet: #53e0c8;                     /* teal — pre-prints (almost-published) */
+  --accent-flare: #ffb86b;                     /* amber — live demos, awards */
   --accent-pulsar: #ff7eb6;                    /* pink — thesis */
 
   --accent-ion-soft: rgba(105, 216, 255, 0.12);
   --accent-nebula-soft: rgba(167, 139, 250, 0.13);
   --accent-aurora-soft: rgba(86, 232, 169, 0.12);
+  --accent-comet-soft: rgba(83, 224, 200, 0.12);
   --accent-flare-soft: rgba(255, 184, 107, 0.13);
   --accent-pulsar-soft: rgba(255, 126, 182, 0.13);
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Chip from '../components/Chip'
 import PageIntro from '../components/PageIntro'
-import { research, researchTypeTone, type ResearchType } from '../data/research'
+import { research, researchTypePlural, researchTypeTone, type ResearchType } from '../data/research'
 
 export default function Research() {
   const [filter, setFilter] = useState<ResearchType | null>(null)
@@ -33,7 +33,7 @@ export default function Research() {
             aria-pressed={filter === t}
             onClick={() => setFilter(filter === t ? null : t)}
           >
-            {t}
+            {researchTypePlural[t]}
           </button>
         ))}
       </div>

@@ -60,7 +60,7 @@ export default function Starfield() {
     }
 
     const buildStars = () => {
-      const count = Math.min(950, Math.round((w * h) / 1250))
+      const count = Math.min(3000, Math.round((w * h) / 425))
       stars = Array.from({ length: count }, () => {
         const s = {} as Star
         spawn(s, true)
@@ -167,7 +167,7 @@ export default function Starfield() {
 
     const onScroll = () => {
       const y = window.scrollY
-      scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY), 600)
+      scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY) * 0.5, 600)
       lastScrollY = y
     }
 
