@@ -200,7 +200,7 @@
       "date": "Dec 2021 — June 2023",
       "image": "/projects/kernel_flow.webp",
       "body": [
-        "For my master's thesis, I investigated a miniaturized time-domain functional near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing the neural correlates of cognitive function. This was the <u>first</u> comprehensive cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the <u>first</u> cognitive study with Kernel Flow. Through this project, I developed and verified an experimental setup for investigating the neural correlates of cognitive tasks and designed open-source tools to facilitate optical neuroimaging research."
+        "For my master's thesis, I investigated a miniaturized time-domain functional near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing the neural correlates of cognitive function. This was the first comprehensive cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the first cognitive study with Kernel Flow. Through this project, I developed and verified an experimental setup for investigating the neural correlates of cognitive tasks and designed open-source tools to facilitate optical neuroimaging research."
       ],
       "links": [
         {

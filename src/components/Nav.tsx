@@ -5,13 +5,15 @@ import SocialLinks from './SocialLinks'
 const LINKS = [
   { to: '/projects', label: 'Projects', index: '01' },
   { to: '/research', label: 'Research', index: '02' },
-  { to: '/bookshelf', label: 'Bookshelf', index: '03' },
-  { to: '/timeline', label: 'Timeline', index: '04' },
+  { to: '/blog', label: 'Blog', index: '03' },
+  { to: '/bookshelf', label: 'Bookshelf', index: '04' },
+  { to: '/timeline', label: 'Timeline', index: '05' },
 ]
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const location = useLocation()
+  const isHome = location.pathname === '/'
 
   // Close the overlay on navigation
   useEffect(() => {
@@ -30,9 +32,14 @@ export default function Nav() {
     <>
       <header className="nav">
         <div className="nav__inner">
-          <Link to="/" className="nav__brand" aria-label="Home">
-            <span className="nav__name">Zack Goldblum</span>
-          </Link>
+          {/* The hero already says the name — keep the slot so the links stay right-aligned */}
+          {isHome ? (
+            <span className="nav__brand" aria-hidden="true" />
+          ) : (
+            <Link to="/" className="nav__brand" aria-label="Home">
+              <span className="nav__name">Zack Goldblum</span>
+            </Link>
+          )}
 
           <nav className="nav__links" aria-label="Primary">
             {LINKS.map((l) => (

@@ -33,6 +33,8 @@ body {
 
 .site__main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: var(--width-content);
   margin: 0 auto;

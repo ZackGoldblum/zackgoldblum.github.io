@@ -91,7 +91,7 @@
     "url": "https://ayazlab.com/",
     "alt": "Ayaz Lab",
     "org": "Neuroergonomics and Neuroengineering Lab, Drexel University",
-    "orgDetail": "Cognitive Neuroengineering and Quantitative Experimental Research (CONQUER) Collaborative",
+    "orgDetail": "Cognitive Neuroengineering and Quantitative Experimental Research Collaborative",
     "positions": [
       {
         "title": "Research Assistant",
@@ -155,13 +155,13 @@
     "url": "https://drexel.edu/biomed/",
     "alt": "Drexel University",
     "org": "Drexel University",
-    "orgDetail": "School of Biomedical Engineering, Science and Health Systems\n+ Pennoni Honors College",
+    "orgDetail": "School of Biomedical Engineering, Science and Health Systems + Pennoni Honors College",
     "positions": [
       {
         "title": "Biomedical Engineering Graduate",
         "bullets": [
-          "BS in Biomedical Engineering — GPA 3.85.",
-          "MS in Biomedical Engineering — GPA 4.00.",
+          "BS in Biomedical Engineering <code>GPA 3.85</code>",
+          "MS in Biomedical Engineering <code>GPA 4.00</code>",
           "Neuroengineering concentration + Neuroscience minor.",
           "Graduated with Honors from the Pennoni Honors College."
         ]

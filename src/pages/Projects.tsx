@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import LinkIcon from '../components/LinkIcon'
 import PageIntro from '../components/PageIntro'
 import { projects, type Project } from '../data/projects'
 
@@ -30,7 +31,7 @@ function ProjectCard({ project }: { project: Project }) {
                 target={l.href.startsWith('/') ? undefined : '_blank'}
                 rel="noopener noreferrer"
               >
-                {l.label} <span className="btn__arrow">↗</span>
+                {l.label} <LinkIcon external={!l.href.startsWith('/')} />
               </a>
             ))}
             {project.buildList && (
@@ -66,7 +67,7 @@ export default function Projects() {
       <PageIntro
         index="01"
         title="Projects"
-        lede="Things I've built — research platforms, clinical tools, startups, and the occasional liquid-cooled machine."
+        lede="Collection of projects I've worked on over the years. Mix of things from school, research, and personal endeavors."
       />
       {Object.entries(projects).map(([era, items]) => (
         <section key={era}>

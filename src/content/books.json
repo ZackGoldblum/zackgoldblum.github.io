@@ -3,6 +3,30 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "Crowbar",
+        "author": "Andrew Edwards",
+        "cover": "/books/crowbar.webp",
+        "rating": 3
+      },
+      {
+        "title": "Meditations",
+        "author": "Marcus Aurelius",
+        "cover": "/books/meditations.webp",
+        "rating": 2.5
+      },
+      {
+        "title": "The Odyssey",
+        "author": "Homer",
+        "cover": "/books/the_odyssey.webp",
+        "rating": 3
+      },
+      {
+        "title": "King of Dogs",
+        "author": "Andrew Edwards",
+        "cover": "/books/king_of_dogs.webp",
+        "rating": 4
+      },
+      {
         "title": "Leviathan Falls",
         "author": "James S.A. Corey",
         "cover": "/books/leviathan_falls.webp",
@@ -741,6 +765,11 @@
         "cover": "/books/lord_of_the_flies.webp"
       },
       {
+        "title": "Oedipus Rex",
+        "author": "Sophocles",
+        "cover": "/books/oedipus_rex.webp"
+      },
+      {
         "title": "The Book Thief",
         "author": "Markus Zusak",
         "cover": "/books/the_book_thief.webp"
@@ -761,6 +790,16 @@
         "cover": "/books/to_kill_a_mockingbird.webp"
       },
       {
+        "title": "Romeo and Juliet",
+        "author": "William Shakespeare",
+        "cover": "/books/romeo_and_juliet.webp"
+      },
+      {
+        "title": "The Outsiders",
+        "author": "S. E. Hinton",
+        "cover": "/books/the_outsiders.webp"
+      },
+      {
         "title": "Inkdeath",
         "author": "Cornelia Funke",
         "cover": "/books/inkdeath.webp"
@@ -774,6 +813,21 @@
         "title": "Inkheart",
         "author": "Cornelia Funke",
         "cover": "/books/inkheart.webp"
+      },
+      {
+        "title": "The Game of Lives",
+        "author": "James Dashner",
+        "cover": "/books/the_game_of_lives.webp"
+      },
+      {
+        "title": "The Rule of Thoughts",
+        "author": "James Dashner",
+        "cover": "/books/the_rule_of_thoughts.webp"
+      },
+      {
+        "title": "The Eye of Minds",
+        "author": "James Dashner",
+        "cover": "/books/the_eye_of_minds.webp"
       },
       {
         "title": "The Death Cure",
@@ -886,6 +940,11 @@
         "cover": "/books/the_hunger_games.webp"
       },
       {
+        "title": "Ship Breaker",
+        "author": "Paolo Bacigalupi",
+        "cover": "/books/ship_breaker.webp"
+      },
+      {
         "title": "The House of Hades",
         "author": "Rick Riordan",
         "cover": "/books/the_house_of_hades.webp"
@@ -929,6 +988,11 @@
         "title": "The Lightning Thief",
         "author": "Rick Riordan",
         "cover": "/books/the_lightning_thief.webp"
+      },
+      {
+        "title": "Holes",
+        "author": "Louis Sachar",
+        "cover": "/books/holes.webp"
       },
       {
         "title": "The Phantom Tollbooth",

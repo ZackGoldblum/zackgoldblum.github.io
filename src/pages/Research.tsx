@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import Chip from '../components/Chip'
+import LinkIcon from '../components/LinkIcon'
 import PageIntro from '../components/PageIntro'
-import { research, researchTypePlural, researchTypeTone, type ResearchType } from '../data/research'
+import { research, researchFilters, researchTypeTone, type ResearchFilter } from '../data/research'
 
 export default function Research() {
-  const [filter, setFilter] = useState<ResearchType | null>(null)
+  const [filter, setFilter] = useState<ResearchFilter | null>(null)
 
-  // Only offer filters for types that actually appear
-  const types = (Object.keys(researchTypeTone) as ResearchType[]).filter((t) =>
-    Object.values(research).some((items) => items.some((item) => item.type === t)),
+  // Only offer filters whose types actually appear
+  const filters = researchFilters.filter((f) =>
+    Object.values(research).some((items) => items.some((item) => f.types.includes(item.type))),
   )
 
   return (
@@ -16,7 +17,7 @@ export default function Research() {
       <PageIntro
         index="02"
         title="Research"
-        lede="Publications, posters, and talks — translational neuroengineering, epilepsy care, and AI systems that make neural data conversational."
+        lede="All my published and presented research. From my early work in neurocritical care and optical neuroimaging to my current translational neuroengineering and neuroinformatics focus."
       />
       <div className="filter-row" role="group" aria-label="Filter by type">
         <button
@@ -26,19 +27,19 @@ export default function Research() {
         >
           All
         </button>
-        {types.map((t) => (
+        {filters.map((f) => (
           <button
-            key={t}
-            className={`chip chip--btn${filter === t ? ` chip--${researchTypeTone[t]}` : ''}`}
-            aria-pressed={filter === t}
-            onClick={() => setFilter(filter === t ? null : t)}
+            key={f.label}
+            className={`chip chip--btn${filter === f ? ` chip--${f.tone}` : ''}`}
+            aria-pressed={filter === f}
+            onClick={() => setFilter(filter === f ? null : f)}
           >
-            {researchTypePlural[t]}
+            {f.label}
           </button>
         ))}
       </div>
       {Object.entries(research).map(([era, items]) => {
-        const visible = filter ? items.filter((item) => item.type === filter) : items
+        const visible = filter ? items.filter((item) => filter.types.includes(item.type)) : items
         if (visible.length === 0) return null
         return (
           <section key={era}>
@@ -58,21 +59,35 @@ export default function Research() {
                     ))}
                   </div>
                   <h3 className="research__title">{item.title}</h3>
-                  <p
-                    className="research__citation prose"
-                    dangerouslySetInnerHTML={{ __html: item.citation }}
-                  />
+                  {(() => {
+                    const EQ = '*Equal contribution.'
+                    const equal = item.citation.includes(EQ)
+                    const citation = equal ? item.citation.replace(EQ, '').trim() : item.citation
+                    return (
+                      <>
+                        <p
+                          className="research__citation prose"
+                          dangerouslySetInnerHTML={{ __html: citation }}
+                        />
+                        {equal && (
+                          <p className="research__footnote">
+                            *These authors contributed equally to this work
+                          </p>
+                        )}
+                      </>
+                    )
+                  })()}
                   {item.links && item.links.length > 0 && (
                     <div className="research__links">
                       {item.links.map((l) => (
                         <a
                           key={l.href}
-                          className="research__link mono"
+                          className="btn"
                           href={l.href}
                           target={l.href.startsWith('/') ? undefined : '_blank'}
                           rel="noopener noreferrer"
                         >
-                          {l.label.toUpperCase()} ↗
+                          {l.label} <LinkIcon external={!l.href.startsWith('/')} />
                         </a>
                       ))}
                     </div>

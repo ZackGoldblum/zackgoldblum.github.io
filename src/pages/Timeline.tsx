@@ -34,9 +34,9 @@ export default function Timeline() {
   return (
     <div>
       <PageIntro
-        index="04"
+        index="05"
         title="Timeline"
-        lede="Where I've been and what I'm building now — research, startups, and school along the way."
+        lede="Where I've been and what I'm doing now."
       />
 
       <section>

@@ -24,14 +24,19 @@ export const researchTypeTone: Record<ResearchType, ChipTone> = {
   Thesis: 'pulsar',
 }
 
-/** Plural labels for the filter buttons. */
-export const researchTypePlural: Record<ResearchType, string> = {
-  Publication: 'Publications',
-  'Pre-print': 'Pre-prints',
-  Poster: 'Posters',
-  Talk: 'Talks',
-  'Live Demo': 'Live Demos',
-  Thesis: 'Theses',
+/** Filter buttons — long-tail types are bucketed into a gray "Other". */
+export interface ResearchFilter {
+  label: string
+  tone: ChipTone
+  types: ResearchType[]
 }
+
+export const researchFilters: ResearchFilter[] = [
+  { label: 'Publications', tone: 'aurora', types: ['Publication'] },
+  { label: 'Pre-prints', tone: 'comet', types: ['Pre-print'] },
+  { label: 'Posters', tone: 'nebula', types: ['Poster'] },
+  { label: 'Talks', tone: 'ion', types: ['Talk'] },
+  { label: 'Other', tone: 'dim', types: ['Live Demo', 'Thesis'] },
+]
 
 export const research = data as Record<string, ResearchItem[]>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 
 /**
  * Starfield — flying through space.
@@ -31,6 +32,14 @@ const STREAK = 1.6 // streak length in frames of motion
 
 export default function Starfield() {
   const ref = useRef<HTMLCanvasElement>(null)
+
+  // Route changes teleport to the top (ScrollToTop) — that jump is not
+  // flying, so the next scroll event shouldn't throttle the engines.
+  const teleported = useRef(false)
+  const { pathname } = useLocation()
+  useEffect(() => {
+    teleported.current = true
+  }, [pathname])
 
   useEffect(() => {
     const canvas = ref.current
@@ -133,9 +142,10 @@ export default function Starfield() {
 
         const dx = px - qx
         const dy = py - qy
-        if (dx * dx + dy * dy > 1.2) {
+        // Streaks only while the throttle is open — cruising renders clean dots
+        if (boost > 1 && dx * dx + dy * dy > 1.2) {
           ctx.strokeStyle = `rgba(${s.color},${alpha})`
-          ctx.lineWidth = size
+          ctx.lineWidth = size * 2 // match the dot's diameter — no size snap at the handoff
           ctx.lineCap = 'round'
           ctx.beginPath()
           ctx.moveTo(qx, qy)
@@ -167,7 +177,11 @@ export default function Starfield() {
 
     const onScroll = () => {
       const y = window.scrollY
-      scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY) * 0.5, 600)
+      if (teleported.current) {
+        teleported.current = false // navigation jump — no boost
+      } else {
+        scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY) * 0.5, 600)
+      }
       lastScrollY = y
     }
 
