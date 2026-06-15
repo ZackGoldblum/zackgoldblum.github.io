@@ -5,9 +5,8 @@ import SocialLinks from './SocialLinks'
 const LINKS = [
   { to: '/projects', label: 'Projects', index: '01' },
   { to: '/research', label: 'Research', index: '02' },
-  { to: '/blog', label: 'Blog', index: '03' },
-  { to: '/bookshelf', label: 'Bookshelf', index: '04' },
-  { to: '/timeline', label: 'Timeline', index: '05' },
+  { to: '/bookshelf', label: 'Bookshelf', index: '03' },
+  { to: '/timeline', label: 'Timeline', index: '04' },
 ]
 
 export default function Nav() {

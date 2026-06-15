@@ -69,7 +69,8 @@ export default function Projects() {
         title="Projects"
         lede="Collection of projects I've worked on over the years. Mix of things from school, research, and personal endeavors."
       />
-      {Object.entries(projects).map(([era, items]) => (
+      {Object.entries(projects).map(([era, items]) =>
+        items.length === 0 ? null : (
         <section key={era}>
           <div className="era">
             <span className="era__year">{era.toUpperCase()}</span>
@@ -81,7 +82,8 @@ export default function Projects() {
             ))}
           </div>
         </section>
-      ))}
+        )
+      )}
     </div>
   )
 }

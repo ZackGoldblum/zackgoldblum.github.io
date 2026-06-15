@@ -1,12 +1,13 @@
 {
-  "Current": [
+  "Current": [],
+  "2026-2027": [
     {
       "title": "Personal Website",
       "blurb": "My own website to showcase some of the things I do to the world.",
-      "date": "Sept 2022 — Present",
+      "date": "Sept 2022 — June 2026",
       "image": "/projects/website.webp",
       "body": [
-        "V4: Complete redesign — dark, space-age, and mobile-first, with a custom canvas starfield that flies through space and hits warp speed when you scroll.",
+        "V4: Modern redesign that finally looks good on mobile :)",
         "V3: Re-implementation into a React single page application.",
         "V2: New design with a Three.js-animated starfield background.",
         "V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette inspired by <a href=\"https://github.com/daltonmenezes/aura-theme/tree/main\" target=\"_blank\" rel=\"noopener noreferrer\">Aura Theme</a>."
@@ -21,52 +22,13 @@
   ],
   "2025-2026": [
     {
-      "title": "Neuronova",
-      "org": "Penn Center for Neuromodulation Technology",
-      "blurb": "Brain data visualization and normative modeling platform for intracranial EEG research.",
-      "date": "Dec 2024 — Present",
-      "image": "/projects/neuronova.webp",
-      "body": [
-        "Built at the Penn Center for Neuromodulation Technology, Neuronova is a platform for visualizing and analyzing intracranial EEG data across a multi-center research cohort. The platform lets researchers place individual patient electrodes on a 3D brain surface rendered in Three.js, then compare electrode-level measurements—spectral power across delta, theta, alpha, beta, and gamma bands—against population-level reference distributions. Deviations from the normative model are quantified as z-scores, giving researchers a principled way to identify abnormal channels or regions across patients.",
-        "The data pipeline ingests HDF5-format iEEG recordings from Pennsieve, computes 30+ time-series features per channel using a CaTCH-22-inspired feature set, and stores both raw features and computed statistics in PostgreSQL. The frontend is React with Recharts for distribution plots and Three.js for the 3D viewer; the backend is Flask + SQLAlchemy. Production infrastructure runs on AWS (Elastic Beanstalk, RDS, S3/CloudFront) provisioned with Terraform and deployed via GitHub Actions CI/CD."
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/penn-cnt/neuronova"
-        }
-      ]
-    },
-    {
-      "title": "BE-5210 Competition Website",
-      "org": "University of Pennsylvania",
-      "blurb": "Full-stack leaderboard platform for a machine learning competition on intracranial EEG data.",
-      "date": "Jan 2026 — March 2026",
-      "image": "/projects/be5210.webp",
-      "body": [
-        "I built this full-stack competition website for BE-5210, a Penn biomedical engineering course centered on predicting theta-gamma coupling in intracranial EEG data. Student teams upload MATLAB files containing their model predictions, which are automatically scored via Pearson correlation against held-out test data. The defining feature is a staged leaderboard: scores are released on a configurable schedule rather than immediately, preventing teams from gaming submissions by reacting to competitor results in real time. Atomic PostgreSQL transactions and APScheduler ensure the leaderboard advances exactly once per interval even under concurrent workers.",
-        "The stack is React + Flask + PostgreSQL, containerized with Docker and deployed on AWS (S3/CloudFront for the frontend, Elastic Beanstalk for the API, RDS for the database). I also added a \"Whack-a-Brian\" easter egg minigame—complete with its own global high score table—as a reward for curious students."
-      ],
-      "links": [
-        {
-          "label": "Visit site",
-          "href": "https://be5210.com"
-        },
-        {
-          "label": "GitHub",
-          "href": "https://github.com/penn-cnt/BE-5210"
-        }
-      ]
-    },
-    {
       "title": "Sociail Chat",
       "org": "Sociail",
       "blurb": "Bringing together the best of human and AI collaboration.",
       "date": "June 2023 — Dec 2025",
       "image": "/projects/sociail_chat.webp",
       "body": [
-        "My time at Sociail marks my first true entrepreneurial experience. I joined the founding team right after graduating from Drexel and developed the initial prototype of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself leading a multinational software development team and guiding the product through successive iterations until a limited release. Approaching launch, my focus shifted from technical development to product design, user experience, and go-to-market strategy. My co-founder responsibilities helped build the company itself: interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail. There is so much more to share, and eventually I'll write something long-form that conveys how truly foundational this experience is.",
-        "The platform is built on the Matrix protocol (Synapse server) for end-to-end encrypted real-time messaging, with a React/TypeScript frontend customized on top of Element Web. The backend is Node.js + Redis for the messaging core, Python FastAPI for AI orchestration, and Apache Kafka for event streaming. A multi-agent system routes requests via a semantic router to specialized agents (conversation, task, research, code) backed by a RAG pipeline and vector store. The model farm spans self-hosted models (LLaMA 3.2, Mistral, CodeLLaMA, SDXL) running on our own GPU cluster—two Dell PowerEdge R740xd servers with NVIDIA A6000s (96GB VRAM total)—alongside external providers (OpenAI, Anthropic, AWS Bedrock). Production runs on DigitalOcean managed Kubernetes with Cloudflare for CDN and DDoS protection, Prometheus + Grafana + Loki for observability, and HCP Vault for secrets management. Bridges connect the platform to Slack, Discord, WhatsApp, Telegram, and GitHub."
+        "My time at Sociail marks my first true entrepreneurial experience. I joined the founding team right after graduating from Drexel and developed the initial prototype of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself leading a multinational software development team and guiding the product through successive iterations until a limited release. Approaching launch, my focus shifted from technical development to product design, user experience, and go-to-market strategy. My co-founder responsibilities helped build the company itself: interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail. There is so much more to share, and eventually I'll write something long-form that conveys how truly foundational this experience is."
       ],
       "links": [
         {
@@ -78,44 +40,6 @@
   ],
   "2024-2025": [
     {
-      "title": "AskEEG",
-      "org": "BMIN 5100",
-      "blurb": "Conversational interface for querying and analyzing intracranial EEG data using natural language.",
-      "date": "Jan 2025 — May 2025",
-      "image": "/projects/askeeg.webp",
-      "body": [
-        "AskEEG is a course project I built for BMIN 5100 (Biomedical Informatics) at Penn: a conversational interface for querying and analyzing intracranial EEG data. Instead of manually specifying analysis parameters, a researcher can ask something like \"What is the synchrony in the alpha band from 10 to 20 seconds?\" and the system uses an LLM (Claude or GPT via LangChain) to extract the time window, frequency band, and relevant channels before running the analysis. The signal processing pipeline applies common average referencing, notch filtering at 60 Hz, and bandpass filtering, then computes the Kuramoto order parameter—a phase-based synchrony metric—across all channels per frequency band.",
-        "The architecture is a Vue 3 frontend backed by a Flask REST API, with iEEG data sourced from Pennsieve or S3. Compute-intensive analyses run in AWS Fargate containers, with Terraform-managed infrastructure and CloudWatch logging. Session isolation via S3 key prefixes supports multi-user workflows without data collision."
-      ],
-      "links": [
-        {
-          "label": "GitHub",
-          "href": "https://github.com/BMIN-5100-Spring-2025/Goldblum-AskEEG"
-        }
-      ]
-    },
-    {
-      "title": "ASM-Calc",
-      "org": "Penn Center for Neuromodulation Technology",
-      "blurb": "Clinical pharmacokinetics tool for calculating and visualizing anti-seizure medication concentrations.",
-      "date": "Feb 2025",
-      "image": "/projects/asm_calc.webp",
-      "body": [
-        "ASM-Calc is a clinical tool I built with researchers at the Penn Center for Neuromodulation Technology to help clinicians visualize anti-seizure medication (ASM) concentrations over time. Input dose events with timestamps and the app renders individual and combined drug curves in real time, drawing on a two-compartment pharmacokinetic model that accounts for absorption, distribution, and elimination. Twenty-plus ASMs are pre-configured with literature-sourced parameters (half-life, volume of distribution, bioavailability), and the combined total concentration curve is automatically computed when multiple drugs are active—useful for spotting potential interactions. The project is based on research published in <em>Epilepsia</em>.",
-        "The React + Vite frontend talks to a Flask backend deployed as Vercel serverless functions. State is persisted in localStorage so sessions survive page refreshes. The pharmacokinetic engine is a clean ~170 lines of NumPy—auditable and straightforward, as clinical tooling should be."
-      ],
-      "links": [
-        {
-          "label": "Visit site",
-          "href": "https://www.asmcalc.com"
-        },
-        {
-          "label": "GitHub",
-          "href": "https://github.com/penn-cnt/ASM-Calc"
-        }
-      ]
-    },
-    {
       "title": "EpiTracker",
       "blurb": "Insightful epilepsy management.",
       "date": "Oct 2024 — Dec 2024",
@@ -124,10 +48,6 @@
         "Final project for <em>Applied Medical Innovation</em>, where we learned and executed the process of creating impactful, commercially viable medical innovations. The concept for EpiTracker emerged from nearly a dozen stakeholder interviews spanning neurologists, neurosurgeons, foundations, and patients, with the goal of identifying addressable gaps in epilepsy care. We discovered an opportunity to reduce the time to optimal treatment by capturing critical information from ambulatory settings and presenting actionable trends and insights to support clinical care decisions. The project culminated in a functional prototype of EpiTracker—which took the form of a mobile app for patients and web portal for clinicians—and a final pitch complete with market research and a business model."
       ],
       "links": [
-        {
-          "label": "Visit site",
-          "href": "https://epitracker.pythonanywhere.com/"
-        },
         {
           "label": "GitHub",
           "href": "https://github.com/ZackGoldblum/EpiTracker"
@@ -179,14 +99,6 @@
             "1x EK-Loop Angled Bracket - 120/120mm",
             "6x EK-Loop Hard Tube 12mm 0.8m - Acrylic",
             "1x EK-CryoFuel Mystic Fog (Premix 1000mL)"
-          ]
-        },
-        {
-          "heading": "Equipment",
-          "items": [
-            "1x EK-Loop Heat Gun 1500W",
-            "1x EK-Loop Leak Tester Flex",
-            "1x Corsair Hydro X Series XT Hardline Bending Toolkit"
           ]
         }
       ]

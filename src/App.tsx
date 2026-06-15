@@ -3,8 +3,6 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
 import Starfield from './components/Starfield'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
 import Bookshelf from './pages/Bookshelf'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
@@ -34,8 +32,6 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/research" element={<Research />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/bookshelf" element={<Bookshelf />} />
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/about" element={<Navigate to="/timeline" replace />} />
