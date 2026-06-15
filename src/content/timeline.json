@@ -15,6 +15,22 @@
     ]
   },
   {
+    "date": "Dec 2024 — Present",
+    "logo": "/about/neurobridge_thumbnail.webp",
+    "url": "https://www.med.upenn.edu/neurobridge/",
+    "alt": "NeuroBridge Lab",
+    "org": "NeuroBridge Lab, University of Pennsylvania",
+    "orgDetail": "Perelman School of Medicine",
+    "positions": [
+      {
+        "title": "Graduate Student Researcher",
+        "bullets": [
+          "Developing scalable tools and cloud-based infrastructure for translational neuroscience."
+        ]
+      }
+    ]
+  },
+  {
     "date": "Aug 2024 — Present",
     "logo": "/about/penn_thumbnail.webp",
     "url": "https://be.seas.upenn.edu/",
@@ -33,6 +49,30 @@
     ]
   },
   {
+    "date": "Sept 2023 — Present",
+    "logo": "/about/litt_lab_thumbnail.webp",
+    "url": "https://littlab.seas.upenn.edu/",
+    "alt": "Litt Lab",
+    "org": "Litt Lab, University of Pennsylvania",
+    "orgDetail": "Center for Neuroengineering and Therapeutics",
+    "positions": [
+      {
+        "title": "Graduate Student Researcher",
+        "span": "Aug 2024 — Present",
+        "bullets": [
+          "Developing AI for real-time patient-brain communication."
+        ]
+      },
+      {
+        "title": "Research Specialist",
+        "span": "Sept 2023 — Aug 2024",
+        "bullets": [
+          "Translational neuroengineering research for epilepsy patient care."
+        ]
+      }
+    ]
+  },
+  {
     "date": "June 2023 — Dec 2025",
     "logo": "/about/sociail_thumbnail.webp",
     "url": "https://www.sociail.com/",
@@ -42,7 +82,9 @@
       {
         "title": "Advisor",
         "span": "March 2024 — Dec 2025",
-        "bullets": []
+        "bullets": [
+          "Go-to-market strategy and QA for public release."
+        ]
       },
       {
         "title": "Co-Founder, Tech Lead",
@@ -65,22 +107,6 @@
         "title": "Co-Director, Mentorships",
         "bullets": [
           "Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."
-        ]
-      }
-    ]
-  },
-  {
-    "date": "Sept 2023 — Aug 2024",
-    "logo": "/about/litt_lab_thumbnail.webp",
-    "url": "https://littlab.seas.upenn.edu/",
-    "alt": "Litt Lab",
-    "org": "Litt Lab, University of Pennsylvania",
-    "orgDetail": "Center for Neuroengineering and Therapeutics",
-    "positions": [
-      {
-        "title": "Research Specialist",
-        "bullets": [
-          "Translational neuroengineering research for epilepsy patient care."
         ]
       }
     ]

@@ -20,10 +20,22 @@
 
 @media (min-width: 880px) {
   .hero {
-    grid-template-columns: minmax(0, 1fr) 280px;
-    align-items: center;
+    /* Text (with socials beneath it) on the left, image on the right.
+       Both columns stretch so the photo matches the left block's full
+       height — title down through the socials. */
+    grid-template-columns: minmax(0, 1fr) 220px;
+    align-items: stretch;
     column-gap: var(--space-8);
   }
+  .hero__portrait img {
+    height: 100%;
+    aspect-ratio: auto; /* fill the row height instead of staying square */
+  }
+}
+
+/* Image snaps up a step on wider screens (content caps at 1080px). */
+@media (min-width: 1080px) {
+  .hero { grid-template-columns: minmax(0, 1fr) 280px; }
 }
 
 .hero__text {
@@ -40,7 +52,6 @@
 
 .hero__portrait img {
   width: 100%;
-  max-width: 280px;
   height: auto;
   aspect-ratio: 1;
   object-fit: cover;
@@ -54,15 +65,24 @@
 }
 
 .hero__title {
-  font-size: var(--text-hero);
+  /* Snaps between sizes at breakpoints rather than scaling fluidly. Each
+     step is sized so "Zack Goldblum" still fits one line under nowrap. */
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.02;
   color: var(--accent-ion);
+  white-space: nowrap; /* "Zack Goldblum" stays on one line */
 }
 
+@media (min-width: 480px) { .hero__title { font-size: 2.5rem; } }
+@media (min-width: 640px) { .hero__title { font-size: 3rem; } }
+@media (min-width: 880px) { .hero__title { font-size: 3.75rem; } }
+@media (min-width: 1080px) { .hero__title { font-size: 4.75rem; } }
+
 .hero__lede {
-  max-width: 54ch;
+  /* Tuned so the blurb settles onto two lines at desktop widths */
+  max-width: 38rem;
   font-size: var(--text-md);
   line-height: var(--leading-normal);
 }
@@ -73,11 +93,9 @@
 }
 
 .hero__socials-card {
-  align-self: flex-start;
+  align-self: flex-start; /* hug content under the text, don't stretch */
   padding: var(--space-2) var(--space-3);
 }
-
-.hero__tagline { text-align: center; }
 
 /* ---------- Projects ---------- */
 
@@ -500,6 +518,7 @@
 .timeline__position code {
   font-family: var(--font-mono);
   font-size: 0.85em;
+  margin-left: 0.25em;
   background: var(--bg-hairline);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-sm);
@@ -521,18 +540,30 @@
 }
 
 .timeline__org-detail {
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
   color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
 }
 
 .timeline__position + .timeline__position { margin-top: var(--space-4); }
 
 .timeline__position h3 { font-size: var(--text-base); }
 
+/* Title leads; sub-role date sits just after it as quiet reference info */
+.timeline__position-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
 .timeline__span {
+  flex: none;
+  font-size: var(--text-xs);
   color: var(--text-dim);
-  font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--tracking-wide);
 }
 
 .timeline__position ul {

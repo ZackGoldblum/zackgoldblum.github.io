@@ -5,6 +5,9 @@
 html {
   background: var(--bg-void);
   scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+  /* Stop the elastic rubber-band bounce that drags the footer up when
+     overscrolling past the bottom of the page. */
+  overscroll-behavior-y: none;
 }
 
 body {

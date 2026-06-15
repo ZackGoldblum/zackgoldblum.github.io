@@ -116,7 +116,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: var(--space-6);
-  padding: calc(var(--nav-height) + var(--space-7)) var(--gutter) var(--space-7);
+  padding: var(--nav-height) var(--gutter) var(--space-7);
   background: rgba(3, 3, 7, 0.4); /* 60% transparent */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -219,6 +219,19 @@
 .footer__meta {
   color: var(--text-dim);
   letter-spacing: var(--tracking-wide);
+}
+
+/* ---------- Separator bar ---------- */
+/* A thin vertical rule — reads as punctuation, not another background star,
+   and centered on the cap height rather than the baseline. */
+.sep {
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin: 0 0.55em;
+  background: currentColor;
+  vertical-align: -0.08em;
+  opacity: 0.6;
 }
 
 /* ---------- Page intro ---------- */
@@ -416,6 +429,15 @@ svg.btn__arrow { margin-top: 1px; }
   .nav__links { display: none; }
   .nav__burger { display: block; }
   .footer__inner { justify-content: center; text-align: center; }
+
+  /* Homepage hero is self-contained — drop the navbar bar and let the
+     burger float on its own so it stays reachable. */
+  .nav--home {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+  }
 }
 
 @media (max-width: 400px) {

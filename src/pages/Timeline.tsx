@@ -1,4 +1,5 @@
 import PageIntro from '../components/PageIntro'
+import { withSeps } from '../components/Sep'
 import { courses, teaching, timeline, volunteering, type SimpleEntry } from '../data/about'
 
 function SectionHead({ title }: { title: string }) {
@@ -20,7 +21,7 @@ function Ledger({ title, entries }: { title: string; entries: SimpleEntry[] }) {
           <li key={e.title + e.org}>
             <div className="ledger__main">
               <span className="ledger__title">{e.title}</span>
-              <span className="ledger__org">{e.org}</span>
+              <span className="ledger__org">{withSeps(e.org)}</span>
             </div>
             <span className="ledger__date mono">{e.date}</span>
           </li>
@@ -59,10 +60,10 @@ export default function Timeline() {
                 </div>
                 {entry.positions.map((pos) => (
                   <div key={pos.title} className="timeline__position">
-                    <h3>
-                      {pos.title}
-                      {pos.span && <span className="timeline__span mono"> · {pos.span}</span>}
-                    </h3>
+                    <div className="timeline__position-head">
+                      <h3>{pos.title}</h3>
+                      {pos.span && <span className="timeline__span mono">{pos.span.toUpperCase()}</span>}
+                    </div>
                     {pos.bullets.length > 0 && (
                       <ul>
                         {pos.bullets.map((b) => (

@@ -30,7 +30,7 @@ export default function Nav() {
 
   return (
     <>
-      <header className="nav">
+      <header className={`nav${isHome ? ' nav--home' : ''}`}>
         <div className="nav__inner">
           {/* The hero already says the name — keep the slot so the links stay right-aligned */}
           {isHome ? (
