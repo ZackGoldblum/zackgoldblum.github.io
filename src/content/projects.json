@@ -1,0 +1,235 @@
+{
+  "Current": [],
+  "2026-2027": [
+    {
+      "title": "Personal Website",
+      "blurb": "My own website to showcase some of the things I do to the world.",
+      "date": "Sept 2022 — June 2026",
+      "image": "/projects/website.webp",
+      "body": [
+        "V4: Modern redesign that finally looks good on mobile :)",
+        "V3: Re-implementation into a React single page application.",
+        "V2: New design with a Three.js-animated starfield background.",
+        "V1: 5 HTML files, 1 CSS file, 1 font, 0 frameworks. That's it! Clean and simple. Color palette inspired by <a href=\"https://github.com/daltonmenezes/aura-theme/tree/main\" target=\"_blank\" rel=\"noopener noreferrer\">Aura Theme</a>."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/ZackGoldblum/zackgoldblum.github.io"
+        }
+      ]
+    }
+  ],
+  "2025-2026": [
+    {
+      "title": "Sociail Chat",
+      "org": "Sociail",
+      "blurb": "Bringing together the best of human and AI collaboration.",
+      "date": "June 2023 — Dec 2025",
+      "image": "/projects/sociail_chat.webp",
+      "body": [
+        "My time at Sociail marks my first true entrepreneurial experience. I joined the founding team right after graduating from Drexel and developed the initial prototype of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself leading a multinational software development team and guiding the product through successive iterations until a limited release. Approaching launch, my focus shifted from technical development to product design, user experience, and go-to-market strategy. My co-founder responsibilities helped build the company itself: interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail. There is so much more to share, and eventually I'll write something long-form that conveys how truly foundational this experience is."
+      ],
+      "links": [
+        {
+          "label": "Visit site",
+          "href": "https://www.sociail.com/"
+        }
+      ]
+    }
+  ],
+  "2024-2025": [
+    {
+      "title": "EpiTracker",
+      "blurb": "Insightful epilepsy management.",
+      "date": "Oct 2024 — Dec 2024",
+      "image": "/projects/epitracker.webp",
+      "body": [
+        "Final project for <em>Applied Medical Innovation</em>, where we learned and executed the process of creating impactful, commercially viable medical innovations. The concept for EpiTracker emerged from nearly a dozen stakeholder interviews spanning neurologists, neurosurgeons, foundations, and patients, with the goal of identifying addressable gaps in epilepsy care. We discovered an opportunity to reduce the time to optimal treatment by capturing critical information from ambulatory settings and presenting actionable trends and insights to support clinical care decisions. The project culminated in a functional prototype of EpiTracker—which took the form of a mobile app for patients and web portal for clinicians—and a final pitch complete with market research and a business model."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/ZackGoldblum/EpiTracker"
+        }
+      ]
+    },
+    {
+      "title": "Custom Hardline Liquid Cooled PC",
+      "blurb": "My first foray into building liquid cooled computers.",
+      "date": "Aug 2024",
+      "image": "/projects/liquid_cooled_pc.webp",
+      "body": [
+        "I've been building computers for over a decade (since I was 14 years old). In fact, it was this skill that landed me my first job as an assistant technician at a local IT company. As a kid, I loved to disassemble old tech products to see what was inside — although I had no idea how any of it worked. But going the other direction to build something functional was a whole new paradigm. I did figure it out though, because that first computer I built is still next to me, and still running! Since then, I've built computers for friends, several machine learning servers, and now my second (and first ever liquid cooled) PC. This build was significantly more challenging, but worth it for the experience gain and seeing the meticulous planning finally come together. There are a couple things to improve: my 90° bends could use some practice and one of the GPU tubing runs will need to be re-routed next time I do maintenance. Overall, I'm proud of this build and glad I took it on."
+      ],
+      "links": [],
+      "buildList": [
+        {
+          "heading": "Computer Components",
+          "items": [
+            "1x Gigabyte GeForce RTX 4090 Gaming OC",
+            "1x AMD Ryzen 7 7800X3D",
+            "1x NZXT N7 B650E - White",
+            "1x Corsair Vengeance DDR5 RAM 64GB (2x32GB) 6000MHz CL30 - White",
+            "1x Samsung 990 Pro 2TB",
+            "1x Seasonic Vertex GX-1000 | 1000W | 80+ Gold",
+            "1x Corsair 4000D Airflow - White",
+            "6x EK-Loop Fan FPT 120 D-RGB - White (27mm Thickness)",
+            "1x Corsair iCUE Commander Core XT",
+            "1x EK-Loop PCI-E 4.0 Riser Cable",
+            "1x D-RGB 6-Way Splitter Cable",
+            "1x ARGB Adapter Cable"
+          ]
+        },
+        {
+          "heading": "Liquid Cooling Loop Components",
+          "items": [
+            "1x EK-Quantum Vector² Master RTX 4090 D-RGB - Nickel + Plexi",
+            "1x EK-Quantum Kinetic FLT 80 DDC PWM D-RGB - Plexi",
+            "1x EK-Quantum Velocity² D-RGB - AM5 Nickel + Plexi",
+            "1x EK-Quantum Surface P360M - White (44mm Thickness)",
+            "1x EK-Quantum Surface P240M - White (44mm Thickness)",
+            "10x EK-Quantum Torque HDC 12mm - Satin Titanium",
+            "6x EK-Quantum Torque Rotary 90° - Satin Titanium",
+            "4x EK-Quantum Torque Micro Plug - Satin Titanium",
+            "1x EK-Quantum Torque Double Rotary Offset 21mm Fitting - Satin Titanium",
+            "1x EK-Quantum Torque Extender Static MF 28mm - Satin Titanium",
+            "1x EK-Quantum Torque Extender Static MF 7mm - Satin Titanium",
+            "1x EK-Quantum Torque Drain Valve - Satin Titanium",
+            "1x EK-Loop Angled Bracket - 120/120mm",
+            "6x EK-Loop Hard Tube 12mm 0.8m - Acrylic",
+            "1x EK-CryoFuel Mystic Fog (Premix 1000mL)"
+          ]
+        }
+      ]
+    }
+  ],
+  "2023-2024": [
+    {
+      "title": "Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging",
+      "org": "Neuroergonomics and Neuroengineering Lab",
+      "blurb": "Master's thesis research project under Dr. Hasan Ayaz.",
+      "date": "Dec 2021 — June 2023",
+      "image": "/projects/kernel_flow.webp",
+      "body": [
+        "For my master's thesis, I investigated a miniaturized time-domain functional near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing the neural correlates of cognitive function. This was the first comprehensive cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the first cognitive study with Kernel Flow. Through this project, I developed and verified an experimental setup for investigating the neural correlates of cognitive tasks and designed open-source tools to facilitate optical neuroimaging research."
+      ],
+      "links": [
+        {
+          "label": "Thesis",
+          "href": "https://doi.org/10.17918/00001784"
+        },
+        {
+          "label": "GitHub (Experiment)",
+          "href": "https://github.com/AyazLab/KernelFlow_Experiment"
+        },
+        {
+          "label": "GitHub (Analysis)",
+          "href": "https://github.com/AyazLab/KernelFlow_Analysis"
+        }
+      ]
+    },
+    {
+      "title": "Novel Medical Devices for Neurocritical Care Monitoring",
+      "org": "Moberg Analytics",
+      "blurb": "Capturing contextual data and environmental factors in the neuro-ICU.",
+      "date": "March 2022 — June 2023",
+      "image": "/projects/moberg_medical_devices.webp",
+      "body": [
+        "In collaboration with UT Southwestern Medical Center, I designed and developed devices to capture intracranial pressure (ICP) context as well as light, temperature, and noise levels in neuro-ICU rooms. After the Stopcock Position Sensor for ICP context was clinically validated at UT Southwestern Medical Center, I initiated a joint effort with a Drexel <em>Senior Design</em> team to overhaul the devices and verify the sensors for environmental data capture."
+      ],
+      "links": [
+        {
+          "label": "Publication",
+          "href": "https://doi.org/10.1093/milmed/usad136"
+        }
+      ]
+    }
+  ],
+  "2022-2023": [
+    {
+      "title": "Neurocritical Care Patient Outcome Predictor",
+      "org": "Drexel University",
+      "blurb": "A GUI-based tool for clinicians to predict the outcome of a neurocritical care patient.",
+      "date": "Sept 2022 — Dec 2022",
+      "image": "/projects/neuro_outcome_predictor.webp",
+      "body": [
+        "Final project for the <em>Advanced Biocomputational Languages</em> graduate class taught by Dr. Ahmet Sacan. We created a GUI for clinicians that predicts the outcome of a neurocritical care patient. The parameters input for the current patient are compared to a database of retrospectively collected patient and medical data using a k-nearest neighbors algorithm. The utilized database is the Medical Information Mart for Intensive Care (MIMIC)-IV."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/ZackGoldblum/Neurocritial-Care-Patient-Outcome-Predictor"
+        }
+      ]
+    },
+    {
+      "title": "TrachTalk",
+      "org": "Drexel University",
+      "blurb": "An independently operable pediatric tracheostomy cuff controller.",
+      "date": "Sept 2021 — March 2022",
+      "image": "/projects/trachtalk.webp",
+      "body": [
+        "<em>Junior Design</em> project for a device that inflates or deflates a tracheostomy cuff at the press of a button. The inflation pressure is set by a clinician using the dial and is maintained while the patient is breathing. The patient presses the button when he or she wishes to speak and the cuff deflates. This work was presented at several Drexel Biomed events at which I participated on a Q&A panel for prospective students."
+      ],
+      "links": [
+        {
+          "label": "Project PDF",
+          "href": "/projects/trachtalk_project.pdf"
+        }
+      ]
+    },
+    {
+      "title": "BrainTech Podcast",
+      "org": "YouTube and Spotify",
+      "blurb": "I hosted and produced the BrainTech Podcast.",
+      "date": "Aug 2021 — March 2022",
+      "image": "/projects/braintech_podcast.webp",
+      "body": [
+        "Through conversations with researchers, engineers, business leaders, and thinkers in brain technology, I hope to inspire students who will shape the future of this field. This podcast was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu Onaral. Four episodes were created as initial run. I would like to return to this project at some point and do more with the BrainTech channel."
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "href": "https://www.youtube.com/@braintechyoutube"
+        }
+      ]
+    }
+  ],
+  "2021-2022": [
+    {
+      "title": "Real-Time EEG-Based BCI Motor Imagery Classifier",
+      "org": "Drexel University",
+      "blurb": "Acquires 8-channel EEG data from the OpenBCI Ultracortex Mark IV headset, creates left vs. right-hand motor imagery datasets, and classifies user intention in near real-time.",
+      "date": "March 2021 — June 2021",
+      "image": "/projects/BCI_project.webp",
+      "body": [
+        "Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We evaluated the classification accuracies of several convolutional neural network models from Army Research Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention from my OpenBCI headset. The software handles EEG data acquisition from the headset, pre-processing, and visualization, as well as dataset creation and real-time classification using our model."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/ZackGoldblum/BMES725-BCI-Motor-Imagery"
+        }
+      ]
+    }
+  ],
+  "2020-2021": [
+    {
+      "title": "NeoPET",
+      "org": "Johns Hopkins University MedHacks 2020",
+      "blurb": "The Novel application for Parkinson's and Essential Tremor (NeoPET) provides an innovative way of tracking Parkinson's and Essential Tremor symptoms and treatment responses through a smartphone.",
+      "date": "Sept 2020",
+      "image": "/projects/neoPET_project.webp",
+      "body": [
+        "Collaborated with students from UMN to create a mobile app for Parkinson's and Essential Tremor patients that uses machine learning to analyze and quantify symptom severity. We leveraged accelerometer, gyroscope, and keystroke data streams from a smartphone to train the model and create visualizations for clinicians to remotely monitor disease progression over time. Built on Android and Google Firebase."
+      ],
+      "links": [
+        {
+          "label": "DevPost",
+          "href": "https://devpost.com/software/neopet-2pgzxt"
+        }
+      ]
+    }
+  ]
+}

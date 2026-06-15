@@ -1,0 +1,197 @@
+[
+  {
+    "date": "Sept 2025 — Present",
+    "logo": "/about/pennhealthtech_thumbnail.webp",
+    "url": "https://healthtech.upenn.edu/",
+    "alt": "Penn Health-Tech",
+    "org": "Penn Health-Tech, University of Pennsylvania",
+    "positions": [
+      {
+        "title": "Student Fellow",
+        "bullets": [
+          "Penn Health-Tech is a university-wide effort to advance Penn's world-class breakthroughs into devices and health technologies."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Dec 2024 — Present",
+    "logo": "/about/neurobridge_thumbnail.webp",
+    "url": "https://www.med.upenn.edu/neurobridge/",
+    "alt": "NeuroBridge Lab",
+    "org": "NeuroBridge Lab, University of Pennsylvania",
+    "orgDetail": "Perelman School of Medicine",
+    "positions": [
+      {
+        "title": "Graduate Student Researcher",
+        "bullets": [
+          "Developing scalable tools and cloud-based infrastructure for translational neuroscience."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Aug 2024 — Present",
+    "logo": "/about/penn_thumbnail.webp",
+    "url": "https://be.seas.upenn.edu/",
+    "alt": "University of Pennsylvania",
+    "org": "University of Pennsylvania",
+    "orgDetail": "School of Engineering and Applied Science",
+    "positions": [
+      {
+        "title": "Bioengineering PhD Candidate",
+        "bullets": [
+          "Litt Lab under Brian Litt, MD.",
+          "NeuroBridge Lab under Nishant Sinha, PhD.",
+          "Ashton Fellow."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Sept 2023 — Present",
+    "logo": "/about/litt_lab_thumbnail.webp",
+    "url": "https://littlab.seas.upenn.edu/",
+    "alt": "Litt Lab",
+    "org": "Litt Lab, University of Pennsylvania",
+    "orgDetail": "Center for Neuroengineering and Therapeutics",
+    "positions": [
+      {
+        "title": "Graduate Student Researcher",
+        "span": "Aug 2024 — Present",
+        "bullets": [
+          "Developing AI for real-time patient-brain communication."
+        ]
+      },
+      {
+        "title": "Research Specialist",
+        "span": "Sept 2023 — Aug 2024",
+        "bullets": [
+          "Translational neuroengineering research for epilepsy patient care."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "June 2023 — Dec 2025",
+    "logo": "/about/sociail_thumbnail.webp",
+    "url": "https://www.sociail.com/",
+    "alt": "Sociail",
+    "org": "Sociail",
+    "positions": [
+      {
+        "title": "Advisor",
+        "span": "March 2024 — Dec 2025",
+        "bullets": [
+          "Go-to-market strategy and QA for public release."
+        ]
+      },
+      {
+        "title": "Co-Founder, Tech Lead",
+        "span": "June 2023 — March 2024",
+        "bullets": [
+          "Led a multinational software development team building our collaborative AI platform, Sociail Chat.",
+          "Conducted co-founder responsibilities around building the company itself, including interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Sept 2024 — Sept 2025",
+    "logo": "/about/nucleate_thumbnail.webp",
+    "url": "https://www.nucleate.xyz/",
+    "alt": "Nucleate",
+    "org": "Nucleate Philadelphia",
+    "positions": [
+      {
+        "title": "Co-Director, Mentorships",
+        "bullets": [
+          "Nucleate is a student-led, non-profit organization that empowers the next generation of biotech leaders by educating today's academic trainees."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Dec 2021 — Sept 2023",
+    "logo": "/about/ayaz_lab_thumbnail.webp",
+    "url": "https://ayazlab.com/",
+    "alt": "Ayaz Lab",
+    "org": "Neuroergonomics and Neuroengineering Lab, Drexel University",
+    "orgDetail": "Cognitive Neuroengineering and Quantitative Experimental Research Collaborative",
+    "positions": [
+      {
+        "title": "Research Assistant",
+        "bullets": [
+          "Thesis: <em>Evaluation of Cognitive Function using Time-Domain Optical Neuroimaging</em> under Dr. Hasan Ayaz.",
+          "Designed and implemented a comprehensive cognitive study time-synchronized with TD-fNIRS data acquisition.",
+          "Developed neuroimaging data processing, visualization, and analysis tools for TD-fNIRS.",
+          "Enrolled and recorded behavioral, physiological, and neuroimaging data from 15 participants.",
+          "Evaluated the neural correlates of cognitive function across a battery of eight cognitive tasks."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "June 2020 — June 2023",
+    "logo": "/about/moberg_analytics_thumbnail.webp",
+    "url": "https://moberganalytics.com/",
+    "alt": "Moberg Analytics",
+    "org": "Moberg Analytics",
+    "positions": [
+      {
+        "title": "Lead Engineer",
+        "span": "March 2022 — June 2023",
+        "bullets": [
+          "Led the development of a medical device for validating intracranial pressure recordings from conception through clinical trials at UT Southwestern Medical Center.",
+          "Managed a project to create contextual neuro-ICU sensors and a data aggregation system in collaboration with Drexel University.",
+          "Created an evaluation framework and assessed medical devices for performance in Prolonged Casualty Care."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "span": "June 2020 — March 2022",
+        "bullets": [
+          "Developed a cloud-based platform for neurophysiological data harmonization, visualization, and analytics.",
+          "Established a common data format for a large-scale neurocritical care patient data repository.",
+          "Published an open-source Python package to aid researchers and developers working with HDF5 files."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Sept 2019 — March 2020",
+    "logo": "/about/intact_vascular_thumbnail.webp",
+    "url": "https://www.linkedin.com/company/intactvascular/",
+    "alt": "Intact Vascular",
+    "org": "Intact Vascular",
+    "positions": [
+      {
+        "title": "Product Research & Development Engineer",
+        "bullets": [
+          "Performed product verification and validation activities for a novel stent-delivery system.",
+          "Completed CAD designs and requirement testing.",
+          "Improved UX aspects of the device and optimized the manufacturing assembly process."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "Sept 2018 — June 2023",
+    "logo": "/about/drexel_thumbnail.webp",
+    "url": "https://drexel.edu/biomed/",
+    "alt": "Drexel University",
+    "org": "Drexel University",
+    "orgDetail": "School of Biomedical Engineering, Science and Health Systems + Pennoni Honors College",
+    "positions": [
+      {
+        "title": "Biomedical Engineering Graduate",
+        "bullets": [
+          "BS in Biomedical Engineering <code>GPA 3.85</code>",
+          "MS in Biomedical Engineering <code>GPA 4.00</code>",
+          "Neuroengineering concentration + Neuroscience minor.",
+          "Graduated with Honors from the Pennoni Honors College."
+        ]
+      }
+    ]
+  }
+]

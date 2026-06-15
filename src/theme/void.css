@@ -1,0 +1,46 @@
+/* ============================================================
+   void.css — the palette. Deep space over a faint nebula.
+   Components reference only these semantic tokens;
+   no hard-coded colors anywhere else.
+   ============================================================ */
+
+:root {
+  /* Surfaces — near-black, no blue cast */
+  --bg-void: #040408;                          /* the deep field */
+  --bg-deep: #08080d;                          /* slightly lifted */
+  --bg-raised: rgba(255, 255, 255, 0.024);     /* barely-there panel */
+  --bg-elevated: rgba(255, 255, 255, 0.05);    /* hover / active */
+  --bg-hairline: rgba(255, 255, 255, 0.045);   /* whisper fill */
+
+  /* Text */
+  --text-bright: #eef2fc;                      /* headings, starlight */
+  --text-body: #aeb8d0;                        /* body copy */
+  --text-dim: #6d7894;                         /* meta, captions */
+
+  /* Accents */
+  --accent-ion: #69d8ff;                       /* primary — ion blue (talks) */
+  --accent-nebula: #a78bfa;                    /* violet — posters */
+  --accent-aurora: #56e8a9;                    /* green — publications */
+  --accent-comet: #53e0c8;                     /* teal — pre-prints (almost-published) */
+  --accent-flare: #ffb86b;                     /* amber — live demos, awards */
+  --accent-pulsar: #ff7eb6;                    /* pink — thesis */
+
+  --accent-ion-soft: rgba(105, 216, 255, 0.12);
+  --accent-nebula-soft: rgba(167, 139, 250, 0.13);
+  --accent-aurora-soft: rgba(86, 232, 169, 0.12);
+  --accent-comet-soft: rgba(83, 224, 200, 0.12);
+  --accent-flare-soft: rgba(255, 184, 107, 0.13);
+  --accent-pulsar-soft: rgba(255, 126, 182, 0.13);
+
+  /* Lines & glows */
+  --line: rgba(255, 255, 255, 0.1);
+  --line-soft: rgba(255, 255, 255, 0.055);
+  --line-bright: rgba(255, 255, 255, 0.22);
+  --glow-ion: 0 0 24px rgba(105, 216, 255, 0.18);
+  --glow-soft: 0 0 28px rgba(225, 232, 250, 0.08);
+
+  /* Hero gradient — starlight sweep */
+  --grad-starlight: linear-gradient(120deg, #eef2fc 20%, #9fd8ff 55%, #b9a4ff 85%);
+
+  color-scheme: dark;
+}

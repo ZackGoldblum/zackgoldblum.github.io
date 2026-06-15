@@ -1,0 +1,445 @@
+/* ============================================================
+   components.css — shared component styling.
+   ============================================================ */
+
+/* ---------- Nav ---------- */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(4, 4, 8, 0.7);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.nav__inner {
+  max-width: var(--width-content);
+  margin: 0 auto;
+  height: var(--nav-height);
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav__name {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav__link {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-body);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav__link:hover {
+  color: var(--text-bright);
+}
+
+.nav__link--active {
+  color: var(--accent-ion);
+}
+
+.nav__link--active::after {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: 2px;
+  height: 1px;
+  background: var(--accent-ion);
+  box-shadow: 0 0 8px var(--accent-ion);
+}
+
+/* Burger — hidden on desktop */
+.nav__burger {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  transition: background var(--dur-med) var(--ease-out);
+}
+
+.nav__burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 1.5px;
+  background: var(--text-bright);
+  border-radius: 2px;
+  transition: transform var(--dur-med) var(--ease-out), top var(--dur-med) var(--ease-out);
+}
+
+.nav__burger span:nth-child(1) { top: 16px; }
+.nav__burger span:nth-child(2) { top: 23px; }
+
+.nav__burger--open span:nth-child(1) { top: 19.5px; transform: rotate(45deg); }
+.nav__burger--open span:nth-child(2) { top: 19.5px; transform: rotate(-45deg); }
+
+/* Mobile overlay — sits beneath the navbar (z 40 < 50) so the
+   burger stays visible and clickable while it's open. */
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--space-6);
+  padding: var(--nav-height) var(--gutter) var(--space-7);
+  background: rgba(3, 3, 7, 0.4); /* 60% transparent */
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-med) var(--ease-out), visibility var(--dur-med);
+}
+
+.nav__overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+}
+
+.nav__overlay-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-bright);
+  text-decoration: none;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line-soft);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.nav__overlay-link:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav__overlay-link:first-child { border-top: 1px solid var(--line-soft); }
+
+.nav__overlay--open .nav__overlay-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav__overlay-link--active { color: var(--accent-ion); }
+
+.nav__overlay-index {
+  color: var(--accent-ion);
+  font-size: var(--text-2xs);
+}
+
+.nav__overlay-socials { margin-top: var(--space-2); }
+
+/* ---------- Socials ---------- */
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.socials__link {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--text-dim);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.socials__link:hover {
+  color: var(--text-bright);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  border-top: 1px solid var(--line-soft);
+  background: rgba(4, 4, 8, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.footer__inner {
+  max-width: var(--width-content);
+  margin: 0 auto;
+  padding: var(--space-5) var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.footer__meta {
+  color: var(--text-dim);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ---------- Separator bar ---------- */
+/* A thin vertical rule — reads as punctuation, not another background star,
+   and centered on the cap height rather than the baseline. */
+.sep {
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin: 0 0.55em;
+  background: currentColor;
+  vertical-align: -0.08em;
+  opacity: 0.6;
+}
+
+/* ---------- Page intro ---------- */
+
+.page-intro { margin-bottom: var(--space-7); }
+
+.page-intro__sep { color: var(--text-dim); }
+
+.page-intro__title {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.page-intro__lede {
+  margin-top: var(--space-3);
+  max-width: 56ch;
+  color: var(--text-body);
+}
+
+/* ---------- Chip ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  background: var(--bg-hairline);
+  white-space: nowrap;
+}
+
+/* Chip as a filter button */
+.chip--btn {
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.chip--btn:hover {
+  color: var(--text-bright);
+  border-color: var(--line-bright);
+}
+
+.chip--ion { color: var(--accent-ion); background: var(--accent-ion-soft); border-color: transparent; }
+.chip--nebula { color: var(--accent-nebula); background: var(--accent-nebula-soft); border-color: transparent; }
+.chip--aurora { color: var(--accent-aurora); background: var(--accent-aurora-soft); border-color: transparent; }
+.chip--comet { color: var(--accent-comet); background: var(--accent-comet-soft); border-color: transparent; }
+.chip--flare { color: var(--accent-flare); background: var(--accent-flare-soft); border-color: transparent; }
+.chip--pulsar { color: var(--accent-pulsar); background: var(--accent-pulsar-soft); border-color: transparent; }
+.chip--dim { color: var(--text-body); background: var(--bg-elevated); border-color: transparent; }
+
+/* Active filter buttons keep a muted outline in their accent */
+.chip--btn.chip--ion { border-color: color-mix(in srgb, var(--accent-ion) 40%, transparent); }
+.chip--btn.chip--nebula { border-color: color-mix(in srgb, var(--accent-nebula) 40%, transparent); }
+.chip--btn.chip--aurora { border-color: color-mix(in srgb, var(--accent-aurora) 40%, transparent); }
+.chip--btn.chip--comet { border-color: color-mix(in srgb, var(--accent-comet) 40%, transparent); }
+.chip--btn.chip--flare { border-color: color-mix(in srgb, var(--accent-flare) 40%, transparent); }
+.chip--btn.chip--pulsar { border-color: color-mix(in srgb, var(--accent-pulsar) 40%, transparent); }
+.chip--btn.chip--dim { border-color: var(--line-bright); } /* same outline as hover */
+
+/* ---------- Stars rating ---------- */
+
+.stars {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.stars__base,
+.stars__fill {
+  display: inline-flex;
+  gap: 2px;
+}
+
+/* Never compress glyphs — the fill row clips, it doesn't shrink */
+.stars__base svg,
+.stars__fill svg {
+  flex: none;
+}
+
+.stars__base { color: rgba(140, 160, 210, 0.28); }
+
+.stars__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: var(--accent-flare);
+  white-space: nowrap;
+}
+
+/* ---------- Card — minimal transparent panel ----------
+   A hairline and a whisper of fill; the starfield passes through. */
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  transition: border-color var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out);
+}
+
+.card--hover:hover {
+  border-color: var(--line);
+  transform: translateY(-2px);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-bright);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--bg-hairline);
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.btn:hover {
+  border-color: var(--accent-ion);
+  color: var(--accent-ion);
+}
+
+.btn--primary {
+  border-color: var(--accent-ion);
+  color: var(--accent-ion);
+  background: var(--accent-ion-soft);
+}
+
+/* Text glyph (e.g. +/− build-list toggle) */
+.btn__arrow { font-family: var(--font-mono); font-size: var(--text-xs); }
+/* SVG link arrow — nudged to sit on the text baseline */
+svg.btn__arrow { margin-top: 1px; }
+
+/* ---------- Lightbox — full-size book cover ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  cursor: zoom-out;
+}
+
+.lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 3, 7, 0.78);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out);
+}
+
+.lightbox--open .lightbox__backdrop { opacity: 1; }
+
+.lightbox__img {
+  position: absolute;
+  border-radius: var(--radius-md);
+  /* Border and shadow belong to the full-size view — both fade with the zoom */
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: left var(--dur-med) var(--ease-out), top var(--dur-med) var(--ease-out),
+    width var(--dur-med) var(--ease-out), height var(--dur-med) var(--ease-out),
+    box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out);
+}
+
+.lightbox--open .lightbox__img {
+  border-color: var(--line);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox__backdrop,
+  .lightbox__img { transition: none; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 720px) {
+  .nav__links { display: none; }
+  .nav__burger { display: block; }
+  .footer__inner { justify-content: center; text-align: center; }
+
+  /* Homepage hero is self-contained — drop the navbar bar and let the
+     burger float on its own so it stays reachable. */
+  .nav--home {
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav__name { font-size: var(--text-base); }
+}
