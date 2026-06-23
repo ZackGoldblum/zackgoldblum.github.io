@@ -1,6 +1,17 @@
 {
   "2026-2027": [
     {
+      "type": "Publication",
+      "title": "The Seizure Embedding Map: A Spatio-Temporal Transformer for Comparing Patients by Ictal Intracranial EEG Features at Scale",
+      "citation": "Pattnaik AR*, Xu Z*, Ojemann WKS, Aguila CA, Lucas A, Lavelle S, <b>Goldblum Z</b>, Galer PD, Gallagher R, Davis KA, Sinha N, Conrad EC, Litt B. <em>Journal of Neural Engineering</em>. June 22, 2026. DOI: 10.1088/1741-2552/ae805d. *Equal contribution.",
+      "links": [
+        {
+          "label": "Journal of Neural Engineering",
+          "href": "https://iopscience.iop.org/article/10.1088/1741-2552/ae805d"
+        }
+      ]
+    },
+    {
       "type": "Poster",
       "title": "An Implantable Device that Converses with Patients and Learns to Co-Manage Epilepsy",
       "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>AI in Epilepsy and Neurological Disorders</em>. San Juan, PR. March 16-19, 2026. *Equal contribution.",
