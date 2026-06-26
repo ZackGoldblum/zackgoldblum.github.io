@@ -3,6 +3,12 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "The Last Wish",
+        "author": "Andrzej Sapkowski",
+        "cover": "/books/the_last_wish.webp",
+        "rating": 4
+      },
+      {
         "title": "Crowbar",
         "author": "Andrew Edwards",
         "cover": "/books/crowbar.webp",
