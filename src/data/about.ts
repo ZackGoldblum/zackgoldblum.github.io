@@ -13,7 +13,7 @@ export interface TimelinePosition {
 export interface TimelineEntry {
   date: string
   logo: string
-  url: string
+  url?: string
   alt: string
   org: string
   /** \n inserts a line break (rendered with white-space: pre-line). */

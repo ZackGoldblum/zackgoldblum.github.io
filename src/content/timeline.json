@@ -193,5 +193,22 @@
         ]
       }
     ]
+  },
+  {
+    "date": "June 2015 — Sept 2019",
+    "logo": "/about/tspa_thumbnail.webp",
+    "url": "https://www.yourtechpa.com/",
+    "alt": "Tech Solutions PA",
+    "org": "Tech Solutions PA",
+    "positions": [
+      {
+        "title": "Assistant IT Technician",
+        "bullets": [
+          "Installed servers, security camera systems, wireless networks, and POS hardware at project sites across the tri-state area.",
+          "Completed and certified ethernet data cable runs.",
+          "Built, repaired, and upgraded client computers."
+        ]
+      }
+    ]
   }
 ]

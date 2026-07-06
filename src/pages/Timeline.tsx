@@ -49,9 +49,15 @@ export default function Timeline() {
               </div>
               <div className="timeline__content card">
                 <div className="timeline__head">
-                  <a href={entry.url} target="_blank" rel="noopener noreferrer" className="timeline__logo">
-                    <img src={entry.logo} alt={entry.alt} loading="lazy" />
-                  </a>
+                  {entry.url ? (
+                    <a href={entry.url} target="_blank" rel="noopener noreferrer" className="timeline__logo">
+                      <img src={entry.logo} alt={entry.alt} loading="lazy" />
+                    </a>
+                  ) : (
+                    <span className="timeline__logo">
+                      <img src={entry.logo} alt={entry.alt} loading="lazy" />
+                    </span>
+                  )}
                   <div>
                     <p className="timeline__date mono">{entry.date.toUpperCase()}</p>
                     <p className="timeline__org">{entry.org}</p>
