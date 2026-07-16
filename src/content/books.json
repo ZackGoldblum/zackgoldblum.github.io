@@ -3,6 +3,12 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "Sword of Destiny",
+        "author": "Andrzej Sapkowski",
+        "cover": "/books/sword_of_destiny.webp",
+        "rating": 3.5
+      },
+      {
         "title": "The Last Wish",
         "author": "Andrzej Sapkowski",
         "cover": "/books/the_last_wish.webp",
