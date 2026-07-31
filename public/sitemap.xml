@@ -5,19 +5,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.zackgoldblum.com/projects</loc>
+    <loc>https://www.zackgoldblum.com/projects/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.zackgoldblum.com/research</loc>
+    <loc>https://www.zackgoldblum.com/research/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.zackgoldblum.com/timeline</loc>
+    <loc>https://www.zackgoldblum.com/timeline/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.zackgoldblum.com/bookshelf</loc>
+    <loc>https://www.zackgoldblum.com/bookshelf/</loc>
     <priority>0.5</priority>
   </url>
 </urlset>

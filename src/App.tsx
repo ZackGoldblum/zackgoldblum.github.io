@@ -52,11 +52,26 @@ function setMetaTag(selector: string, content: string) {
   document.head.querySelector<HTMLMetaElement>(selector)?.setAttribute('content', content)
 }
 
+/**
+ * GitHub Pages 301s /projects to /projects/, so both forms reach the app and
+ * must resolve to the same PAGE_META entry. Router matching already ignores the
+ * trailing slash; useLocation().pathname does not.
+ */
+function metaKey(pathname: string) {
+  return pathname !== '/' && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
+}
+
+/** The trailing-slash form is what Pages serves with a 200, so that's canonical. */
+function absoluteUrl(key: string) {
+  return key === '/' ? `${SITE_URL}/` : `${SITE_URL}${key}/`
+}
+
 function PageMeta() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    const meta = PAGE_META[pathname]
+    const key = metaKey(pathname)
+    const meta = PAGE_META[key]
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
 
     if (!meta) {
@@ -70,14 +85,14 @@ function PageMeta() {
     setMetaTag('meta[name="description"]', meta.description)
     setMetaTag('meta[property="og:title"]', meta.title)
     setMetaTag('meta[property="og:description"]', meta.description)
-    setMetaTag('meta[property="og:url"]', SITE_URL + pathname)
+    setMetaTag('meta[property="og:url"]', absoluteUrl(key))
 
     if (!canonical) {
       canonical = document.createElement('link')
       canonical.rel = 'canonical'
       document.head.appendChild(canonical)
     }
-    canonical.href = SITE_URL + pathname
+    canonical.href = absoluteUrl(key)
   }, [pathname])
 
   return null
