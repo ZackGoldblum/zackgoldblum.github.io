@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build && cp dist/index.html dist/404.html",
+    "predeploy": "npm run build && cp dist/index.html dist/404.html && for r in projects research bookshelf timeline; do mkdir -p \"dist/$r\" && cp dist/index.html \"dist/$r/index.html\"; done",
     "deploy": "echo 'zackgoldblum.com' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {

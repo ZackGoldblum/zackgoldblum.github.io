@@ -18,6 +18,71 @@ function ScrollToTop() {
   return null
 }
 
+const SITE_URL = 'https://www.zackgoldblum.com'
+
+/** Per-route <title>/description/canonical — index.html can only carry one set. */
+const PAGE_META: Record<string, { title: string; description: string }> = {
+  '/': {
+    title: 'Zack Goldblum',
+    description:
+      'Zack Goldblum — engineer and scientist working at the intersection of neurotechnology and artificial intelligence.',
+  },
+  '/projects': {
+    title: 'Projects — Zack Goldblum',
+    description:
+      "Collection of projects I've worked on over the years. Mix of things from school, research, and personal endeavors.",
+  },
+  '/research': {
+    title: 'Research — Zack Goldblum',
+    description:
+      'Published and presented research, from neurocritical care and optical neuroimaging to translational neuroengineering and neuroinformatics.',
+  },
+  '/bookshelf': {
+    title: 'Bookshelf — Zack Goldblum',
+    description:
+      "What I've been reading. Mostly sci-fi, some classics and non-fiction mixed in.",
+  },
+  '/timeline': {
+    title: 'Timeline — Zack Goldblum',
+    description: "Where I've been and what I'm doing now.",
+  },
+}
+
+function setMetaTag(selector: string, content: string) {
+  document.head.querySelector<HTMLMetaElement>(selector)?.setAttribute('content', content)
+}
+
+function PageMeta() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    const meta = PAGE_META[pathname]
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]')
+
+    if (!meta) {
+      // Unknown path: GitHub Pages already returns a 404 status, so leave it uncanonicalized.
+      document.title = 'Page not found — Zack Goldblum'
+      canonical?.remove()
+      return
+    }
+
+    document.title = meta.title
+    setMetaTag('meta[name="description"]', meta.description)
+    setMetaTag('meta[property="og:title"]', meta.title)
+    setMetaTag('meta[property="og:description"]', meta.description)
+    setMetaTag('meta[property="og:url"]', SITE_URL + pathname)
+
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.rel = 'canonical'
+      document.head.appendChild(canonical)
+    }
+    canonical.href = SITE_URL + pathname
+  }, [pathname])
+
+  return null
+}
+
 export default function App() {
   const { pathname } = useLocation()
 
@@ -28,6 +93,7 @@ export default function App() {
         <Nav />
         <main className="site__main">
           <ScrollToTop />
+          <PageMeta />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

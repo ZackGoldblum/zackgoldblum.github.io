@@ -42,8 +42,15 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-      - name: Create 404.html
-        run: cp dist/index.html dist/404.html
+      # GitHub Pages has no server-side rewrites, so every client-side route
+      # needs a real index.html or it is served as 404.html with a 404 status.
+      - name: Create route entry points and 404.html
+        run: |
+          cp dist/index.html dist/404.html
+          for route in projects research bookshelf timeline; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
