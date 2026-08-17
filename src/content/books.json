@@ -928,6 +928,51 @@
         "cover": "/books/lockdown.webp"
       },
       {
+        "title": "Scorpia Rising",
+        "author": "Anthony Horowitz",
+        "cover": "/books/scorpia_rising.webp"
+      },
+      {
+        "title": "Crocodile Tears",
+        "author": "Anthony Horowitz",
+        "cover": "/books/crocodile_tears.webp"
+      },
+      {
+        "title": "Snakehead",
+        "author": "Anthony Horowitz",
+        "cover": "/books/snakehead.webp"
+      },
+      {
+        "title": "Ark Angel",
+        "author": "Anthony Horowitz",
+        "cover": "/books/ark_angel.webp"
+      },
+      {
+        "title": "Scorpia",
+        "author": "Anthony Horowitz",
+        "cover": "/books/scorpia.webp"
+      },
+      {
+        "title": "Eagle Strike",
+        "author": "Anthony Horowitz",
+        "cover": "/books/eagle_strike.webp"
+      },
+      {
+        "title": "Skeleton Key",
+        "author": "Anthony Horowitz",
+        "cover": "/books/skeleton_key.webp"
+      },
+      {
+        "title": "Point Blanc",
+        "author": "Anthony Horowitz",
+        "cover": "/books/point_blanc.webp"
+      },
+      {
+        "title": "Stormbreaker",
+        "author": "Anthony Horowitz",
+        "cover": "/books/stormbreaker.webp"
+      },
+      {
         "title": "Flesh & Bone",
         "author": "Jonathan Maberry",
         "cover": "/books/flesh_and_bone.webp"
