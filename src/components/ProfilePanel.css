@@ -1,0 +1,245 @@
+/* ============================================================
+   ProfilePanel.css — futuristic HUD "inspector" panel.
+   Chamfered frame, glowing header bar, grid viewport with a
+   holographic portrait, and a data-readout column.
+   ============================================================ */
+
+.hud {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+}
+
+/* one unified card — header band + body share the same rounded frame, fill,
+   and hairline as the rest of the site's cards. */
+.hud__panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  background: var(--bg-raised);
+  /* a faint ion edge-glow ties it to the header without a separate frame */
+  box-shadow: 0 0 0 1px rgba(105, 216, 255, 0.04),
+    0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- header ---------- */
+
+.hud__head {
+  position: relative;
+  padding: var(--space-6) var(--space-6) var(--space-5);
+}
+
+/* glowing divider rule between header and body — brightest at the left,
+   fading out to the right */
+.hud__head::after {
+  content: '';
+  position: absolute;
+  left: var(--space-6);
+  right: var(--space-6);
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent-ion) 75%, transparent),
+    color-mix(in srgb, var(--accent-ion) 14%, transparent) 55%,
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(105, 216, 255, 0.25);
+}
+
+.hud__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--accent-ion);
+}
+
+.hud__cube {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-ion);
+}
+
+.hud__title {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 5.5vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.0;
+  color: var(--text-bright);
+  text-shadow: 0 0 26px rgba(105, 216, 255, 0.22);
+}
+
+/* ---------- body ---------- */
+
+.hud__body {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: var(--space-6);
+  /* inside the unified card — no frame of its own */
+  padding: var(--space-6);
+}
+
+/* viewport — the "item" stage */
+.hud__viewport {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-5);
+}
+
+.hud__code {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent-ion) 70%, var(--text-dim));
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.hud__code--bl { position: static; }
+
+/* holographic portrait */
+.hud__portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent-ion) 35%, transparent);
+  box-shadow: 0 0 22px rgba(105, 216, 255, 0.15),
+    inset 0 0 30px rgba(105, 216, 255, 0.08);
+}
+
+.hud__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.04) contrast(1.05) saturate(1.02);
+}
+
+/* scanline overlay + cyan projection tint */
+.hud__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(105, 216, 255, 0.1), rgba(105, 216, 255, 0) 45%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(105, 216, 255, 0.07) 0 1px,
+      transparent 1px 3px
+    );
+  mix-blend-mode: screen;
+}
+
+/* slow holographic sweep */
+.hud__scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 38%;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(105, 216, 255, 0.16),
+    transparent
+  );
+  animation: hud-sweep 5.5s var(--ease-glide) infinite;
+}
+
+@keyframes hud-sweep {
+  0% { top: -40%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+
+/* ---------- readout column ---------- */
+
+.hud__readout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.hud__fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.hud__field {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.hud__k {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.hud__k::before {
+  content: '» ';
+  color: var(--accent-ion);
+}
+
+.hud__v {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-bright);
+}
+
+.hud__desc {
+  margin: 0;
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
+}
+
+.hud__footer {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line-soft);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 640px) {
+  .hud__body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+    padding: var(--space-5);
+  }
+  .hud__viewport { max-width: 220px; margin: 0 auto; }
+  .hud__bar { padding: var(--space-3) var(--space-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hud__scan { animation: none; display: none; }
+}

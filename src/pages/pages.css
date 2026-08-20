@@ -11,6 +11,12 @@
   display: grid;
 }
 
+/* Holographic dossier card — center it in the viewport between nav/footer. */
+.home--card {
+  align-content: center;
+  justify-items: center;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

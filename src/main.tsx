@@ -16,6 +16,7 @@ import './theme/void.css'
 import './theme/typography.css'
 import './styles/base.css'
 import './components/components.css'
+import './components/ProfilePanel.css'
 import './pages/pages.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
