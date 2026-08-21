@@ -8,6 +8,58 @@ interface Lightbox {
   book: Book
   rect: DOMRect
   aspect: number // natural width / height of the cover
+  color: [number, number, number] // dominant cover color for the 3D book's generated faces
+}
+
+/**
+ * Dominant color of a loaded cover image. Downsamples to a small canvas,
+ * buckets pixels at 4 bits/channel, and votes weighted toward saturated
+ * mid-tones so white pages and black borders don't win.
+ */
+function coverColor(img: HTMLImageElement): [number, number, number] {
+  const FALLBACK: [number, number, number] = [74, 76, 86]
+  if (!img.complete || !img.naturalWidth) return FALLBACK
+  try {
+    const w = 40
+    const h = Math.max(1, Math.round((w * img.naturalHeight) / img.naturalWidth))
+    const canvas = document.createElement('canvas')
+    canvas.width = w
+    canvas.height = h
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return FALLBACK
+    ctx.drawImage(img, 0, 0, w, h)
+    const { data } = ctx.getImageData(0, 0, w, h)
+    const score = new Map<number, number>()
+    const sum = new Map<number, [number, number, number, number]>()
+    let best = -1
+    let bestKey = 0
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i]
+      const g = data[i + 1]
+      const b = data[i + 2]
+      const max = Math.max(r, g, b)
+      const sat = max === 0 ? 0 : (max - Math.min(r, g, b)) / max
+      const lum = max / 255
+      const weight = (0.06 + sat) * (lum < 0.09 || lum > 0.94 ? 0.12 : 1)
+      const key = ((r >> 4) << 8) | ((g >> 4) << 4) | (b >> 4)
+      const s = (score.get(key) ?? 0) + weight
+      score.set(key, s)
+      const acc = sum.get(key) ?? [0, 0, 0, 0]
+      acc[0] += r
+      acc[1] += g
+      acc[2] += b
+      acc[3]++
+      sum.set(key, acc)
+      if (s > best) {
+        best = s
+        bestKey = key
+      }
+    }
+    const [r, g, b, n] = sum.get(bestKey)!
+    return [Math.round(r / n), Math.round(g / n), Math.round(b / n)]
+  } catch {
+    return FALLBACK
+  }
 }
 
 export default function Bookshelf() {
@@ -51,6 +103,7 @@ export default function Bookshelf() {
                       book,
                       rect,
                       aspect: img.naturalWidth / img.naturalHeight || 2 / 3,
+                      color: coverColor(img),
                     })
                   }}
                 >
@@ -71,6 +124,7 @@ export default function Bookshelf() {
           book={lightbox.book}
           fromRect={lightbox.rect}
           aspect={lightbox.aspect}
+          color={lightbox.color}
           onClose={() => setLightbox(null)}
         />
       )}

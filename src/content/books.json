@@ -6,67 +6,78 @@
         "title": "Blood of Elves",
         "author": "Andrzej Sapkowski",
         "cover": "/books/blood_of_elves.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 432
       },
       {
         "title": "Sword of Destiny",
         "author": "Andrzej Sapkowski",
         "cover": "/books/sword_of_destiny.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 416
       },
       {
         "title": "The Last Wish",
         "author": "Andrzej Sapkowski",
         "cover": "/books/the_last_wish.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 352
       },
       {
         "title": "Crowbar",
         "author": "Andrew Edwards",
         "cover": "/books/crowbar.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 242
       },
       {
         "title": "Meditations",
         "author": "Marcus Aurelius",
         "cover": "/books/meditations.webp",
-        "rating": 2.5
+        "rating": 2.5,
+        "pages": 272
       },
       {
         "title": "The Odyssey",
         "author": "Homer",
         "cover": "/books/the_odyssey.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 541
       },
       {
         "title": "King of Dogs",
         "author": "Andrew Edwards",
         "cover": "/books/king_of_dogs.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 326
       },
       {
         "title": "Leviathan Falls",
         "author": "James S.A. Corey",
         "cover": "/books/leviathan_falls.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 560
       },
       {
         "title": "Tiamat's Wrath",
         "author": "James S.A. Corey",
         "cover": "/books/tiamats_wrath.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 576
       },
       {
         "title": "Persepolis Rising",
         "author": "James S.A. Corey",
         "cover": "/books/persepolis_rising.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 592
       },
       {
         "title": "The Vital Question",
         "author": "Nick Lane",
         "cover": "/books/the_vital_question.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 368
       }
     ]
   },
@@ -77,151 +88,176 @@
         "title": "The Scaling Era: An Oral History of AI",
         "author": "Dwarkesh Patel",
         "cover": "/books/the_scaling_era.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 248
       },
       {
         "title": "Babylon's Ashes",
         "author": "James S.A. Corey",
         "cover": "/books/babylons_ashes.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 544
       },
       {
         "title": "Nemesis Games",
         "author": "James S.A. Corey",
         "cover": "/books/nemesis_games.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 536
       },
       {
         "title": "Cibola Burn",
         "author": "James S.A. Corey",
         "cover": "/books/cibola_burn.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 591
       },
       {
         "title": "Biomega 6",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_6.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 200
       },
       {
         "title": "Biomega 5",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_5.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 200
       },
       {
         "title": "Biomega 4",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_4.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 192
       },
       {
         "title": "Biomega 3",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_3.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 216
       },
       {
         "title": "Biomega 2",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_2.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 216
       },
       {
         "title": "Biomega 1",
         "author": "Tsutomu Nihei",
         "cover": "/books/biomega_1.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 220
       },
       {
         "title": "Abaddon's Gate",
         "author": "James S.A. Corey",
         "cover": "/books/abaddons_gate.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 576
       },
       {
         "title": "Caliban's War",
         "author": "James S.A. Corey",
         "cover": "/books/calibans_war.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 595
       },
       {
         "title": "Leviathan Wakes",
         "author": "James S.A. Corey",
         "cover": "/books/leviathan_wakes.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 561
       },
       {
         "title": "NOiSE",
         "author": "Tsutomu Nihei",
         "cover": "/books/noise.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 188
       },
       {
         "title": "Black Hole Blues",
         "author": "Janna Levin",
         "cover": "/books/black_hole_blues.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 256
       },
       {
         "title": "Abundance",
         "author": "Ezra Klein & Derek Thompson",
         "cover": "/books/abundance.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 320
       },
       {
         "title": "Zero to One",
         "author": "Peter Thiel",
         "cover": "/books/zero_to_one.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 224
       },
       {
         "title": "Sleep and the Soul",
         "author": "Greg Egan",
         "cover": "/books/sleep_and_the_soul.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 382
       },
       {
         "title": "The Techno-Optimist Manifesto",
         "author": "Marc Andressen",
         "cover": "/books/the_techno-optimist_manifesto.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 81
       },
       {
         "title": "The Quantum Thief",
         "author": "Hannu Rajaniemi",
         "cover": "/books/the_quantum_thief.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 367
       },
       {
         "title": "The Metamorphosis of Prime Intellect",
         "author": "Roger Williams",
         "cover": "/books/the_metamorphosis_of_prime_intellect.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 175
       },
       {
         "title": "The Return of the King",
         "author": "J. R. R. Tolkien",
         "cover": "/books/the_return_of_the_king.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 512
       },
       {
         "title": "The Two Towers",
         "author": "J. R. R. Tolkien",
         "cover": "/books/the_two_towers.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 416
       },
       {
         "title": "The Fellowship of the Ring",
         "author": "J. R. R. Tolkien",
         "cover": "/books/the_fellowship_of_the_ring.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 480
       },
       {
         "title": "The Hobbit",
         "author": "J. R. R. Tolkien",
         "cover": "/books/the_hobbit.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 320
       }
     ]
   },
@@ -232,109 +268,127 @@
         "title": "Quanta and Fields",
         "author": "Sean Carroll",
         "cover": "/books/the_biggest_ideas_quanta_and_fields.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 289
       },
       {
         "title": "Space, Time, and Motion",
         "author": "Sean Carroll",
         "cover": "/books/the_biggest_ideas_space_time_and_motion.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 304
       },
       {
         "title": "Shutter Island",
         "author": "Dennis Lehane",
         "cover": "/books/shutter_island.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 400
       },
       {
         "title": "Axiomatic",
         "author": "Greg Egan",
         "cover": "/books/axiomatic.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 384
       },
       {
         "title": "Welcome to the Universe in 3D: A Visual Tour",
         "author": "Neil deGrasse Tyson",
         "cover": "/books/welcome_to_the_universe_in_3d.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 208
       },
       {
         "title": "Diaspora",
         "author": "Greg Egan",
         "cover": "/books/diaspora.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 352
       },
       {
         "title": "Permutation City",
         "author": "Greg Egan",
         "cover": "/books/permutation_city.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 352
       },
       {
         "title": "Do Androids Dream of Electric Sheep?",
         "author": "Philip K. Dick",
         "cover": "/books/do_androids_dream_of_electric_sheep.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 229
       },
       {
         "title": "Mona Lisa Overdrive",
         "author": "William Gibson",
         "cover": "/books/mona_lisa_overdrive.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 314
       },
       {
         "title": "Count Zero",
         "author": "William Gibson",
         "cover": "/books/count_zero.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 305
       },
       {
         "title": "Neuromancer",
         "author": "William Gibson",
         "cover": "/books/neuromancer.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 297
       },
       {
         "title": "Burning Chrome",
         "author": "William Gibson",
         "cover": "/books/burning_chrome.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 204
       },
       {
         "title": "Thinking in Systems",
         "author": "Donella H. Meadows",
         "cover": "/books/thinking_in_systems.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 240
       },
       {
         "title": "Reincarnation Blues",
         "author": "Michael Poore",
         "cover": "/books/reincarnation_blues.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 384
       },
       {
         "title": "The Lovecraft Compendium",
         "author": "H. P. Lovecraft",
         "cover": "/books/the_lovecraft_compendium.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 208
       },
       {
         "title": "BLAME! 6",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_6.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 330
       },
       {
         "title": "BLAME! 5",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_5.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 346
       },
       {
         "title": "BLAME! 4",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_4.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 370
       }
     ]
   },
@@ -345,115 +399,134 @@
         "title": "BLAME! 3",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_3.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 354
       },
       {
         "title": "BLAME! 2",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_2.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 382
       },
       {
         "title": "BLAME! 1",
         "author": "Tsutomu Nihei",
         "cover": "/books/blame_1.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 408
       },
       {
         "title": "Those Who Resist",
         "author": "N. C. Scrimgeour",
         "cover": "/books/those_who_resist.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 458
       },
       {
         "title": "Those Once Forgotten",
         "author": "N. C. Scrimgeour",
         "cover": "/books/those_once_forgotten.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 414
       },
       {
         "title": "Those Left Behind",
         "author": "N. C. Scrimgeour",
         "cover": "/books/those_left_behind.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 403
       },
       {
         "title": "Children of Memory",
         "author": "Adrian Tchaikovsky",
         "cover": "/books/children_of_memory.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 512
       },
       {
         "title": "What is ChatGPT Doing and Why Does It Work?",
         "author": "Stephen Wolfram",
         "cover": "/books/what_is_chatgpt_doing_and_why_does_it_work.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 102
       },
       {
         "title": "Apex",
         "author": "Ramez Naam",
         "cover": "/books/apex.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 608
       },
       {
         "title": "Crux",
         "author": "Ramez Naam",
         "cover": "/books/crux.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 624
       },
       {
         "title": "Nexus",
         "author": "Ramez Naam",
         "cover": "/books/nexus.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 528
       },
       {
         "title": "Exhalation",
         "author": "Ted Chiang",
         "cover": "/books/exhalation.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 368
       },
       {
         "title": "Stories of Your Life and Others",
         "author": "Ted Chiang",
         "cover": "/books/stories_of_your_life_and_others.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 304
       },
       {
         "title": "Animal Farm",
         "author": "George Orwell",
         "cover": "/books/animal_farm.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 140
       },
       {
         "title": "The Exodus Betrayal",
         "author": "N. C. Scrimgeour",
         "cover": "/books/the_exodus_betrayal.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 276
       },
       {
         "title": "You Look Like a Thing and I Love You",
         "author": "Janelle Shane",
         "cover": "/books/you_look_like_a_thing_and_i_love_you.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 272
       },
       {
         "title": "Livewired",
         "author": "David Eagleman",
         "cover": "/books/livewired.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 320
       },
       {
         "title": "Project Hail Mary",
         "author": "Andy Weir",
         "cover": "/books/project_hail_mary.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 496
       },
       {
         "title": "The Alchemist",
         "author": "Paulo Coelho",
         "cover": "/books/the_alchemist.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 208
       }
     ]
   },
@@ -464,73 +537,85 @@
         "title": "Chapterhouse: Dune",
         "author": "Frank Herbert",
         "cover": "/books/chapterhouse_dune.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 624
       },
       {
         "title": "Heretics of Dune",
         "author": "Frank Herbert",
         "cover": "/books/heretics_of_dune.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 688
       },
       {
         "title": "God Emperor of Dune",
         "author": "Frank Herbert",
         "cover": "/books/god_emperor_of_dune.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 608
       },
       {
         "title": "Children of Dune",
         "author": "Frank Herbert",
         "cover": "/books/children_of_dune.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 624
       },
       {
         "title": "Dune Messiah",
         "author": "Frank Herbert",
         "cover": "/books/dune_messiah.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 352
       },
       {
         "title": "Dune",
         "author": "Frank Herbert",
         "cover": "/books/dune.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 896
       },
       {
         "title": "To Hold Up the Sky",
         "author": "Cixin Liu",
         "cover": "/books/to_hold_up_the_sky.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 336
       },
       {
         "title": "The Wandering Earth",
         "author": "Cixin Liu",
         "cover": "/books/the_wandering_earth.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 464
       },
       {
         "title": "Pale Blue Dot",
         "author": "Carl Sagan",
         "cover": "/books/pale_blue_dot.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 384
       },
       {
         "title": "Cosmos",
         "author": "Carl Sagan",
         "cover": "/books/cosmos.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 432
       },
       {
         "title": "Brave New World",
         "author": "Aldous Huxley",
         "cover": "/books/brave_new_world.webp",
-        "rating": 3
+        "rating": 3,
+        "pages": 288
       },
       {
         "title": "The Martian",
         "author": "Andy Weir",
         "cover": "/books/the_martian.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 480
       }
     ]
   },
@@ -541,61 +626,71 @@
         "title": "Minus 148",
         "author": "Art Davidson",
         "cover": "/books/minus_148.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 256
       },
       {
         "title": "Of Mice and Men",
         "author": "John Steinbeck",
         "cover": "/books/of_mice_and_men.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 107
       },
       {
         "title": "Children of Ruin",
         "author": "Adrian Tchaikovsky",
         "cover": "/books/children_of_ruin.webp",
-        "rating": 4.5
+        "rating": 4.5,
+        "pages": 608
       },
       {
         "title": "Children of Time",
         "author": "Adrian Tchaikovsky",
         "cover": "/books/children_of_time.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 640
       },
       {
         "title": "21 Lessons for the 21st Century",
         "author": "Yuval Noah Harari",
         "cover": "/books/21_lessons_for_the_21st_century.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 416
       },
       {
         "title": "Homo Deus",
         "author": "Yuval Noah Harari",
         "cover": "/books/homo_deus.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 464
       },
       {
         "title": "Ball Lightning",
         "author": "Cixin Liu",
         "cover": "/books/ball_lightning.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 400
       },
       {
         "title": "Death's End",
         "author": "Cixin Liu",
         "cover": "/books/deaths_end.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 624
       },
       {
         "title": "The Dark Forest",
         "author": "Cixin Liu",
         "cover": "/books/the_dark_forest.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 528
       },
       {
         "title": "Three Body Problem",
         "author": "Cixin Liu",
         "cover": "/books/three_body_problem.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 416
       }
     ]
   },
@@ -606,55 +701,64 @@
         "title": "For Whom the Bell Tolls",
         "author": "Ernest Hemingway",
         "cover": "/books/for_whom_the_bell_tolls.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 480
       },
       {
         "title": "Mostly Harmless",
         "author": "Douglas Adams",
         "cover": "/books/mostly_harmless.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 288
       },
       {
         "title": "So Long, and Thanks for all the Fish",
         "author": "Douglas Adams",
         "cover": "/books/so_long_and_thanks_for_all_the_fish.webp",
-        "rating": 2.5
+        "rating": 2.5,
+        "pages": 224
       },
       {
         "title": "Life, the Universe and Everything",
         "author": "Douglas Adams",
         "cover": "/books/life_the_universe_and_everything.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 232
       },
       {
         "title": "The Restaurant at the End of the Universe",
         "author": "Douglas Adams",
         "cover": "/books/the_restaurant_at_the_end_of_the_universe.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 256
       },
       {
         "title": "The Hitchhiker's Guide to the Galaxy",
         "author": "Douglas Adams",
         "cover": "/books/the_hitchhikers_guide_to_the_galaxy.webp",
-        "rating": 5
+        "rating": 5,
+        "pages": 208
       },
       {
         "title": "Einstein's Dreams",
         "author": "Alan Lightman",
         "cover": "/books/einsteins_dreams.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 144
       },
       {
         "title": "Astrophysics for People in a Hurry",
         "author": "Neil deGrasse Tyson",
         "cover": "/books/astrophysics_for_people_in_a_hurry.webp",
-        "rating": 3.5
+        "rating": 3.5,
+        "pages": 224
       },
       {
         "title": "Surely You're Joking, Mr. Feynman!",
         "author": "Richard Feynman",
         "cover": "/books/surely_youre_joking_mr_feynman.webp",
-        "rating": 4
+        "rating": 4,
+        "pages": 400
       }
     ]
   },
@@ -665,402 +769,482 @@
       {
         "title": "11/22/63",
         "author": "Stephen King",
-        "cover": "/books/11_22_63.webp"
+        "cover": "/books/11_22_63.webp",
+        "pages": 849
       },
       {
         "title": "Atomic Habits",
         "author": "James Clear",
-        "cover": "/books/atomic_habits.webp"
+        "cover": "/books/atomic_habits.webp",
+        "pages": 320
       },
       {
         "title": "Ready Player One",
         "author": "Ernest Cline",
-        "cover": "/books/ready_player_one.webp"
+        "cover": "/books/ready_player_one.webp",
+        "pages": 384
       },
       {
         "title": "The Future of the Mind",
         "author": "Michio Kaku",
-        "cover": "/books/the_future_of_the_mind.webp"
+        "cover": "/books/the_future_of_the_mind.webp",
+        "pages": 400
       },
       {
         "title": "MaddAddam",
         "author": "Margaret Atwood",
-        "cover": "/books/maddaddam.webp"
+        "cover": "/books/maddaddam.webp",
+        "pages": 416
       },
       {
         "title": "The Year of the Flood",
         "author": "Margaret Atwood",
-        "cover": "/books/the_year_of_the_flood.webp"
+        "cover": "/books/the_year_of_the_flood.webp",
+        "pages": 448
       },
       {
         "title": "Oryx and Crake",
         "author": "Margaret Atwood",
-        "cover": "/books/oryx_and_crake.webp"
+        "cover": "/books/oryx_and_crake.webp",
+        "pages": 389
       },
       {
         "title": "When Breath Becomes Air",
         "author": "Paul Kalanithi",
-        "cover": "/books/when_breath_becomes_air.webp"
+        "cover": "/books/when_breath_becomes_air.webp",
+        "pages": 228
       },
       {
         "title": "The Devil in the White City",
         "author": "Erik Larson",
-        "cover": "/books/the_devil_in_the_white_city.webp"
+        "cover": "/books/the_devil_in_the_white_city.webp",
+        "pages": 447
       },
       {
         "title": "Make Your Bed",
         "author": "William H. McRaven",
-        "cover": "/books/make_your_bed.webp"
+        "cover": "/books/make_your_bed.webp",
+        "pages": 144
       },
       {
         "title": "David and Goliath",
         "author": "Malcolm Gladwell",
-        "cover": "/books/david_and_goliath.webp"
+        "cover": "/books/david_and_goliath.webp",
+        "pages": 352
       },
       {
         "title": "Outliers",
         "author": "Malcolm Gladwell",
-        "cover": "/books/outliers.webp"
+        "cover": "/books/outliers.webp",
+        "pages": 321
       },
       {
         "title": "The Tipping Point",
         "author": "Malcolm Gladwell",
-        "cover": "/books/the_tipping_point.webp"
+        "cover": "/books/the_tipping_point.webp",
+        "pages": 298
       },
       {
         "title": "Blink",
         "author": "Malcolm Gladwell",
-        "cover": "/books/blink.webp"
+        "cover": "/books/blink.webp",
+        "pages": 296
       },
       {
         "title": "Frankenstein",
         "author": "Mary Shelley",
-        "cover": "/books/frankenstein.webp"
+        "cover": "/books/frankenstein.webp",
+        "pages": 288
       },
       {
         "title": "1984",
         "author": "George Orwell",
-        "cover": "/books/1984.webp"
+        "cover": "/books/1984.webp",
+        "pages": 416
       },
       {
         "title": "Farenheit 451",
         "author": "Ray Bradbury",
-        "cover": "/books/farenheit_451.webp"
+        "cover": "/books/farenheit_451.webp",
+        "pages": 195
       },
       {
         "title": "Bel Canto",
         "author": "Ann Patchett",
-        "cover": "/books/bel_canto.webp"
+        "cover": "/books/bel_canto.webp",
+        "pages": 318
       },
       {
         "title": "The Body Builders",
         "author": "Adam Piore",
-        "cover": "/books/the_body_builders.webp"
+        "cover": "/books/the_body_builders.webp",
+        "pages": 384
       },
       {
         "title": "The Kite Runner",
         "author": "Khaled Hosseini",
-        "cover": "/books/the_kite_runner.webp"
+        "cover": "/books/the_kite_runner.webp",
+        "pages": 400
       },
       {
         "title": "The Metamorphosis",
         "author": "Franz Kafka",
-        "cover": "/books/the_metamorphosis.webp"
+        "cover": "/books/the_metamorphosis.webp",
+        "pages": 69
       },
       {
         "title": "The Catcher in the Rye",
         "author": "J. D. Salinger",
-        "cover": "/books/the_catcher_in_the_rye.webp"
+        "cover": "/books/the_catcher_in_the_rye.webp",
+        "pages": 288
       },
       {
         "title": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
-        "cover": "/books/the_great_gatsby.webp"
+        "cover": "/books/the_great_gatsby.webp",
+        "pages": 114
       },
       {
         "title": "Lord of the Flies",
         "author": "William Golding",
-        "cover": "/books/lord_of_the_flies.webp"
+        "cover": "/books/lord_of_the_flies.webp",
+        "pages": 224
       },
       {
         "title": "Oedipus Rex",
         "author": "Sophocles",
-        "cover": "/books/oedipus_rex.webp"
+        "cover": "/books/oedipus_rex.webp",
+        "pages": 80
       },
       {
         "title": "The Book Thief",
         "author": "Markus Zusak",
-        "cover": "/books/the_book_thief.webp"
+        "cover": "/books/the_book_thief.webp",
+        "pages": 608
       },
       {
         "title": "The Pearl",
         "author": "John Steinbeck",
-        "cover": "/books/the_pearl.webp"
+        "cover": "/books/the_pearl.webp",
+        "pages": 90
       },
       {
         "title": "The Giver",
         "author": "Lois Lowry",
-        "cover": "/books/the_giver.webp"
+        "cover": "/books/the_giver.webp",
+        "pages": 240
       },
       {
         "title": "To Kill a Mockingbird",
         "author": "Harper Lee",
-        "cover": "/books/to_kill_a_mockingbird.webp"
+        "cover": "/books/to_kill_a_mockingbird.webp",
+        "pages": 336
       },
       {
         "title": "Romeo and Juliet",
         "author": "William Shakespeare",
-        "cover": "/books/romeo_and_juliet.webp"
+        "cover": "/books/romeo_and_juliet.webp",
+        "pages": 92
       },
       {
         "title": "The Outsiders",
         "author": "S. E. Hinton",
-        "cover": "/books/the_outsiders.webp"
+        "cover": "/books/the_outsiders.webp",
+        "pages": 224
       },
       {
         "title": "Inkdeath",
         "author": "Cornelia Funke",
-        "cover": "/books/inkdeath.webp"
+        "cover": "/books/inkdeath.webp",
+        "pages": 704
       },
       {
         "title": "Inkspell",
         "author": "Cornelia Funke",
-        "cover": "/books/inkspell.webp"
+        "cover": "/books/inkspell.webp",
+        "pages": 672
       },
       {
         "title": "Inkheart",
         "author": "Cornelia Funke",
-        "cover": "/books/inkheart.webp"
+        "cover": "/books/inkheart.webp",
+        "pages": 576
       },
       {
         "title": "The Game of Lives",
         "author": "James Dashner",
-        "cover": "/books/the_game_of_lives.webp"
+        "cover": "/books/the_game_of_lives.webp",
+        "pages": 352
       },
       {
         "title": "The Rule of Thoughts",
         "author": "James Dashner",
-        "cover": "/books/the_rule_of_thoughts.webp"
+        "cover": "/books/the_rule_of_thoughts.webp",
+        "pages": 352
       },
       {
         "title": "The Eye of Minds",
         "author": "James Dashner",
-        "cover": "/books/the_eye_of_minds.webp"
+        "cover": "/books/the_eye_of_minds.webp",
+        "pages": 312
       },
       {
         "title": "The Death Cure",
         "author": "James Dashner",
-        "cover": "/books/the_death_cure.webp"
+        "cover": "/books/the_death_cure.webp",
+        "pages": 368
       },
       {
         "title": "The Scorch Trials",
         "author": "James Dashner",
-        "cover": "/books/the_scorch_trials.webp"
+        "cover": "/books/the_scorch_trials.webp",
+        "pages": 400
       },
       {
         "title": "The Maze Runner",
         "author": "James Dashner",
-        "cover": "/books/the_maze_runner.webp"
+        "cover": "/books/the_maze_runner.webp",
+        "pages": 375
       },
       {
         "title": "Terminal",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/terminal.webp"
+        "cover": "/books/terminal.webp",
+        "pages": 448
       },
       {
         "title": "Spiral",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/spiral.webp"
+        "cover": "/books/spiral.webp",
+        "pages": 448
       },
       {
         "title": "Closer",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/closer.webp"
+        "cover": "/books/closer.webp",
+        "pages": 544
       },
       {
         "title": "Freefall",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/freefall.webp"
+        "cover": "/books/freefall.webp",
+        "pages": 608
       },
       {
         "title": "Deeper",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/deeper.webp"
+        "cover": "/books/deeper.webp",
+        "pages": 656
       },
       {
         "title": "Tunnels",
         "author": "Roderick Gordon & Brian Williams",
-        "cover": "/books/tunnels.webp"
+        "cover": "/books/tunnels.webp",
+        "pages": 496
       },
       {
         "title": "Pathfinder",
         "author": "Orson Scott Card",
-        "cover": "/books/pathfinder.webp"
+        "cover": "/books/pathfinder.webp",
+        "pages": 672
       },
       {
         "title": "Ender's Game",
         "author": "Orson Scott Card",
-        "cover": "/books/enders_game.webp"
+        "cover": "/books/enders_game.webp",
+        "pages": 256
       },
       {
         "title": "Execution",
         "author": "Alexander Gordon Smith",
-        "cover": "/books/execution.webp"
+        "cover": "/books/execution.webp",
+        "pages": 336
       },
       {
         "title": "Fugitives",
         "author": "Alexander Gordon Smith",
-        "cover": "/books/fugitives.webp"
+        "cover": "/books/fugitives.webp",
+        "pages": 304
       },
       {
         "title": "Death Sentence",
         "author": "Alexander Gordon Smith",
-        "cover": "/books/death_sentence.webp"
+        "cover": "/books/death_sentence.webp",
+        "pages": 288
       },
       {
         "title": "Solitary",
         "author": "Alexander Gordon Smith",
-        "cover": "/books/solitary.webp"
+        "cover": "/books/solitary.webp",
+        "pages": 256
       },
       {
         "title": "Lockdown",
         "author": "Alexander Gordon Smith",
-        "cover": "/books/lockdown.webp"
+        "cover": "/books/lockdown.webp",
+        "pages": 304
       },
       {
         "title": "Scorpia Rising",
         "author": "Anthony Horowitz",
-        "cover": "/books/scorpia_rising.webp"
+        "cover": "/books/scorpia_rising.webp",
+        "pages": 432
       },
       {
         "title": "Crocodile Tears",
         "author": "Anthony Horowitz",
-        "cover": "/books/crocodile_tears.webp"
+        "cover": "/books/crocodile_tears.webp",
+        "pages": 416
       },
       {
         "title": "Snakehead",
         "author": "Anthony Horowitz",
-        "cover": "/books/snakehead.webp"
+        "cover": "/books/snakehead.webp",
+        "pages": 388
       },
       {
         "title": "Ark Angel",
         "author": "Anthony Horowitz",
-        "cover": "/books/ark_angel.webp"
+        "cover": "/books/ark_angel.webp",
+        "pages": 352
       },
       {
         "title": "Scorpia",
         "author": "Anthony Horowitz",
-        "cover": "/books/scorpia.webp"
+        "cover": "/books/scorpia.webp",
+        "pages": 416
       },
       {
         "title": "Eagle Strike",
         "author": "Anthony Horowitz",
-        "cover": "/books/eagle_strike.webp"
+        "cover": "/books/eagle_strike.webp",
+        "pages": 322
       },
       {
         "title": "Skeleton Key",
         "author": "Anthony Horowitz",
-        "cover": "/books/skeleton_key.webp"
+        "cover": "/books/skeleton_key.webp",
+        "pages": 327
       },
       {
         "title": "Point Blanc",
         "author": "Anthony Horowitz",
-        "cover": "/books/point_blanc.webp"
+        "cover": "/books/point_blanc.webp",
+        "pages": 320
       },
       {
         "title": "Stormbreaker",
         "author": "Anthony Horowitz",
-        "cover": "/books/stormbreaker.webp"
+        "cover": "/books/stormbreaker.webp",
+        "pages": 304
       },
       {
         "title": "Flesh & Bone",
         "author": "Jonathan Maberry",
-        "cover": "/books/flesh_and_bone.webp"
+        "cover": "/books/flesh_and_bone.webp",
+        "pages": 496
       },
       {
         "title": "Dust & Decay",
         "author": "Jonathan Maberry",
-        "cover": "/books/dust_and_decay.webp"
+        "cover": "/books/dust_and_decay.webp",
+        "pages": 544
       },
       {
         "title": "Rot & Ruin",
         "author": "Jonathan Maberry",
-        "cover": "/books/rot_and_ruin.webp"
+        "cover": "/books/rot_and_ruin.webp",
+        "pages": 480
       },
       {
         "title": "Mockingjay",
         "author": "Suzanne Collins",
-        "cover": "/books/mockingjay.webp"
+        "cover": "/books/mockingjay.webp",
+        "pages": 400
       },
       {
         "title": "Catching Fire",
         "author": "Suzanne Collins",
-        "cover": "/books/catching_fire.webp"
+        "cover": "/books/catching_fire.webp",
+        "pages": 400
       },
       {
         "title": "The Hunger Games",
         "author": "Suzanne Collins",
-        "cover": "/books/the_hunger_games.webp"
+        "cover": "/books/the_hunger_games.webp",
+        "pages": 384
       },
       {
         "title": "Ship Breaker",
         "author": "Paolo Bacigalupi",
-        "cover": "/books/ship_breaker.webp"
+        "cover": "/books/ship_breaker.webp",
+        "pages": 352
       },
       {
         "title": "The House of Hades",
         "author": "Rick Riordan",
-        "cover": "/books/the_house_of_hades.webp"
+        "cover": "/books/the_house_of_hades.webp",
+        "pages": 608
       },
       {
         "title": "The Mark of Athena",
         "author": "Rick Riordan",
-        "cover": "/books/the_mark_of_athena.webp"
+        "cover": "/books/the_mark_of_athena.webp",
+        "pages": 608
       },
       {
         "title": "The Son of Neptune",
         "author": "Rick Riordan",
-        "cover": "/books/the_son_of_neptune.webp"
+        "cover": "/books/the_son_of_neptune.webp",
+        "pages": 544
       },
       {
         "title": "The Lost Hero",
         "author": "Rick Riordan",
-        "cover": "/books/the_lost_hero.webp"
+        "cover": "/books/the_lost_hero.webp",
+        "pages": 576
       },
       {
         "title": "The Last Olympian",
         "author": "Rick Riordan",
-        "cover": "/books/the_last_olympian.webp"
+        "cover": "/books/the_last_olympian.webp",
+        "pages": 432
       },
       {
         "title": "The Battle of the Labyrinth",
         "author": "Rick Riordan",
-        "cover": "/books/the_battle_of_the_labyrinth.webp"
+        "cover": "/books/the_battle_of_the_labyrinth.webp",
+        "pages": 400
       },
       {
         "title": "The Titan's Curse",
         "author": "Rick Riordan",
-        "cover": "/books/the_titans_curse.webp"
+        "cover": "/books/the_titans_curse.webp",
+        "pages": 352
       },
       {
         "title": "The Sea of Monsters",
         "author": "Rick Riordan",
-        "cover": "/books/the_sea_of_monsters.webp"
+        "cover": "/books/the_sea_of_monsters.webp",
+        "pages": 320
       },
       {
         "title": "The Lightning Thief",
         "author": "Rick Riordan",
-        "cover": "/books/the_lightning_thief.webp"
+        "cover": "/books/the_lightning_thief.webp",
+        "pages": 416
       },
       {
         "title": "Holes",
         "author": "Louis Sachar",
-        "cover": "/books/holes.webp"
+        "cover": "/books/holes.webp",
+        "pages": 272
       },
       {
         "title": "The Phantom Tollbooth",
         "author": "Norton Juster",
-        "cover": "/books/the_phantom_tollbooth.webp"
+        "cover": "/books/the_phantom_tollbooth.webp",
+        "pages": 272
       }
     ]
   }

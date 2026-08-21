@@ -5,6 +5,7 @@ export interface Book {
   author: string
   cover: string
   rating?: number
+  pages?: number
 }
 
 export interface BookGroup {

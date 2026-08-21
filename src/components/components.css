@@ -423,6 +423,244 @@ svg.btn__arrow { margin-top: 1px; }
   .lightbox__img { transition: none; }
 }
 
+/* ---------- 3D book — six-face box behind the lightbox cover ----------
+   Face geometry: front/back at ±thickness/2, spine/fore-edge/top/bottom
+   are thickness-wide planes centered on their edge and folded 90°.
+   --bt: thickness (from page count)  --bc: dominant cover color  --ink: spine text */
+
+.lightbox__img--hidden { visibility: hidden; }
+
+.lightbox__scene {
+  position: absolute;
+}
+
+/* Perspective and drop-shadow live here, NOT on the box — filter is a
+   grouping property that would force the box's preserve-3d to flat. */
+.book3d {
+  width: 100%;
+  height: 100%;
+  perspective: 1400px;
+  filter: drop-shadow(0 24px 60px rgba(0, 0, 0, 0.55));
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.book3d:active { cursor: grabbing; }
+
+.book3d__box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Live lighting: each face carries a dark veil (::before) whose opacity is
+   set per frame (--veil-*) from the rendered rotation. A veil, not a filter —
+   filter is a grouping property and would knock the face out of the 3D scene. */
+.book3d__face {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.book3d__face::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #07070c;
+  opacity: var(--veil, 0);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.book3d__front,
+.book3d__back { inset: 0; }
+
+.book3d__front {
+  --veil: var(--veil-front, 0);
+  transform: translateZ(calc(var(--bt) / 2));
+}
+
+.book3d__front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Glossy sheen that sweeps across the cover as the book turns */
+.book3d__front::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(78deg, transparent 42%, rgba(255, 255, 255, 0.2) 50%, transparent 58%);
+  background-size: 300% 100%;
+  background-position: var(--sheen, 50%) 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Paper grain shared by the generated board faces — inline SVG turbulence,
+   soft-light blended so it reads as texture, not dirt. */
+.book3d__back,
+.book3d__spine {
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+/* Back cover: grain and a soft vignette over the base color. */
+.book3d__back {
+  --veil: var(--veil-back, 0);
+  transform: rotateY(180deg) translateZ(calc(var(--bt) / 2));
+  background:
+    var(--grain) repeat,
+    radial-gradient(120% 100% at 50% 40%, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.18)),
+    var(--bc);
+  background-blend-mode: soft-light, normal;
+}
+
+.book3d__spine,
+.book3d__edge--fore {
+  top: 0;
+  width: var(--bt);
+  height: 100%;
+}
+
+.book3d__spine {
+  --veil: var(--veil-spine, 0);
+  left: calc(var(--bt) / -2);
+  transform: rotateY(-90deg);
+  background:
+    var(--grain) repeat,
+    linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0) 14%, rgba(255, 255, 255, 0.07) 50%, rgba(0, 0, 0, 0) 86%, rgba(0, 0, 0, 0.35)),
+    var(--bc);
+  background-blend-mode: soft-light, normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 0;
+  overflow: hidden;
+}
+
+.book3d__spine-title,
+.book3d__spine-author {
+  writing-mode: vertical-rl;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book3d__spine-title {
+  font-family: var(--font-mono);
+  font-size: clamp(9px, calc(var(--bt) * 0.3), 18px);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  max-height: 64%;
+}
+
+.book3d__spine-author {
+  font-size: clamp(8px, calc(var(--bt) * 0.24), 14px);
+  opacity: 0.75;
+  max-height: 30%;
+}
+
+/* Back-cover furniture — colophon block up top, barcode bottom-left
+   (away from the hinge). Type scales with the rendered book height. */
+.book3d__back-info {
+  position: absolute;
+  top: 9%;
+  left: 12%;
+  right: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(var(--bh) * 0.014);
+  text-align: center;
+  color: var(--ink);
+}
+
+.book3d__back-title {
+  font-family: var(--font-mono);
+  font-size: clamp(10px, calc(var(--bh) * 0.024), 17px);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.book3d__back-author {
+  font-size: clamp(9px, calc(var(--bh) * 0.019), 14px);
+  opacity: 0.75;
+}
+
+.book3d__back-rule {
+  width: 16%;
+  height: 1px;
+  margin-top: calc(var(--bh) * 0.006);
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.book3d__back .stars__base { color: currentColor; opacity: 0.25; }
+.book3d__back .stars__fill { color: currentColor; }
+
+.book3d__back-barcode {
+  position: absolute;
+  left: 10%;
+  bottom: 6%;
+  width: clamp(64px, calc(var(--bh) * 0.17), 112px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 7px 4px;
+  background: #f2efe7;
+  border-radius: 2px;
+}
+
+.book3d__back-barcode-lines {
+  width: 100%;
+  height: clamp(16px, calc(var(--bh) * 0.045), 30px);
+  background: repeating-linear-gradient(90deg, #1b1b20 0 1px, transparent 1px 3px, #1b1b20 3px 5px, transparent 5px 6px, #1b1b20 6px 7px, transparent 7px 10px);
+}
+
+.book3d__back-barcode-num {
+  font-family: var(--font-mono);
+  font-size: clamp(7px, calc(var(--bh) * 0.013), 10px);
+  letter-spacing: 0.12em;
+  color: #1b1b20;
+}
+
+/* Page edges — fine repeating lines suggest the paper stack */
+.book3d__edge--fore {
+  --veil: var(--veil-fore, 0);
+  right: calc(var(--bt) / -2);
+  transform: rotateY(90deg);
+  background: repeating-linear-gradient(90deg, #e6dcc4 0 1px, #f4edda 1px 3px);
+}
+
+.book3d__edge--top,
+.book3d__edge--bottom {
+  left: 0;
+  width: 100%;
+  height: var(--bt);
+  background: repeating-linear-gradient(0deg, #e6dcc4 0 1px, #f4edda 1px 3px);
+}
+
+.book3d__edge--top {
+  --veil: var(--veil-top, 0);
+  top: calc(var(--bt) / -2);
+  transform: rotateX(90deg);
+}
+
+.book3d__edge--bottom {
+  --veil: var(--veil-bottom, 0);
+  bottom: calc(var(--bt) / -2);
+  transform: rotateX(-90deg);
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 720px) {
