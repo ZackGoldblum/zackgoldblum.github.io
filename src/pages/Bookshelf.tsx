@@ -6,7 +6,7 @@ import { bookshelf, type Book } from '../data/books'
 
 interface Lightbox {
   book: Book
-  rect: DOMRect
+  el: HTMLElement // the cover button — BookLightbox re-measures it as needed
   aspect: number // natural width / height of the cover
   color: [number, number, number] // dominant cover color for the 3D book's generated faces
 }
@@ -88,20 +88,9 @@ export default function Bookshelf() {
                   onClick={(e) => {
                     const el = e.currentTarget
                     const img = el.querySelector('img')!
-                    // Button rect (incl. its 1px border), minus the hover
-                    // lift — the zoom should land on the resting position
-                    const r = el.getBoundingClientRect()
-                    const tf = getComputedStyle(el).transform
-                    const m = tf === 'none' ? null : new DOMMatrixReadOnly(tf)
-                    const rect = new DOMRect(
-                      r.x - (m?.m41 ?? 0),
-                      r.y - (m?.m42 ?? 0),
-                      r.width,
-                      r.height,
-                    )
                     setLightbox({
                       book,
-                      rect,
+                      el,
                       aspect: img.naturalWidth / img.naturalHeight || 2 / 3,
                       color: coverColor(img),
                     })
@@ -122,7 +111,7 @@ export default function Bookshelf() {
       {lightbox && (
         <BookLightbox
           book={lightbox.book}
-          fromRect={lightbox.rect}
+          fromEl={lightbox.el}
           aspect={lightbox.aspect}
           color={lightbox.color}
           onClose={() => setLightbox(null)}

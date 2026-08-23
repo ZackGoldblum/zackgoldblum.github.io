@@ -4,7 +4,7 @@ import type { Book } from '../data/books'
 
 interface BookLightboxProps {
   book: Book
-  fromRect: DOMRect // thumbnail position — the zoom animates from/to here
+  fromEl: HTMLElement // the grid thumbnail — the zoom animates from/to its rect
   aspect: number // natural width / height — full view never crops
   color: [number, number, number] // dominant cover color — paints the generated faces
   onClose: () => void
@@ -22,15 +22,35 @@ const SPIN_BACK_MS = 300
  * swings open; drag rotates it. Closing spins the book back to face front,
  * swaps the flat image back, and reverses the zoom into the grid.
  */
-export default function BookLightbox({ book, fromRect, aspect, color, onClose }: BookLightboxProps) {
+/**
+ * The element's rect with its own transform translation backed out. The cover
+ * buttons lift on hover, and the zoom should start and land on the resting
+ * position rather than the lifted one.
+ */
+function restingRect(el: HTMLElement) {
+  const r = el.getBoundingClientRect()
+  const tf = getComputedStyle(el).transform
+  const m = tf === 'none' ? null : new DOMMatrixReadOnly(tf)
+  return {
+    left: r.left - (m?.m41 ?? 0),
+    top: r.top - (m?.m42 ?? 0),
+    width: r.width,
+    height: r.height,
+  }
+}
+
+export default function BookLightbox({ book, fromEl, aspect, color, onClose }: BookLightboxProps) {
   const [open, setOpen] = useState(false)
   const [show3d, setShow3d] = useState(false)
   const [returning, setReturning] = useState(false)
   const closing = useRef(false)
 
-  // Final rect — centered at the cover's own aspect, capped by the viewport
-  const vw = window.innerWidth
-  const vh = window.innerHeight
+  // Final rect — centered at the cover's own aspect, capped by the viewport.
+  // The viewport is state, not a bare read: the lightbox outlives resizes and
+  // the rect is absolute pixels, so it has to be recomputed when they change.
+  const [viewport, setViewport] = useState({ w: window.innerWidth, h: window.innerHeight })
+  const vw = viewport.w
+  const vh = viewport.h
   const height = Math.min(vh * 0.85, (vw * 0.9) / aspect)
   const width = height * aspect
   const left = (vw - width) / 2
@@ -38,12 +58,11 @@ export default function BookLightbox({ book, fromRect, aspect, color, onClose }:
 
   // Animate the box itself (not a transform) so the corner radius
   // stays constant in screen pixels throughout the zoom.
-  const thumb = {
-    left: fromRect.left,
-    top: fromRect.top,
-    width: fromRect.width,
-    height: fromRect.height,
-  }
+  //
+  // Measured every render rather than captured once: a resize reflows the grid
+  // underneath, and the closing zoom has to land on where the thumbnail is now,
+  // not where it was when the book was opened.
+  const thumb = restingRect(fromEl)
   const full = { left, top, width, height }
 
   const close = () => {
@@ -81,12 +100,18 @@ export default function BookLightbox({ book, fromRect, aspect, color, onClose }:
     }
     window.addEventListener('keydown', onKey)
 
+    // Re-center on resize. .lightbox__scene carries no transition, so the box
+    // tracks the new rect instantly instead of easing along behind the drag.
+    const onResize = () => setViewport({ w: window.innerWidth, h: window.innerHeight })
+    window.addEventListener('resize', onResize)
+
     // Lock scroll while open
     document.documentElement.style.overflow = 'hidden'
     return () => {
       cancelAnimationFrame(raf)
       window.clearTimeout(t)
       window.removeEventListener('keydown', onKey)
+      window.removeEventListener('resize', onResize)
       document.documentElement.style.overflow = ''
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
