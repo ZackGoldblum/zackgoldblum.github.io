@@ -490,16 +490,37 @@ svg.btn__arrow { margin-top: 1px; }
   object-fit: cover;
 }
 
-/* Glossy sheen that sweeps across the cover as the book turns */
-.book3d__front::after {
+/* Glossy sheen that sweeps across the boards as the book turns. Front, back,
+   and spine are one laminated case, so they share the gloss; the page edges
+   are cut paper and stay matte on purpose. Absolutely positioned, so the
+   pseudo-element never becomes a flex item on the faces that lay out text. */
+.book3d__front::after,
+.book3d__back::after,
+.book3d__spine::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(78deg, transparent 42%, rgba(255, 255, 255, 0.2) 50%, transparent 58%);
+  background: linear-gradient(78deg, transparent 42%, rgba(255, 255, 255, var(--gloss, 0.2)) 50%, transparent 58%);
   background-size: 300% 100%;
-  background-position: var(--sheen, 50%) 0;
   pointer-events: none;
   z-index: 2;
+}
+
+.book3d__front::after { background-position: var(--sheen-front, 50%) 0; }
+
+/* The back is printed matter rather than cover art, so the gloss is barely
+   there — enough to stop it reading as matte, not enough to wash out the
+   blurb and barcode as the highlight crosses them. */
+.book3d__back::after {
+  background-position: var(--sheen-back, 50%) 0;
+  --gloss: 0.045;
+}
+
+/* The spine is narrow, so the band crosses it fast and would flare at the
+   back's strength. Faintest of the three: a catch of light, not a streak. */
+.book3d__spine::after {
+  background-position: var(--sheen-spine, 50%) 0;
+  --gloss: 0.035;
 }
 
 /* Paper grain shared by the generated board faces — inline SVG turbulence,

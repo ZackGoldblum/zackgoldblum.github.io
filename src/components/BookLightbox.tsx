@@ -199,8 +199,12 @@ function Book3D({ book, height, color, returning }: Book3DProps) {
       el.style.setProperty('--veil-top', veil(-m.m21, -m.m22, -m.m23))
       el.style.setProperty('--veil-front', veil(m.m31, m.m32, m.m33))
       el.style.setProperty('--veil-back', veil(-m.m31, -m.m32, -m.m33))
-      // Glossy sheen sweeps across the cover as its normal swings past the light
-      el.style.setProperty('--sheen', `${(50 + 55 * m.m31).toFixed(1)}%`)
+      // Glossy sheen sweeps across each laminated face as its normal swings
+      // past the light. Same inputs as the veil — a face's own normal — so the
+      // front, back, and spine each catch the light on their own schedule.
+      el.style.setProperty('--sheen-front', `${(50 + 55 * m.m31).toFixed(1)}%`)
+      el.style.setProperty('--sheen-back', `${(50 - 55 * m.m31).toFixed(1)}%`)
+      el.style.setProperty('--sheen-spine', `${(50 - 55 * m.m11).toFixed(1)}%`)
     }
     tick()
     return () => cancelAnimationFrame(raf)
