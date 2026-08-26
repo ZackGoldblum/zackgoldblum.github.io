@@ -3,6 +3,13 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "Kafka on the Shore",
+        "author": "Haruki Murakami",
+        "cover": "/books/kafka_on_the_shore.webp",
+        "rating": 4,
+        "pages": 480
+      },
+      {
         "title": "Blood of Elves",
         "author": "Andrzej Sapkowski",
         "cover": "/books/blood_of_elves.webp",
