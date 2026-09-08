@@ -1,6 +1,17 @@
 {
   "2026-2027": [
     {
+      "type": "Poster",
+      "title": "Human-AI Collaboration for Co-Managing Epilepsy in Real Time",
+      "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>Redefining Healthcare in the Age of AI: A Nature Conference</em>. Paris, FR. September 8-10, 2026. *Equal contribution.",
+      "links": [
+        {
+          "label": "View Poster",
+          "href": "/research/goldblum_nature_ai_medicine_2026.pdf"
+        }
+      ]
+    },
+    {
       "type": "Publication",
       "title": "The Seizure Embedding Map: A Spatio-Temporal Transformer for Comparing Patients by Ictal Intracranial EEG Features at Scale",
       "citation": "Pattnaik AR*, Xu Z*, Ojemann WKS, Aguila CA, Lucas A, Lavelle S, <b>Goldblum Z</b>, Galer PD, Gallagher R, Davis KA, Sinha N, Conrad EC, Litt B. <em>Journal of Neural Engineering</em>. June 22, 2026. DOI: 10.1088/1741-2552/ae805d. *Equal contribution.",
