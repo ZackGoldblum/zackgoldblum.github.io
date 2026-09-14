@@ -2,7 +2,7 @@ import { useState } from 'react'
 import BookLightbox from '../components/BookLightbox'
 import PageIntro from '../components/PageIntro'
 import Stars from '../components/Stars'
-import { bookshelf, type Book } from '../data/books'
+import { bookshelf, thumbnail, type Book } from '../data/books'
 
 interface Lightbox {
   book: Book
@@ -96,7 +96,14 @@ export default function Bookshelf() {
                     })
                   }}
                 >
-                  <img src={book.cover} alt={`${book.title} cover`} loading="lazy" />
+                  <img
+                    src={thumbnail(book.cover)}
+                    alt={`${book.title} cover`}
+                    width={book.w}
+                    height={book.h}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </button>
                 <figcaption>
                   <p className="book__title">{book.title}</p>

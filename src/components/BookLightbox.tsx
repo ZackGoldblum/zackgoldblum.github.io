@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import Stars from './Stars'
-import type { Book } from '../data/books'
+import { thumbnail, type Book } from '../data/books'
 
 interface BookLightboxProps {
   book: Book
@@ -40,6 +40,9 @@ function restingRect(el: HTMLElement) {
 }
 
 export default function BookLightbox({ book, fromEl, aspect, color, onClose }: BookLightboxProps) {
+  // Open on the grid thumbnail — it is already decoded, so the zoom starts on a
+  // painted cover — and swap in the full-size one once it arrives.
+  const [src, setSrc] = useState(() => thumbnail(book.cover))
   const [open, setOpen] = useState(false)
   const [show3d, setShow3d] = useState(false)
   const [returning, setReturning] = useState(false)
@@ -87,6 +90,12 @@ export default function BookLightbox({ book, fromEl, aspect, color, onClose }: B
   closeRef.current = close
 
   useEffect(() => {
+    const full = new Image()
+    full.onload = () => setSrc(book.cover)
+    full.src = book.cover
+  }, [book.cover])
+
+  useEffect(() => {
     // Expand on the frame after mount so the start transform paints first
     const raf = requestAnimationFrame(() => requestAnimationFrame(() => setOpen(true)))
     // Swap to the 3D book once the zoom lands. A timer, not transitionend —
@@ -128,7 +137,7 @@ export default function BookLightbox({ book, fromEl, aspect, color, onClose }: B
       <div className="lightbox__backdrop" />
       <img
         className={`lightbox__img${show3d ? ' lightbox__img--hidden' : ''}`}
-        src={book.cover}
+        src={src}
         alt={`${book.title} cover`}
         style={open ? full : thumb}
         onTransitionEnd={() => {
@@ -137,7 +146,7 @@ export default function BookLightbox({ book, fromEl, aspect, color, onClose }: B
       />
       {show3d && (
         <div className="lightbox__scene" style={full} onClick={(e) => e.stopPropagation()}>
-          <Book3D book={book} height={height} color={color} returning={returning} />
+          <Book3D book={book} src={src} height={height} color={color} returning={returning} />
         </div>
       )}
     </div>
@@ -146,12 +155,13 @@ export default function BookLightbox({ book, fromEl, aspect, color, onClose }: B
 
 interface Book3DProps {
   book: Book
+  src: string // cover image — the thumbnail until the full-size one loads
   height: number // rendered cover height in px — thickness scales off this
   color: [number, number, number]
   returning: boolean // true → spin back to front-facing for the close zoom
 }
 
-function Book3D({ book, height, color, returning }: Book3DProps) {
+function Book3D({ book, src, height, color, returning }: Book3DProps) {
   const boxRef = useRef<HTMLDivElement>(null)
   const rot = useRef({ x: -4, y: 30 }) // resting pose after the opening swing
   const drag = useRef<{ id: number; x: number; y: number } | null>(null)
@@ -272,7 +282,7 @@ function Book3D({ book, height, color, returning }: Book3DProps) {
     >
       <div className="book3d__box" ref={boxRef} style={vars}>
         <div className="book3d__face book3d__front">
-          <img src={book.cover} alt={`${book.title} cover`} draggable={false} />
+          <img src={src} alt={`${book.title} cover`} draggable={false} />
         </div>
         <div className="book3d__face book3d__back">
           <div className="book3d__back-info">
