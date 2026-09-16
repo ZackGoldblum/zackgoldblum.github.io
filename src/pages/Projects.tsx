@@ -1,16 +1,27 @@
 import { useState } from 'react'
+import ImageLightbox from '../components/ImageLightbox'
 import LinkIcon from '../components/LinkIcon'
 import PageIntro from '../components/PageIntro'
 import { projects, type Project } from '../data/projects'
 
 function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false)
+  // Click-to-zoom: the button is the source rect the lightbox animates from
+  const [zoom, setZoom] = useState<{ el: HTMLElement; aspect: number } | null>(null)
 
   return (
     <article className="project card">
-      <div className="project__media">
+      <button
+        className="project__media"
+        aria-label={`View ${project.title} image`}
+        onClick={(e) => {
+          const el = e.currentTarget
+          const img = el.querySelector('img')!
+          setZoom({ el, aspect: img.naturalWidth / img.naturalHeight || 4 / 3 })
+        }}
+      >
         <img src={project.image} alt={project.title} loading="lazy" />
-      </div>
+      </button>
       <div className="project__body">
         <p className="project__date mono">{project.date.toUpperCase()}</p>
         <h3 className="project__title">{project.title}</h3>
@@ -57,6 +68,15 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
       </div>
+      {zoom && (
+        <ImageLightbox
+          src={project.image}
+          alt={project.title}
+          fromEl={zoom.el}
+          aspect={zoom.aspect}
+          onClose={() => setZoom(null)}
+        />
+      )}
     </article>
   )
 }

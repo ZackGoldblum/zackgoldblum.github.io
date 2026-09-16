@@ -112,7 +112,20 @@
   padding: var(--space-5);
 }
 
+/* Click-to-zoom button (same lift-on-hover as .book__cover; the lightbox
+   backs the lift out of its captured rect so the zoom returns to rest) */
+.project__media {
+  display: block;
+  width: 100%;
+  align-self: start;
+  cursor: zoom-in;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+.project__media:hover { transform: translateY(-2px); }
+
 .project__media img {
+  display: block;
   width: 100%;
   border-radius: var(--radius-md);
   border: 1px solid var(--line-soft);
