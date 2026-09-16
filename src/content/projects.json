@@ -52,6 +52,32 @@
   ],
   "2024-2025": [
     {
+      "title": "ASM Calc",
+      "org": "Penn Center for Neuroengineering and Therapeutics",
+      "blurb": "Calculate and visualize anti-seizure medication (ASM) levels over time using pharmacokinetic modeling.",
+      "date": "Feb 2025",
+      "images": [
+        {
+          "src": "/projects/asm_calc.webp",
+          "w": 1600,
+          "h": 1875
+        }
+      ],
+      "body": [
+        "In the epilepsy monitoring unit, clinicians deliberately lower a patient's ASM levels to provoke seizures they can record and localize. The taper strategy is critical to this process, but is often done <em>by feel</em> rather than with quantitative methods. ASM Calc is a small tool I built with clinicians at Penn to help plan those tapers and avoid severve seizures. Clinicians enter each dose and the time it was given, and it models the estimated concentration of every drug over time, plus the combined total when several are active. The estimates come from a pharmacokinetic model developed in our lab and published in <em>Epilepsia</em>."
+      ],
+      "details": [
+        "Nineteen common ASMs are pre-configured with literature-sourced half-life, volume of distribution, and bioavailability, all of which can be adjusted. Each dose is modeled with first-order absorption and elimination, so its curve rises as the drug is absorbed and decays with the drug's half-life, and overlapping doses are summed.",
+        "The frontend is React with Vite and the API is Flask, deployed as Vercel serverless functions."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/penn-cnt/ASM-Calc"
+        }
+      ]
+    },
+    {
       "title": "EpiTracker",
       "blurb": "Insightful epilepsy management.",
       "date": "Oct 2024 — Dec 2024",
