@@ -89,14 +89,14 @@
       "date": "Jan 2025 — May 2025",
       "images": [
         {
-          "src": "/projects/askeeg_1.webp",
-          "w": 1600,
-          "h": 1883
-        },
-        {
           "src": "/projects/askeeg_2.webp",
           "w": 1600,
           "h": 1322
+        },
+        {
+          "src": "/projects/askeeg_1.webp",
+          "w": 1600,
+          "h": 1883
         }
       ],
       "body": [
