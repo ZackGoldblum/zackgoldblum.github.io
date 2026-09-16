@@ -8,7 +8,7 @@
   /* Surfaces — near-black, no blue cast */
   --bg-void: #040408;                          /* the deep field */
   --bg-deep: #08080d;                          /* slightly lifted */
-  --bg-raised: rgba(255, 255, 255, 0.024);     /* barely-there panel */
+  --bg-raised: rgba(11, 12, 18, 0.6);          /* dark panel, faint blue cast, stars through */
   --bg-elevated: rgba(255, 255, 255, 0.05);    /* hover / active */
   --bg-hairline: rgba(255, 255, 255, 0.045);   /* whisper fill */
 

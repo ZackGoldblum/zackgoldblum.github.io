@@ -360,8 +360,8 @@
   white-space: nowrap;
 }
 
-/* ---------- Card — minimal transparent panel ----------
-   A hairline and a whisper of fill; the starfield passes through. */
+/* ---------- Card — dark translucent panel ----------
+   A hairline over a dim, faintly blue fill; the starfield glows through. */
 
 .card {
   background: var(--bg-raised);
