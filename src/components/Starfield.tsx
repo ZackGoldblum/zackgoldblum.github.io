@@ -44,9 +44,11 @@ const STREAK = 1.6 // streak length in frames of motion
 export default function Starfield() {
   const ref = useRef<HTMLCanvasElement>(null)
 
-  // Route changes teleport to the top (ScrollToTop) — that jump is not
-  // flying, so the next scroll event shouldn't throttle the engines.
-  const teleported = useRef(false)
+  // Jumps aren't flying. Route changes teleport to the top (ScrollToTop),
+  // and a reload restores the saved position — often in several steps as
+  // the page lays out — so scroll only throttles the engines once the user
+  // has actually driven: the next wheel, touch, key, or click re-arms it.
+  const teleported = useRef(true)
   const { pathname } = useLocation()
   useEffect(() => {
     teleported.current = true
@@ -277,12 +279,14 @@ export default function Starfield() {
 
     const onScroll = () => {
       const y = window.scrollY
-      if (teleported.current) {
-        teleported.current = false // navigation jump — no boost
-      } else {
+      if (!teleported.current) {
         scrollVel = Math.min(scrollVel + Math.abs(y - lastScrollY) * 0.5, 600)
       }
       lastScrollY = y
+    }
+
+    const onInput = () => {
+      teleported.current = false
     }
 
     const onVisibility = () => {
@@ -301,12 +305,20 @@ export default function Starfield() {
 
     window.addEventListener('resize', resize)
     window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('wheel', onInput, { passive: true })
+    window.addEventListener('touchstart', onInput, { passive: true })
+    window.addEventListener('keydown', onInput)
+    window.addEventListener('mousedown', onInput)
     document.addEventListener('visibilitychange', onVisibility)
 
     return () => {
       stop()
       window.removeEventListener('resize', resize)
       window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('wheel', onInput)
+      window.removeEventListener('touchstart', onInput)
+      window.removeEventListener('keydown', onInput)
+      window.removeEventListener('mousedown', onInput)
       document.removeEventListener('visibilitychange', onVisibility)
     }
   }, [])
