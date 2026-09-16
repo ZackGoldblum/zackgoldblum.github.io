@@ -28,6 +28,37 @@
   ],
   "2025-2026": [
     {
+      "title": "Brain-Computer Interfaces Competition Website",
+      "org": "University of Pennsylvania",
+      "blurb": "A class competition site for decoding finger movements from brain recordings.",
+      "date": "Jan 2026 — April 2026",
+      "images": [
+        {
+          "src": "/projects/be5210_1.webp",
+          "w": 1600,
+          "h": 1511
+        },
+        {
+          "src": "/projects/be5210_2.webp",
+          "w": 1600,
+          "h": 1335
+        }
+      ],
+      "body": [
+        "<em>Brain-Computer Interfaces</em> (BE 5210) is Penn's graduate BCI course, and its final project is a competition. Student teams receive electrocorticography recordings from patients who were flexing their fingers while wearing a data glove, and the teams have to build models that predict the finger movements from the brain signals alone. Teams register, upload their prediction files, and are scored automatically against held-out data. Scores are only revealed on a fixed schedule, creating a competetive dynamic where teams vie for leaderboard rankings against increasingly difficult accuracy thresholds. This website was previously held together by many years of hotfixes and code duct tape, with a single CSV file as the foundation of the site. This year, I completely redesigned and rebuilt the website, with modern cloud infrastructure and services. Of course, I added some easter eggs for the students to find :)"
+      ],
+      "details": [
+        "The stack is a React frontend, a Flask API, and PostgreSQL, containerized with Docker. Submissions are parsed with SciPy from .mat files, validated for the expected variable and shape, and scored as the correlation between predicted and actual finger flexion. The frontend deploys to S3 behind CloudFront and the API runs on Elastic Beanstalk with RDS for the database, all defined in Terraform.",
+        "The leaderboard refresh is a database-backed timer. A scheduled job checks whether the next release time has passed and, in a single transaction, publishes pending scores and advances the timer, so the leaderboard moves exactly once per interval even with several API workers running. The interval is configurable through environment variables, which let it tighten from every three hours to hourly as deadlines approach."
+      ],
+      "links": [
+        {
+          "label": "Visit site",
+          "href": "https://be5210.com"
+        }
+      ]
+    },
+    {
       "title": "Sociail Chat",
       "org": "Sociail",
       "blurb": "Bringing together the best of human and AI collaboration.",
