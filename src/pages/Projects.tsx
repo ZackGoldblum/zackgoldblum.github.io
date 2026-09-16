@@ -20,7 +20,7 @@ function ProjectCard({ project }: { project: Project }) {
           setZoom({ el, aspect: img.naturalWidth / img.naturalHeight || 4 / 3 })
         }}
       >
-        <img src={project.image} alt={project.title} loading="lazy" />
+        <img src={project.image} alt={project.title} width={project.w} height={project.h} loading="lazy" />
       </button>
       <div className="project__body">
         <p className="project__date mono">{project.date.toUpperCase()}</p>

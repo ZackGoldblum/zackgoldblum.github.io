@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
@@ -10,11 +10,66 @@ import Projects from './pages/Projects'
 import Research from './pages/Research'
 import Timeline from './pages/Timeline'
 
+// A reload (or a return from another site) should land where the page was
+// left. The browser's own restoration only runs once the page is tall enough,
+// i.e. after React has painted it at the top — a visible flash of the wrong
+// content — so it is disabled and done here instead, before the first paint.
+history.scrollRestoration = 'manual'
+
+const loadPath = window.location.pathname
+let pristine = true // no in-app navigation yet — the load path may still restore
+
+/** Route changes start at the top; the initial load restores its saved offset. */
 function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => {
-    window.scrollTo(0, 0)
+
+  useLayoutEffect(() => {
+    const saved = sessionStorage.getItem(`scroll:${pathname}`)
+    const nav = performance.getEntriesByType('navigation')[0] as
+      | PerformanceNavigationTiming
+      | undefined
+    // A fresh visit ('navigate') starts at the top even if an offset was saved
+    const restore = pristine && pathname === loadPath && saved !== null && nav?.type !== 'navigate'
+    if (!restore) {
+      pristine = false
+      window.scrollTo(0, 0)
+      return
+    }
+
+    const y = Number(saved)
+    window.scrollTo(0, y)
+    // The page keeps settling for a moment — fonts swap in, lazy images size
+    // up — and each reflow would leave the offset pointing at different
+    // content. Re-apply it as the document changes height (before paint, so
+    // nothing visibly moves) until the user takes over or the load settles.
+    const ro = new ResizeObserver(() => window.scrollTo(0, y))
+    ro.observe(document.body)
+    let timer = 0
+    const stop = () => {
+      ro.disconnect()
+      window.clearTimeout(timer)
+    }
+    const inputs = ['wheel', 'touchstart', 'keydown', 'mousedown'] as const
+    for (const ev of inputs) window.addEventListener(ev, stop, { passive: true, once: true })
+    const settled = () => {
+      timer = window.setTimeout(stop, 500)
+    }
+    if (document.readyState === 'complete') settled()
+    else window.addEventListener('load', settled, { once: true })
+    return () => {
+      stop()
+      for (const ev of inputs) window.removeEventListener(ev, stop)
+      window.removeEventListener('load', settled)
+    }
   }, [pathname])
+
+  useEffect(() => {
+    const save = () =>
+      sessionStorage.setItem(`scroll:${window.location.pathname}`, String(window.scrollY))
+    window.addEventListener('pagehide', save)
+    return () => window.removeEventListener('pagehide', save)
+  }, [])
+
   return null
 }
 

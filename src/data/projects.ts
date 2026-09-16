@@ -16,6 +16,9 @@ export interface Project {
   blurb: string
   date: string
   image: string
+  /** Intrinsic image size — reserves the card's layout before the (lazy) image loads. */
+  w?: number
+  h?: number
   /** Paragraphs; minimal inline HTML allowed (em, u, b). */
   body: string[]
   links: ProjectLink[]

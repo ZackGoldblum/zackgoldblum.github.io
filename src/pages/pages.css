@@ -127,6 +127,7 @@
 .project__media img {
   display: block;
   width: 100%;
+  height: auto; /* the width/height attributes only reserve the aspect */
   border-radius: var(--radius-md);
   border: 1px solid var(--line-soft);
 }
@@ -667,8 +668,6 @@
 
 @media (max-width: 880px) {
   .project { grid-template-columns: minmax(0, 1fr); }
-  /* Stacked full-width: show the whole image at its natural aspect — never crop */
-  .project__media img { height: auto; }
 }
 
 @media (max-width: 720px) {
