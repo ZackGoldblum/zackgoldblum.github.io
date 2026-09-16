@@ -26,6 +26,8 @@ export interface Project {
   images: ProjectImage[]
   /** Paragraphs; minimal inline HTML allowed (em, u, b). */
   body: string[]
+  /** Optional expandable technical write-up; same inline HTML rules as body. */
+  details?: string[]
   links: ProjectLink[]
   buildList?: BuildSection[]
 }

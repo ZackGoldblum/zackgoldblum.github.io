@@ -7,6 +7,7 @@ import { projects, type Project } from '../data/projects'
 
 function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false)
+  const [detailsOpen, setDetailsOpen] = useState(false)
   // Click-to-zoom: the button is the source rect the lightbox animates from
   const [zoom, setZoom] = useState<{ el: HTMLElement; aspect: number } | null>(null)
   const [imgIndex, setImgIndex] = useState(0)
@@ -57,7 +58,7 @@ function ProjectCard({ project }: { project: Project }) {
             <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
           ))}
         </div>
-        {(project.links.length > 0 || project.buildList) && (
+        {(project.links.length > 0 || project.details || project.buildList) && (
           <div className="project__links">
             {project.links.map((l) => (
               <a
@@ -70,12 +71,25 @@ function ProjectCard({ project }: { project: Project }) {
                 {l.label} <LinkIcon external={!l.href.startsWith('/')} />
               </a>
             ))}
+            {project.details && (
+              <button className="btn" onClick={() => setDetailsOpen(!detailsOpen)}>
+                {detailsOpen ? 'Hide details' : 'Technical details'}{' '}
+                <span className="btn__arrow">{detailsOpen ? '−' : '+'}</span>
+              </button>
+            )}
             {project.buildList && (
               <button className="btn" onClick={() => setExpanded(!expanded)}>
                 {expanded ? 'Hide build list' : 'Build list'}{' '}
                 <span className="btn__arrow">{expanded ? '−' : '+'}</span>
               </button>
             )}
+          </div>
+        )}
+        {detailsOpen && project.details && (
+          <div className="project__details prose">
+            {project.details.map((p, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+            ))}
           </div>
         )}
         {expanded && project.buildList && (
