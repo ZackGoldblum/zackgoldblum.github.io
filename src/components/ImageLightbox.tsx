@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
+import ArrowButton from './ArrowButton'
 
 interface ImageLightboxProps {
   src: string
   alt: string
   fromEl: HTMLElement // the inline image's button — the zoom animates from/to its rect
   aspect: number // natural width / height — full view never crops
+  /** Cycle to the previous (-1) or next (1) image; when set, arrows and arrow keys appear */
+  onStep?: (step: number) => void
   onClose: () => void
 }
 
@@ -30,9 +33,10 @@ function restingRect(el: HTMLElement) {
  *
  * The same FLIP zoom as BookLightbox without the 3D book: the image mounts
  * at the source element's rect and transitions to a centered full-size rect;
- * closing reverses the zoom back into place.
+ * closing reverses the zoom back into place. A multi-image card passes
+ * `onStep`; swapping `src`/`aspect` then eases the box to the new shape.
  */
-export default function ImageLightbox({ src, alt, fromEl, aspect, onClose }: ImageLightboxProps) {
+export default function ImageLightbox({ src, alt, fromEl, aspect, onStep, onClose }: ImageLightboxProps) {
   const [open, setOpen] = useState(false)
   const closing = useRef(false)
 
@@ -53,15 +57,19 @@ export default function ImageLightbox({ src, alt, fromEl, aspect, onClose }: Ima
     // Unmount after the reverse zoom (fallback if transitionend never fires)
     window.setTimeout(onClose, 450)
   }
-  // Escape handler lives in a mount effect — read the latest close through a ref
+  // Key handlers live in a mount effect — read the latest callbacks through refs
   const closeRef = useRef(close)
   closeRef.current = close
+  const stepRef = useRef(onStep)
+  stepRef.current = onStep
 
   useEffect(() => {
     // Expand on the frame after mount so the start rect paints first
     const raf = requestAnimationFrame(() => requestAnimationFrame(() => setOpen(true)))
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeRef.current()
+      else if (e.key === 'ArrowLeft') stepRef.current?.(-1)
+      else if (e.key === 'ArrowRight') stepRef.current?.(1)
     }
     const onResize = () => setViewport({ w: window.innerWidth, h: window.innerHeight })
     window.addEventListener('keydown', onKey)
@@ -94,6 +102,28 @@ export default function ImageLightbox({ src, alt, fromEl, aspect, onClose }: Ima
           if (closing.current) onClose()
         }}
       />
+      {onStep && (
+        <>
+          <ArrowButton
+            dir="prev"
+            label="Previous image"
+            className="lightbox__arrow lightbox__arrow--prev"
+            onClick={(e) => {
+              e.stopPropagation()
+              onStep(-1)
+            }}
+          />
+          <ArrowButton
+            dir="next"
+            label="Next image"
+            className="lightbox__arrow lightbox__arrow--next"
+            onClick={(e) => {
+              e.stopPropagation()
+              onStep(1)
+            }}
+          />
+        </>
+      )}
     </div>
   )
 }

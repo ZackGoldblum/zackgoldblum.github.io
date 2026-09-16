@@ -5,9 +5,13 @@
       "title": "Personal Website",
       "blurb": "My own website to showcase some of the things I do to the world.",
       "date": "Sept 2022 — June 2026",
-      "image": "/projects/website.webp",
-      "w": 2246,
-      "h": 1996,
+      "images": [
+        {
+          "src": "/projects/website.webp",
+          "w": 2246,
+          "h": 1996
+        }
+      ],
       "body": [
         "V4: Modern redesign that finally looks good on mobile :)",
         "V3: Re-implementation into a React single page application.",
@@ -28,9 +32,13 @@
       "org": "Sociail",
       "blurb": "Bringing together the best of human and AI collaboration.",
       "date": "June 2023 — Dec 2025",
-      "image": "/projects/sociail_chat.webp",
-      "w": 1788,
-      "h": 1868,
+      "images": [
+        {
+          "src": "/projects/sociail_chat.webp",
+          "w": 1788,
+          "h": 1868
+        }
+      ],
       "body": [
         "My time at Sociail marks my first true entrepreneurial experience. I joined the founding team right after graduating from Drexel and developed the initial prototype of Sociail Chat, our collaborative AI platform. As the startup grew, I found myself leading a multinational software development team and guiding the product through successive iterations until a limited release. Approaching launch, my focus shifted from technical development to product design, user experience, and go-to-market strategy. My co-founder responsibilities helped build the company itself: interviewing and onboarding team members, establishing our culture, and creating the 'operating system' of Sociail. There is so much more to share, and eventually I'll write something long-form that conveys how truly foundational this experience is."
       ],
@@ -47,9 +55,13 @@
       "title": "EpiTracker",
       "blurb": "Insightful epilepsy management.",
       "date": "Oct 2024 — Dec 2024",
-      "image": "/projects/epitracker.webp",
-      "w": 3128,
-      "h": 3160,
+      "images": [
+        {
+          "src": "/projects/epitracker.webp",
+          "w": 3128,
+          "h": 3160
+        }
+      ],
       "body": [
         "Final project for <em>Applied Medical Innovation</em>, where we learned and executed the process of creating impactful, commercially viable medical innovations. The concept for EpiTracker emerged from nearly a dozen stakeholder interviews spanning neurologists, neurosurgeons, foundations, and patients, with the goal of identifying addressable gaps in epilepsy care. We discovered an opportunity to reduce the time to optimal treatment by capturing critical information from ambulatory settings and presenting actionable trends and insights to support clinical care decisions. The project culminated in a functional prototype of EpiTracker—which took the form of a mobile app for patients and web portal for clinicians—and a final pitch complete with market research and a business model."
       ],
@@ -64,9 +76,13 @@
       "title": "Custom Hardline Liquid Cooled PC",
       "blurb": "My first foray into building liquid cooled computers.",
       "date": "Aug 2024",
-      "image": "/projects/liquid_cooled_pc.webp",
-      "w": 3024,
-      "h": 3570,
+      "images": [
+        {
+          "src": "/projects/liquid_cooled_pc.webp",
+          "w": 3024,
+          "h": 3570
+        }
+      ],
       "body": [
         "I've been building computers for over a decade (since I was 14 years old). In fact, it was this skill that landed me my first job as an assistant technician at a local IT company. As a kid, I loved to disassemble old tech products to see what was inside — although I had no idea how any of it worked. But going the other direction to build something functional was a whole new paradigm. I did figure it out though, because that first computer I built is still next to me, and still running! Since then, I've built computers for friends, several machine learning servers, and now my second (and first ever liquid cooled) PC. This build was significantly more challenging, but worth it for the experience gain and seeing the meticulous planning finally come together. There are a couple things to improve: my 90° bends could use some practice and one of the GPU tubing runs will need to be re-routed next time I do maintenance. Overall, I'm proud of this build and glad I took it on."
       ],
@@ -118,9 +134,13 @@
       "org": "Neuroergonomics and Neuroengineering Lab",
       "blurb": "Master's thesis research project under Dr. Hasan Ayaz.",
       "date": "Dec 2021 — June 2023",
-      "image": "/projects/kernel_flow.webp",
-      "w": 2502,
-      "h": 2404,
+      "images": [
+        {
+          "src": "/projects/kernel_flow.webp",
+          "w": 2502,
+          "h": 2404
+        }
+      ],
       "body": [
         "For my master's thesis, I investigated a miniaturized time-domain functional near-infrared spectroscopy (TD-fNIRS) neuroimaging system, Kernel Flow, for assessing the neural correlates of cognitive function. This was the first comprehensive cognitive study using TD-fNIRS and whole-head optical brain monitoring, as well as the first cognitive study with Kernel Flow. Through this project, I developed and verified an experimental setup for investigating the neural correlates of cognitive tasks and designed open-source tools to facilitate optical neuroimaging research."
       ],
@@ -144,9 +164,13 @@
       "org": "Moberg Analytics",
       "blurb": "Capturing contextual data and environmental factors in the neuro-ICU.",
       "date": "March 2022 — June 2023",
-      "image": "/projects/moberg_medical_devices.webp",
-      "w": 1820,
-      "h": 1538,
+      "images": [
+        {
+          "src": "/projects/moberg_medical_devices.webp",
+          "w": 1820,
+          "h": 1538
+        }
+      ],
       "body": [
         "In collaboration with UT Southwestern Medical Center, I designed and developed devices to capture intracranial pressure (ICP) context as well as light, temperature, and noise levels in neuro-ICU rooms. After the Stopcock Position Sensor for ICP context was clinically validated at UT Southwestern Medical Center, I initiated a joint effort with a Drexel <em>Senior Design</em> team to overhaul the devices and verify the sensors for environmental data capture."
       ],
@@ -164,9 +188,13 @@
       "org": "Drexel University",
       "blurb": "A GUI-based tool for clinicians to predict the outcome of a neurocritical care patient.",
       "date": "Sept 2022 — Dec 2022",
-      "image": "/projects/neuro_outcome_predictor.webp",
-      "w": 494,
-      "h": 350,
+      "images": [
+        {
+          "src": "/projects/neuro_outcome_predictor.webp",
+          "w": 494,
+          "h": 350
+        }
+      ],
       "body": [
         "Final project for the <em>Advanced Biocomputational Languages</em> graduate class taught by Dr. Ahmet Sacan. We created a GUI for clinicians that predicts the outcome of a neurocritical care patient. The parameters input for the current patient are compared to a database of retrospectively collected patient and medical data using a k-nearest neighbors algorithm. The utilized database is the Medical Information Mart for Intensive Care (MIMIC)-IV."
       ],
@@ -182,9 +210,13 @@
       "org": "Drexel University",
       "blurb": "An independently operable pediatric tracheostomy cuff controller.",
       "date": "Sept 2021 — March 2022",
-      "image": "/projects/trachtalk.webp",
-      "w": 502,
-      "h": 415,
+      "images": [
+        {
+          "src": "/projects/trachtalk.webp",
+          "w": 502,
+          "h": 415
+        }
+      ],
       "body": [
         "<em>Junior Design</em> project for a device that inflates or deflates a tracheostomy cuff at the press of a button. The inflation pressure is set by a clinician using the dial and is maintained while the patient is breathing. The patient presses the button when he or she wishes to speak and the cuff deflates. This work was presented at several Drexel Biomed events at which I participated on a Q&A panel for prospective students."
       ],
@@ -200,9 +232,13 @@
       "org": "YouTube and Spotify",
       "blurb": "I hosted and produced the BrainTech Podcast.",
       "date": "Aug 2021 — March 2022",
-      "image": "/projects/braintech_podcast.webp",
-      "w": 3000,
-      "h": 2668,
+      "images": [
+        {
+          "src": "/projects/braintech_podcast.webp",
+          "w": 3000,
+          "h": 2668
+        }
+      ],
       "body": [
         "Through conversations with researchers, engineers, business leaders, and thinkers in brain technology, I hope to inspire students who will shape the future of this field. This podcast was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu Onaral. Four episodes were created as initial run. I would like to return to this project at some point and do more with the BrainTech channel."
       ],
@@ -220,9 +256,13 @@
       "org": "Drexel University",
       "blurb": "Acquires 8-channel EEG data from the OpenBCI Ultracortex Mark IV headset, creates left vs. right-hand motor imagery datasets, and classifies user intention in near real-time.",
       "date": "March 2021 — June 2021",
-      "image": "/projects/BCI_project.webp",
-      "w": 352,
-      "h": 310,
+      "images": [
+        {
+          "src": "/projects/BCI_project.webp",
+          "w": 352,
+          "h": 310
+        }
+      ],
       "body": [
         "Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We evaluated the classification accuracies of several convolutional neural network models from Army Research Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention from my OpenBCI headset. The software handles EEG data acquisition from the headset, pre-processing, and visualization, as well as dataset creation and real-time classification using our model."
       ],
@@ -240,9 +280,13 @@
       "org": "Johns Hopkins University MedHacks 2020",
       "blurb": "The Novel application for Parkinson's and Essential Tremor (NeoPET) provides an innovative way of tracking Parkinson's and Essential Tremor symptoms and treatment responses through a smartphone.",
       "date": "Sept 2020",
-      "image": "/projects/neoPET_project.webp",
-      "w": 600,
-      "h": 400,
+      "images": [
+        {
+          "src": "/projects/neoPET_project.webp",
+          "w": 600,
+          "h": 400
+        }
+      ],
       "body": [
         "Collaborated with students from UMN to create a mobile app for Parkinson's and Essential Tremor patients that uses machine learning to analyze and quantify symptom severity. We leveraged accelerometer, gyroscope, and keystroke data streams from a smartphone to train the model and create visualizations for clinicians to remotely monitor disease progression over time. Built on Android and Google Firebase."
       ],

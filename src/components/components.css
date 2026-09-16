@@ -410,6 +410,27 @@
 /* SVG link arrow — nudged to sit on the text baseline */
 svg.btn__arrow { margin-top: 1px; }
 
+/* Round chevron button — cycles images on project cards and in the lightbox */
+.arrow-btn {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(3, 3, 7, 0.6);
+  border: 1px solid var(--line);
+  color: var(--text-bright);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  opacity: 0.7;
+  transition: opacity var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.arrow-btn:hover {
+  opacity: 1;
+  background: rgba(3, 3, 7, 0.8);
+}
+
 /* ---------- Lightbox — full-size book cover ---------- */
 
 .lightbox {
@@ -446,6 +467,23 @@ svg.btn__arrow { margin-top: 1px; }
   border-color: var(--line);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
 }
+
+/* Arrows to cycle a multi-image lightbox — larger, and fade with the backdrop */
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+
+.lightbox__arrow svg { width: 18px; height: 18px; }
+.lightbox--open .lightbox__arrow { opacity: 0.85; }
+.lightbox--open .lightbox__arrow:hover { opacity: 1; }
+.lightbox__arrow--prev { left: var(--space-4); }
+.lightbox__arrow--next { right: var(--space-4); }
 
 @media (prefers-reduced-motion: reduce) {
   .lightbox__backdrop,

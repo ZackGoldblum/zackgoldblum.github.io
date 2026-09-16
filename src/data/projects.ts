@@ -10,15 +10,20 @@ export interface BuildSection {
   items: string[]
 }
 
+export interface ProjectImage {
+  src: string
+  /** Intrinsic size — reserves the card's layout before the (lazy) image loads. */
+  w?: number
+  h?: number
+}
+
 export interface Project {
   title: string
   org?: string
   blurb: string
   date: string
-  image: string
-  /** Intrinsic image size — reserves the card's layout before the (lazy) image loads. */
-  w?: number
-  h?: number
+  /** Card images; more than one adds arrows to cycle through them. */
+  images: ProjectImage[]
   /** Paragraphs; minimal inline HTML allowed (em, u, b). */
   body: string[]
   links: ProjectLink[]

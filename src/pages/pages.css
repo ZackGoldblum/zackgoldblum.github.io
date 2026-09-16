@@ -112,17 +112,32 @@
   padding: var(--space-5);
 }
 
-/* Click-to-zoom button (same lift-on-hover as .book__cover; the lightbox
-   backs the lift out of its captured rect so the zoom returns to rest) */
 .project__media {
+  position: relative; /* anchors the cycling arrows */
+  align-self: start;
+}
+
+/* Click-to-zoom button (same lift-on-hover as .book__cover; the lightbox
+   backs the lift out of its captured rect so the zoom returns to rest).
+   Hover is read on the wrapper so the lift holds while over an arrow. */
+.project__media-zoom {
   display: block;
   width: 100%;
-  align-self: start;
   cursor: zoom-in;
   transition: transform var(--dur-med) var(--ease-out);
 }
 
-.project__media:hover { transform: translateY(-2px); }
+.project__media:hover .project__media-zoom { transform: translateY(-2px); }
+
+/* Arrows to cycle a multi-image card sit at the sides of the image */
+.project__media-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project__media-arrow--prev { left: var(--space-2); }
+.project__media-arrow--next { right: var(--space-2); }
 
 .project__media img {
   display: block;

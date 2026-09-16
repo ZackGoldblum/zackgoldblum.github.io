@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ArrowButton from '../components/ArrowButton'
 import ImageLightbox from '../components/ImageLightbox'
 import LinkIcon from '../components/LinkIcon'
 import PageIntro from '../components/PageIntro'
@@ -8,20 +9,44 @@ function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false)
   // Click-to-zoom: the button is the source rect the lightbox animates from
   const [zoom, setZoom] = useState<{ el: HTMLElement; aspect: number } | null>(null)
+  const [imgIndex, setImgIndex] = useState(0)
+  const images = project.images
+  const image = images[imgIndex]
+  const imageAlt =
+    images.length > 1 ? `${project.title} (${imgIndex + 1} of ${images.length})` : project.title
+  const cycle = (step: number) => setImgIndex((imgIndex + step + images.length) % images.length)
 
   return (
     <article className="project card">
-      <button
-        className="project__media"
-        aria-label={`View ${project.title} image`}
-        onClick={(e) => {
-          const el = e.currentTarget
-          const img = el.querySelector('img')!
-          setZoom({ el, aspect: img.naturalWidth / img.naturalHeight || 4 / 3 })
-        }}
-      >
-        <img src={project.image} alt={project.title} width={project.w} height={project.h} loading="lazy" />
-      </button>
+      <div className="project__media">
+        <button
+          className="project__media-zoom"
+          aria-label={`View ${project.title} image`}
+          onClick={(e) => {
+            const el = e.currentTarget
+            const img = el.querySelector('img')!
+            setZoom({ el, aspect: img.naturalWidth / img.naturalHeight || 4 / 3 })
+          }}
+        >
+          <img src={image.src} alt={imageAlt} width={image.w} height={image.h} loading="lazy" />
+        </button>
+        {images.length > 1 && (
+          <>
+            <ArrowButton
+              dir="prev"
+              label="Previous image"
+              className="project__media-arrow project__media-arrow--prev"
+              onClick={() => cycle(-1)}
+            />
+            <ArrowButton
+              dir="next"
+              label="Next image"
+              className="project__media-arrow project__media-arrow--next"
+              onClick={() => cycle(1)}
+            />
+          </>
+        )}
+      </div>
       <div className="project__body">
         <p className="project__date mono">{project.date.toUpperCase()}</p>
         <h3 className="project__title">{project.title}</h3>
@@ -70,10 +95,11 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       {zoom && (
         <ImageLightbox
-          src={project.image}
-          alt={project.title}
+          src={image.src}
+          alt={imageAlt}
           fromEl={zoom.el}
-          aspect={zoom.aspect}
+          aspect={image.w && image.h ? image.w / image.h : zoom.aspect}
+          onStep={images.length > 1 ? cycle : undefined}
           onClose={() => setZoom(null)}
         />
       )}
