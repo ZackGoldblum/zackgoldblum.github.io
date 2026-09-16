@@ -52,6 +52,37 @@
   ],
   "2024-2025": [
     {
+      "title": "AskEEG",
+      "org": "University of Pennsylvania",
+      "blurb": "Ask questions about brain recordings and get analyses back.",
+      "date": "Jan 2025 — May 2025",
+      "images": [
+        {
+          "src": "/projects/askeeg_1.webp",
+          "w": 1600,
+          "h": 1883
+        },
+        {
+          "src": "/projects/askeeg_2.webp",
+          "w": 1600,
+          "h": 1322
+        }
+      ],
+      "body": [
+        "Final project for <em>Biomedical Informatics</em> (BMIN 5100) at Penn. Analyzing EEG usually means manually writing code to select a time window, set of channels, calculate a feature of interest (ex. a specific frequency band), and plot it — all before you can begin to understand your data. AskEEG replaces that tedious process with a natural language interface that enables EEG data exploration and analysis just by asking for it. A researcher can type <em>\"What is the synchrony in the alpha band from 10 to 20 seconds?\"</em> and the app uses a large language model to extract the parameters, run the analysis on the recording, and return the results and plots. This is a complete cloud application running on AWS and was my first experience developing with infrastructure as code."
+      ],
+      "details": [
+        "The large language model (GPT-4o mini through LangChain) reads the question, picks the feature of interest from the app's toolbox of analyses, and extracts its parameters: time window, frequency band, and channels. The app then computes that feature in Python. For synchrony, for instance, the recording is re-referenced to the common average, notch-filtered to remove 60 Hz line noise, and bandpass-filtered to the requested band. The Hilbert transform gives each channel's instantaneous phase, and the Kuramoto order parameter turns those phases into a single number between 0 and 1 that captures how synchronized the channels are at each moment. Results come back as time series plots and per-band summaries.",
+        "The frontend is Vue 3 with Pinia, backend is a Flask REST API. Recording metadata comes from Pennsieve and the data itself from S3. The compute-heavy analysis runs in Docker containers on AWS Fargate, with logs in CloudWatch and the infrastructure defined in Terraform."
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/BMIN-5100-Spring-2025/Goldblum-AskEEG"
+        }
+      ]
+    },
+    {
       "title": "ASM Calc",
       "org": "Penn Center for Neuroengineering and Therapeutics",
       "blurb": "Calculate and visualize anti-seizure medication (ASM) levels over time using pharmacokinetic modeling.",
