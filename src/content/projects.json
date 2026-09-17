@@ -1,5 +1,69 @@
 {
-  "Current": [],
+  "Current": [
+    {
+      "title": "Pioneer Project",
+      "org": "Penn Center for Neuroengineering and Therapeutics",
+      "blurb": "An AI that talks with epilepsy patients about their own brain activity, and learns from what they tell it.",
+      "date": "Nov 2023 — Present",
+      "images": [
+        {
+          "src": "/projects/pioneer_1.webp",
+          "w": 1600,
+          "h": 1352
+        },
+        {
+          "src": "/projects/pioneer_2.webp",
+          "w": 1600,
+          "h": 1664
+        },
+        {
+          "src": "/projects/pioneer_3.webp",
+          "w": 1600,
+          "h": 1049
+        },
+        {
+          "src": "/projects/pioneer_4.webp",
+          "w": 1600,
+          "h": 670
+        },
+        {
+          "src": "/projects/pioneer_5.webp",
+          "w": 1600,
+          "h": 1530
+        }
+      ],
+      "body": [
+        "Implanted brain devices monitor patients around the clock, but run the same fixed algorithms for years without adapting to the individual. And although they can detect an impending seizure, a missed dose of medication, or a decline in cognitive function, nothing is communicated to the patient. There is no way to ask the device what it sees either. Medical devices should talk with the people who depend on them and learn from what they say back. Pioneer is our first step toward that, beginning with epilepsy. We built a platform that streams a patient's EEG from the hospital into a secure cloud, extracts markers of seizure risk, sleep, and medication level in real time, and connects all of it to an AI the patient can text with from their phone. The AI checks in with short surveys, sends alerts when it detects seizures or interictal spikes, answers questions like <em>how did I sleep last night?</em> with real data and plots, and records what patients report back. Those reports become labels that retrain the seizure detector, so the system gets better at recognizing each person's seizures the longer they communicate.",
+        "Our pilot study enrolled 13 patients in Penn's epilepsy monitoring unit. I helped design the study and is soon to be published in <em>Nature Medicine</em>. Since then, close to 50 patients have used the system, with enrollment ongoing. We are working to bring it out of the hospital and into daily life with sub-scalp EEG and DBS devices."
+      ],
+      "details": [
+        "The platform has three main components. On the hospital side, real-time clinical EEG is relayed, along with medication logs, into Azure Event Hubs. In the cloud, Databricks streaming pipelines preprocess the signal and run pretrained models for seizure detection (SPaRCNet for scalp EEG, WaveNet and ONCET for intracranial), interictal spike detection, and sleep staging (YASA), plus brain-wide phase synchrony and an estimate of anti-seizure medication load derived from dosing records. Results land in Delta tables in a Unity Catalog. The patient-facing app is a Flask service on Azure App Service backed by PostgreSQL, installed as a progressive web app.",
+        "The conversational AI is a LangGraph state machine. Every incoming message passes through a moderation node, then a router decides whether it is general conversation or a question about the patient's data. Data questions go to a ReAct-style agent that inspects the database schema, writes SQL against that patient's records, and synthesizes an answer. Every AI response is moderated again before delivery, and investigators reviewed all conversations daily. The model was a HIPAA-compliant deployment of GPT-4o-mini."
+      ],
+      "links": [
+        {
+          "label": "Preprint",
+          "href": "https://doi.org/10.64898/2026.01.26.26344234"
+        },
+        {
+          "label": "GitHub (Chat interface)",
+          "href": "https://github.com/penn-cnt/Pioneer-Chat-Release"
+        },
+        {
+          "label": "GitHub (Fine-tuning)",
+          "href": "https://github.com/penn-cnt/Pioneer-Finetune-Release"
+        },
+        {
+          "label": "GitHub (Databricks)",
+          "href": "https://github.com/penn-cnt/Pioneer-Databricks-Release"
+        },
+        {
+          "label": "GitHub (Analysis)",
+          "href": "https://github.com/penn-cnt/Pioneer-Analysis-Release"
+        }
+      ]
+    }
+  ],
   "2026-2027": [
     {
       "title": "Personal Website",
