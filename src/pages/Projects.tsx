@@ -19,6 +19,12 @@ function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article className="project card">
+      <div className="project__header">
+        <p className="project__date mono">{project.date.toUpperCase()}</p>
+        <h3 className="project__title">{project.title}</h3>
+        {project.org && <p className="project__org">{project.org}</p>}
+        <p className="project__blurb">{project.blurb}</p>
+      </div>
       <div className="project__media">
         <button
           className="project__media-zoom"
@@ -49,10 +55,6 @@ function ProjectCard({ project }: { project: Project }) {
         )}
       </div>
       <div className="project__body">
-        <p className="project__date mono">{project.date.toUpperCase()}</p>
-        <h3 className="project__title">{project.title}</h3>
-        {project.org && <p className="project__org">{project.org}</p>}
-        <p className="project__blurb">{project.blurb}</p>
         <div className="project__prose prose">
           {project.body.map((p, i) => (
             <p key={i} dangerouslySetInnerHTML={{ __html: p }} />

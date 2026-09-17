@@ -105,14 +105,24 @@
   gap: var(--space-5);
 }
 
+/* Image beside the text on wide screens; the header (date, title, org)
+   moves above the image when the card collapses to one column. */
 .project {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
-  gap: var(--space-5);
+  grid-template-areas:
+    'media header'
+    'media body';
+  gap: 0 var(--space-5);
   padding: var(--space-5);
 }
 
+.project__header { grid-area: header; }
+
+.project__body { grid-area: body; }
+
 .project__media {
+  grid-area: media;
   position: relative; /* anchors the cycling arrows */
   align-self: start;
 }
@@ -694,7 +704,14 @@
 /* ---------- Responsive ---------- */
 
 @media (max-width: 880px) {
-  .project { grid-template-columns: minmax(0, 1fr); }
+  .project {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'header'
+      'media'
+      'body';
+    row-gap: var(--space-4);
+  }
 }
 
 @media (max-width: 720px) {
