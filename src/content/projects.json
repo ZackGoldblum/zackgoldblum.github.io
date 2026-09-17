@@ -1,6 +1,33 @@
 {
   "Current": [
     {
+      "title": "Neuronova",
+      "org": "NeuroBridge Lab",
+      "blurb": "A scalable atlas of human intracranial electrophysiology.",
+      "date": "Dec 2024 — Present",
+      "images": [
+        {
+          "src": "/projects/neuronova.webp",
+          "w": 1600,
+          "h": 2377
+        }
+      ],
+      "body": [
+        "Intracranial epilepsy recordings are the most direct measurements we have of a living human brain. They come from patients with severe epilepsy who have electrodes placed within the brain to localize seizures. But these data are scattered across hospitals, and every site records and processes them differently, so there's no shared answer to a basic question: what does <em>normal</em> activity look like in a given brain region? Neuronova is the atlas platform we've been building at Penn to change that. It connects to data repositories, maps electrodes into a common anatomical space, computes the same features for every recording, and builds population reference distributions for each region of the brain. A researcher or clinician can then load a patient, see their electrodes on a 3D brain, and identify recording sites that fall outside the population norm. Because the atlas stays connected to its source databases and records the provenance of every step, it can grow as new data arrive while earlier results stay reproducible.",
+        "The current release holds 175 participants from nine institutions, with 520 recordings and more than 19,000 electrode contacts, nearly 17,000 of them anatomically localized. Our first application is epilepsy, where we are testing whether deviations from the regional norms point to the tissue that generates seizures. The same infrastructure is meant to reach further, into neuromodulation devices such as deep brain and responsive stimulators, rehabilitation brain-computer interfaces, and eventually patient-specific computational models. The paper describing the atlas is in preparation."
+      ],
+      "details": [
+        "Recordings enter through a repository adapter, built first for Pennsieve, that pulls the iEEG data and electrode coordinates while preserving source identifiers, access permissions, and dataset versions; it can also accept data from other BIDS-organized repositories. Every contact is mapped into MNI152 space and assigned to a region of the Lausanne 2018 atlas. A feature pipeline then computes spectral power in the delta, theta, alpha, beta, and gamma bands, the catch22 time-series feature set, and entropy measures for every channel. Reference distributions are built across anatomy, age, and site. A patient's values are expressed as z-scores against the reference for the same brain region, so <em>abnormal</em> has a precise meaning: how many standard deviations a channel sits from the population.",
+        "The frontend is React, with Three.js for the 3D brain and electrode rendering and Recharts for the distribution plots. A shared data model links participants, sessions, electrodes, coordinate spaces, recordings, features, and software versions, the basis for a synchronized view that ties the 3D anatomy, MRI or CT planes, and raw traces to the same electrode. The backend is Flask with SQLAlchemy on PostgreSQL. Everything runs on AWS: the frontend on S3 behind CloudFront, the API on Elastic Beanstalk, and the database on RDS. The infrastructure is defined in Terraform and deployed through GitHub Actions."
+      ],
+      "links": [
+        {
+          "label": "Visit site",
+          "href": "https://neurobridge.cloud"
+        }
+      ]
+    },
+    {
       "title": "Pioneer Project",
       "org": "Penn Center for Neuroengineering and Therapeutics",
       "blurb": "Medical devices that talk with patients.",
