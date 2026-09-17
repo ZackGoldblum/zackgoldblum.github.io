@@ -3,7 +3,7 @@
     {
       "title": "Pioneer Project",
       "org": "Penn Center for Neuroengineering and Therapeutics",
-      "blurb": "An AI that talks with epilepsy patients about their own brain activity, and learns from what they tell it.",
+      "blurb": "Medical devices that talk with patients.",
       "date": "Nov 2023 — Present",
       "images": [
         {
@@ -34,7 +34,7 @@
       ],
       "body": [
         "Implanted brain devices monitor patients around the clock, but run the same fixed algorithms for years without adapting to the individual. And although they can detect an impending seizure, a missed dose of medication, or a decline in cognitive function, nothing is communicated to the patient. There is no way to ask the device what it sees either. Medical devices should talk with the people who depend on them and learn from what they say back. Pioneer is our first step toward that, beginning with epilepsy. We built a platform that streams a patient's EEG from the hospital into a secure cloud, extracts markers of seizure risk, sleep, and medication level in real time, and connects all of it to an AI the patient can text with from their phone. The AI checks in with short surveys, sends alerts when it detects seizures or interictal spikes, answers questions like <em>how did I sleep last night?</em> with real data and plots, and records what patients report back. Those reports become labels that retrain the seizure detector, so the system gets better at recognizing each person's seizures the longer they communicate.",
-        "Our pilot study enrolled 13 patients in Penn's epilepsy monitoring unit. I helped design the study and is soon to be published in <em>Nature Medicine</em>. Since then, close to 50 patients have used the system, with enrollment ongoing. We are working to bring it out of the hospital and into daily life with sub-scalp EEG and DBS devices."
+        "Our pilot study enrolled 13 patients in Penn's epilepsy monitoring unit. The study is soon to be published in <em>Nature Medicine</em>. Since then, close to 50 patients have used the system, with enrollment ongoing. We are working to bring it out of the hospital and into daily life with sub-scalp EEG and DBS devices."
       ],
       "details": [
         "The platform has three main components. On the hospital side, real-time clinical EEG is relayed, along with medication logs, into Azure Event Hubs. In the cloud, Databricks streaming pipelines preprocess the signal and run pretrained models for seizure detection (SPaRCNet for scalp EEG, WaveNet and ONCET for intracranial), interictal spike detection, and sleep staging (YASA), plus brain-wide phase synchrony and an estimate of anti-seizure medication load derived from dosing records. Results land in Delta tables in a Unity Catalog. The patient-facing app is a Flask service on Azure App Service backed by PostgreSQL, installed as a progressive web app.",
@@ -109,7 +109,7 @@
         }
       ],
       "body": [
-        "<em>Brain-Computer Interfaces</em> (BE 5210) is Penn's graduate BCI course, and its final project is a competition. Student teams receive electrocorticography recordings from patients who were flexing their fingers while wearing a data glove, and the teams have to build models that predict the finger movements from the brain signals alone. Teams register, upload their prediction files, and are scored automatically against held-out data. Scores are only revealed on a fixed schedule, creating a competetive dynamic where teams vie for leaderboard rankings against increasingly difficult accuracy thresholds. This website was previously held together by many years of hotfixes and code duct tape, with a single CSV file as the foundation of the site. This year, I completely redesigned and rebuilt the website, with modern cloud infrastructure and services. Of course, I added some easter eggs for the students to find :)"
+        "<em>Brain-Computer Interfaces</em> (BE 5210) is Penn's graduate BCI course, and its final project is a competition. Student teams receive electrocorticography recordings from patients who were flexing their fingers while wearing a data glove, and the teams have to build models that predict the finger movements from the brain signals alone. Teams register, upload their prediction files, and are scored automatically against held-out data. Scores are only revealed on a fixed schedule, creating a competitive dynamic where teams vie for leaderboard rankings against increasingly difficult accuracy thresholds. This website was previously held together by many years of hotfixes and code duct tape, with a single CSV file as the foundation of the site. This year, I completely redesigned and rebuilt the website, with modern cloud infrastructure and services. Of course, I added some easter eggs for the students to find :)"
       ],
       "details": [
         "The stack is a React frontend, a Flask API, and PostgreSQL, containerized with Docker. Submissions are parsed with SciPy from .mat files, validated for the expected variable and shape, and scored as the correlation between predicted and actual finger flexion. The frontend deploys to S3 behind CloudFront and the API runs on Elastic Beanstalk with RDS for the database, all defined in Terraform.",
@@ -164,7 +164,7 @@
         }
       ],
       "body": [
-        "Final project for <em>Biomedical Informatics</em> (BMIN 5100) at Penn. Analyzing EEG usually means manually writing code to select a time window, set of channels, calculate a feature of interest (ex. a specific frequency band), and plot it — all before you can begin to understand your data. AskEEG replaces that tedious process with a natural language interface that enables EEG data exploration and analysis just by asking for it. A researcher can type <em>\"What is the synchrony in the alpha band from 10 to 20 seconds?\"</em> and the app uses a large language model to extract the parameters, run the analysis on the recording, and return the results and plots. This is a complete cloud application running on AWS and was my first experience developing with infrastructure as code."
+        "Final project for <em>Biomedical Informatics</em> (BMIN 5100) at Penn. Analyzing EEG usually means manually writing code to select a time window, set of channels, calculate a feature of interest (e.g. a specific frequency band), and plot it — all before you can begin to understand your data. AskEEG replaces that tedious process with a natural language interface that enables EEG data exploration and analysis just by asking for it. A researcher can type <em>\"What is the synchrony in the alpha band from 10 to 20 seconds?\"</em> and the app uses a large language model to extract the parameters, run the analysis on the recording, and return the results and plots. This is a complete cloud application running on AWS and was my first experience developing with infrastructure as code."
       ],
       "details": [
         "The large language model (GPT-4o mini through LangChain) reads the question, picks the feature of interest from the app's toolbox of analyses, and extracts its parameters: time window, frequency band, and channels. The app then computes that feature in Python. For synchrony, for instance, the recording is re-referenced to the common average, notch-filtered to remove 60 Hz line noise, and bandpass-filtered to the requested band. The Hilbert transform gives each channel's instantaneous phase, and the Kuramoto order parameter turns those phases into a single number between 0 and 1 that captures how synchronized the channels are at each moment. Results come back as time series plots and per-band summaries.",
@@ -190,7 +190,7 @@
         }
       ],
       "body": [
-        "In the epilepsy monitoring unit, clinicians deliberately lower a patient's ASM levels to provoke seizures they can record and localize. The taper strategy is critical to this process, but is often done <em>by feel</em> rather than with quantitative methods. ASM Calc is a small tool I built with clinicians at Penn to help plan those tapers and avoid severve seizures. Clinicians enter each dose and the time it was given, and it models the estimated concentration of every drug over time, plus the combined total when several are active. The estimates come from a pharmacokinetic model developed in our lab and published in <em>Epilepsia</em>."
+        "In the epilepsy monitoring unit, clinicians deliberately lower a patient's ASM levels to provoke seizures they can record and localize. The taper strategy is critical to this process, but is often done <em>by feel</em> rather than with quantitative methods. ASM Calc is a small tool I built with clinicians at Penn to help plan those tapers and avoid severe seizures. Clinicians enter each dose and the time it was given, and it models the estimated concentration of every drug over time, plus the combined total when several are active. The estimates come from a pharmacokinetic model developed in our lab and published in <em>Epilepsia</em>."
       ],
       "details": [
         "Nineteen common ASMs are pre-configured with literature-sourced half-life, volume of distribution, and bioavailability, all of which can be adjusted. Each dose is modeled with first-order absorption and elimination, so its curve rises as the drug is absorbed and decays with the drug's half-life, and overlapping doses are summed.",
@@ -392,7 +392,7 @@
         }
       ],
       "body": [
-        "Through conversations with researchers, engineers, business leaders, and thinkers in brain technology, I hope to inspire students who will shape the future of this field. This podcast was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu Onaral. Four episodes were created as initial run. I would like to return to this project at some point and do more with the BrainTech channel."
+        "Through conversations with researchers, engineers, business leaders, and thinkers in brain technology, I hope to inspire students who will shape the future of this field. This podcast was spun out of the <em>Brain Technology Convergence</em> graduate course taught by Dr. Banu Onaral. Four episodes were created as an initial run. I would like to return to this project at some point and do more with the BrainTech channel."
       ],
       "links": [
         {
@@ -416,7 +416,7 @@
         }
       ],
       "body": [
-        "Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We evaluated the classification accuracies of several convolutional neural network models from Army Research Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention from my OpenBCI headset. The software handles EEG data acquisition from the headset, pre-processing, and visualization, as well as dataset creation and real-time classification using our model."
+        "Final project for the <em>Neural Networks</em> graduate course taught by Dr. Hualou Liang. We evaluated the classification accuracies of several convolutional neural network models from the Army Research Laboratory (ARL) EEGModels project and then trained our own to classify motor imagery intention from my OpenBCI headset. The software handles EEG data acquisition from the headset, pre-processing, and visualization, as well as dataset creation and real-time classification using our model."
       ],
       "links": [
         {
