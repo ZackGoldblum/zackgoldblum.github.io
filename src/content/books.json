@@ -3,6 +3,15 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "Baptism of Fire",
+        "author": "Andrzej Sapkowski",
+        "cover": "/books/baptism_of_fire.webp",
+        "rating": 3.5,
+        "pages": 384,
+        "w": 1001,
+        "h": 1500
+      },
+      {
         "title": "The Time of Contempt",
         "author": "Andrzej Sapkowski",
         "cover": "/books/the_time_of_contempt.webp",
