@@ -83,22 +83,22 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
       'Zack Goldblum — engineer and scientist working at the intersection of neurotechnology and artificial intelligence.',
   },
   '/projects': {
-    title: 'Projects — Zack Goldblum',
+    title: 'Projects | Zack Goldblum',
     description:
       "Collection of projects I've worked on over the years. Mix of things from school, research, and personal endeavors.",
   },
   '/research': {
-    title: 'Research — Zack Goldblum',
+    title: 'Research | Zack Goldblum',
     description:
       'Published and presented research, from neurocritical care and optical neuroimaging to translational neuroengineering and neuroinformatics.',
   },
   '/bookshelf': {
-    title: 'Bookshelf — Zack Goldblum',
+    title: 'Bookshelf | Zack Goldblum',
     description:
       "What I've been reading. Mostly sci-fi, some classics and non-fiction mixed in.",
   },
   '/timeline': {
-    title: 'Timeline — Zack Goldblum',
+    title: 'Timeline | Zack Goldblum',
     description: "Where I've been and what I'm doing now.",
   },
 }
@@ -131,7 +131,7 @@ function PageMeta() {
 
     if (!meta) {
       // Unknown path: GitHub Pages already returns a 404 status, so leave it uncanonicalized.
-      document.title = 'Page not found — Zack Goldblum'
+      document.title = 'Page not found | Zack Goldblum'
       canonical?.remove()
       return
     }
