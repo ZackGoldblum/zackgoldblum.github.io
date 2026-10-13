@@ -1,6 +1,17 @@
 {
   "2026-2027": [
     {
+      "type": "Publication",
+      "title": "Human-Artificial Intelligence Collaboration for Comanaging Epilepsy in Real Time",
+      "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh KG, Chang E, Lavelle SB, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>Nature Medicine</em>. October 13, 2026. DOI: 10.1038/s41591-026-04680-4. *Equal contribution.",
+      "links": [
+        {
+          "label": "Nature Medicine",
+          "href": "https://www.nature.com/articles/s41591-026-04680-4"
+        }
+      ]
+    },
+    {
       "type": "Poster",
       "title": "Human-AI Collaboration for Co-Managing Epilepsy in Real Time",
       "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh K, Chang E, Lavelle S, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>Redefining Healthcare in the Age of AI: A Nature Conference</em>. Paris, FR. September 8-10, 2026. *Equal contribution.",
