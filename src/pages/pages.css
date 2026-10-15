@@ -134,11 +134,22 @@
   cursor: zoom-in;
 }
 
-/* Arrows to cycle a multi-image card sit at the sides of the image */
+/* Arrows to cycle a multi-image card sit at the sides of the image and
+   only appear while the image is hovered (or an arrow has keyboard focus) */
 .project__media-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0;
+}
+
+.project__media:hover .project__media-arrow,
+.project__media:focus-within .project__media-arrow { opacity: 0.7; }
+.project__media .project__media-arrow:hover { opacity: 1; }
+
+/* No hover on touch screens, so keep the arrows visible there */
+@media (hover: none) {
+  .project__media-arrow { opacity: 0.7; }
 }
 
 .project__media-arrow--prev { left: var(--space-2); }
