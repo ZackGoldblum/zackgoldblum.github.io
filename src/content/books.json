@@ -1020,14 +1020,6 @@
     "subtitle": "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate order as best I can recall.",
     "books": [
       {
-        "title": "Utopia",
-        "author": "Lincoln Child",
-        "cover": "/books/utopia.webp",
-        "pages": 400,
-        "w": 1017,
-        "h": 1500
-      },
-      {
         "title": "11/22/63",
         "author": "Stephen King",
         "cover": "/books/11_22_63.webp",
@@ -1140,6 +1132,14 @@
         "h": 1500
       },
       {
+        "title": "Oedipus Rex",
+        "author": "Sophocles",
+        "cover": "/books/oedipus_rex.webp",
+        "pages": 80,
+        "w": 628,
+        "h": 1000
+      },
+      {
         "title": "Frankenstein",
         "author": "Mary Shelley",
         "cover": "/books/frankenstein.webp",
@@ -1220,14 +1220,6 @@
         "h": 1200
       },
       {
-        "title": "Oedipus Rex",
-        "author": "Sophocles",
-        "cover": "/books/oedipus_rex.webp",
-        "pages": 80,
-        "w": 628,
-        "h": 1000
-      },
-      {
         "title": "The Book Thief",
         "author": "Markus Zusak",
         "cover": "/books/the_book_thief.webp",
@@ -1252,14 +1244,6 @@
         "h": 1500
       },
       {
-        "title": "To Kill a Mockingbird",
-        "author": "Harper Lee",
-        "cover": "/books/to_kill_a_mockingbird.webp",
-        "pages": 336,
-        "w": 997,
-        "h": 1500
-      },
-      {
         "title": "Romeo and Juliet",
         "author": "William Shakespeare",
         "cover": "/books/romeo_and_juliet.webp",
@@ -1274,6 +1258,22 @@
         "pages": 224,
         "w": 682,
         "h": 1000
+      },
+      {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "cover": "/books/to_kill_a_mockingbird.webp",
+        "pages": 336,
+        "w": 997,
+        "h": 1500
+      },
+      {
+        "title": "Utopia",
+        "author": "Lincoln Child",
+        "cover": "/books/utopia.webp",
+        "pages": 400,
+        "w": 1017,
+        "h": 1500
       },
       {
         "title": "Inkdeath",
@@ -1410,6 +1410,14 @@
         "pages": 256,
         "w": 994,
         "h": 1500
+      },
+      {
+        "title": "Ship Breaker",
+        "author": "Paolo Bacigalupi",
+        "cover": "/books/ship_breaker.webp",
+        "pages": 352,
+        "w": 667,
+        "h": 1000
       },
       {
         "title": "Execution",
@@ -1570,14 +1578,6 @@
         "pages": 384,
         "w": 785,
         "h": 1200
-      },
-      {
-        "title": "Ship Breaker",
-        "author": "Paolo Bacigalupi",
-        "cover": "/books/ship_breaker.webp",
-        "pages": 352,
-        "w": 667,
-        "h": 1000
       },
       {
         "title": "The House of Hades",
