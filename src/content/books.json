@@ -1020,6 +1020,14 @@
     "subtitle": "Books from school and growing up, though I'm sure I've forgotten many. They're in approximate order as best I can recall.",
     "books": [
       {
+        "title": "Utopia",
+        "author": "Lincoln Child",
+        "cover": "/books/utopia.webp",
+        "pages": 400,
+        "w": 1017,
+        "h": 1500
+      },
+      {
         "title": "11/22/63",
         "author": "Stephen King",
         "cover": "/books/11_22_63.webp",
