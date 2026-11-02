@@ -3,6 +3,15 @@
     "era": "2026-2027",
     "books": [
       {
+        "title": "The Tower of Swallows",
+        "author": "Andrzej Sapkowski",
+        "cover": "/books/the_tower_of_swallows.webp",
+        "rating": 4,
+        "pages": 464,
+        "w": 1001,
+        "h": 1500
+      },
+      {
         "title": "Baptism of Fire",
         "author": "Andrzej Sapkowski",
         "cover": "/books/baptism_of_fire.webp",
