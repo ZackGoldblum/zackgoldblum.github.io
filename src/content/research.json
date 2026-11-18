@@ -1,6 +1,17 @@
 {
   "2026-2027": [
     {
+      "type": "Pre-print",
+      "title": "Normative Modeling of Structural and Diffusion MRI for Epilepsy Diagnosis and Classification",
+      "citation": "Zhou DJ, Jaskir M, Hutchinson R, Eisenberg ES, Gal J, Imtiaz T, <b>Goldblum Z</b>, Vadali C, Lucas A, Josyula M, Gugger JJ, Conrad EC, Das S, Stein JM, Davis KA, Sinha N. <em>medRxiv</em>. November 17, 2026. DOI: 10.64898/2026.11.14.26368080.",
+      "links": [
+        {
+          "label": "medRxiv",
+          "href": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368080v1"
+        }
+      ]
+    },
+    {
       "type": "Publication",
       "title": "Human-Artificial Intelligence Collaboration for Comanaging Epilepsy in Real Time",
       "citation": "<b>Goldblum Z*</b>, Shi H*, Xu Z, Ojemann WKS, Aguila CA, Long K, Xie K, Nix KC, Walsh KG, Chang E, Lavelle SB, Bach B, Davis KA, Sinha N, Hammer LH, Conrad EC, Litt B. <em>Nature Medicine</em>. October 13, 2026. DOI: 10.1038/s41591-026-04680-4. *Equal contribution.",
